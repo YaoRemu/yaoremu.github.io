@@ -1954,7 +1954,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #75c14d;
+  background: #ffff28;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3019,4 +3019,11 @@ ul.breadcrumb li+li:last-child {
   transition-duration: 0.2s;
   transition-timing-function: ease-in-out;
   transition-delay: 0s;
+}
+.post {
+  margin-top: 60px;
+  margin-bottom: 60px;
+  padding: 25px;
+  -webkit-box-shadow: 0 0 20px rgba(202,203,203,0.5);
+  -moz-box-shadow: 0 0 20px rgba(202,203,204,0.5);
 }
