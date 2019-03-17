@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[NO.2 MySql服务安装]]></title>
+    <url>%2F2019%2F03%2F17%2FMD%2F</url>
+    <content type="text"><![CDATA[####安装过程 先添加安装文件中bin文件夹到用户环境变量(这样才可以使用命令) mysqld –initialize（执行初始化【不添加用户名】） mysqld install (安装MySql) （由于之前已经安装过，所以这里提升已存在） net start mysql(启动MySql服务) 完成！ 注意：要正确配置[my.ini]中的文件！！！]]></content>
+  </entry>
+  <entry>
     <title><![CDATA[No.1 关于我的博客]]></title>
     <url>%2F2019%2F03%2F16%2Fhello-world%2F</url>
     <content type="text"><![CDATA[由于是首次创建博客，花了大概三天，终于搞定了自己的博客，接下来可以专心推文了，相关内容后续补充！]]></content>
