@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-03-18T08:00:05.293Z</updated>
+  <updated>2019-03-18T09:05:07.531Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>ciscoTelnet</title>
+    <title>No3. Telnet</title>
     <link href="http://yoursite.com/2019/03/18/ciscoTelnet/"/>
     <id>http://yoursite.com/2019/03/18/ciscoTelnet/</id>
     <published>2019-03-18T08:00:05.000Z</published>
-    <updated>2019-03-18T08:00:05.293Z</updated>
+    <updated>2019-03-18T09:05:07.531Z</updated>
     
     <summary type="html">
     
@@ -29,12 +29,18 @@
       
         
         
-          &lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;/body&gt;&lt;/html&gt;
+          &lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;p&gt;拓扑图:  &lt;/p&gt;
+&lt;h4 id=&quot;配置命令&quot;&gt;&lt;a href=&quot;#配置命令&quot; class=&quot;headerlink&quot; title=&quot;配置命令:&quot;&gt;&lt;/a&gt;配置命令:&lt;/h4&gt;&lt;ol&gt;
+&lt;li&gt;首先开启Vlan:  
         
       
     
     </summary>
     
+      <category term="Cisco" scheme="http://yoursite.com/categories/Cisco/"/>
+    
+    
+      <category term="Cisco基础" scheme="http://yoursite.com/tags/Cisco%E5%9F%BA%E7%A1%80/"/>
     
   </entry>
   
@@ -43,7 +49,7 @@
     <link href="http://yoursite.com/2019/03/17/MD/"/>
     <id>http://yoursite.com/2019/03/17/MD/</id>
     <published>2019-03-17T07:52:24.000Z</published>
-    <updated>2019-03-18T07:47:55.502Z</updated>
+    <updated>2019-03-18T08:43:32.906Z</updated>
     
     <summary type="html">
     
@@ -57,6 +63,10 @@
     
     </summary>
     
+      <category term="安装" scheme="http://yoursite.com/categories/%E5%AE%89%E8%A3%85/"/>
+    
+    
+      <category term="安装教程" scheme="http://yoursite.com/tags/%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/"/>
     
   </entry>
   
@@ -65,7 +75,7 @@
     <link href="http://yoursite.com/2019/03/16/hello-world/"/>
     <id>http://yoursite.com/2019/03/16/hello-world/</id>
     <published>2019-03-16T13:04:18.614Z</published>
-    <updated>2019-03-18T07:42:48.164Z</updated>
+    <updated>2019-03-18T08:43:26.816Z</updated>
     
     <summary type="html">
     
@@ -80,6 +90,8 @@
     
     </summary>
     
+    
+      <category term="日常" scheme="http://yoursite.com/tags/%E6%97%A5%E5%B8%B8/"/>
     
   </entry>
   

@@ -1,18 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[ciscoTelnet]]></title>
+    <title><![CDATA[No3. Telnet]]></title>
     <url>%2F2019%2F03%2F18%2FciscoTelnet%2F</url>
-    <content type="text"><![CDATA[]]></content>
+    <content type="text"><![CDATA[拓扑图: 配置命令: 首先开启Vlan: enable configure terminal interface vlan 1 no shutdown 配置交换机：设置Vlan1 IP及其子网掩码: interface vlan 1 ip address 10.1.1.154 255.255.255.0 exit 设置进入系统视图的密码：enable password **** 设置五条虚拟链接：line vty 0 4 设置特权等级[级别越高权限越大]：privilege level 1 0 设置远程链接(Telnet)的密码：password cisco 设置login验证[如果只设置login,直接输入密码即可；如果设置了login local，则需要输入用户名以及密码]:login 退出VTY[VTY(Virtual typle terminal)虚拟类型终端]的配置：exit 使用PC与交换机进行Telnet测试:Telnet 10.1.1.154 (输入前面密码即可) 结果:]]></content>
+      <categories>
+        <category>Cisco</category>
+      </categories>
+      <tags>
+        <tag>Cisco基础</tag>
+      </tags>
   </entry>
   <entry>
     <title><![CDATA[NO.2 MySql服务安装]]></title>
     <url>%2F2019%2F03%2F17%2FMD%2F</url>
     <content type="text"><![CDATA[安装过程 先添加安装文件中bin文件夹到用户环境变量(这样才可以使用命令) mysqld –initialize（执行初始化【不添加用户名】/此处注意，如果安装提示出错，可以删除 [data] 文件夹后重试 ） mysqld install (安装MySql) （由于之前已经安装过，所以这里提示 已存在） net start mysql(启动MySql服务) 完成！ 注意：要正确配置[my.ini]中的文件！！！]]></content>
+      <categories>
+        <category>安装</category>
+      </categories>
+      <tags>
+        <tag>安装教程</tag>
+      </tags>
   </entry>
   <entry>
     <title><![CDATA[No.1 关于我的博客]]></title>
     <url>%2F2019%2F03%2F16%2Fhello-world%2F</url>
     <content type="text"><![CDATA[由于是首次创建博客，花了大概三天，终于搞定了自己的博客，接下来可以专心推文了，相关内容后续补充！]]></content>
+      <tags>
+        <tag>日常</tag>
+      </tags>
   </entry>
 </search>
