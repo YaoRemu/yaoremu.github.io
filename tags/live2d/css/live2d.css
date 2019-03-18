@@ -1,4 +1,4 @@
-<html><head></head><body>#landlord {
+#landlord {
     user-select: none;
     position: fixed;
     left: 5px;
@@ -937,4 +937,4 @@
 }
 @keyframes rainbow {
     100% { filter: hue-rotate(360deg); }
-}</body></html>
+}
