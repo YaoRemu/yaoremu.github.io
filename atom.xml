@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-03-18T09:05:07.531Z</updated>
+  <updated>2019-03-18T09:29:52.068Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://yoursite.com/2019/03/18/ciscoTelnet/"/>
     <id>http://yoursite.com/2019/03/18/ciscoTelnet/</id>
     <published>2019-03-18T08:00:05.000Z</published>
-    <updated>2019-03-18T09:05:07.531Z</updated>
+    <updated>2019-03-18T09:29:52.068Z</updated>
     
     <summary type="html">
     
@@ -29,9 +29,7 @@
       
         
         
-          &lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;p&gt;拓扑图:  &lt;/p&gt;
-&lt;h4 id=&quot;配置命令&quot;&gt;&lt;a href=&quot;#配置命令&quot; class=&quot;headerlink&quot; title=&quot;配置命令:&quot;&gt;&lt;/a&gt;配置命令:&lt;/h4&gt;&lt;ol&gt;
-&lt;li&gt;首先开启Vlan:  
+          &lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;h4 id=&quot;拓扑图&quot;&gt;&lt;a href=&quot;#拓扑图&quot; class=&quot;headerlink&quot; title=&quot;拓扑图:&quot;&gt;&lt;/a&gt;拓扑图:&lt;/h4&gt;&lt;p&gt;&lt;img
         
       
     
@@ -49,7 +47,7 @@
     <link href="http://yoursite.com/2019/03/17/MD/"/>
     <id>http://yoursite.com/2019/03/17/MD/</id>
     <published>2019-03-17T07:52:24.000Z</published>
-    <updated>2019-03-18T08:43:32.906Z</updated>
+    <updated>2019-03-18T09:28:40.202Z</updated>
     
     <summary type="html">
     
@@ -75,7 +73,7 @@
     <link href="http://yoursite.com/2019/03/16/hello-world/"/>
     <id>http://yoursite.com/2019/03/16/hello-world/</id>
     <published>2019-03-16T13:04:18.614Z</published>
-    <updated>2019-03-18T08:43:26.816Z</updated>
+    <updated>2019-03-18T09:25:30.880Z</updated>
     
     <summary type="html">
     
