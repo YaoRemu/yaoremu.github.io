@@ -495,32 +495,28 @@
       
         
           
-            <meta name="generator" content="Hexo 3.8.0"><h4 id="拓扑图"><a href="#拓扑图" class="headerlink" title="拓扑图:"></a>拓扑图:</h4><p><img src="https://i.loli.net/2019/03/18/5c8f650c54adc.png" alt></p>
-<hr>
-<h4 id="配置命令"><a href="#配置命令" class="headerlink" title="配置命令:"></a>配置命令:</h4><ol>
-<li>首先开启Vlan:   <pre><code>enable  
+            <p>
+              拓扑图:
+
+配置命令:
+首先开启Vlan:   enable  
 configure terminal  
 interface vlan 1
 no shutdown   
-</code></pre>eg:<img src="https://i.loli.net/2019/03/18/5c8f6503c7838.png" alt> </li>
-<li>配置交换机：<br>设置Vlan1 IP及其子网掩码:  <pre><code>interface vlan 1  
-ip address 10.1.1.154 255.255.255.0
-exit
-</code></pre>设置进入系统视图的密码：<pre><code>enable password ****
-</code></pre>设置五条虚拟链接：<pre><code>line vty 0 4
-</code></pre>设置特权等级<font color="red">[级别越高权限越大]</font>：<pre><code>privilege level 1 0 
-</code></pre>设置远程链接(Telnet)的密码：<pre><code>password cisco
-</code></pre>设置login验证<font color="red">[如果只设置login,直接输入密码即可；如果设置了login local，则需要输入用户名以及密码]</font>:<pre><code>login
-</code></pre>退出VTY<font color="red">[VTY(Virtual typle terminal)虚拟类型终端]</font>的配置：<pre><code>exit
-</code></pre></li>
-<li>使用PC与交换机进行Telnet测试:<pre><code>Telnet 10.1.1.154
-(输入前面密码即可)  
-</code></pre>eg:<img src="https://i.loli.net/2019/03/18/5c8f64da1050f.png" alt></li>
-</ol>
-<hr>
-<h4 id="结果"><a href="#结果" class="headerlink" title="结果:"></a>结果:</h4><p><img src="https://i.loli.net/2019/03/18/5c8f64f558e75.png" alt></p>
-
+eg: 
+配置交换机：设置Vlan1 IP及其子网掩码:  interface vlan 1  
+ip address 10.1
+              ...
+            </p>
+          <!--noindex-->
           
+            <div class="post-button text-center">
+              <a class="btn" href="/2019/03/18/ciscoTelnet/#more" rel="contents">
+                阅读全文 »
+              </a>
+            </div>
+          
+          <!--/noindex-->
         
       
     </div>
@@ -706,30 +702,31 @@ exit
       
         
           
-            <meta name="generator" content="Hexo 3.8.0"><h4 id="安装过程"><a href="#安装过程" class="headerlink" title="安装过程"></a>安装过程</h4><ol>
-<li>先添加安装文件中bin文件夹到用户环境变量(这样才可以使用<mysqld>命令)</mysqld></li>
-</ol>
-<p><img src="https://i.loli.net/2019/03/18/5c8f64228fa23.png" alt>  </p>
-<ol start="2">
-<li>mysqld –initialize（执行初始化【不添加用户名】/<font color="red">此处注意，如果安装提示出错，可以删除  [data]  文件夹后重试 </font>）</li>
-</ol>
-<p><img src="https://i.loli.net/2019/03/18/5c8f646d3d426.png" alt></p>
-<ol start="3">
-<li>mysqld install (安装MySql)</li>
-</ol>
-<p><img src="https://i.loli.net/2019/03/18/5c8f649bcae67.png" alt>  </p>
-<pre><code>（由于之前已经安装过，所以这里提示 已存在）        
-</code></pre><ol start="4">
-<li>net start mysql(启动MySql服务)</li>
-</ol>
-<p><img src="https://i.loli.net/2019/03/18/5c8f64aa533a1.png" alt>  </p>
-<ol start="5">
-<li>完成！  </li>
-</ol>
-<hr>
-<p>   <font color="red" size="5">注意：要正确配置[my.ini]中的文件！！！</font><br><img src="https://i.loli.net/2019/03/18/5c8f64c3d0dd1.png" alt></p>
+            <p>
+              安装过程
+先添加安装文件中bin文件夹到用户环境变量(这样才可以使用命令)
 
+  
+
+mysqld –initialize（执行初始化【不添加用户名】/此处注意，如果安装提示出错，可以删除  [data]  文件夹后重试 ）
+
+
+
+mysqld install (安装MySql)
+
+  
+（由于之前
+              ...
+            </p>
+          <!--noindex-->
           
+            <div class="post-button text-center">
+              <a class="btn" href="/2019/03/17/MD/#more" rel="contents">
+                阅读全文 »
+              </a>
+            </div>
+          
+          <!--/noindex-->
         
       
     </div>
@@ -901,10 +898,21 @@ exit
       
         
           
-            <meta name="generator" content="Hexo 3.8.0"><p>由于是首次创建博客，花了大概三天，终于搞定了自己的博客，接下来可以专心推文了，相关内容后续补充！</p>
-<p><img src="https://i.loli.net/2019/03/18/5c8f63fe2eafb.jpeg" alt="蕾姆亲"></p>
+            <p>
+              由于是首次创建博客，花了大概三天，终于搞定了自己的博客，接下来可以专心推文了，相关内容后续补充！
 
+
+              
+            </p>
+          <!--noindex-->
           
+            <div class="post-button text-center">
+              <a class="btn" href="/2019/03/16/hello-world/#more" rel="contents">
+                阅读全文 »
+              </a>
+            </div>
+          
+          <!--/noindex-->
         
       
     </div>
