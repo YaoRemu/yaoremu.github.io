@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[ciscoTelnet]]></title>
+    <url>%2F2019%2F03%2F18%2FciscoTelnet%2F</url>
+    <content type="text"><![CDATA[]]></content>
+  </entry>
+  <entry>
     <title><![CDATA[NO.2 MySql服务安装]]></title>
     <url>%2F2019%2F03%2F17%2FMD%2F</url>
     <content type="text"><![CDATA[安装过程 先添加安装文件中bin文件夹到用户环境变量(这样才可以使用命令) mysqld –initialize（执行初始化【不添加用户名】/此处注意，如果安装提示出错，可以删除 [data] 文件夹后重试 ） mysqld install (安装MySql) （由于之前已经安装过，所以这里提示 已存在） net start mysql(启动MySql服务) 完成！ 注意：要正确配置[my.ini]中的文件！！！]]></content>
