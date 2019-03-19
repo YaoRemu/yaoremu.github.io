@@ -368,7 +368,209 @@
 
   <div id="posts" class="posts-expand">
     
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/03/18/ciscoTelnet/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="YaoRemu">
+      <meta itemprop="description" content="欢迎来到YaoRemu的博客">
+      <meta itemprop="image" content="/images/rm.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="YaoZhao'Blog">
+    </span>
+
+    
+      <header class="post-header">
+
         
+        
+          <h1 class="post-title" itemprop="name headline">No3. Telnet
+
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          
+
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-03-18 16:00:05 / 修改时间：17:29:52" itemprop="dateCreated datePublished" datetime="2019-03-18T16:00:05+08:00">2019-03-18</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Cisco/" itemprop="url" rel="index"><span itemprop="name">Cisco</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+              
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+            
+                <span class="post-meta-item-text">评论数：</span>
+                <a href="/2019/03/18/ciscoTelnet/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/03/18/ciscoTelnet/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="post-meta-item-icon">
+            <i class="fa fa-eye"></i>
+             阅读次数： 
+            <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
+            </span>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <meta name="generator" content="Hexo 3.8.0"><h4 id="拓扑图"><a href="#拓扑图" class="headerlink" title="拓扑图:"></a>拓扑图:</h4><p><img src="https://i.loli.net/2019/03/18/5c8f650c54adc.png" alt></p>
+<hr>
+<h4 id="配置命令"><a href="#配置命令" class="headerlink" title="配置命令:"></a>配置命令:</h4><ol>
+<li>首先开启Vlan:   <pre><code>enable  
+configure terminal  
+interface vlan 1
+no shutdown   
+</code></pre>eg:<img src="https://i.loli.net/2019/03/18/5c8f6503c7838.png" alt> </li>
+<li>配置交换机：<br>设置Vlan1 IP及其子网掩码:  <pre><code>interface vlan 1  
+ip address 10.1.1.154 255.255.255.0
+exit
+</code></pre>设置进入系统视图的密码：<pre><code>enable password ****
+</code></pre>设置五条虚拟链接：<pre><code>line vty 0 4
+</code></pre>设置特权等级<font color="red">[级别越高权限越大]</font>：<pre><code>privilege level 1 0 
+</code></pre>设置远程链接(Telnet)的密码：<pre><code>password cisco
+</code></pre>设置login验证<font color="red">[如果只设置login,直接输入密码即可；如果设置了login local，则需要输入用户名以及密码]</font>:<pre><code>login
+</code></pre>退出VTY<font color="red">[VTY(Virtual typle terminal)虚拟类型终端]</font>的配置：<pre><code>exit
+</code></pre></li>
+<li>使用PC与交换机进行Telnet测试:<pre><code>Telnet 10.1.1.154
+(输入前面密码即可)  
+</code></pre>eg:<img src="https://i.loli.net/2019/03/18/5c8f64da1050f.png" alt></li>
+</ol>
+<hr>
+<h4 id="结果"><a href="#结果" class="headerlink" title="结果:"></a>结果:</h4><p><img src="https://i.loli.net/2019/03/18/5c8f64f558e75.png" alt></p>
+
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Cisco基础/" rel="tag"># Cisco基础</a>
+          
+        </div>
+      
+
+      
+      
+        <div class="post-widgets">
+        
+
+        
+
+        
+          
+          <div class="social_share">
+            
+            
+            
+              <div>
+                
   <div class="bdsharebuttonbox">
     <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
     <a href="#" class="bds_douban" data-cmd="douban" title="分享到豆瓣网"></a>
@@ -405,7 +607,46 @@
   with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='//bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
 </script>
 
+              </div>
+            
+          </div>
+        
+        </div>
       
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/03/17/MySql服务安装/" rel="next" title="NO.2 MySql服务安装">
+                <i class="fa fa-chevron-left"></i> NO.2 MySql服务安装
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/03/18/MarkDown基础教学/" rel="prev" title="MarkDown基础教学">
+                MarkDown基础教学 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
   </div>
 
 
