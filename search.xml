@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[交换机的基本配置]]></title>
-    <url>%2F2019%2F03%2F19%2F%E4%BA%A4%E6%8D%A2%E6%9C%BA%E7%9A%84%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE%2F</url>
-    <content type="text"><![CDATA[]]></content>
+    <title><![CDATA[cisco多交换机上配置基于端口的Vlan隔离办公网络]]></title>
+    <url>%2F2019%2F03%2F19%2Fcisco%E5%A4%9A%E4%BA%A4%E6%8D%A2%E6%9C%BA%E4%B8%8A%E9%85%8D%E7%BD%AE%E5%9F%BA%E4%BA%8E%E7%AB%AF%E5%8F%A3%E7%9A%84Vlan%E9%9A%94%E7%A6%BB%E5%8A%9E%E5%85%AC%E7%BD%91%E7%BB%9C%2F</url>
+    <content type="text"><![CDATA[拓扑图 配置命令配置左边的交换机enable //特权模式 configure terminal //全局模式 interface fa 0/1 switchport mode trunk //配置Trunk switchport trunk allowed vlan all //trunk允许所有Vlan流量通行（默认trunk就是允许所有） vlan 10 //开启vlan name RD1 //命名 vlan 20 name RD2 interface range fa0/9-fa0/16 //配置一组接口 switchport access vlan 10 //把该端口划分给Vlan exit interface range f0/17-fa0/24 switchport access vlan 20 exit 配置右边的交换机enable configure terminal interface fa0/1 switchport mode trunk switchport trunk allowed vlan all vlan 10 name RD1 vlan 20 name RD2 interface range fa0/9-fa0/16 switchport access vlan 10 exit interface range fa0/17-fa0/24 switchport access vlan 20 exit 注意： access为链接电脑的端口或者傻瓜交换机（也就是同一Vlan的交换机）；trunk则肯定是连接交换机的（属于多vlan的交换机）; 测试结果结果：PC1与PC3、PC2与PC4之间能相互ping通，除此以外的任意两台电脑上ping不通的；]]></content>
       <categories>
         <category>Cisco</category>
       </categories>
@@ -12,9 +12,9 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[cisco多交换机上配置基于端口的Vlan隔离办公网络]]></title>
-    <url>%2F2019%2F03%2F19%2Fcisco%E5%A4%9A%E4%BA%A4%E6%8D%A2%E6%9C%BA%E4%B8%8A%E9%85%8D%E7%BD%AE%E5%9F%BA%E4%BA%8E%E7%AB%AF%E5%8F%A3%E7%9A%84Vlan%E9%9A%94%E7%A6%BB%E5%8A%9E%E5%85%AC%E7%BD%91%E7%BB%9C%2F</url>
-    <content type="text"><![CDATA[拓扑图 配置命令配置左边的交换机enable //特权模式 configure terminal //全局模式 interface fa 0/1 switchport mode trunk //配置Trunk switchport trunk allowed vlan all //trunk允许所有Vlan流量通行（默认trunk就是允许所有） vlan 10 //开启vlan name RD1 //命名 vlan 20 name RD2 interface range fa0/9-fa0/16 //配置一组接口 switchport access vlan 10 //把该端口划分给Vlan exit interface range f0/17-fa0/24 switchport access vlan 20 exit 配置右边的交换机enable configure terminal interface fa0/1 switchport mode trunk switchport trunk allowed vlan all vlan 10 name RD1 vlan 20 name RD2 interface range fa0/9-fa0/16 switchport access vlan 10 exit interface range fa0/17-fa0/24 switchport access vlan 20 exit 注意： access为链接电脑的端口或者傻瓜交换机（也就是同一Vlan的交换机）；trunk则肯定是连接交换机的（属于多vlan的交换机）; 测试结果结果：PC1与PC3、PC2与PC4之间能相互ping通，除此以外的任意两台电脑上ping不通的；]]></content>
+    <title><![CDATA[交换机的基本配置]]></title>
+    <url>%2F2019%2F03%2F19%2F%E4%BA%A4%E6%8D%A2%E6%9C%BA%E7%9A%84%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE%2F</url>
+    <content type="text"><![CDATA[]]></content>
       <categories>
         <category>Cisco</category>
       </categories>
@@ -58,7 +58,7 @@
   <entry>
     <title><![CDATA[No.1 关于我的博客]]></title>
     <url>%2F2019%2F03%2F16%2F%E7%AE%80%E4%BB%8B%2F</url>
-    <content type="text"><![CDATA[由于是首次创建博客，花了大概三天，终于搞定了自己的博客，接下来可以专心推文了，相关内容后续补充！]]></content>
+    <content type="text"><![CDATA[由于是首次创建博客，花了大概三天，终于搞定了自己的博客，接下来可以专心推文了，欢迎各位道友！]]></content>
       <tags>
         <tag>日常</tag>
       </tags>
