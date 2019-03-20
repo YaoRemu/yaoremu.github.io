@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[cisco多交换机之间的端口聚合链路]]></title>
+    <url>%2F2019%2F03%2F20%2Fcisco%E5%A4%9A%E4%BA%A4%E6%8D%A2%E6%9C%BA%E4%B9%8B%E9%97%B4%E7%9A%84%E7%AB%AF%E5%8F%A3%E8%81%9A%E5%90%88%E9%93%BE%E8%B7%AF%2F</url>
+    <content type="text"><![CDATA[拓扑图： 配置命令Switch0的配置命令hostname SwitchA //更名 int port-channel 1 //端口聚合模式 exit int fa0/1 channel-group 1 mode on //配置端口聚合模式 exit int fa0/2 channel-group 1 mode on exit int fa0/3 channel-group 1 mode on exit int port-channel 1 switchport mode trunk //将端口聚合配置为trunk模式 switchport trunk allowed vlan all Switch1的配置命令hostname SwitchA int port-channel 1 exit interface fa0/1 channel-group 1 mode on exit interface fa0/2 channel-group 1 mode on exit interface fa0/3 channel-group 1 mode on exit int port-channel 1 switchport mode trunk switchport trunk allowed vlan all 结果使用show run查看结果： 知识点 链路聚合的配置，实现交换机间的端口聚合，扩展网络宽带，实现链路冗余备份；]]></content>
+      <categories>
+        <category>Cisco</category>
+      </categories>
+      <tags>
+        <tag>Cisco基础</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[cisco多交换机上配置基于端口的Vlan隔离办公网络]]></title>
     <url>%2F2019%2F03%2F19%2Fcisco%E5%A4%9A%E4%BA%A4%E6%8D%A2%E6%9C%BA%E4%B8%8A%E9%85%8D%E7%BD%AE%E5%9F%BA%E4%BA%8E%E7%AB%AF%E5%8F%A3%E7%9A%84Vlan%E9%9A%94%E7%A6%BB%E5%8A%9E%E5%85%AC%E7%BD%91%E7%BB%9C%2F</url>
     <content type="text"><![CDATA[拓扑图 配置命令配置左边的交换机enable //特权模式 configure terminal //全局模式 interface fa 0/1 switchport mode trunk //配置Trunk switchport trunk allowed vlan all //trunk允许所有Vlan流量通行（默认trunk就是允许所有） vlan 10 //开启vlan name RD1 //命名 vlan 20 name RD2 interface range fa0/9-fa0/16 //配置一组接口 switchport access vlan 10 //把该端口划分给Vlan exit interface range f0/17-fa0/24 switchport access vlan 20 exit 配置右边的交换机enable configure terminal interface fa0/1 switchport mode trunk switchport trunk allowed vlan all vlan 10 name RD1 vlan 20 name RD2 interface range fa0/9-fa0/16 switchport access vlan 10 exit interface range fa0/17-fa0/24 switchport access vlan 20 exit 注意： access为链接电脑的端口或者傻瓜交换机（也就是同一Vlan的交换机）；trunk则肯定是连接交换机的（属于多vlan的交换机）; 测试结果结果：PC1与PC3、PC2与PC4之间能相互ping通，除此以外的任意两台电脑上ping不通的；]]></content>
