@@ -1,4 +1,4 @@
-<!DOCTYPE html><html class="theme-next pisces use-motion" lang="zh-CN"><head><meta name="generator" content="Hexo 3.8.0">
+<!DOCTYPE html><html class="theme-next pisces" lang="zh-CN"><head><meta name="generator" content="Hexo 3.8.0">
   <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
@@ -68,7 +68,7 @@
     fastclick: false,
     lazyload: false,
     tabs: true,
-    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    motion: {"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
     algolia: {
       applicationID: '',
       apiKey: '',
@@ -930,7 +930,7 @@ switchport trunk allowed vlan all
     <script language="javascript">
       function show_date_time(){
         window.setTimeout("show_date_time()", 1000);
-        BirthDay=new Date("16/3/2019 12:0:0");//这个日期是可以修改的
+        BirthDay=new Date("3/16/2019 12:00:00");//这个日期是可以修改的
         today=new Date();
         timeold=(today.getTime()-BirthDay.getTime());//其实仅仅改了这里
         sectimeold=timeold/1000
@@ -943,7 +943,7 @@ switchport trunk allowed vlan all
         e_minsold=(e_hrsold-hrsold)*60;
         minsold=Math.floor((e_hrsold-hrsold)*60);
         seconds=Math.floor((e_minsold-minsold)*60);
-        span_dt_dt.innerHTML="YaoRemu的博客已经运行："+daysold+" 天 "+hrsold+" 小时 "+minsold+" 分 "+seconds+" 秒";
+        span_dt_dt.innerHTML="YaoRemu博客运行时间： "+daysold+" 天 "+hrsold+" 小时 "+minsold+" 分 "+seconds+" 秒";
       }
       show_date_time();
     </script>
