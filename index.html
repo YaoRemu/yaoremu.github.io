@@ -532,6 +532,10 @@
 
     
 
+    <div>
+    
+    </div>
+
     <footer class="post-footer">
       
 
@@ -724,6 +728,10 @@ int fa
 
     
 
+    <div>
+    
+    </div>
+
     <footer class="post-footer">
       
 
@@ -913,6 +921,10 @@ switch
 
     
 
+    <div>
+    
+    </div>
+
     <footer class="post-footer">
       
 
@@ -1096,6 +1108,10 @@ switch
     
 
     
+
+    <div>
+    
+    </div>
 
     <footer class="post-footer">
       
@@ -1308,6 +1324,10 @@ eg:点击跳转百度
 
     
 
+    <div>
+    
+    </div>
+
     <footer class="post-footer">
       
 
@@ -1500,6 +1520,10 @@ ip address 10.1
     
 
     
+
+    <div>
+    
+    </div>
 
     <footer class="post-footer">
       
@@ -1708,6 +1732,10 @@ mysqld install (安装MySql)
     
 
     
+
+    <div>
+    
+    </div>
 
     <footer class="post-footer">
       
@@ -1959,7 +1987,34 @@ mysqld install (安装MySql)
 
 
 
-
+<section class="footer-time">
+    <span class="footer__copyright">
+    <div>
+    <span id="span_dt_dt"> </span>
+    <script language="javascript">
+      function show_date_time(){
+        window.setTimeout("show_date_time()", 1000);
+        BirthDay=new Date("16/3/2019 12:0:0");//这个日期是可以修改的
+        today=new Date();
+        timeold=(today.getTime()-BirthDay.getTime());//其实仅仅改了这里
+        sectimeold=timeold/1000
+        secondsold=Math.floor(sectimeold);
+        msPerDay=24*60*60*1000
+        e_daysold=timeold/msPerDay
+        daysold=Math.floor(e_daysold);
+        e_hrsold=(e_daysold-daysold)*24;
+        hrsold=Math.floor(e_hrsold);
+        e_minsold=(e_hrsold-hrsold)*60;
+        minsold=Math.floor((e_hrsold-hrsold)*60);
+        seconds=Math.floor((e_minsold-minsold)*60);
+        span_dt_dt.innerHTML="YaoRemu的博客已经运行："+daysold+" 天 "+hrsold+" 小时 "+minsold+" 分 "+seconds+" 秒";
+      }
+      show_date_time();
+    </script>
+    </div>
+    <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+</span></section>
         
 <div class="busuanzi-count">
   <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
@@ -2490,7 +2545,8 @@ mysqld install (安装MySql)
     
   
 
-
+<!-- 页面点击小红心 -->
+<script type="text/javascript" src="/js/src/clicklove.js"></script>
 
 
 <script type="text/javascript" charset="utf-8" src="/js/lazyload-plugin/lazyload.intersectionObserver.min.js"></script></body></html>
