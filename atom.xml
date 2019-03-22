@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-03-22T06:41:31.086Z</updated>
+  <updated>2019-03-22T10:39:53.804Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://yoursite.com/2019/03/22/%E5%BF%AB%E9%80%9F%E7%94%9F%E6%88%90%E6%A0%91%E9%85%8D%E7%BD%AE/"/>
     <id>http://yoursite.com/2019/03/22/快速生成树配置/</id>
     <published>2019-03-22T05:34:22.000Z</published>
-    <updated>2019-03-22T06:41:31.086Z</updated>
+    <updated>2019-03-22T10:39:53.804Z</updated>
     
     <summary type="html">
     
@@ -35,6 +35,10 @@
     
     </summary>
     
+      <category term="Cisco" scheme="http://yoursite.com/categories/Cisco/"/>
+    
+    
+      <category term="Cisco基础" scheme="http://yoursite.com/tags/Cisco%E5%9F%BA%E7%A1%80/"/>
     
   </entry>
   
