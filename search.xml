@@ -58,7 +58,7 @@
   <entry>
     <title><![CDATA[cisco多交换机之间的端口聚合链路]]></title>
     <url>%2F2019%2F03%2F20%2Fcisco%E5%A4%9A%E4%BA%A4%E6%8D%A2%E6%9C%BA%E4%B9%8B%E9%97%B4%E7%9A%84%E7%AB%AF%E5%8F%A3%E8%81%9A%E5%90%88%E9%93%BE%E8%B7%AF%2F</url>
-    <content type="text"><![CDATA[拓扑图： 配置命令Switch0的配置命令hostname SwitchA //更名 int port-channel 1 //端口聚合模式 exit int fa0/1 channel-group 1 mode on //配置端口聚合模式 exit int fa0/2 channel-group 1 mode on exit int fa0/3 channel-group 1 mode on exit int port-channel 1 switchport mode trunk //将端口聚合配置为trunk模式 switchport trunk allowed vlan all Switch1的配置命令hostname SwitchA int port-channel 1 exit interface fa0/1 channel-group 1 mode on exit interface fa0/2 channel-group 1 mode on exit interface fa0/3 channel-group 1 mode on exit int port-channel 1 switchport mode trunk switchport trunk allowed vlan all 结果使用show run查看结果： 知识点 链路聚合的配置，实现交换机间的端口聚合，扩展网络宽带，实现链路冗余备份；]]></content>
+    <content type="text"><![CDATA[拓扑图： 相关知识：port-channel具备了逻辑端口的属性，真正成为一个独立的逻辑端口；端口汇聚是一种逻辑上的抽象过程，将一组具备相同属性的端口，抽象成一个逻辑端口；其不仅能增加网络的带宽，还能提供链路的备份功能，以及负载均衡； 配置命令Switch0的配置命令hostname SwitchA //更名 int port-channel 1 //端口聚合模式 exit int fa0/1 channel-group 1 mode on //将物理端口加入channel-group exit int fa0/2 channel-group 1 mode on exit int fa0/3 channel-group 1 mode on exit int port-channel 1 switchport mode trunk //将端口聚合配置为trunk模式 switchport trunk allowed vlan all Switch1的配置命令hostname SwitchA int port-channel 1 exit interface fa0/1 channel-group 1 mode on exit interface fa0/2 channel-group 1 mode on exit interface fa0/3 channel-group 1 mode on exit int port-channel 1 switchport mode trunk switchport trunk allowed vlan all 结果使用show run查看结果： 知识点 链路聚合的配置，实现交换机间的端口聚合，扩展网络宽带，实现链路冗余备份；]]></content>
       <categories>
         <category>Cisco</category>
       </categories>

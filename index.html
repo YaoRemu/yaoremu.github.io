@@ -612,23 +612,18 @@ switchport mode trunk        /...
         </a>
         <div class="abstract-content">
             拓扑图：
+
+相关知识：port-channel具备了逻辑端口的属性，真正成为一个独立的逻辑端口；端口汇聚是一种逻辑上的抽象过程，将一组具备相同属性的端口，抽象成一个逻辑端口；其不仅能增加网络的带宽，还能提供链路的备份功能，以及负载均衡；
+
 配置命令Switch0的配置命令hostname SwitchA        //更名
 int port-channel 1        //端口聚合模式
 exit
 
 int fa0/1
-channel-group 1 mode on    //配置端口聚合模式
+channel-group 1 mode on    //将物理端口加入channel-group
 exit
 int fa0/2
-channel-group 1 mode on
-exit
-int fa0/3
-channel-group 1 mode on
-exit
-
-int port-channel 1
-switchport mode trunk        //将端口聚合配置为trunk模式
-switchpo...
+channel-group 1 ...
         </div>
         <div class="abstract-post-meta">
             <!-- date  -->
@@ -1136,11 +1131,11 @@ exit
         <div class="sidebar-panel-tags">
     <div class="sidebar-tags-name">
     
-        <span class="sidebar-tag-name" data-tags="MarkDown基本语法"><span class="iconfont-archer"></span>MarkDown基本语法</span>
-    
         <span class="sidebar-tag-name" data-tags="Cisco基础"><span class="iconfont-archer"></span>Cisco基础</span>
     
         <span class="sidebar-tag-name" data-tags="安装教程"><span class="iconfont-archer"></span>安装教程</span>
+    
+        <span class="sidebar-tag-name" data-tags="MarkDown基本语法"><span class="iconfont-archer"></span>MarkDown基本语法</span>
     
         <span class="sidebar-tag-name" data-tags="日常"><span class="iconfont-archer"></span>日常</span>
     
@@ -1176,11 +1171,11 @@ exit
         <div class="sidebar-panel-categories">
     <div class="sidebar-categories-name">
     
-        <span class="sidebar-category-name" data-categories="教学"><span class="iconfont-archer"></span>教学</span>
-    
         <span class="sidebar-category-name" data-categories="Cisco"><span class="iconfont-archer"></span>Cisco</span>
     
         <span class="sidebar-category-name" data-categories="安装"><span class="iconfont-archer"></span>安装</span>
+    
+        <span class="sidebar-category-name" data-categories="教学"><span class="iconfont-archer"></span>教学</span>
     
     </div>
     <div class="iconfont-archer sidebar-categories-empty"></div>
