@@ -379,6 +379,48 @@ height:50vh;
     
     
     <article class="index-post">
+        <a class="abstract-title" href="/2019/03/25/路由器RIP动态路由配置/">
+            
+                <span>路由器RIP动态路由配置</span>
+        </a>
+        <div class="abstract-content">
+            拓扑图
+
+相关知识①：动态路由是指路由器能够自动的建立自己的路由表，并且根据实际情况适时的进行调整；
+
+
+相关知识②：RIP(routing infromation protocol)路由信息协议：一种内部网关协议（IGP），是一种动态路由选择协议；RIP协议基于距离矢量算法，使用“跳数(metric)”来衡量到达目标地址的路由协议。（该协议的路由器只关心自己周围的世界，只与自己相连的路由器交换信息，范围在15跳之内）；
+
+
+相关知识③：RIPv1与RIPv2的区别：
+
+配置命令配置三层交换机enable
+configure terminal
+hostname S3560
+划分vlan给...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2019/03/25</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class="abstract-tags">
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Cisco基础">Cisco基础</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
         <a class="abstract-title" href="/2019/03/24/路由器静态路由配置/">
             
                 <span>路由器静态路由配置</span>
@@ -647,49 +689,6 @@ vlan 10                          ...
     
     
     <article class="index-post">
-        <a class="abstract-title" href="/2019/03/18/ciscoTelnet/">
-            
-                <span>No3. Telnet</span>
-        </a>
-        <div class="abstract-content">
-            拓扑图:
-
-配置命令:
-首先开启Vlan:   enable  
-configure terminal  
-interface vlan 1
-no shutdown   
-eg: 
-配置交换机：设置Vlan1 IP及其子网掩码:  interface vlan 1  
-ip address 10.1.1.154 255.255.255.0
-exit
-设置进入系统视图的密码：enable password ****
-设置五条虚拟链接：line vty 0 4
-设置特权等级[级别越高权限越大]：privilege level 1 0 
-设置远程链接(Telnet)的密码：password c...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2019/03/18</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class="abstract-tags">
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Cisco基础">Cisco基础</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
         <a class="abstract-title" href="/2019/03/18/MarkDown基础教学/">
             
                 <span>MarkDown基础教学</span>
@@ -751,45 +750,37 @@ eg:点击跳转百度
     
     
     <article class="index-post">
-        <a class="abstract-title" href="/2019/03/17/MySql服务安装/">
+        <a class="abstract-title" href="/2019/03/18/ciscoTelnet/">
             
-                <span>MySql服务安装</span>
+                <span>No3. Telnet</span>
         </a>
         <div class="abstract-content">
-            安装过程
-先添加安装文件中bin文件夹到用户环境变量(这样才可以使用命令)
+            拓扑图:
 
-  
-
-mysqld –initialize（执行初始化【不添加用户名】/此处注意，如果安装提示出错，可以删除  [data]  文件夹后重试 ）
-
-
-
-mysqld install (安装MySql)
-
-  
-（由于之前已经安装过，所以这里提示 已存在）        
-
-net start mysql(启动MySql服务)
-
-  
-
-完成！  
-
-
-   注意：要正确配置[my.ini]中的文件！！！
-
+配置命令:
+首先开启Vlan:   enable  
+configure terminal  
+interface vlan 1
+no shutdown   
+eg: 
+配置交换机：设置Vlan1 IP及其子网掩码:  interface vlan 1  
+ip address 10.1.1.154 255.255.255.0
+exit
+设置进入系统视图的密码：enable password ****
+设置五条虚拟链接：line vty 0 4
+设置特权等级[级别越高权限越大]：privilege level 1 0 
+设置远程链接(Telnet)的密码：password c...
         </div>
         <div class="abstract-post-meta">
             <!-- date  -->
             <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2019/03/17</span>
+                <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2019/03/18</span>
             </div>
             <!-- tags  -->
             
             <div class="abstract-tags">
     
-        <a class="post-tag" href="javascript:void(0);" data-tags="安装教程">安装教程</a>
+        <a class="post-tag" href="javascript:void(0);" data-tags="Cisco基础">Cisco基础</a>
     
 </div>
             
@@ -797,6 +788,10 @@ net start mysql(启动MySql服务)
     </article>
     
     <!-- paginator  -->
+    
+    <nav class="page-nav">
+        <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">NEXT ></a>
+    </nav>
     
 </main>
             <!-- profile -->
@@ -1049,9 +1044,16 @@ net start mysql(启动MySql服务)
     
     
     
+    
+    
+    
+    
+    
+    
+    
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 10
+        Total : 11
         </div>
         <!-- search  -->
         
@@ -1078,6 +1080,11 @@ net start mysql(启动MySql服务)
     
     <div class="archive-year"> 2019 </div>
     <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">03/25</span><a class="archive-post-title" href="/2019/03/25/路由器RIP动态路由配置/">路由器RIP动态路由配置</a>
+        </li>
     
     
         <li class="archive-post-item">
@@ -1111,12 +1118,12 @@ net start mysql(启动MySql服务)
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">03/18</span><a class="archive-post-title" href="/2019/03/18/ciscoTelnet/">No3. Telnet</a>
+            <span class="archive-post-date">03/18</span><a class="archive-post-title" href="/2019/03/18/MarkDown基础教学/">MarkDown基础教学</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">03/18</span><a class="archive-post-title" href="/2019/03/18/MarkDown基础教学/">MarkDown基础教学</a>
+            <span class="archive-post-date">03/18</span><a class="archive-post-title" href="/2019/03/18/ciscoTelnet/">No3. Telnet</a>
         </li>
     
     
@@ -1129,9 +1136,9 @@ net start mysql(启动MySql服务)
         <div class="sidebar-panel-tags">
     <div class="sidebar-tags-name">
     
-        <span class="sidebar-tag-name" data-tags="Cisco基础"><span class="iconfont-archer"></span>Cisco基础</span>
-    
         <span class="sidebar-tag-name" data-tags="MarkDown基本语法"><span class="iconfont-archer"></span>MarkDown基本语法</span>
+    
+        <span class="sidebar-tag-name" data-tags="Cisco基础"><span class="iconfont-archer"></span>Cisco基础</span>
     
         <span class="sidebar-tag-name" data-tags="安装教程"><span class="iconfont-archer"></span>安装教程</span>
     
@@ -1169,9 +1176,9 @@ net start mysql(启动MySql服务)
         <div class="sidebar-panel-categories">
     <div class="sidebar-categories-name">
     
-        <span class="sidebar-category-name" data-categories="Cisco"><span class="iconfont-archer"></span>Cisco</span>
-    
         <span class="sidebar-category-name" data-categories="教学"><span class="iconfont-archer"></span>教学</span>
+    
+        <span class="sidebar-category-name" data-categories="Cisco"><span class="iconfont-archer"></span>Cisco</span>
     
         <span class="sidebar-category-name" data-categories="安装"><span class="iconfont-archer"></span>安装</span>
     
