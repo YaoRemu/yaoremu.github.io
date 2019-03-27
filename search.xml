@@ -1,6 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[路由器综合路由配置]]></title>
+    <url>%2F2019%2F03%2F27%2F%E8%B7%AF%E7%94%B1%E5%99%A8%E7%BB%BC%E5%90%88%E8%B7%AF%E7%94%B1%E9%85%8D%E7%BD%AE%2F</url>
+    <content type="text"><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title><![CDATA[从零开始学英语 第一话]]></title>
+    <url>%2F2019%2F03%2F26%2F%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E5%AD%A6%E8%8B%B1%E8%AF%AD-%E7%AC%AC%E4%B8%80%E8%AF%9D%2F</url>
+    <content type="text"><![CDATA[选词填空Years ago,doctors often said pain was a normal part of life.In particular,when older patients __ of pain, they were told it was a natural part of aging and they would have to learn to live with it. Time have changed. Today, we take pain __. Indeed, pain is now considered the fifth vital sign, as important as blood pressure, temperature, breathing rate and pulse in __ a person’s well-being. We know that chronic (慢性的) pain can disrupt (扰乱) a person’s life, causing problems that __ from missed work to depression. That’s why a growing number of hospitals now depend upon physicians who __ in pain medicine. Not only do we evaluate the cause of the pain, which can help us treat the pain better, but we also help provide comprehensive therapy for depression and other psychological and social __ related to chronic pain. Such comprehensive therapy often __ the work of social workers, psychiatrists (精神科医生) and psychologists, as well as specialists in pain medicine. This modern __ for pain management has led to a wealth of innovative treatments which are more effective and with fewer side effects than ever before. Decades age, there were only a __ number of drugs available, and many of them caused __ side effects in older people, including dizziness and fatigue. This created a double-edged sword: the medications helped relieve the pain but caused other problems that could be worse than the pain itself.]]></content>
+      <categories>
+        <category>English</category>
+      </categories>
+      <tags>
+        <tag>English CET-4</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[路由器OSPF动态路由配置]]></title>
     <url>%2F2019%2F03%2F26%2F%E8%B7%AF%E7%94%B1%E5%99%A8OSPF%E5%8A%A8%E6%80%81%E8%B7%AF%E7%94%B1%E9%85%8D%E7%BD%AE%2F</url>
     <content type="text"><![CDATA[拓扑图 相关知识①：OSPF(Open Shortest Path First 开放式最短路径优先)是一个内部网关协议(Interior Gateway Protocol，检测IGP)，用在单一自治系统(autonomous system,AS)内决策路由。与RIP相比，OSPF是链路状态协议，而RIP是距离矢量协议。 相关知识②：OSPF开放式最短路径优先协议，是目前网络中应用最广泛的路由协议之一；OSPF路由协议通过向全网扩散本设备的链路状态信息，使网络中每台设备最终同步一个具有全网链路状态的数据库，然后路由器采用SPF算法，以自己为根，计算到达其他网络的最短路径，最终形成全网路由信息； 配置命令配置三层交换机S3569enable configure terminal hostname S3569 划分Vlan给端口vlan 10 exit valn 20 exit interface fa 0/10 switchport access vlan 10 exit interface fa 0/20 switchport access vlan 20 exit 配置Vlaninterface vlan 10 ip address 192.168.1.1 255.255.255.0 no shutdown exit interface vlan 20 ip address 192.168.3.1 255.255.255.0 no shutdown exit end show ip route //查看路由表 配置OSPF动态路由协议configure terminal ip routing //开启三层交换机路由功能 router ospf 1 //启动OSPF进程 network 192.168.1.0 0.0.0.255 area 0 //通告直连网络 network 192.168.3.0 0.0.0.255 area 0 end show ip route 知识点①：OSPF宣告是要加反掩码的； 知识点②：area是自治系统区域的标识，eg：如果全局在一个area中，那么它们属于一个自治系统，也成单区域自治系统； 配置路由器R1enable configure terminal hostname R1 配置端口interface fa0/0 no shutdown ip address 192.168.3.2 255.255.255.0 exit interface serial 0/0/0 no shutdown clock rate 64000 ip address 1952.168.4.1 255.255.255.0 end show ip route 配置OSPF动态路由协议configure terminal router ospf 1 network 192.168.3.0 0.0.0.255 area 0 network 192.168.4.0 0.0.0.255 area 0 end show ip route 配置路由器R2enable configure terminal hostname R2 配置端口interface fa 0/0 no shutdown ip address 192.168.2.1 255.255.255.0 exit interface serial 0/0/0 no shutdown ip address 192.168.4.2 255.255.255.0 end show ip route 配置OSPF动态路由协议configure terminal router ospf 1 network 192.168.2.0 0.0.0.255 area 0 network 192.168.4.0 0.0.0.255 area 0 end show ip route 实验结果验证 PC1、PC2 主机之间可以互相通信；eg:]]></content>
