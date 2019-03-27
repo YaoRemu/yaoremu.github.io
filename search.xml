@@ -3,7 +3,13 @@
   <entry>
     <title><![CDATA[路由器综合路由配置]]></title>
     <url>%2F2019%2F03%2F27%2F%E8%B7%AF%E7%94%B1%E5%99%A8%E7%BB%BC%E5%90%88%E8%B7%AF%E7%94%B1%E9%85%8D%E7%BD%AE%2F</url>
-    <content type="text"><![CDATA[]]></content>
+    <content type="text"><![CDATA[拓扑图 相关知识①：运行多个路由协议进程，系统软件提供了路由信息从一个路由进程重新分布到另一个路由进程的功能；路由的相互重分布可以再所有的IP路由协议之间进行。相关命令：redistribute protocol … 相关知识②：路由重分发，可在同一网内使用多种路由协议，为了实现多种路由协议的协同工作，路由器可以使用路由重分发(route redistribution) 将学习到的一种路由协议的路由通过另一种路由协议广播出去，这样网络的所有部分就可以互通了。为了实现重分发，路由器必须同时运行多种路由协议，这样每种路由协议才可以取路由表中的所有或部分其他协议的路由来进行广播； 配置命令配置三层路由器Switch0enable configure terminal 开启Vlanvlan 2 exit 划分Vlan给端口fa0/10interface fa0/10 switchport access vlan 2 exit 注意：由于vlan1默认是划分给所有端口的，所以可以省略划分vlan1 配置Vlaninterface vlan 1 ip address 192.168.1.1 255.255.255.0 no shutdown exit interface vlan 2 ip address 192.168.2.1 255.255.255.0 no shutdown exit 查看Vlan信息end show interface vlan 1 在路由器上启动rip协议configure terminal ip routing //开启三层交换机路由功能 router rip //配置RIP协议 network 192.168.1.0 //宣告本地路由和相连路由之间的网段 network 192.168.2.0 version 2 //设置RIP版本 配置路由器Router0enable configure terminal hostname R1 配置端口interface fa0/0 ip address 192.168.2.2 255.255.255.0 no shutdown exit interface fa0/1 ip address 192.168.3.1 255.255.255.0 no shutdown exit 在路由器启动rip协议router rip network 192.168.2.0 version 2 在路由器启动ospf协议router ospf 1 //配置OSPF协议 network 192.168.3.0 0.0.0.255 area 0 //宣告直连网络 配置路由器Router1enable configure terminal hostname R2 配置端口interface fa0/1 ip address 192.168.3.2 255.255.255.0 no shutdown exit interface fa0/0 ip address 192.168.4.1 255.255.255.0 no shutdown exit 在路由器启动ospf协议router ospf 1 network 192.168.3.0 0.0.0.255 area 0 network 192.168.4.0 0.0.0.255 area 0 查看路由表end show ip route 实验结果使用Router0（中间的路由器）测试与两台PC是否能够通信ping 192.168.1.2 (success) ping 192.168.4.2 (success) 尝试PC0与PC1通信 （此时无法通信） 配置Router0（中间的路由器）configure terminal 路由重分布router rip redistribute ospf 1 //ospf路由重发布 exit router ospf 1 redistribute rip subnets //rip路由重发布 end 注意： 本例在Packet Tracer 5.2上能够正常运行，但是在Packet Tracer 5.3 上的Switch0不能学习到192.168.3.0/192.168.4.0的路由信息，所以需要给Switch0指定静态路由: ip route 0.0.0.0 0.0.0.0 192.168.2.2 再次Router1查看路由表 （查看路由重发布后该路由器学习到的路由） show ip route 再次尝试PC0与PC1通信 （成功通信）]]></content>
+      <categories>
+        <category>Cisco</category>
+      </categories>
+      <tags>
+        <tag>Cisco基础</tag>
+      </tags>
   </entry>
   <entry>
     <title><![CDATA[从零开始学英语 第一话]]></title>
