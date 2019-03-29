@@ -335,6 +335,43 @@
     
     
     <article class="index-post">
+        <a class="abstract-title" href="/2019/03/19/cisco多交换机上配置基于端口的Vlan隔离办公网络/">
+            
+                <span>cisco多交换机上配置基于端口的Vlan隔离办公网络</span>
+        </a>
+        <div class="abstract-content">
+            拓扑图
+配置命令配置左边的交换机enable                                //特权模式
+configure terminal                    //全局模式
+
+interface fa 0/1                    
+switchport mode trunk                //配置Trunk
+switchport trunk allowed vlan all    //trunk允许所有Vlan流量通行（默认trunk就是允许所有）
+
+vlan 10                          ...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2019/03/19</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class="abstract-tags">
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Cisco基础">Cisco基础</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
         <a class="abstract-title" href="/2019/03/18/ciscoTelnet/">
             
                 <span>No3. Telnet</span>
@@ -585,9 +622,16 @@ exit
     
     
     
+    
+    
+    
+    
+    
+    
+    
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 15
+        Total : 16
         </div>
         <!-- search  -->
         
@@ -614,6 +658,11 @@ exit
     
     <div class="archive-year"> 2019 </div>
     <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">03/29</span><a class="archive-post-title" href="/2019/03/29/扩展IP访问控制列表配置/">扩展IP访问控制列表配置</a>
+        </li>
     
     
         <li class="archive-post-item">
@@ -690,13 +739,13 @@ exit
         <div class="sidebar-panel-tags">
     <div class="sidebar-tags-name">
     
-        <span class="sidebar-tag-name" data-tags="安装教程"><span class="iconfont-archer"></span>安装教程</span>
-    
         <span class="sidebar-tag-name" data-tags="MarkDown基本语法"><span class="iconfont-archer"></span>MarkDown基本语法</span>
     
-        <span class="sidebar-tag-name" data-tags="Cisco笔记"><span class="iconfont-archer"></span>Cisco笔记</span>
-    
         <span class="sidebar-tag-name" data-tags="Cisco基础"><span class="iconfont-archer"></span>Cisco基础</span>
+    
+        <span class="sidebar-tag-name" data-tags="安装教程"><span class="iconfont-archer"></span>安装教程</span>
+    
+        <span class="sidebar-tag-name" data-tags="Cisco笔记"><span class="iconfont-archer"></span>Cisco笔记</span>
     
         <span class="sidebar-tag-name" data-tags="日常"><span class="iconfont-archer"></span>日常</span>
     
@@ -732,11 +781,11 @@ exit
         <div class="sidebar-panel-categories">
     <div class="sidebar-categories-name">
     
-        <span class="sidebar-category-name" data-categories="安装"><span class="iconfont-archer"></span>安装</span>
-    
         <span class="sidebar-category-name" data-categories="教学"><span class="iconfont-archer"></span>教学</span>
     
         <span class="sidebar-category-name" data-categories="Cisco"><span class="iconfont-archer"></span>Cisco</span>
+    
+        <span class="sidebar-category-name" data-categories="安装"><span class="iconfont-archer"></span>安装</span>
     
     </div>
     <div class="iconfont-archer sidebar-categories-empty"></div>

@@ -379,6 +379,47 @@ height:50vh;
     
     
     <article class="index-post">
+        <a class="abstract-title" href="/2019/03/29/扩展IP访问控制列表配置/">
+            
+                <span>扩展IP访问控制列表配置</span>
+        </a>
+        <div class="abstract-content">
+            拓扑图
+
+知识点①：访问控制列表定义的典型规则主要有以下：源地址，目标地址，上层协议，时间区域；扩展IP访问列表（编号100-199、2000、2699）使用以上四种组合来进行转发或阻断分组；可以根据数据包的源IP、目的IP、源接口、目的接口、协议来定义规则，进行数据包的过滤。
+
+
+知识点②：扩展IP访问列表的配置包括以下两部分：①定义扩展IP访问列表；②将扩展IP访问列表应用于特定接口上；
+
+配置命令配置Router0端口enable
+configure terminal
+hostname R0
+
+interface fa0/0
+ip address 172.16.1.1 255.25...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2019/03/29</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class="abstract-tags">
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Cisco基础">Cisco基础</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
         <a class="abstract-title" href="/2019/03/28/标准-IP-访问控制列表配置/">
             
                 <span>标准 IP 访问控制列表配置</span>
@@ -693,52 +734,6 @@ end
         </div>
     </article>
     
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/2019/03/21/利用三层交换机实现Vlan间路由/">
-            
-                <span>利用三层交换机实现Vlan间路由</span>
-        </a>
-        <div class="abstract-content">
-            拓扑图
-配置命令配置二层交换机enable            //特权模式
-configure terminal        //全局配置模式
-
-vlan 2        //开启vlan
-exit
-vlan 3
-exit
-
-interface fa0/2        
-switchport access vlan 2        //配置端口在access模式，允许vlan2通过
-exit
-interface fa0/3
-switchport access vlan 3
-exit
-
-interface fa0/1
-switchport mode trunk        /...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2019/03/21</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class="abstract-tags">
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Cisco基础">Cisco基础</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
     <!-- paginator  -->
     
     <nav class="page-nav">
@@ -1031,9 +1026,16 @@ switchport mode trunk        /...
     
     
     
+    
+    
+    
+    
+    
+    
+    
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 15
+        Total : 16
         </div>
         <!-- search  -->
         
@@ -1060,6 +1062,11 @@ switchport mode trunk        /...
     
     <div class="archive-year"> 2019 </div>
     <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">03/29</span><a class="archive-post-title" href="/2019/03/29/扩展IP访问控制列表配置/">扩展IP访问控制列表配置</a>
+        </li>
     
     
         <li class="archive-post-item">
@@ -1136,13 +1143,13 @@ switchport mode trunk        /...
         <div class="sidebar-panel-tags">
     <div class="sidebar-tags-name">
     
-        <span class="sidebar-tag-name" data-tags="安装教程"><span class="iconfont-archer"></span>安装教程</span>
-    
         <span class="sidebar-tag-name" data-tags="MarkDown基本语法"><span class="iconfont-archer"></span>MarkDown基本语法</span>
     
-        <span class="sidebar-tag-name" data-tags="Cisco笔记"><span class="iconfont-archer"></span>Cisco笔记</span>
-    
         <span class="sidebar-tag-name" data-tags="Cisco基础"><span class="iconfont-archer"></span>Cisco基础</span>
+    
+        <span class="sidebar-tag-name" data-tags="安装教程"><span class="iconfont-archer"></span>安装教程</span>
+    
+        <span class="sidebar-tag-name" data-tags="Cisco笔记"><span class="iconfont-archer"></span>Cisco笔记</span>
     
         <span class="sidebar-tag-name" data-tags="日常"><span class="iconfont-archer"></span>日常</span>
     
@@ -1178,11 +1185,11 @@ switchport mode trunk        /...
         <div class="sidebar-panel-categories">
     <div class="sidebar-categories-name">
     
-        <span class="sidebar-category-name" data-categories="安装"><span class="iconfont-archer"></span>安装</span>
-    
         <span class="sidebar-category-name" data-categories="教学"><span class="iconfont-archer"></span>教学</span>
     
         <span class="sidebar-category-name" data-categories="Cisco"><span class="iconfont-archer"></span>Cisco</span>
+    
+        <span class="sidebar-category-name" data-categories="安装"><span class="iconfont-archer"></span>安装</span>
     
     </div>
     <div class="iconfont-archer sidebar-categories-empty"></div>

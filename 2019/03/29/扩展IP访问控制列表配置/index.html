@@ -11,7 +11,7 @@
     <meta name="description" content="欢迎来到YaoRemu的博客">
     <meta http-equiv="Cache-control" content="no-cache">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>cisco多交换机上配置基于端口的Vlan隔离办公网络 · YaoRemu'Blog</title>
+    <title>扩展IP访问控制列表配置 · YaoRemu'Blog</title>
     <style type="text/css">
     @font-face {
         font-family: 'Oswald-Regular';
@@ -206,7 +206,7 @@
                 <a href="/">Welcome to YaoRemu'Blog</a>
             </div>
             <div class="post-title">
-                <a href="#" class="post-name">cisco多交换机上配置基于端口的Vlan隔离办公网络</a>
+                <a href="#" class="post-name">扩展IP访问控制列表配置</a>
             </div>
     </div>
     
@@ -236,7 +236,7 @@ height:50vh;
         <h1 class="intro-title">
             <!-- 主页  -->
             
-            cisco多交换机上配置基于端口的Vlan隔离办公网络
+            扩展IP访问控制列表配置
             <!-- 404 -->
             
         </h1>
@@ -261,12 +261,12 @@ height:50vh;
                 
                 
                     <div class="post-intro-read">
-                        <span>字数统计: <span class="post-count word-count">239</span>阅读时长: <span class="post-count reading-time">1 min</span></span>
+                        <span>字数统计: <span class="post-count word-count">623</span>阅读时长: <span class="post-count reading-time">2 min</span></span>
                     </div>
                 
                 <div class="post-intro-meta">
                     <span class="post-intro-calander iconfont-archer"></span>
-                    <span class="post-intro-time">2019/03/19</span>
+                    <span class="post-intro-time">2019/03/29</span>
                     
                     <span id="busuanzi_container_page_pv" class="busuanzi-pv">
                         <span class="iconfont-archer"></span>
@@ -390,56 +390,86 @@ height:50vh;
         <div class="container container-unloaded">
             <main class="main post-page">
     <article class="article-entry">
-        <meta name="generator" content="Hexo 3.8.0"><h1 id="拓扑图"><a href="#拓扑图" class="headerlink" title="拓扑图"></a>拓扑图</h1><p><img src="https://i.loli.net/2019/03/19/5c90c782046ec.png" alt></p>
-<h1 id="配置命令"><a href="#配置命令" class="headerlink" title="配置命令"></a>配置命令</h1><h2 id="配置左边的交换机"><a href="#配置左边的交换机" class="headerlink" title="配置左边的交换机"></a>配置左边的交换机</h2><pre><code>enable                                <font color="#abcfe4">//特权模式</font>
-configure terminal                    <font color="#abcfe4">//全局模式</font>
-
-interface fa 0/1                    
-switchport mode trunk                <font color="#abcfe4">//配置Trunk</font>
-switchport trunk allowed vlan all    <font color="#abcfe4">//trunk允许所有Vlan流量通行（默认trunk就是允许所有）</font>
-
-vlan 10                            <font color="#abcfe4">//开启vlan</font>
-name RD1                            <font color="#abcfe4">//命名</font>
-vlan 20
-name RD2
-
-interface range fa0/9-fa0/16        <font color="#abcfe4">//配置一组接口</font>
-switchport access vlan 10            <font color="#abcfe4">//把该端口划分给Vlan</font>
-exit
-
-interface range f0/17-fa0/24
-switchport access vlan 20
-exit
-</code></pre><h2 id="配置右边的交换机"><a href="#配置右边的交换机" class="headerlink" title="配置右边的交换机"></a>配置右边的交换机</h2><pre><code>enable 
+        <meta name="generator" content="Hexo 3.8.0"><h1 id="拓扑图"><a href="#拓扑图" class="headerlink" title="拓扑图"></a>拓扑图</h1><p><img src="http://ww1.sinaimg.cn/large/8c0b2220ly1g1jtwv67knj20ho09w0sx.jpg" alt></p>
+<blockquote>
+<p>知识点①：访问控制列表定义的典型规则主要有以下：源地址，目标地址，上层协议，时间区域；<br>扩展IP访问列表（编号100-199、2000、2699）使用以上四种组合来进行转发或阻断分组；可以根据数据包的源IP、目的IP、源接口、目的接口、协议来定义规则，进行数据包的过滤。</p>
+</blockquote>
+<blockquote>
+<p>知识点②：扩展IP访问列表的配置包括以下两部分：①定义扩展IP访问列表；②将扩展IP访问列表应用于特定接口上；</p>
+</blockquote>
+<h1 id="配置命令"><a href="#配置命令" class="headerlink" title="配置命令"></a>配置命令</h1><h2 id="配置Router0端口"><a href="#配置Router0端口" class="headerlink" title="配置Router0端口"></a>配置Router0端口</h2><pre><code>enable
 configure terminal
+hostname R0
+
+interface fa0/0
+ip address 172.16.1.1 255.255.255.0
+no shutdown
+exit
 
 interface fa0/1
-switchport mode trunk
-switchport trunk allowed vlan all
+ip address 172.16.2.1 255.255.255.0
+no shutdown
+exit
+</code></pre><h2 id="配置Router1端口"><a href="#配置Router1端口" class="headerlink" title="配置Router1端口"></a>配置Router1端口</h2><pre><code>enable
+configure terminal
+hostname R1
 
-vlan 10
-name RD1
-vlan 20
-name RD2
-
-interface range fa0/9-fa0/16
-switchport access vlan 10
+interface fa0/1
+ip address 172.16.2.2 255.255.255.0
+no shutdown
 exit
 
-interface range fa0/17-fa0/24
-switchport access vlan 20
+interface s0/0/0
+ip address 172.16.3.1 255.255.255.0
+no shutdown
+clock rate 64000
+</code></pre><h2 id="配置Router2端口"><a href="#配置Router2端口" class="headerlink" title="配置Router2端口"></a>配置Router2端口</h2><pre><code>enable
+configure terminal
+hostname R2
+
+interface s0/0/0
+ip address 172.16.3.2 255.255.255.0
+no shutdown
 exit
-</code></pre><p><strong>注意：</strong> access为链接电脑的端口或者傻瓜交换机（也就是同一Vlan的交换机）；trunk则肯定是连接交换机的（属于多vlan的交换机）;</p>
-<h1 id="测试结果"><a href="#测试结果" class="headerlink" title="测试结果"></a>测试结果</h1><p>结果：PC1与PC3、PC2与PC4之间能相互ping通，除此以外的任意两台电脑上ping不通的；</p>
+
+interface fa0/0
+ip address 172.16.4.1 255.255.255.0
+no shutdown
+exit
+</code></pre><h2 id="配置Router0静态路由"><a href="#配置Router0静态路由" class="headerlink" title="配置Router0静态路由"></a>配置Router0静态路由</h2><pre><code>ip route 0.0.0.0 0.0.0.0 172.16.2.2
+</code></pre><h2 id="配置Router2静态路由"><a href="#配置Router2静态路由" class="headerlink" title="配置Router2静态路由"></a>配置Router2静态路由</h2><pre><code>ip route 0.0.0.0 0.0.0.0 172.16.3.1
+</code></pre><h2 id="配置Router1静态路由"><a href="#配置Router1静态路由" class="headerlink" title="配置Router1静态路由"></a>配置Router1静态路由</h2><pre><code>ip router 172.16.1.0 255.255.255.0 172.16.2.1
+ip router 172.16.4.0 255.255.255.0 172.16.3.2
+
+end 
+show ip route        <font color="#abcfe4">//查看路由表</font>
+</code></pre><h2 id="实验PC0尝试与服务器通信"><a href="#实验PC0尝试与服务器通信" class="headerlink" title="实验PC0尝试与服务器通信"></a>实验PC0尝试与服务器通信</h2><h3 id="ping-172-16-4-2"><a href="#ping-172-16-4-2" class="headerlink" title="ping 172.16.4.2"></a>ping 172.16.4.2</h3><p><strong>（此时成功通信）</strong><br><img src="http://ww1.sinaimg.cn/large/8c0b2220ly1g1juhap18jj20cq06f74b.jpg" alt></p>
+<h3 id="使用网页尝试通信"><a href="#使用网页尝试通信" class="headerlink" title="使用网页尝试通信"></a>使用网页尝试通信</h3><p><img src="http://ww1.sinaimg.cn/large/8c0b2220ly1g1juhapdqdj20kc0afaa5.jpg" alt></p>
+<h2 id="Router1上配置扩展IP访问控制列表"><a href="#Router1上配置扩展IP访问控制列表" class="headerlink" title="Router1上配置扩展IP访问控制列表"></a>Router1上配置扩展IP访问控制列表</h2><pre><code>configure terminal
+</code></pre><h3 id="允许源主机地址使用TCP协议通过出站端口访问目标地址WEB服务器"><a href="#允许源主机地址使用TCP协议通过出站端口访问目标地址WEB服务器" class="headerlink" title="允许源主机地址使用TCP协议通过出站端口访问目标地址WEB服务器"></a>允许源主机地址使用TCP协议通过出站端口访问目标地址WEB服务器</h3><pre><code>access-list 100 permit tcp host 172.16.1.2 host 172.16.4.2 eq www
+</code></pre><h3 id="禁止源主机地址使用icmp协议通过出站端口到达目标主机地址WEB服务器"><a href="#禁止源主机地址使用icmp协议通过出站端口到达目标主机地址WEB服务器" class="headerlink" title="禁止源主机地址使用icmp协议通过出站端口到达目标主机地址WEB服务器"></a>禁止源主机地址使用icmp协议通过出站端口到达目标主机地址WEB服务器</h3><pre><code>access-list 100 deny icmp host 172.16.1.2 host 172.16.4.2 echo
+</code></pre><blockquote>
+<p>知识点①：echo表示：传递echo报文</p>
+</blockquote>
+<blockquote>
+<p>知识点②：ICMP协议（Internet Control Message Protocol Internet控制报文协议）：TCP/IP协议簇的一个子协议，用在IP主机，路由器之间传递控制消息；<br>控制消息：指网络通不通，主机是否可达、路由是否可用等网络本身的消息；</p>
+</blockquote>
+<h3 id="将ACL应用到端口"><a href="#将ACL应用到端口" class="headerlink" title="将ACL应用到端口"></a>将ACL应用到端口</h3><pre><code>interface s0/0/0        
+ip access-group 100 out
+end
+</code></pre><h1 id="实验结果"><a href="#实验结果" class="headerlink" title="实验结果"></a>实验结果</h1><h2 id="ping-172-16-4-2-1"><a href="#ping-172-16-4-2-1" class="headerlink" title="ping 172.16.4.2"></a>ping 172.16.4.2</h2><p><strong>（此时无法通信）</strong></p>
+<p><img src="http://ww1.sinaimg.cn/large/8c0b2220ly1g1juoby3opj20d805h3yh.jpg" alt></p>
+<h2 id="使用网页尝试通信-1"><a href="#使用网页尝试通信-1" class="headerlink" title="使用网页尝试通信"></a>使用网页尝试通信</h2><p><strong>（此时成功通信）</strong></p>
+<p><img src="http://ww1.sinaimg.cn/large/8c0b2220ly1g1juoc071ij20hv09smx8.jpg" alt></p>
 
     </article>
     <!-- license  -->
     
         <div class="license-wrapper">
             <p>原文作者：<a href="http://yoursite.com">YaoRemu</a>
-            </p><p>原文链接：<a href="http://yoursite.com/2019/03/19/cisco多交换机上配置基于端口的Vlan隔离办公网络/">http://yoursite.com/2019/03/19/cisco多交换机上配置基于端口的Vlan隔离办公网络/</a>
-            </p><p>发表日期：<a href="http://yoursite.com/2019/03/19/cisco多交换机上配置基于端口的Vlan隔离办公网络/">March 19th 2019, 6:07:32 pm</a>
-            </p><p>更新日期：<a href="http://yoursite.com/2019/03/19/cisco多交换机上配置基于端口的Vlan隔离办公网络/">March 19th 2019, 7:56:22 pm</a>
+            </p><p>原文链接：<a href="http://yoursite.com/2019/03/29/扩展IP访问控制列表配置/">http://yoursite.com/2019/03/29/扩展IP访问控制列表配置/</a>
+            </p><p>发表日期：<a href="http://yoursite.com/2019/03/29/扩展IP访问控制列表配置/">March 29th 2019, 6:14:23 pm</a>
+            </p><p>更新日期：<a href="http://yoursite.com/2019/03/29/扩展IP访问控制列表配置/">March 29th 2019, 7:19:35 pm</a>
             </p><p>版权声明：本文采用<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可</p>
         </div>
     
@@ -447,17 +477,12 @@ exit
     <ul class="post-paginator">
         <li class="next">
             
-                <div class="nextSlogan">Next Post</div>
-                <a href="/2019/03/20/cisco多交换机之间的端口聚合链路/" title="cisco多交换机之间的端口聚合链路">
-                    <div class="nextTitle">cisco多交换机之间的端口聚合链路</div>
-                </a>
-            
         </li>
         <li class="previous">
             
                 <div class="prevSlogan">Previous Post</div>
-                <a href="/2019/03/18/MarkDown基础教学/" title="MarkDown基础教学">
-                    <div class="prevTitle">MarkDown基础教学</div>
+                <a href="/2019/03/28/标准-IP-访问控制列表配置/" title="标准 IP 访问控制列表配置">
+                    <div class="prevTitle">标准 IP 访问控制列表配置</div>
                 </a>
             
         </li>
@@ -584,7 +609,7 @@ exit
         <div class="toc-catalog">
             <span class="iconfont-archer catalog-icon"></span><span>CATALOG</span>
         </div>
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#拓扑图"><span class="toc-number">1.</span> <span class="toc-text">拓扑图</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#配置命令"><span class="toc-number">2.</span> <span class="toc-text">配置命令</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#配置左边的交换机"><span class="toc-number">2.1.</span> <span class="toc-text">配置左边的交换机</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#配置右边的交换机"><span class="toc-number">2.2.</span> <span class="toc-text">配置右边的交换机</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#测试结果"><span class="toc-number">3.</span> <span class="toc-text">测试结果</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#拓扑图"><span class="toc-number">1.</span> <span class="toc-text">拓扑图</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#配置命令"><span class="toc-number">2.</span> <span class="toc-text">配置命令</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#配置Router0端口"><span class="toc-number">2.1.</span> <span class="toc-text">配置Router0端口</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#配置Router1端口"><span class="toc-number">2.2.</span> <span class="toc-text">配置Router1端口</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#配置Router2端口"><span class="toc-number">2.3.</span> <span class="toc-text">配置Router2端口</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#配置Router0静态路由"><span class="toc-number">2.4.</span> <span class="toc-text">配置Router0静态路由</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#配置Router2静态路由"><span class="toc-number">2.5.</span> <span class="toc-text">配置Router2静态路由</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#配置Router1静态路由"><span class="toc-number">2.6.</span> <span class="toc-text">配置Router1静态路由</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#实验PC0尝试与服务器通信"><span class="toc-number">2.7.</span> <span class="toc-text">实验PC0尝试与服务器通信</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#ping-172-16-4-2"><span class="toc-number">2.7.1.</span> <span class="toc-text">ping 172.16.4.2</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#使用网页尝试通信"><span class="toc-number">2.7.2.</span> <span class="toc-text">使用网页尝试通信</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Router1上配置扩展IP访问控制列表"><span class="toc-number">2.8.</span> <span class="toc-text">Router1上配置扩展IP访问控制列表</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#允许源主机地址使用TCP协议通过出站端口访问目标地址WEB服务器"><span class="toc-number">2.8.1.</span> <span class="toc-text">允许源主机地址使用TCP协议通过出站端口访问目标地址WEB服务器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#禁止源主机地址使用icmp协议通过出站端口到达目标主机地址WEB服务器"><span class="toc-number">2.8.2.</span> <span class="toc-text">禁止源主机地址使用icmp协议通过出站端口到达目标主机地址WEB服务器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#将ACL应用到端口"><span class="toc-number">2.8.3.</span> <span class="toc-text">将ACL应用到端口</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#实验结果"><span class="toc-number">3.</span> <span class="toc-text">实验结果</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#ping-172-16-4-2-1"><span class="toc-number">3.1.</span> <span class="toc-text">ping 172.16.4.2</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#使用网页尝试通信-1"><span class="toc-number">3.2.</span> <span class="toc-text">使用网页尝试通信</span></a></li></ol></li></ol>
     </div>
     
     <div class="back-top iconfont-archer"></div>

@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[扩展IP访问控制列表配置]]></title>
+    <url>%2F2019%2F03%2F29%2F%E6%89%A9%E5%B1%95IP%E8%AE%BF%E9%97%AE%E6%8E%A7%E5%88%B6%E5%88%97%E8%A1%A8%E9%85%8D%E7%BD%AE%2F</url>
+    <content type="text"><![CDATA[拓扑图 知识点①：访问控制列表定义的典型规则主要有以下：源地址，目标地址，上层协议，时间区域；扩展IP访问列表（编号100-199、2000、2699）使用以上四种组合来进行转发或阻断分组；可以根据数据包的源IP、目的IP、源接口、目的接口、协议来定义规则，进行数据包的过滤。 知识点②：扩展IP访问列表的配置包括以下两部分：①定义扩展IP访问列表；②将扩展IP访问列表应用于特定接口上； 配置命令配置Router0端口enable configure terminal hostname R0 interface fa0/0 ip address 172.16.1.1 255.255.255.0 no shutdown exit interface fa0/1 ip address 172.16.2.1 255.255.255.0 no shutdown exit 配置Router1端口enable configure terminal hostname R1 interface fa0/1 ip address 172.16.2.2 255.255.255.0 no shutdown exit interface s0/0/0 ip address 172.16.3.1 255.255.255.0 no shutdown clock rate 64000 配置Router2端口enable configure terminal hostname R2 interface s0/0/0 ip address 172.16.3.2 255.255.255.0 no shutdown exit interface fa0/0 ip address 172.16.4.1 255.255.255.0 no shutdown exit 配置Router0静态路由ip route 0.0.0.0 0.0.0.0 172.16.2.2 配置Router2静态路由ip route 0.0.0.0 0.0.0.0 172.16.3.1 配置Router1静态路由ip router 172.16.1.0 255.255.255.0 172.16.2.1 ip router 172.16.4.0 255.255.255.0 172.16.3.2 end show ip route //查看路由表 实验PC0尝试与服务器通信ping 172.16.4.2（此时成功通信） 使用网页尝试通信 Router1上配置扩展IP访问控制列表configure terminal 允许源主机地址使用TCP协议通过出站端口访问目标地址WEB服务器access-list 100 permit tcp host 172.16.1.2 host 172.16.4.2 eq www 禁止源主机地址使用icmp协议通过出站端口到达目标主机地址WEB服务器access-list 100 deny icmp host 172.16.1.2 host 172.16.4.2 echo 知识点①：echo表示：传递echo报文 知识点②：ICMP协议（Internet Control Message Protocol Internet控制报文协议）：TCP/IP协议簇的一个子协议，用在IP主机，路由器之间传递控制消息；控制消息：指网络通不通，主机是否可达、路由是否可用等网络本身的消息； 将ACL应用到端口interface s0/0/0 ip access-group 100 out end 实验结果ping 172.16.4.2（此时无法通信） 使用网页尝试通信（此时成功通信）]]></content>
+      <categories>
+        <category>Cisco</category>
+      </categories>
+      <tags>
+        <tag>Cisco基础</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[标准 IP 访问控制列表配置]]></title>
     <url>%2F2019%2F03%2F28%2F%E6%A0%87%E5%87%86-IP-%E8%AE%BF%E9%97%AE%E6%8E%A7%E5%88%B6%E5%88%97%E8%A1%A8%E9%85%8D%E7%BD%AE%2F</url>
     <content type="text"><![CDATA[拓扑图 相关知识①：ACLs 的全称为 接入控制列表(Access Control Lists),也称访问控制列表(Access Lists),俗称防火墙，在有的文档中还称包过滤。 相关知识②：ACLs 通过定义一些规则对网络设备接口上的数据报文进行控制；运行通过或者丢失，从而提高网络可管理型和安全性； 相关知识③：IP ACL分为两种：标准IP访问列表和扩展IP访问列表，编号范围为 1~99、1300~1999、100~199、2000~2699;标准IP访问控制列表：根据数据包的源地址定义规则，进行数据包的过滤；扩展IP访问控制列表：根据数据包的源IP、目的IP、源接口、目的端口、协议来定义规则，进行数据包的过滤； 相关知识④：IP ACL 基于接口进行规则的应用，分为：入栈应用和出栈应用； 配置命令配置路由器0enable configure terminal hostname R0 配置端口interface fa 0/0 ip address 172.16.1.1 255.255.255.0 no shutdown exit interface fa0/1 ip address 172.16.2.1 255.255.255.0 no shutdown exit interface s0/0/0 ip address 172.16.3.1 255.255.255.0 no shutdown clock rate 64000 exit 配置路由器1enable configure terminal hostname R1 配置端口interface s0/0/0 ip address 172.16.3.2 255.255.255.0 no shutdown exit interface f0/0 ip address 172.16.4.1 255.255.255.0 no shutdown exit 配置路由器0的静态路由配置静态路由ip route 172.16.4.0 255.255.255.0 172.16.3.2 配置路由器1的静态路由配置静态路由ip route 0.0.0.0 0.0.0.0 172.16.3.1 查看路由表end show ip route PC0、PC1尝试能否与PC2通信PC0: （此时成功通信） PC1: （此时成功通信） 在路由器0中配置访问控制列表建立ACL命名为 5ijsjip access-list standard 5ijsj permit 172.16.1.0 0.0.0.255 //允许网段通过 deny 172.16.2.0 0.0.0.255 //禁止网段通过 interface s0/0/0 ip access-group 5ijsj out //将ACL应用到相关端口 end 知识点：in表示过滤入口的包；out表示过滤出口的包； 实验结果再次PC0、PC1尝试能否与PC2通信PC0: （由于ACL允许 172.16.1.0 网段通过，所以PC0成功通信） PC1: （由于ACL禁止 172.16.1.0 网段通过，所以PC1通信失败）]]></content>
