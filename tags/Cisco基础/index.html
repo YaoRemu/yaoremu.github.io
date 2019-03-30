@@ -335,6 +335,40 @@
     
     
     <article class="index-post">
+        <a class="abstract-title" href="/2019/03/30/网络地址转换NAT配置/">
+            
+                <span>网络地址转换NAT配置</span>
+        </a>
+        <div class="abstract-content">
+            拓扑图
+
+相关知识①：网络地址转换NAT（Network Address Translation）,被广泛应用于各种类型Internet接入方式和各种类型的网络中。原因很简单，NAT不仅完美地解决了IP地址不足的问题，而且还能够有效地避免来自网络外部的攻击，隐藏并保护网络内部的计算机。
+
+
+相关知识②：默认情况下，内部IP地址是无法被路由到外网的，内部主机10.1.1.1要与外部Internet通信，IP包到达NAT路由器时，IP包头的源地址10.1.1.1被替换成一个合法的外网IP，并在NAT转发表中保存这条记录。 当外部主机发送一个应答到内网时，NAT路由器收到后，查看当前NAT转换...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2019/03/30</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class="abstract-tags">
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Cisco基础">Cisco基础</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
         <a class="abstract-title" href="/2019/03/29/扩展IP访问控制列表配置/">
             
                 <span>扩展IP访问控制列表配置</span>
@@ -704,47 +738,6 @@ switchport mode trunk        /...
         </div>
     </article>
     
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/2019/03/20/cisco多交换机之间的端口聚合链路/">
-            
-                <span>cisco多交换机之间的端口聚合链路</span>
-        </a>
-        <div class="abstract-content">
-            拓扑图：
-
-相关知识：port-channel具备了逻辑端口的属性，真正成为一个独立的逻辑端口；端口汇聚是一种逻辑上的抽象过程，将一组具备相同属性的端口，抽象成一个逻辑端口；其不仅能增加网络的带宽，还能提供链路的备份功能，以及负载均衡；
-
-配置命令Switch0的配置命令hostname SwitchA        //更名
-int port-channel 1        //端口聚合模式
-exit
-
-int fa0/1
-channel-group 1 mode on    //将物理端口加入channel-group
-exit
-int fa0/2
-channel-group 1 ...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2019/03/20</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class="abstract-tags">
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Cisco基础">Cisco基础</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
     <!-- paginator  -->
     
     <nav class="page-nav">
@@ -965,9 +958,16 @@ channel-group 1 ...
     
     
     
+    
+    
+    
+    
+    
+    
+    
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 16
+        Total : 17
         </div>
         <!-- search  -->
         
@@ -994,6 +994,11 @@ channel-group 1 ...
     
     <div class="archive-year"> 2019 </div>
     <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">03/30</span><a class="archive-post-title" href="/2019/03/30/网络地址转换NAT配置/">网络地址转换NAT配置</a>
+        </li>
     
     
         <li class="archive-post-item">
@@ -1077,9 +1082,9 @@ channel-group 1 ...
     
         <span class="sidebar-tag-name" data-tags="MarkDown基本语法"><span class="iconfont-archer"></span>MarkDown基本语法</span>
     
-        <span class="sidebar-tag-name" data-tags="Cisco基础"><span class="iconfont-archer"></span>Cisco基础</span>
-    
         <span class="sidebar-tag-name" data-tags="安装教程"><span class="iconfont-archer"></span>安装教程</span>
+    
+        <span class="sidebar-tag-name" data-tags="Cisco基础"><span class="iconfont-archer"></span>Cisco基础</span>
     
         <span class="sidebar-tag-name" data-tags="Cisco笔记"><span class="iconfont-archer"></span>Cisco笔记</span>
     
@@ -1119,9 +1124,9 @@ channel-group 1 ...
     
         <span class="sidebar-category-name" data-categories="教学"><span class="iconfont-archer"></span>教学</span>
     
-        <span class="sidebar-category-name" data-categories="Cisco"><span class="iconfont-archer"></span>Cisco</span>
-    
         <span class="sidebar-category-name" data-categories="安装"><span class="iconfont-archer"></span>安装</span>
+    
+        <span class="sidebar-category-name" data-categories="Cisco"><span class="iconfont-archer"></span>Cisco</span>
     
     </div>
     <div class="iconfont-archer sidebar-categories-empty"></div>
