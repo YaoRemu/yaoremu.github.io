@@ -335,380 +335,6 @@
     
     
     <article class="index-post">
-        <a class="abstract-title" href="/2019/03/30/网络地址转换NAT配置/">
-            
-                <span>网络地址转换NAT配置</span>
-        </a>
-        <div class="abstract-content">
-            拓扑图
-
-相关知识①：网络地址转换NAT（Network Address Translation）,被广泛应用于各种类型Internet接入方式和各种类型的网络中。原因很简单，NAT不仅完美地解决了IP地址不足的问题，而且还能够有效地避免来自网络外部的攻击，隐藏并保护网络内部的计算机。
-
-
-相关知识②：默认情况下，内部IP地址是无法被路由到外网的，内部主机10.1.1.1要与外部Internet通信，IP包到达NAT路由器时，IP包头的源地址10.1.1.1被替换成一个合法的外网IP，并在NAT转发表中保存这条记录。 当外部主机发送一个应答到内网时，NAT路由器收到后，查看当前NAT转换...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2019/03/30</span>
-            </div>
-
-
-
-            <!-- tags  -->
-            
-            <div class="abstract-tags">
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Cisco基础">Cisco基础</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/2019/03/29/扩展IP访问控制列表配置/">
-            
-                <span>扩展IP访问控制列表配置</span>
-        </a>
-        <div class="abstract-content">
-            拓扑图
-
-知识点①：访问控制列表定义的典型规则主要有以下：源地址，目标地址，上层协议，时间区域；扩展IP访问列表（编号100-199、2000、2699）使用以上四种组合来进行转发或阻断分组；可以根据数据包的源IP、目的IP、源接口、目的接口、协议来定义规则，进行数据包的过滤。
-
-
-知识点②：扩展IP访问列表的配置包括以下两部分：①定义扩展IP访问列表；②将扩展IP访问列表应用于特定接口上；
-
-配置命令配置Router0端口enable
-configure terminal
-hostname R0
-
-interface fa0/0
-ip address 172.16.1.1 255.25...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2019/03/29</span>
-            </div>
-
-
-
-            <!-- tags  -->
-            
-            <div class="abstract-tags">
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Cisco基础">Cisco基础</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/2019/03/28/标准-IP-访问控制列表配置/">
-            
-                <span>标准 IP 访问控制列表配置</span>
-        </a>
-        <div class="abstract-content">
-            拓扑图
-
-相关知识①：ACLs 的全称为 接入控制列表(Access Control Lists),也称访问控制列表(Access Lists),俗称防火墙，在有的文档中还称包过滤。
-
-
-相关知识②：ACLs 通过定义一些规则对网络设备接口上的数据报文进行控制；运行通过或者丢失，从而提高网络可管理型和安全性；
-
-
-相关知识③：IP ACL分为两种：标准IP访问列表和扩展IP访问列表，编号范围为 1~99、1300~1999、100~199、2000~2699;标准IP访问控制列表：根据数据包的源地址定义规则，进行数据包的过滤；扩展IP访问控制列表：根据数据包的源IP、目的IP、源接口、目...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2019/03/28</span>
-            </div>
-
-
-
-            <!-- tags  -->
-            
-            <div class="abstract-tags">
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Cisco基础">Cisco基础</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/2019/03/28/OSPF、RIP小记/">
-            
-                <span>OSPF、RIP小记</span>
-        </a>
-        <div class="abstract-content">
-            OSPF可将OSPF比喻成导航，可以实时更新；
-RIP将RIP比喻成路标，是固定不变的，除非人为修改；
-
-
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2019/03/28</span>
-            </div>
-
-
-
-            <!-- tags  -->
-            
-            <div class="abstract-tags">
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Cisco笔记">Cisco笔记</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/2019/03/27/路由器综合路由配置/">
-            
-                <span>路由器综合路由配置</span>
-        </a>
-        <div class="abstract-content">
-            拓扑图
-
-相关知识①：运行多个路由协议进程，系统软件提供了路由信息从一个路由进程重新分布到另一个路由进程的功能；路由的相互重分布可以再所有的IP路由协议之间进行。相关命令：redistribute protocol …
-
-
-相关知识②：路由重分发，可在同一网内使用多种路由协议，为了实现多种路由协议的协同工作，路由器可以使用路由重分发(route redistribution) 将学习到的一种路由协议的路由通过另一种路由协议广播出去，这样网络的所有部分就可以互通了。为了实现重分发，路由器必须同时运行多种路由协议，这样每种路由协议才可以取路由表中的所有或部分其他协议的路由来进行广播；
-
-配置...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2019/03/27</span>
-            </div>
-
-
-
-            <!-- tags  -->
-            
-            <div class="abstract-tags">
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Cisco基础">Cisco基础</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/2019/03/26/路由器OSPF动态路由配置/">
-            
-                <span>路由器OSPF动态路由配置</span>
-        </a>
-        <div class="abstract-content">
-            拓扑图
-
-相关知识①：OSPF(Open Shortest Path First 开放式最短路径优先)是一个内部网关协议(Interior Gateway Protocol，检测IGP)，用在单一自治系统(autonomous system,AS)内决策路由。与RIP相比，OSPF是链路状态协议，而RIP是距离矢量协议。
-
-
-相关知识②：OSPF开放式最短路径优先协议，是目前网络中应用最广泛的路由协议之一；OSPF路由协议通过向全网扩散本设备的链路状态信息，使网络中每台设备最终同步一个具有全网链路状态的数据库，然后路由器采用SPF算法，以自己为根，计算到达其他网络的最短路径，最终形成全网...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2019/03/26</span>
-            </div>
-
-
-
-            <!-- tags  -->
-            
-            <div class="abstract-tags">
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Cisco基础">Cisco基础</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/2019/03/25/路由器RIP动态路由配置/">
-            
-                <span>路由器RIP动态路由配置</span>
-        </a>
-        <div class="abstract-content">
-            拓扑图
-
-相关知识①：动态路由是指路由器能够自动的建立自己的路由表，并且根据实际情况适时的进行调整；
-
-
-相关知识②：RIP(routing infromation protocol)路由信息协议：一种内部网关协议（IGP），是一种动态路由选择协议；RIP协议基于距离矢量算法，使用“跳数(metric)”来衡量到达目标地址的路由协议。（该协议的路由器只关心自己周围的世界，只与自己相连的路由器交换信息，范围在15跳之内）；
-
-
-相关知识③：RIPv1与RIPv2的区别：
-
-配置命令配置三层交换机enable
-configure terminal
-hostname S3560
-划分vlan给...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2019/03/25</span>
-            </div>
-
-
-
-            <!-- tags  -->
-            
-            <div class="abstract-tags">
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Cisco基础">Cisco基础</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/2019/03/24/路由器静态路由配置/">
-            
-                <span>路由器静态路由配置</span>
-        </a>
-        <div class="abstract-content">
-            拓扑图
-
-注：由于路由器[2811]初始时没有Serial接口，所以需要在图形化界面安装上[WIC-2T]组件；
-
-配置命令配置Router1各个端口enable
-configure terminal
-hostname R1
-
-interface fa0/1
-no shutdown        //开启端口
-ip address 192.168.1.1 255.255.255.0        //配置端口IP以及子网掩码
-exit
-
-interface serial 0/0/0        //配置串行接口
-no shutdown
-ip address 192.168.3.1 25...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2019/03/24</span>
-            </div>
-
-
-
-            <!-- tags  -->
-            
-            <div class="abstract-tags">
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Cisco基础">Cisco基础</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/2019/03/23/路由器单臂路由配置/">
-            
-                <span>路由器单臂路由配置</span>
-        </a>
-        <div class="abstract-content">
-            拓扑图
-配置命令配置Switchenable
-configure terminal
-
-vlan 2
-exit
-vlan 3
-exit
-
-interface fastEthernet 0/2
-switchport access vlan 2        //将端口划分给Vlan2
-exit
-
-interface fastEthernet 0/3
-switchport access vlan 3        //将端口划分给Vlan3
-exit
-
-interface fastEthernet 0/1        
-switchport mode trunk        //设置端口为...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2019/03/23</span>
-            </div>
-
-
-
-            <!-- tags  -->
-            
-            <div class="abstract-tags">
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Cisco基础">Cisco基础</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
         <a class="abstract-title" href="/2019/03/22/快速生成树配置/">
             
                 <span>快速生成树配置</span>
@@ -752,10 +378,341 @@ spanning-tree mode...
         </div>
     </article>
     
+    
+    
+    
+    
+    
+    <article class="index-post">
+        <a class="abstract-title" href="/2019/03/21/利用三层交换机实现Vlan间路由/">
+            
+                <span>利用三层交换机实现Vlan间路由</span>
+        </a>
+        <div class="abstract-content">
+            拓扑图
+配置命令配置二层交换机enable            //特权模式
+configure terminal        //全局配置模式
+
+vlan 2        //开启vlan
+exit
+vlan 3
+exit
+
+interface fa0/2        
+switchport access vlan 2        //配置端口在access模式，允许vlan2通过
+exit
+interface fa0/3
+switchport access vlan 3
+exit
+
+interface fa0/1
+switchport mode trunk        /...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2019/03/21</span>
+            </div>
+
+
+
+            <!-- tags  -->
+            
+            <div class="abstract-tags">
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Cisco基础">Cisco基础</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
+        <a class="abstract-title" href="/2019/03/20/cisco多交换机之间的端口聚合链路/">
+            
+                <span>cisco多交换机之间的端口聚合链路</span>
+        </a>
+        <div class="abstract-content">
+            拓扑图：
+
+相关知识：port-channel具备了逻辑端口的属性，真正成为一个独立的逻辑端口；端口汇聚是一种逻辑上的抽象过程，将一组具备相同属性的端口，抽象成一个逻辑端口；其不仅能增加网络的带宽，还能提供链路的备份功能，以及负载均衡；
+
+配置命令Switch0的配置命令hostname SwitchA        //更名
+int port-channel 1        //端口聚合模式
+exit
+
+int fa0/1
+channel-group 1 mode on    //将物理端口加入channel-group
+exit
+int fa0/2
+channel-group 1 ...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2019/03/20</span>
+            </div>
+
+
+
+            <!-- tags  -->
+            
+            <div class="abstract-tags">
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Cisco基础">Cisco基础</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
+        <a class="abstract-title" href="/2019/03/19/cisco多交换机上配置基于端口的Vlan隔离办公网络/">
+            
+                <span>cisco多交换机上配置基于端口的Vlan隔离办公网络</span>
+        </a>
+        <div class="abstract-content">
+            拓扑图
+配置命令配置左边的交换机enable                                //特权模式
+configure terminal                    //全局模式
+
+interface fa 0/1                    
+switchport mode trunk                //配置Trunk
+switchport trunk allowed vlan all    //trunk允许所有Vlan流量通行（默认trunk就是允许所有）
+
+vlan 10                          ...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2019/03/19</span>
+            </div>
+
+
+
+            <!-- tags  -->
+            
+            <div class="abstract-tags">
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Cisco基础">Cisco基础</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
+        <a class="abstract-title" href="/2019/03/18/MarkDown基础教学/">
+            
+                <span>MarkDown基础教学</span>
+        </a>
+        <div class="abstract-content">
+            基础语法标题# h1
+## h2
+### h3
+#### h4
+##### h5
+###### h6
+
+段落及区块引用> 这段文字被高亮显示...
+eg:
+
+这段文字被高亮显示…
+
+
+插入链接或图片[点击跳转百度](http://www.baidu.com)
+eg:点击跳转百度
+![图片](https://i.loli.net/2019/03/19/5c903bc01be37.gif)
+   eg:
+
+
+列表Markdown支持有序列表和无序列表两种形式：
+
+无序列表使用 * 或 + 或 - 标识
+* 黄瓜
+* 玉米
+* 茄子
+
++ 黄瓜
++ 玉米
++ 茄子
+
+- 黄瓜
+- 玉米
+- 茄...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2019/03/18</span>
+            </div>
+
+
+
+            <!-- tags  -->
+            
+            <div class="abstract-tags">
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="MarkDown基本语法">MarkDown基本语法</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
+        <a class="abstract-title" href="/2019/03/18/ciscoTelnet/">
+            
+                <span>No3. Telnet</span>
+        </a>
+        <div class="abstract-content">
+            拓扑图:
+
+配置命令:
+首先开启Vlan:   enable  
+configure terminal  
+interface vlan 1
+no shutdown   
+eg: 
+配置交换机：设置Vlan1 IP及其子网掩码:  interface vlan 1  
+ip address 10.1.1.154 255.255.255.0
+exit
+设置进入系统视图的密码：enable password ****
+设置五条虚拟链接：line vty 0 4
+设置特权等级[级别越高权限越大]：privilege level 1 0 
+设置远程链接(Telnet)的密码：password c...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2019/03/18</span>
+            </div>
+
+
+
+            <!-- tags  -->
+            
+            <div class="abstract-tags">
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Cisco基础">Cisco基础</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
+        <a class="abstract-title" href="/2019/03/17/MySql服务安装/">
+            
+                <span>MySql服务安装</span>
+        </a>
+        <div class="abstract-content">
+            安装过程
+先添加安装文件中bin文件夹到用户环境变量(这样才可以使用命令)
+
+  
+
+mysqld –initialize（执行初始化【不添加用户名】/此处注意，如果安装提示出错，可以删除  [data]  文件夹后重试 ）
+
+
+
+mysqld install (安装MySql)
+
+  
+（由于之前已经安装过，所以这里提示 已存在）        
+
+net start mysql(启动MySql服务)
+
+  
+
+完成！  
+
+
+   注意：要正确配置[my.ini]中的文件！！！
+
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2019/03/17</span>
+            </div>
+
+
+
+            <!-- tags  -->
+            
+            <div class="abstract-tags">
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="安装教程">安装教程</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
+        <a class="abstract-title" href="/2019/03/16/简介/">
+            
+                <span class="stick-top iconfont-archer"></span>
+                
+                <span>关于我的博客</span>
+        </a>
+        <div class="abstract-content">
+            <p>~~  欢迎各位道友!~~<br><img src="http://ww1.sinaimg.cn/large/8c0b2220gy1g1af9mon7bj20zk0m8wjx.jpg" alt><br>
+        </p></div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2019/03/16</span>
+            </div>
+
+
+
+            <!-- tags  -->
+            
+            <div class="abstract-tags">
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="日常">日常</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
     <!-- paginator  -->
     
     <nav class="page-nav">
-        <a class="extend prev" rel="prev" href="/archives/">< PREV</a><a class="page-number" href="/archives/">1</a><span class="page-number current">2</span><a class="page-number" href="/archives/page/3/">3</a><a class="extend next" rel="next" href="/archives/page/3/">NEXT ></a>
+        <a class="extend prev" rel="prev" href="/archives/">< PREV</a><a class="page-number" href="/archives/">1</a><span class="page-number current">2</span>
     </nav>
     
 </main>
@@ -986,72 +943,9 @@ spanning-tree mode...
     
     
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 27
+        Total : 18
         </div>
         <!-- search  -->
         
@@ -1078,51 +972,6 @@ spanning-tree mode...
     
     <div class="archive-year"> 2019 </div>
     <ul class="year-list">
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">04/09</span><a class="archive-post-title" href="/2019/04/09/live2d/model/rem/remu.pose/">[Untitled Post]</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">04/09</span><a class="archive-post-title" href="/2019/04/09/live2d/model/rem/remu.physics/">[Untitled Post]</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">04/09</span><a class="archive-post-title" href="/2019/04/09/live2d/model/rem/rem/">[Untitled Post]</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">04/09</span><a class="archive-post-title" href="/2019/04/09/live2d/js/message/">[Untitled Post]</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">04/09</span><a class="archive-post-title" href="/2019/04/09/live2d/js/live2d/">[Untitled Post]</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">04/09</span><a class="archive-post-title" href="/2019/04/09/live2d/css/live2d/">[Untitled Post]</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">04/09</span><a class="archive-post-title" href="/2019/04/09/live2d/README/">[Untitled Post]</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">04/09</span><a class="archive-post-title" href="/2019/04/09/live2d/message/">[Untitled Post]</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">04/09</span><a class="archive-post-title" href="/2019/04/09/live2d/demo/">[Untitled Post]</a>
-        </li>
     
     
         <li class="archive-post-item">
@@ -1218,9 +1067,9 @@ spanning-tree mode...
     
         <span class="sidebar-tag-name" data-tags="安装教程"><span class="iconfont-archer"></span>安装教程</span>
     
-        <span class="sidebar-tag-name" data-tags="Cisco笔记"><span class="iconfont-archer"></span>Cisco笔记</span>
-    
         <span class="sidebar-tag-name" data-tags="Cisco基础"><span class="iconfont-archer"></span>Cisco基础</span>
+    
+        <span class="sidebar-tag-name" data-tags="Cisco笔记"><span class="iconfont-archer"></span>Cisco笔记</span>
     
         <span class="sidebar-tag-name" data-tags="日常"><span class="iconfont-archer"></span>日常</span>
     
