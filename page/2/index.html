@@ -765,6 +765,89 @@ var talkAPI = "";//如果有类似图灵机器人的聊天接口请填写接口�
     
     
     <article class="index-post">
+        <a class="abstract-title" href="/2019/03/18/ciscoTelnet/">
+            
+                <span>No3. Telnet</span>
+        </a>
+        <div class="abstract-content">
+            拓扑图:
+
+配置命令:
+首先开启Vlan:   enable  
+configure terminal  
+interface vlan 1
+no shutdown   
+eg: 
+配置交换机：设置Vlan1 IP及其子网掩码:  interface vlan 1  
+ip address 10.1.1.154 255.255.255.0
+exit
+设置进入系统视图的密码：enable password ****
+设置五条虚拟链接：line vty 0 4
+设置特权等级[级别越高权限越大]：privilege level 1 0 
+设置远程链接(Telnet)的密码：password c...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2019/03/18</span>
+            </div>
+
+    <link rel="stylesheet" href="live2d/css/live2d.css">
+<div id="landlord" style="left:5px;bottom:0px;">
+    <div class="message" style="opacity:0"></div>
+    <canvas id="live2d" width="500" height="560" class="live2d"></canvas>
+    <div class="live_talk_input_body">
+        <div class="live_talk_input_name_body">
+            <input name="name" type="text" class="live_talk_name white_input" id="AIuserName" autocomplete="off" placeholder="你的名字">
+        </div>
+        <div class="live_talk_input_text_body">
+            <input name="talk" type="text" class="live_talk_talk white_input" id="AIuserText" autocomplete="off" placeholder="要和我聊什么呀？">
+            <button type="button" class="live_talk_send_btn" id="talk_send">发送</button>
+        </div>
+    </div>
+    <input name="live_talk" id="live_talk" value="1" type="hidden">
+    <div class="live_ico_box">
+        <div class="live_ico_item type_info" id="showInfoBtn"></div>
+        <div class="live_ico_item type_talk" id="showTalkBtn"></div>
+        <div class="live_ico_item type_music" id="musicButton"></div>
+        <div class="live_ico_item type_youdu" id="youduButton"></div>
+        <div class="live_ico_item type_quit" id="hideButton"></div>
+        <input name="live_statu_val" id="live_statu_val" value="0" type="hidden">
+        <audio src style="display:none;" id="live2d_bgm" data-bgm="0" preload="none"></audio>
+        <input name="live2dBGM" value="https://t1.aixinxi.net/o_1c52p4qbp15idv6bl55h381moha.mp3" type="hidden">
+        <input name="live2dBGM" value="https://t1.aixinxi.net/o_1c52p8frrlmf1aled1e14m56una.mp3" type="hidden">
+        <input id="duType" value="douqilai,l2d_caihong" type="hidden">
+    </div>
+</div>
+<div id="open_live2d">召唤蕾姆</div>
+<script type="text/javascript" src="https://apps.bdimg.com/libs/jquery/1.7.1/jquery.min.js"></script>
+<script>
+var message_Path = '/live2d/';//资源目录，如果目录不对请更改
+var talkAPI = "";//如果有类似图灵机器人的聊天接口请填写接口路径
+</script>
+<script type="text/javascript" src="live2d/js/live2d.js"></script>
+<script type="text/javascript" src="live2d/js/message.js"></script>
+
+
+
+
+            <!-- tags  -->
+            
+            <div class="abstract-tags">
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Cisco基础">Cisco基础</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
         <a class="abstract-title" href="/2019/03/18/MarkDown基础教学/">
             
                 <span>MarkDown基础教学</span>
@@ -854,89 +937,6 @@ var talkAPI = "";//如果有类似图灵机器人的聊天接口请填写接口�
             <div class="abstract-tags">
     
         <a class="post-tag" href="javascript:void(0);" data-tags="MarkDown基本语法">MarkDown基本语法</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/2019/03/18/ciscoTelnet/">
-            
-                <span>No3. Telnet</span>
-        </a>
-        <div class="abstract-content">
-            拓扑图:
-
-配置命令:
-首先开启Vlan:   enable  
-configure terminal  
-interface vlan 1
-no shutdown   
-eg: 
-配置交换机：设置Vlan1 IP及其子网掩码:  interface vlan 1  
-ip address 10.1.1.154 255.255.255.0
-exit
-设置进入系统视图的密码：enable password ****
-设置五条虚拟链接：line vty 0 4
-设置特权等级[级别越高权限越大]：privilege level 1 0 
-设置远程链接(Telnet)的密码：password c...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2019/03/18</span>
-            </div>
-
-    <link rel="stylesheet" href="live2d/css/live2d.css">
-<div id="landlord" style="left:5px;bottom:0px;">
-    <div class="message" style="opacity:0"></div>
-    <canvas id="live2d" width="500" height="560" class="live2d"></canvas>
-    <div class="live_talk_input_body">
-        <div class="live_talk_input_name_body">
-            <input name="name" type="text" class="live_talk_name white_input" id="AIuserName" autocomplete="off" placeholder="你的名字">
-        </div>
-        <div class="live_talk_input_text_body">
-            <input name="talk" type="text" class="live_talk_talk white_input" id="AIuserText" autocomplete="off" placeholder="要和我聊什么呀？">
-            <button type="button" class="live_talk_send_btn" id="talk_send">发送</button>
-        </div>
-    </div>
-    <input name="live_talk" id="live_talk" value="1" type="hidden">
-    <div class="live_ico_box">
-        <div class="live_ico_item type_info" id="showInfoBtn"></div>
-        <div class="live_ico_item type_talk" id="showTalkBtn"></div>
-        <div class="live_ico_item type_music" id="musicButton"></div>
-        <div class="live_ico_item type_youdu" id="youduButton"></div>
-        <div class="live_ico_item type_quit" id="hideButton"></div>
-        <input name="live_statu_val" id="live_statu_val" value="0" type="hidden">
-        <audio src style="display:none;" id="live2d_bgm" data-bgm="0" preload="none"></audio>
-        <input name="live2dBGM" value="https://t1.aixinxi.net/o_1c52p4qbp15idv6bl55h381moha.mp3" type="hidden">
-        <input name="live2dBGM" value="https://t1.aixinxi.net/o_1c52p8frrlmf1aled1e14m56una.mp3" type="hidden">
-        <input id="duType" value="douqilai,l2d_caihong" type="hidden">
-    </div>
-</div>
-<div id="open_live2d">召唤蕾姆</div>
-<script type="text/javascript" src="https://apps.bdimg.com/libs/jquery/1.7.1/jquery.min.js"></script>
-<script>
-var message_Path = '/live2d/';//资源目录，如果目录不对请更改
-var talkAPI = "";//如果有类似图灵机器人的聊天接口请填写接口路径
-</script>
-<script type="text/javascript" src="live2d/js/live2d.js"></script>
-<script type="text/javascript" src="live2d/js/message.js"></script>
-
-
-
-
-            <!-- tags  -->
-            
-            <div class="abstract-tags">
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Cisco基础">Cisco基础</a>
     
 </div>
             
@@ -1449,12 +1449,12 @@ var talkAPI = "";//如果有类似图灵机器人的聊天接口请填写接口�
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">03/18</span><a class="archive-post-title" href="/2019/03/18/MarkDown基础教学/">MarkDown基础教学</a>
+            <span class="archive-post-date">03/18</span><a class="archive-post-title" href="/2019/03/18/ciscoTelnet/">No3. Telnet</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">03/18</span><a class="archive-post-title" href="/2019/03/18/ciscoTelnet/">No3. Telnet</a>
+            <span class="archive-post-date">03/18</span><a class="archive-post-title" href="/2019/03/18/MarkDown基础教学/">MarkDown基础教学</a>
         </li>
     
     
@@ -1467,13 +1467,13 @@ var talkAPI = "";//如果有类似图灵机器人的聊天接口请填写接口�
         <div class="sidebar-panel-tags">
     <div class="sidebar-tags-name">
     
-        <span class="sidebar-tag-name" data-tags="MarkDown基本语法"><span class="iconfont-archer"></span>MarkDown基本语法</span>
-    
         <span class="sidebar-tag-name" data-tags="安装教程"><span class="iconfont-archer"></span>安装教程</span>
     
         <span class="sidebar-tag-name" data-tags="Cisco笔记"><span class="iconfont-archer"></span>Cisco笔记</span>
     
         <span class="sidebar-tag-name" data-tags="Cisco基础"><span class="iconfont-archer"></span>Cisco基础</span>
+    
+        <span class="sidebar-tag-name" data-tags="MarkDown基本语法"><span class="iconfont-archer"></span>MarkDown基本语法</span>
     
         <span class="sidebar-tag-name" data-tags="日常"><span class="iconfont-archer"></span>日常</span>
     
@@ -1509,11 +1509,11 @@ var talkAPI = "";//如果有类似图灵机器人的聊天接口请填写接口�
         <div class="sidebar-panel-categories">
     <div class="sidebar-categories-name">
     
-        <span class="sidebar-category-name" data-categories="教学"><span class="iconfont-archer"></span>教学</span>
-    
         <span class="sidebar-category-name" data-categories="安装"><span class="iconfont-archer"></span>安装</span>
     
         <span class="sidebar-category-name" data-categories="Cisco"><span class="iconfont-archer"></span>Cisco</span>
+    
+        <span class="sidebar-category-name" data-categories="教学"><span class="iconfont-archer"></span>教学</span>
     
     </div>
     <div class="iconfont-archer sidebar-categories-empty"></div>
