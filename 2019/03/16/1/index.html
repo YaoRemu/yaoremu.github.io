@@ -11,7 +11,7 @@
     <meta name="description" content="欢迎来到YaoRemu的博客">
     <meta http-equiv="Cache-control" content="no-cache">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>YaoRemu'Blog</title>
+    <title>关于我的博客 · YaoRemu'Blog</title>
     <style type="text/css">
     @font-face {
         font-family: 'Oswald-Regular';
@@ -66,6 +66,8 @@
 
     <link rel="preload" href="/css/style.css?v=20180824" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <link rel="stylesheet" href="/css/mobile.css?v=20180824" media="(max-width: 980px)">
+    
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     
     <!-- /*! loadCSS. [c]2017 Filament Group, Inc. MIT License */
 /* This file is meant as a standalone workflow for
@@ -190,14 +192,23 @@
 </head>
 
     
-        <body class="home-body">
+        <body class="post-body">
     
     
-<header class="header index-header">
+<header class="header">
 
     <div class="read-progress"></div>
     <div class="header-sidebar-menu"></div>
     <!-- post页的toggle banner  -->
+    
+    <div class="banner">
+            <div class="blog-title">
+                <a href="/">Welcome to YaoRemu'Blog</a>
+            </div>
+            <div class="post-title">
+                <a href="#" class="post-name">关于我的博客</a>
+            </div>
+    </div>
     
     <a class="home-link" href="/">Welcome to YaoRemu'Blog</a>
 </header>
@@ -216,17 +227,17 @@ height:50vh;
     <!-- 主页  -->
     
     
-    <!-- 文章页  -->
+    <!-- 404页  -->
             
     <div class="site-intro-placeholder"></div>
-    <div class="site-intro-img" style="background-image: url(http://ww1.sinaimg.cn/large/8c0b2220gy1g1aejyd30tj21c00u07a2.jpg)"></div>
+    <div class="site-intro-img" style="background-image: url(http://ww1.sinaimg.cn/large/8c0b2220gy1g1aemgv57ej21hc0tze81.jpg)"></div>
     <div class="site-intro-meta">
         <!-- 标题  -->
         <h1 class="intro-title">
             <!-- 主页  -->
             
-            Welcome to YaoRemu'Blog
-            <!-- 文章页  -->
+            关于我的博客
+            <!-- 404 -->
             
         </h1>
         <!-- 副标题 -->
@@ -234,12 +245,49 @@ height:50vh;
             <!-- 主页副标题  -->
             
             
-                如果真爱有颜色，那一定是蓝色.
-            
-            <!-- 文章页  -->
+            <!-- 404 -->
             
         </p>
         <!-- 文章页meta -->
+        
+            <div class="post-intros">
+                <!-- 文章页标签  -->
+                
+                    <div class="post-intro-tags">
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="日常">日常</a>
+    
+</div>
+                
+                
+                    <div class="post-intro-read">
+                        <span>字数统计: <span class="post-count word-count">6</span>阅读时长: <span class="post-count reading-time">1 min</span></span>
+                    </div>
+                
+                <div class="post-intro-meta">
+                    <span class="post-intro-calander iconfont-archer"></span>
+                    <span class="post-intro-time">2019/03/16</span>
+                    
+                    <span id="busuanzi_container_page_pv" class="busuanzi-pv">
+                        <span class="iconfont-archer"></span>
+                        <span id="busuanzi_value_page_pv"></span>
+                    </span>
+                    
+                    <span class="shareWrapper">
+                        <span class="iconfont-archer shareIcon"></span>
+                        <span class="shareText">Share</span>
+                        <ul class="shareList">
+                            <li class="iconfont-archer share-qr" data-type="qr">
+                                <div class="share-qrcode"></div>
+                            </li>
+                            <li class="iconfont-archer" data-type="weibo"></li>
+                            <li class="iconfont-archer" data-type="qzone"></li>
+                            <li class="iconfont-archer" data-type="twitter"></li>
+                            <li class="iconfont-archer" data-type="facebook"></li>
+                        </ul>
+                    </span>
+                </div>
+            </div>
         
     </div>
 </div>
@@ -340,493 +388,67 @@ height:50vh;
 </script>        
         <img class="loading" src="/assets/loading.svg" style="display: block; margin: 6rem auto 0 auto; width: 6rem; height: 6rem;">
         <div class="container container-unloaded">
-            <main class="main index-page">
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/2019/03/16/简介/">
-            
-                <span class="stick-top iconfont-archer"></span>
-                
-                <span>关于我的博客</span>
-        </a>
-        <div class="abstract-content">
-            <p>~~  欢迎各位道友!~~<br><img src="http://ww1.sinaimg.cn/large/8c0b2220gy1g1af9mon7bj20zk0m8wjx.jpg" alt><br>
-        </p></div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2019/03/16</span>
-            </div>
+            <main class="main post-page">
+    <article class="article-entry">
+        <meta name="generator" content="Hexo 3.8.0"><p>~~  欢迎各位道友!~~<br><img src="http://ww1.sinaimg.cn/large/8c0b2220gy1g1af9mon7bj20zk0m8wjx.jpg" alt><br><a id="more"></a></p>
 
-
-
-            <!-- tags  -->
-            
-            <div class="abstract-tags">
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="日常">日常</a>
-    
-</div>
-            
-        </div>
     </article>
+    <!-- license  -->
     
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/2019/03/31/网络端口地址转换NAPT配置/">
-            
-                <span>网络端口地址转换NAPT配置</span>
-        </a>
-        <div class="abstract-content">
-            拓扑图
-
-相关知识①：NAT将网络划分为内部网络和外部网络两部分，局域网主机利用NAT访问网络时，是将局域网内部的本地地址转换为全局地址（互联网合法的IP地址）后转发数据包；
-
-
-相关知识②：NAT分为两种类型：NAT（网络地址转换）和NAPT（网络端口地址转换IP地址对应一个全局地址）；
-
-
-相关知识③：NAPT：使用不同的端口来映射多个内网IP地址到一个指定的外网IP地址，多对一。NAPT采用端口多路复用方式。内部网络的所有主机均可共享一个合法外部IP地址实现对Internet的访问，从而可以最大限度地节约IP地址资源。同时，又可以隐瞒内部的所有主机，有效的避免来自Internet的...
+        <div class="license-wrapper">
+            <p>原文作者：<a href="http://yoursite.com">YaoRemu</a>
+            </p><p>原文链接：<a href="http://yoursite.com/2019/03/16/简介/">http://yoursite.com/2019/03/16/简介/</a>
+            </p><p>发表日期：<a href="http://yoursite.com/2019/03/16/简介/">March 16th 2019, 9:04:18 pm</a>
+            </p><p>更新日期：<a href="http://yoursite.com/2019/03/16/简介/">March 26th 2019, 9:18:33 am</a>
+            </p><p>版权声明：本文采用<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可</p>
         </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2019/03/31</span>
-            </div>
-
-
-
-            <!-- tags  -->
-            
-            <div class="abstract-tags">
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Cisco基础">Cisco基础</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/2019/03/30/网络地址转换NAT配置/">
-            
-                <span>网络地址转换NAT配置</span>
-        </a>
-        <div class="abstract-content">
-            拓扑图
-
-相关知识①：网络地址转换NAT（Network Address Translation）,被广泛应用于各种类型Internet接入方式和各种类型的网络中。原因很简单，NAT不仅完美地解决了IP地址不足的问题，而且还能够有效地避免来自网络外部的攻击，隐藏并保护网络内部的计算机。
-
-
-相关知识②：默认情况下，内部IP地址是无法被路由到外网的，内部主机10.1.1.1要与外部Internet通信，IP包到达NAT路由器时，IP包头的源地址10.1.1.1被替换成一个合法的外网IP，并在NAT转发表中保存这条记录。 当外部主机发送一个应答到内网时，NAT路由器收到后，查看当前NAT转换...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2019/03/30</span>
-            </div>
-
-
-
-            <!-- tags  -->
-            
-            <div class="abstract-tags">
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Cisco基础">Cisco基础</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/2019/03/29/扩展IP访问控制列表配置/">
-            
-                <span>扩展IP访问控制列表配置</span>
-        </a>
-        <div class="abstract-content">
-            拓扑图
-
-知识点①：访问控制列表定义的典型规则主要有以下：源地址，目标地址，上层协议，时间区域；扩展IP访问列表（编号100-199、2000、2699）使用以上四种组合来进行转发或阻断分组；可以根据数据包的源IP、目的IP、源接口、目的接口、协议来定义规则，进行数据包的过滤。
-
-
-知识点②：扩展IP访问列表的配置包括以下两部分：①定义扩展IP访问列表；②将扩展IP访问列表应用于特定接口上；
-
-配置命令配置Router0端口enable
-configure terminal
-hostname R0
-
-interface fa0/0
-ip address 172.16.1.1 255.25...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2019/03/29</span>
-            </div>
-
-
-
-            <!-- tags  -->
-            
-            <div class="abstract-tags">
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Cisco基础">Cisco基础</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/2019/03/28/标准-IP-访问控制列表配置/">
-            
-                <span>标准 IP 访问控制列表配置</span>
-        </a>
-        <div class="abstract-content">
-            拓扑图
-
-相关知识①：ACLs 的全称为 接入控制列表(Access Control Lists),也称访问控制列表(Access Lists),俗称防火墙，在有的文档中还称包过滤。
-
-
-相关知识②：ACLs 通过定义一些规则对网络设备接口上的数据报文进行控制；运行通过或者丢失，从而提高网络可管理型和安全性；
-
-
-相关知识③：IP ACL分为两种：标准IP访问列表和扩展IP访问列表，编号范围为 1~99、1300~1999、100~199、2000~2699;标准IP访问控制列表：根据数据包的源地址定义规则，进行数据包的过滤；扩展IP访问控制列表：根据数据包的源IP、目的IP、源接口、目...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2019/03/28</span>
-            </div>
-
-
-
-            <!-- tags  -->
-            
-            <div class="abstract-tags">
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Cisco基础">Cisco基础</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/2019/03/28/OSPF、RIP小记/">
-            
-                <span>OSPF、RIP小记</span>
-        </a>
-        <div class="abstract-content">
-            OSPF可将OSPF比喻成导航，可以实时更新；
-RIP将RIP比喻成路标，是固定不变的，除非人为修改；
-
-
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2019/03/28</span>
-            </div>
-
-
-
-            <!-- tags  -->
-            
-            <div class="abstract-tags">
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Cisco笔记">Cisco笔记</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/2019/03/27/路由器综合路由配置/">
-            
-                <span>路由器综合路由配置</span>
-        </a>
-        <div class="abstract-content">
-            拓扑图
-
-相关知识①：运行多个路由协议进程，系统软件提供了路由信息从一个路由进程重新分布到另一个路由进程的功能；路由的相互重分布可以再所有的IP路由协议之间进行。相关命令：redistribute protocol …
-
-
-相关知识②：路由重分发，可在同一网内使用多种路由协议，为了实现多种路由协议的协同工作，路由器可以使用路由重分发(route redistribution) 将学习到的一种路由协议的路由通过另一种路由协议广播出去，这样网络的所有部分就可以互通了。为了实现重分发，路由器必须同时运行多种路由协议，这样每种路由协议才可以取路由表中的所有或部分其他协议的路由来进行广播；
-
-配置...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2019/03/27</span>
-            </div>
-
-
-
-            <!-- tags  -->
-            
-            <div class="abstract-tags">
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Cisco基础">Cisco基础</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/2019/03/26/路由器OSPF动态路由配置/">
-            
-                <span>路由器OSPF动态路由配置</span>
-        </a>
-        <div class="abstract-content">
-            拓扑图
-
-相关知识①：OSPF(Open Shortest Path First 开放式最短路径优先)是一个内部网关协议(Interior Gateway Protocol，检测IGP)，用在单一自治系统(autonomous system,AS)内决策路由。与RIP相比，OSPF是链路状态协议，而RIP是距离矢量协议。
-
-
-相关知识②：OSPF开放式最短路径优先协议，是目前网络中应用最广泛的路由协议之一；OSPF路由协议通过向全网扩散本设备的链路状态信息，使网络中每台设备最终同步一个具有全网链路状态的数据库，然后路由器采用SPF算法，以自己为根，计算到达其他网络的最短路径，最终形成全网...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2019/03/26</span>
-            </div>
-
-
-
-            <!-- tags  -->
-            
-            <div class="abstract-tags">
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Cisco基础">Cisco基础</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/2019/03/25/路由器RIP动态路由配置/">
-            
-                <span>路由器RIP动态路由配置</span>
-        </a>
-        <div class="abstract-content">
-            拓扑图
-
-相关知识①：动态路由是指路由器能够自动的建立自己的路由表，并且根据实际情况适时的进行调整；
-
-
-相关知识②：RIP(routing infromation protocol)路由信息协议：一种内部网关协议（IGP），是一种动态路由选择协议；RIP协议基于距离矢量算法，使用“跳数(metric)”来衡量到达目标地址的路由协议。（该协议的路由器只关心自己周围的世界，只与自己相连的路由器交换信息，范围在15跳之内）；
-
-
-相关知识③：RIPv1与RIPv2的区别：
-
-配置命令配置三层交换机enable
-configure terminal
-hostname S3560
-划分vlan给...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2019/03/25</span>
-            </div>
-
-
-
-            <!-- tags  -->
-            
-            <div class="abstract-tags">
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Cisco基础">Cisco基础</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/2019/03/24/路由器静态路由配置/">
-            
-                <span>路由器静态路由配置</span>
-        </a>
-        <div class="abstract-content">
-            拓扑图
-
-注：由于路由器[2811]初始时没有Serial接口，所以需要在图形化界面安装上[WIC-2T]组件；
-
-配置命令配置Router1各个端口enable
-configure terminal
-hostname R1
-
-interface fa0/1
-no shutdown        //开启端口
-ip address 192.168.1.1 255.255.255.0        //配置端口IP以及子网掩码
-exit
-
-interface serial 0/0/0        //配置串行接口
-no shutdown
-ip address 192.168.3.1 25...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2019/03/24</span>
-            </div>
-
-
-
-            <!-- tags  -->
-            
-            <div class="abstract-tags">
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Cisco基础">Cisco基础</a>
-    
-</div>
-            
-        </div>
-    </article>
     
     <!-- paginator  -->
+    <ul class="post-paginator">
+        <li class="next">
+            
+                <div class="nextSlogan">Next Post</div>
+                <a href="/2019/03/17/MySql服务安装/" title="MySql服务安装">
+                    <div class="nextTitle">MySql服务安装</div>
+                </a>
+            
+        </li>
+        <li class="previous">
+            
+        </li>
+    </ul>
+    <!-- 评论插件 -->
+    <!-- 来必力City版安装代码 -->
+
+<!-- City版安装代码已完成 -->
     
-    <nav class="page-nav">
-        <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">NEXT ></a>
-    </nav>
     
+    <!-- partial('_partial/comment/changyan') -->
+    <!--PC版-->
+
+
+    
+    
+    <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+    <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+    <div id="comment"></div>
+    <script>
+    new Valine({
+        el: '#comment' ,
+        notify:false, 
+        verify:false, 
+        appId: "SgWkCobuyHsQs2PICTiE4ea7-gzGzoHsz",
+        appKey: "v5krQ6EXt9olzSl8Ms7G7iSf",
+        placeholder: "",
+        path:window.location.pathname, 
+        avatar:'mm' 
+    });
+    </script>
+
+
+    <!-- 评论 -->
 </main>
             <!-- profile -->
-            
-            <div class="profile">
-    <img class="profile-avatar" alt="avatar" src="http://ww1.sinaimg.cn/large/8c0b2220gy1g1cs04vue4j20ht0ht0tz.jpg">
-    <div class="profile-name">YaoRemu</div>
-    
-    <div class="profile-signature">
-        Man proposes, god disposes.
-    </div>
-    
-    
-    <div class="profile-social">
-        
-    
-        
-            
-                <span class="iconfont-archer wechat" title="wechat">
-                  
-                  <img class="profile-qr" src="http://ww1.sinaimg.cn/large/8c0b2220gy1g1aea5wfucg208c08cjrx.gif">
-                </span>
-            
-        
-    
-        
-            
-                <span class="iconfont-archer qq" title="qq">
-                  
-                  <img class="profile-qr" src="http://ww1.sinaimg.cn/large/8c0b2220gy1g1aeafzefgg208c08caba.gif">
-                </span>
-            
-        
-    
-        
-            
-                <a href="https://www.weibo.com/u/2349539872?sudaref=s.weibo.com&display=0&retcode=6102&is_all=1" class="iconfont-archer weibo" target="_blank" title="weibo"></a>
-            
-        
-    
-        
-            
-                <a href="https://YaoRemu.github.io" class="iconfont-archer github" target="_blank" title="github"></a>
-            
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-
-    </div>
-    
-    
-    
-</div>
             
         </div>
         <footer class="footer footer-unloaded">
@@ -956,6 +578,13 @@ var talkAPI = "";//如果有类似图灵机器人的聊天接口请填写接口�
 </footer>
     </div>
     <!-- toc -->
+    
+    <div class="toc-wrapper" style="top:50vh;">
+        <div class="toc-catalog">
+            <span class="iconfont-archer catalog-icon"></span><span>CATALOG</span>
+        </div>
+        
+    </div>
     
     <div class="back-top iconfont-archer"></div>
     <div class="sidebar sidebar-hide">
@@ -1217,11 +846,11 @@ var talkAPI = "";//如果有类似图灵机器人的聊天接口请填写接口�
         <div class="sidebar-panel-tags">
     <div class="sidebar-tags-name">
     
+        <span class="sidebar-tag-name" data-tags="MarkDown基本语法"><span class="iconfont-archer"></span>MarkDown基本语法</span>
+    
         <span class="sidebar-tag-name" data-tags="Cisco笔记"><span class="iconfont-archer"></span>Cisco笔记</span>
     
         <span class="sidebar-tag-name" data-tags="安装教程"><span class="iconfont-archer"></span>安装教程</span>
-    
-        <span class="sidebar-tag-name" data-tags="MarkDown基本语法"><span class="iconfont-archer"></span>MarkDown基本语法</span>
     
         <span class="sidebar-tag-name" data-tags="Cisco基础"><span class="iconfont-archer"></span>Cisco基础</span>
     
@@ -1259,11 +888,11 @@ var talkAPI = "";//如果有类似图灵机器人的聊天接口请填写接口�
         <div class="sidebar-panel-categories">
     <div class="sidebar-categories-name">
     
+        <span class="sidebar-category-name" data-categories="教学"><span class="iconfont-archer"></span>教学</span>
+    
         <span class="sidebar-category-name" data-categories="Cisco"><span class="iconfont-archer"></span>Cisco</span>
     
         <span class="sidebar-category-name" data-categories="安装"><span class="iconfont-archer"></span>安装</span>
-    
-        <span class="sidebar-category-name" data-categories="教学"><span class="iconfont-archer"></span>教学</span>
     
     </div>
     <div class="iconfont-archer sidebar-categories-empty"></div>
@@ -1303,6 +932,8 @@ var talkAPI = "";//如果有类似图灵机器人的聊天接口请填写接口�
     
     
     <!-- async load share.js -->
+    
+        <script src="/scripts/share.js" async></script>    
      
     
 
