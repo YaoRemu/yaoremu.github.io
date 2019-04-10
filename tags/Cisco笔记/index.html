@@ -1,4 +1,15 @@
-<!DOCTYPE html><html lang="zh-CN"><!-- title --><!-- keywords --><head><meta name="generator" content="Hexo 3.8.0">
+<!DOCTYPE html><html lang="zh-CN"><head><link rel="stylesheet" href="/live2d/css/live2d.css">
+    <!-- title -->
+
+
+
+
+<!-- keywords -->
+
+
+
+
+<meta name="generator" content="Hexo 3.8.0">
     <meta charset="utf-8">
     <meta name="baidu-site-verification" content="X1i9zY8G8D">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -812,7 +823,41 @@ RIP将RIP比喻成路标，是固定不变的，除非人为修改；
 
 
 
-   
+<div id="landlord" style="left:5px;bottom:0px;">
+    <div class="message" style="opacity:0"></div>
+    <canvas id="live2d" width="500" height="560" class="live2d"></canvas>
+    <div class="live_talk_input_body">
+        <div class="live_talk_input_name_body">
+            <input name="name" type="text" class="live_talk_name white_input" id="AIuserName" autocomplete="off" placeholder="你的名字">
+        </div>
+        <div class="live_talk_input_text_body">
+            <input name="talk" type="text" class="live_talk_talk white_input" id="AIuserText" autocomplete="off" placeholder="要和我聊什么呀？">
+            <button type="button" class="live_talk_send_btn" id="talk_send">发送</button>
+        </div>
+    </div>
+    <input name="live_talk" id="live_talk" value="1" type="hidden">
+    <div class="live_ico_box">
+        <div class="live_ico_item type_info" id="showInfoBtn"></div>
+        <div class="live_ico_item type_talk" id="showTalkBtn"></div>
+        <div class="live_ico_item type_music" id="musicButton"></div>
+        <div class="live_ico_item type_youdu" id="youduButton"></div>
+        <div class="live_ico_item type_quit" id="hideButton"></div>
+        <input name="live_statu_val" id="live_statu_val" value="0" type="hidden">
+        <audio src style="display:none;" id="live2d_bgm" data-bgm="0" preload="none"></audio>
+        <input name="live2dBGM" value="http://m10.music.126.net/20190410131215/7c39f6a56c246c6db312c9594686ae69/ymusic/f292/02c0/9ea5/e8c52e125e575b833935e4173a618833.mp3" type="hidden">
+        <input name="live2dBGM" value="http://m10.music.126.net/20190410130432/c01dd17cb253326b64783daaaced1737/ymusic/b191/0280/7ef9/1145da689d2be713ef0b6bcdfbe9969f.mp3" type="hidden">
+        <input id="duType" value="douqilai,l2d_caihong" type="hidden">
+    </div>
+</div>
+<div id="open_live2d">召唤蕾姆</div>
+<script type="text/javascript" src="https://apps.bdimg.com/libs/jquery/1.7.1/jquery.min.js"></script>
+<script>
+var message_Path = '/live2d/';//资源目录，如果目录不对请更改
+var talkAPI = "";//如果有类似图灵机器人的聊天接口请填写接口路径
+</script>
+<script type="text/javascript" src="/live2d/js/live2d.js"></script>
+<script type="text/javascript" src="/live2d/js/message.js"></script>
+
 
     
     <!-- busuanzi  -->
