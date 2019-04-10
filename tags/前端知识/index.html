@@ -11,7 +11,7 @@
     <meta name="description" content="欢迎来到YaoRemu的博客">
     <meta http-equiv="Cache-control" content="no-cache">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>网络端口地址转换NAPT配置 · YaoRemu'Blog</title>
+    <title>YaoRemu'Blog</title>
     <style type="text/css">
     @font-face {
         font-family: 'Oswald-Regular';
@@ -192,23 +192,12 @@
 </head>
 
     
-        <body class="post-body">
     
-    
-<header class="header">
+<body><header class="header">
 
     <div class="read-progress"></div>
     <div class="header-sidebar-menu"></div>
     <!-- post页的toggle banner  -->
-    
-    <div class="banner">
-            <div class="blog-title">
-                <a href="/">Welcome to YaoRemu'Blog</a>
-            </div>
-            <div class="post-title">
-                <a href="#" class="post-name">网络端口地址转换NAPT配置</a>
-            </div>
-    </div>
     
     <a class="home-link" href="/">Welcome to YaoRemu'Blog</a>
 </header>
@@ -220,74 +209,24 @@
 
 
 
-
-height:50vh;
 ">
     
     <!-- 主页  -->
-    
-    
-    <!-- 404页  -->
             
     <div class="site-intro-placeholder"></div>
-    <div class="site-intro-img" style="background-image: url(http://ww1.sinaimg.cn/large/8c0b2220gy1g1aemgv57ej21hc0tze81.jpg)"></div>
+    <div class="site-intro-img" style="background-image: url(/)"></div>
     <div class="site-intro-meta">
         <!-- 标题  -->
         <h1 class="intro-title">
             <!-- 主页  -->
-            
-            网络端口地址转换NAPT配置
-            <!-- 404 -->
             
         </h1>
         <!-- 副标题 -->
         <p class="intro-subtitle">
             <!-- 主页副标题  -->
             
-            
-            <!-- 404 -->
-            
         </p>
         <!-- 文章页meta -->
-        
-            <div class="post-intros">
-                <!-- 文章页标签  -->
-                
-                    <div class="post-intro-tags">
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Cisco基础">Cisco基础</a>
-    
-</div>
-                
-                
-                    <div class="post-intro-read">
-                        <span>字数统计: <span class="post-count word-count">638</span>阅读时长: <span class="post-count reading-time">2 min</span></span>
-                    </div>
-                
-                <div class="post-intro-meta">
-                    <span class="post-intro-calander iconfont-archer"></span>
-                    <span class="post-intro-time">2019/03/31</span>
-                    
-                    <span id="busuanzi_container_page_pv" class="busuanzi-pv">
-                        <span class="iconfont-archer"></span>
-                        <span id="busuanzi_value_page_pv"></span>
-                    </span>
-                    
-                    <span class="shareWrapper">
-                        <span class="iconfont-archer shareIcon"></span>
-                        <span class="shareText">Share</span>
-                        <ul class="shareList">
-                            <li class="iconfont-archer share-qr" data-type="qr">
-                                <div class="share-qrcode"></div>
-                            </li>
-                            <li class="iconfont-archer" data-type="weibo"></li>
-                            <li class="iconfont-archer" data-type="qzone"></li>
-                            <li class="iconfont-archer" data-type="twitter"></li>
-                            <li class="iconfont-archer" data-type="facebook"></li>
-                        </ul>
-                    </span>
-                </div>
-            </div>
         
     </div>
 </div>
@@ -388,142 +327,42 @@ height:50vh;
 </script>        
         <img class="loading" src="/assets/loading.svg" style="display: block; margin: 6rem auto 0 auto; width: 6rem; height: 6rem;">
         <div class="container container-unloaded">
-            <main class="main post-page">
-    <article class="article-entry">
-        <meta name="generator" content="Hexo 3.8.0"><h1 id="拓扑图"><a href="#拓扑图" class="headerlink" title="拓扑图"></a>拓扑图</h1><p><img src="http://ww1.sinaimg.cn/large/8c0b2220gy1g1m4ut5hxhj20if0d8aaf.jpg" alt></p>
-<blockquote>
-<p>相关知识①：NAT将网络划分为内部网络和外部网络两部分，局域网主机利用NAT访问网络时，是将局域网内部的本地地址转换为全局地址（互联网合法的IP地址）后转发数据包；</p>
-</blockquote>
-<blockquote>
-<p>相关知识②：NAT分为两种类型：NAT（网络地址转换）和NAPT（网络端口地址转换IP地址对应一个全局地址）；</p>
-</blockquote>
-<blockquote>
-<p>相关知识③：NAPT：使用不同的端口来映射多个内网IP地址到一个指定的外网IP地址，多对一。<br>NAPT采用端口多路复用方式。内部网络的所有主机均可共享一个合法外部IP地址实现对Internet的访问，从而可以最大限度地节约IP地址资源。同时，又可以隐瞒内部的所有主机，有效的避免来自Internet的攻击。因此，目前网络中应用最多的就是端口多路复用方式</p>
-</blockquote>
-<h1 id="配置命令"><a href="#配置命令" class="headerlink" title="配置命令"></a>配置命令</h1><h2 id="配置Router0"><a href="#配置Router0" class="headerlink" title="配置Router0"></a>配置Router0</h2><pre><code>enable
-configure terminal
-hostname R0
-</code></pre><h3 id="配置端口"><a href="#配置端口" class="headerlink" title="配置端口"></a>配置端口</h3><pre><code>interface fa0/0
-ip address 192.168.1.1 255.255.255.0
-no shutdown
-exit
-
-interface s0/0/0
-ip address 200.1.1.1 255.255.255.0
-no shutdown
-clock rate 64000
-exit
-</code></pre><h2 id="配置Router1"><a href="#配置Router1" class="headerlink" title="配置Router1"></a>配置Router1</h2><pre><code>enable 
-configure terminal
-hostname R1
-</code></pre><h3 id="配置端口-1"><a href="#配置端口-1" class="headerlink" title="配置端口"></a>配置端口</h3><pre><code>interface s0/0/0
-ip address 200.1.1.2 255.255.255.0
-no shutdown
-exit
-
-interface fa0/0
-ip address 200.1.2.1 255.255.255.0
-no shutdown
-exit
-</code></pre><h2 id="配置Router0静态路由"><a href="#配置Router0静态路由" class="headerlink" title="配置Router0静态路由"></a>配置Router0静态路由</h2><pre><code>ip route 200.1.2.0 255.255.255.0 200.1.1.2
-</code></pre><h2 id="配置Router1静态路由"><a href="#配置Router1静态路由" class="headerlink" title="配置Router1静态路由"></a>配置Router1静态路由</h2><pre><code>ip route 192.168.1.0 255.255.255.0 200.1.1.1
-</code></pre><h3 id="查看路由表"><a href="#查看路由表" class="headerlink" title="查看路由表"></a>查看路由表</h3><pre><code>end 
-show ip route
-</code></pre><h2 id="使用PC1测试能否与服务器通信"><a href="#使用PC1测试能否与服务器通信" class="headerlink" title="使用PC1测试能否与服务器通信"></a>使用PC1测试能否与服务器通信</h2><h3 id="CMD"><a href="#CMD" class="headerlink" title="CMD"></a>CMD</h3><p><img src="http://ww1.sinaimg.cn/large/8c0b2220gy1g1m5fxpvvej20dw0ajt8y.jpg" alt></p>
-<h3 id="Web浏览器"><a href="#Web浏览器" class="headerlink" title="Web浏览器"></a>Web浏览器</h3><p><img src="http://ww1.sinaimg.cn/large/8c0b2220gy1g1m5fxkgggj20ha0a7t8s.jpg" alt></p>
-<h2 id="Router0上进行网络端口地址转换NAPT配置"><a href="#Router0上进行网络端口地址转换NAPT配置" class="headerlink" title="Router0上进行网络端口地址转换NAPT配置"></a>Router0上进行网络端口地址转换NAPT配置</h2><pre><code>interface fa0/0
-ip nat inside            <font color="#abcfe4">//设定私有地址连接口</font>
-exit
-
-interface fa2/0
-ip nat outside            <font color="#abcfe4">//设定公有地址连接口</font>
-exit
-
-access-list 1 permit 192.168.1.0 0.0.0.255        
-
-
-            <font color="#abcfe4">//建立一个控制列表，列表名为1，用来定义内部使用的私有IP地址段，为地址段转换为公网IP做准备</font>
-
-ip nat pool 5ijsj 200.1.1.3 200.1.1.3 netmask 255.255.255.0            <font color="#abcfe4">//定义一个IP地址池</font>
-
-
-ip nat inside source list 1 pool 5ijsj overload            <font color="#abcfe4">//启用内部源地址转换为动态NAT</font>
-
-        <font color="#abcfe4">//无overload表示多对多，有overload表示多对一</font>
-
-
-
-end
-show ip nat translations        <font color="#abcfe4">//查看NAT转发表</font>
-</code></pre><h1 id="实验结果"><a href="#实验结果" class="headerlink" title="实验结果"></a>实验结果</h1><h2 id="PC1使用Web浏览器范文服务器"><a href="#PC1使用Web浏览器范文服务器" class="headerlink" title="PC1使用Web浏览器范文服务器"></a>PC1使用Web浏览器范文服务器</h2><p><img src="http://ww1.sinaimg.cn/large/8c0b2220gy1g1m5mr7br0j20fz0a0jrh.jpg" alt></p>
-<h2 id="查看NAT转发表"><a href="#查看NAT转发表" class="headerlink" title="查看NAT转发表"></a>查看NAT转发表</h2><p>show ip nat translations(有1个结果)</p>
-<h2 id="PC2使用web浏览器访问服务器"><a href="#PC2使用web浏览器访问服务器" class="headerlink" title="PC2使用web浏览器访问服务器"></a>PC2使用web浏览器访问服务器</h2><p><img src="http://ww1.sinaimg.cn/large/8c0b2220gy1g1m5mr7ctkj20h00aedfx.jpg" alt></p>
-<p>eg:</p>
-<p><img src="http://ww1.sinaimg.cn/large/8c0b2220gy1g1m5wrceqmj20fa02bq2r.jpg" alt></p>
-<h2 id="再次查看NAT转发表"><a href="#再次查看NAT转发表" class="headerlink" title="再次查看NAT转发表"></a>再次查看NAT转发表</h2><p>show ip nat translations(有2个结果)</p>
-<p>eg:</p>
-<p><img src="http://ww1.sinaimg.cn/large/8c0b2220gy1g1m5xhylqjj20fh03d745.jpg" alt></p>
-
-    </article>
-    <!-- license  -->
+            <main class="main index-page">
     
-        <div class="license-wrapper">
-            <p>原文作者：<a href="http://yoursite.com">YaoRemu</a>
-            </p><p>原文链接：<a href="http://yoursite.com/2019/03/31/网络端口地址转换NAPT配置/">http://yoursite.com/2019/03/31/网络端口地址转换NAPT配置/</a>
-            </p><p>发表日期：<a href="http://yoursite.com/2019/03/31/网络端口地址转换NAPT配置/">March 31st 2019, 5:58:35 pm</a>
-            </p><p>更新日期：<a href="http://yoursite.com/2019/03/31/网络端口地址转换NAPT配置/">March 31st 2019, 7:29:04 pm</a>
-            </p><p>版权声明：本文采用<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可</p>
+    
+    
+    
+    
+    
+    <article class="index-post">
+        <a class="abstract-title" href="/2019/04/10/前端学习-全局属性/">
+            
+                <span>前端学习-全局属性</span>
+        </a>
+        <div class="abstract-content">
+            
         </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2019/04/10</span>
+            </div>
+
+
+
+            <!-- tags  -->
+            
+            <div class="abstract-tags">
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="前端知识">前端知识</a>
+    
+</div>
+            
+        </div>
+    </article>
     
     <!-- paginator  -->
-    <ul class="post-paginator">
-        <li class="next">
-            
-                <div class="nextSlogan">Next Post</div>
-                <a href="/2019/04/10/MarkDown进阶操作/" title="MarkDown进阶操作">
-                    <div class="nextTitle">MarkDown进阶操作</div>
-                </a>
-            
-        </li>
-        <li class="previous">
-            
-                <div class="prevSlogan">Previous Post</div>
-                <a href="/2019/03/30/网络地址转换NAT配置/" title="网络地址转换NAT配置">
-                    <div class="prevTitle">网络地址转换NAT配置</div>
-                </a>
-            
-        </li>
-    </ul>
-    <!-- 评论插件 -->
-    <!-- 来必力City版安装代码 -->
-
-<!-- City版安装代码已完成 -->
     
-    
-    <!-- partial('_partial/comment/changyan') -->
-    <!--PC版-->
-
-
-    
-    
-    <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
-    <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
-    <div id="comment"></div>
-    <script>
-    new Valine({
-        el: '#comment' ,
-        notify:false, 
-        verify:false, 
-        appId: "SgWkCobuyHsQs2PICTiE4ea7-gzGzoHsz",
-        appKey: "v5krQ6EXt9olzSl8Ms7G7iSf",
-        placeholder: "",
-        path:window.location.pathname, 
-        avatar:'mm' 
-    });
-    </script>
-
-
-    <!-- 评论 -->
 </main>
             <!-- profile -->
             
@@ -620,13 +459,6 @@ show ip nat translations        <font color="#abcfe4">//查看NAT转发表</font
 </footer>
     </div>
     <!-- toc -->
-    
-    <div class="toc-wrapper" style="top:50vh;">
-        <div class="toc-catalog">
-            <span class="iconfont-archer catalog-icon"></span><span>CATALOG</span>
-        </div>
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#拓扑图"><span class="toc-number">1.</span> <span class="toc-text">拓扑图</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#配置命令"><span class="toc-number">2.</span> <span class="toc-text">配置命令</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#配置Router0"><span class="toc-number">2.1.</span> <span class="toc-text">配置Router0</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#配置端口"><span class="toc-number">2.1.1.</span> <span class="toc-text">配置端口</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#配置Router1"><span class="toc-number">2.2.</span> <span class="toc-text">配置Router1</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#配置端口-1"><span class="toc-number">2.2.1.</span> <span class="toc-text">配置端口</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#配置Router0静态路由"><span class="toc-number">2.3.</span> <span class="toc-text">配置Router0静态路由</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#配置Router1静态路由"><span class="toc-number">2.4.</span> <span class="toc-text">配置Router1静态路由</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#查看路由表"><span class="toc-number">2.4.1.</span> <span class="toc-text">查看路由表</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#使用PC1测试能否与服务器通信"><span class="toc-number">2.5.</span> <span class="toc-text">使用PC1测试能否与服务器通信</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#CMD"><span class="toc-number">2.5.1.</span> <span class="toc-text">CMD</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Web浏览器"><span class="toc-number">2.5.2.</span> <span class="toc-text">Web浏览器</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Router0上进行网络端口地址转换NAPT配置"><span class="toc-number">2.6.</span> <span class="toc-text">Router0上进行网络端口地址转换NAPT配置</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#实验结果"><span class="toc-number">3.</span> <span class="toc-text">实验结果</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#PC1使用Web浏览器范文服务器"><span class="toc-number">3.1.</span> <span class="toc-text">PC1使用Web浏览器范文服务器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#查看NAT转发表"><span class="toc-number">3.2.</span> <span class="toc-text">查看NAT转发表</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#PC2使用web浏览器访问服务器"><span class="toc-number">3.3.</span> <span class="toc-text">PC2使用web浏览器访问服务器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#再次查看NAT转发表"><span class="toc-number">3.4.</span> <span class="toc-text">再次查看NAT转发表</span></a></li></ol></li></ol>
-    </div>
     
     <div class="back-top iconfont-archer"></div>
     <div class="sidebar sidebar-hide">
@@ -1035,8 +867,6 @@ var talkAPI = "";//如果有类似图灵机器人的聊天接口请填写接口�
     
     
     <!-- async load share.js -->
-    
-        <script src="/scripts/share.js" async></script>    
      
     
 
