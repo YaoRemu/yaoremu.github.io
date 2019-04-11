@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-04-10T10:19:24.828Z</updated>
+  <updated>2019-04-11T04:43:58.388Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>新增的元素和废除的元素</title>
+    <link href="http://yoursite.com/2019/04/11/%E6%96%B0%E5%A2%9E%E7%9A%84%E5%85%83%E7%B4%A0%E5%92%8C%E5%BA%9F%E9%99%A4%E7%9A%84%E5%85%83%E7%B4%A0/"/>
+    <id>http://yoursite.com/2019/04/11/新增的元素和废除的元素/</id>
+    <published>2019-04-11T04:11:36.000Z</published>
+    <updated>2019-04-11T04:43:58.388Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;h1 id=&quot;新增的元素&quot;&gt;&lt;a href=&quot;#新增的元素&quot; class=&quot;headerlink&quot; title=&quot;新增的元素&quot;&gt;&lt;/a&gt;新增的元素&lt;/h1&gt;&lt;h2 id=&quot;新增的结构元素&quot;&gt;&lt;a href=&quot;#新增的结构元素&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="【极客】前端学习" scheme="http://yoursite.com/categories/%E3%80%90%E6%9E%81%E5%AE%A2%E3%80%91%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+      <category term="前端知识" scheme="http://yoursite.com/tags/%E5%89%8D%E7%AB%AF%E7%9F%A5%E8%AF%86/"/>
+    
+  </entry>
   
   <entry>
     <title>HTML5与HTML4区别</title>
@@ -507,32 +533,6 @@
     
     
       <category term="Cisco基础" scheme="http://yoursite.com/tags/Cisco%E5%9F%BA%E7%A1%80/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>MySql服务安装</title>
-    <link href="http://yoursite.com/2019/03/17/MySql%E6%9C%8D%E5%8A%A1%E5%AE%89%E8%A3%85/"/>
-    <id>http://yoursite.com/2019/03/17/MySql服务安装/</id>
-    <published>2019-03-17T07:52:24.000Z</published>
-    <updated>2019-03-21T09:33:21.672Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;h4 id=&quot;安装过程&quot;&gt;&lt;a href=&quot;#安装过程&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="安装" scheme="http://yoursite.com/categories/%E5%AE%89%E8%A3%85/"/>
-    
-    
-      <category term="安装教程" scheme="http://yoursite.com/tags/%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/"/>
     
   </entry>
   
