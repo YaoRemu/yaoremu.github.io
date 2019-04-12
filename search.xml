@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[新增的主题结构元素（二）]]></title>
+    <url>%2F2019%2F04%2F12%2F%E6%96%B0%E5%A2%9E%E7%9A%84%E4%B8%BB%E9%A2%98%E7%BB%93%E6%9E%84%E5%85%83%E7%B4%A0%EF%BC%88%E4%BA%8C%EF%BC%89%2F</url>
+    <content type="text"><![CDATA[aside元素aside元素用来表示当前页面或文章的附属信息部分，它可以包含与当前页面或主要内容相关的引用，侧边栏、广告、导航条以及其他类似有区别于主要内容的部分。 article元素内使用1234< /article>]]></content>
+      <categories>
+        <category>【极客】前端学习</category>
+      </categories>
+      <tags>
+        <tag>前端知识</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[新增的主题结构元素]]></title>
     <url>%2F2019%2F04%2F11%2F%E6%96%B0%E5%A2%9E%E7%9A%84%E4%B8%BB%E9%A2%98%E7%BB%93%E6%9E%84%E5%85%83%E7%B4%A0%2F</url>
     <content type="text"><![CDATA[article元素article元素 代表文档、页面或应用程序中独立的、完整的、可以独自被外部引用的内容。它可以是一篇博客或者报刊中的文章，一篇论坛帖子、一段用户评论或独立的插件，或其他任何独立的内容。 eg: 12345678910 YaoRemu< /h1> Hello，欢迎来到YaoRemu的博客< /p> Hello< /p> 这是底部< /p> < /footer>< /article> article元素是可以嵌套使用的 内层的内容在原则上需要与外层的元素相关联（eg：一篇博客文章中，针对于该文章的评论，就可以使用嵌套article元素的方式，因它们有一个所属关系，用来呈现当前的评论，可以使用article元素来进行包裹一下） eg: 123456789101112131415161718192021 YaoRemu< /h1> Hello，欢迎来到YaoRemu的博客< /p> < /header> 作者 < /header> 评论 < /p> time < /footer> < /aritcle> 这是底部< /p> < /footer>< /article> 为了更加的语义化，更加的方便我们去阅读源码，可以使用article元素，使用article元素代替div后，从语义化来说，它是非常方便的，但是从内容的呈现角度来说，他们是没有区别的。 article元素可以用来表示插件eg: 12345678910111213141516171819202122232425262728 YaoRemu< /h1> Hello，欢迎来到YaoRemu的博客< /p> < /header> 作者 < /header> 评论 < /p> time < /footer> < /aritcle> 这是底部< /p> < /footer>< /article> 这是一个内嵌页面< /h1> < /embed> < /object>< /article> eg: < embed>标签定义嵌入的内容，比如插件（演示中表示引入当前页面）]]></content>
