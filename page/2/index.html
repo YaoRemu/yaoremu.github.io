@@ -359,6 +359,47 @@ height:50vh;
     
     
     <article class="index-post">
+        <a class="abstract-title" href="/2019/03/29/扩展IP访问控制列表配置/">
+            
+                <span>扩展IP访问控制列表配置</span>
+        </a>
+        <div class="abstract-content">
+            拓扑图
+
+知识点①：访问控制列表定义的典型规则主要有以下：源地址，目标地址，上层协议，时间区域；扩展IP访问列表（编号100-199、2000、2699）使用以上四种组合来进行转发或阻断分组；可以根据数据包的源IP、目的IP、源接口、目的接口、协议来定义规则，进行数据包的过滤。
+
+
+知识点②：扩展IP访问列表的配置包括以下两部分：①定义扩展IP访问列表；②将扩展IP访问列表应用于特定接口上；
+
+配置命令配置Router0端口enable
+configure terminal
+hostname R0
+
+interface fa0/0
+ip address 172.16.1.1 255.25...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2019/03/29</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class="abstract-tags">
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Cisco基础">Cisco基础</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
         <a class="abstract-title" href="/2019/03/28/标准-IP-访问控制列表配置/">
             
                 <span>标准 IP 访问控制列表配置</span>
@@ -705,47 +746,6 @@ switchport mode trunk        /...
             <!-- date  -->
             <div class="abstract-date">
                 <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2019/03/21</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class="abstract-tags">
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Cisco基础">Cisco基础</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/2019/03/20/cisco多交换机之间的端口聚合链路/">
-            
-                <span>cisco多交换机之间的端口聚合链路</span>
-        </a>
-        <div class="abstract-content">
-            拓扑图：
-
-相关知识：port-channel具备了逻辑端口的属性，真正成为一个独立的逻辑端口；端口汇聚是一种逻辑上的抽象过程，将一组具备相同属性的端口，抽象成一个逻辑端口；其不仅能增加网络的带宽，还能提供链路的备份功能，以及负载均衡；
-
-配置命令Switch0的配置命令hostname SwitchA        //更名
-int port-channel 1        //端口聚合模式
-exit
-
-int fa0/1
-channel-group 1 mode on    //将物理端口加入channel-group
-exit
-int fa0/2
-channel-group 1 ...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2019/03/20</span>
             </div>
             <!-- tags  -->
             
@@ -1113,9 +1113,16 @@ channel-group 1 ...
     
     
     
+    
+    
+    
+    
+    
+    
+    
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 24
+        Total : 25
         </div>
         <!-- search  -->
         
@@ -1142,6 +1149,11 @@ channel-group 1 ...
     
     <div class="archive-year"> 2019 </div>
     <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">04/12</span><a class="archive-post-title" href="/2019/04/12/新增的主题结构元素（三）/">新增的主题结构元素（三）</a>
+        </li>
     
     
         <li class="archive-post-item">
@@ -1269,9 +1281,9 @@ channel-group 1 ...
     
         <span class="sidebar-tag-name" data-tags="安装教程"><span class="iconfont-archer"></span>安装教程</span>
     
-        <span class="sidebar-tag-name" data-tags="Cisco基础"><span class="iconfont-archer"></span>Cisco基础</span>
-    
         <span class="sidebar-tag-name" data-tags="Cisco笔记"><span class="iconfont-archer"></span>Cisco笔记</span>
+    
+        <span class="sidebar-tag-name" data-tags="Cisco基础"><span class="iconfont-archer"></span>Cisco基础</span>
     
         <span class="sidebar-tag-name" data-tags="日常"><span class="iconfont-archer"></span>日常</span>
     
@@ -1349,8 +1361,8 @@ channel-group 1 ...
         <div class="live_ico_item type_quit" id="hideButton"></div>
         <input name="live_statu_val" id="live_statu_val" value="0" type="hidden">
         <audio src style="display:none;" id="live2d_bgm" data-bgm="0" preload="none"></audio>
-        <input name="live2dBGM" value="http://fs.open.kugou.com/a05a6b635edde647ee75965296819893/5cadd317/G007/M01/0F/1B/p4YBAFS6O-iAbqpDACWa_wUIIFw501.mp3" type="hidden">
-        <input name="live2dBGM" value="http://fs.open.kugou.com/a05a6b635edde647ee75965296819893/5cadd317/G007/M01/0F/1B/p4YBAFS6O-iAbqpDACWa_wUIIFw501.mp3" type="hidden">
+        <input name="live2dBGM" value="https://music.163.com/outchain/player?type=2&id=4919987&auto=1&height=66" type="hidden">
+        <input name="live2dBGM" value="https://music.163.com/outchain/player?type=2&id=4919981&auto=1&height=66" type="hidden">
         <input id="duType" value="douqilai,l2d_caihong" type="hidden">
     </div>
 </div>
