@@ -1,4 +1,4 @@
-var home_Path = document.location.protocol +'//' + window.document.location.hostname +'/';
+var home_Path = document.location.protocol +'//' + window.document.location.hostname+':'+location.port;
 
 var userAgent = window.navigator.userAgent.toLowerCase();
 console.log(userAgent);
