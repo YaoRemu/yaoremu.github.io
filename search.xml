@@ -3,7 +3,13 @@
   <entry>
     <title><![CDATA[新增的主题结构元素（七）]]></title>
     <url>%2F2019%2F04%2F14%2F%E6%96%B0%E5%A2%9E%E7%9A%84%E4%B8%BB%E9%A2%98%E7%BB%93%E6%9E%84%E5%85%83%E7%B4%A0%EF%BC%88%E4%B8%83%EF%BC%89%2F</url>
-    <content type="text"><![CDATA[]]></content>
+    <content type="text"><![CDATA[footer元素footer元素可以作为其上层父级内容区块或是一个根区块的脚注。footer通常包括其相关区块的脚注信息，如作者、相关阅读链接及版权信息等。 旧版本和新版本的书写区别旧版的书写方式12345678 版权信息< /a>< /li> 站点地图< /a>< /li> 联系方式< /a>< /li> < /ul>< /div> 新版的书写12345678 版权信息< /a>< /li> 站点地图< /a>< /li> 联系方式< /a>< /li> < /ul>< /footer> footer元素的使用与header元素的使用相似footer元素与header元素一样，一个页面也限制为必要使用一个数量，在当前的页面当中，未必只包含一个footer用来表示底部，它还可以在一个区域块当中进行表示（与header元素的使用比较相似）； eg: 123456789101112 这是一个文章的底部 < /footer>< /article> 这是一个文章的底部 < /footer>< /section> hgroup元素hgroup元素是将标题及其子标题进行分组的元素。hgroup元素通常会将h1~h6元素进行分组，譬如一个内容区块的标题及其子标题算一组 当我们需要为主标题加上一个子标题的时候，尤其是一些文章，或者是一些我们看到的广告，它会有子标题 当只有一个标题的时候，我们就没有必要去使用hgroup;当标题过多，第一个和第二个是同一级，而且他是属于第一个的子标题的时候，此时我们应该使用hgroup将其包裹起来，代表当前他是一个子标题 1234567891011121314151617181920212223 这是文章标题 < /h1> 这是一个子标题< /h2> < /hgroup> 2015-10-10< /time>< /p> < /header> 这是内容 < /div> 这是底部 < /footer>< /article> 内容区域块使用div重载，存在的样式都通过div来进行添加一些css样式]]></content>
+      <categories>
+        <category>【极客】前端学习</category>
+      </categories>
+      <tags>
+        <tag>前端知识</tag>
+      </tags>
   </entry>
   <entry>
     <title><![CDATA[新增的主题结构元素（六）]]></title>

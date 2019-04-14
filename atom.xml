@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-04-14T07:49:26.741Z</updated>
+  <updated>2019-04-14T08:13:30.185Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://yoursite.com/2019/04/14/%E6%96%B0%E5%A2%9E%E7%9A%84%E4%B8%BB%E9%A2%98%E7%BB%93%E6%9E%84%E5%85%83%E7%B4%A0%EF%BC%88%E4%B8%83%EF%BC%89/"/>
     <id>http://yoursite.com/2019/04/14/新增的主题结构元素（七）/</id>
     <published>2019-04-14T07:49:26.000Z</published>
-    <updated>2019-04-14T07:49:26.741Z</updated>
+    <updated>2019-04-14T08:13:30.185Z</updated>
     
     <summary type="html">
     
@@ -29,12 +29,16 @@
       
         
         
-          &lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;/body&gt;&lt;/html&gt;
+          &lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;h1 id=&quot;footer元素&quot;&gt;&lt;a href=&quot;#footer元素&quot; class=&quot;headerlink&quot;
         
       
     
     </summary>
     
+      <category term="【极客】前端学习" scheme="http://yoursite.com/categories/%E3%80%90%E6%9E%81%E5%AE%A2%E3%80%91%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+      <category term="前端知识" scheme="http://yoursite.com/tags/%E5%89%8D%E7%AB%AF%E7%9F%A5%E8%AF%86/"/>
     
   </entry>
   
