@@ -22,7 +22,7 @@
     <meta name="description" content="欢迎来到YaoRemu的博客">
     <meta http-equiv="Cache-control" content="no-cache">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>YaoRemu'Blog</title>
+    <title>新增的主题结构元素（六） · YaoRemu'Blog</title>
     <style type="text/css">
     @font-face {
         font-family: 'Oswald-Regular';
@@ -203,12 +203,23 @@
 </head>
 
     
+        <body class="post-body">
     
-<body><header class="header">
+    
+<header class="header">
 
     <div class="read-progress"></div>
     <div class="header-sidebar-menu"></div>
     <!-- post页的toggle banner  -->
+    
+    <div class="banner">
+            <div class="blog-title">
+                <a href="/">Welcome to YaoRemu'Blog</a>
+            </div>
+            <div class="post-title">
+                <a href="#" class="post-name">新增的主题结构元素（六）</a>
+            </div>
+    </div>
     
     <a class="home-link" href="/">Welcome to YaoRemu'Blog</a>
 </header>
@@ -220,24 +231,74 @@
 
 
 
+
+height:50vh;
 ">
     
     <!-- 主页  -->
+    
+    
+    <!-- 404页  -->
             
     <div class="site-intro-placeholder"></div>
-    <div class="site-intro-img" style="background-image: url(/)"></div>
+    <div class="site-intro-img" style="background-image: url(http://ww1.sinaimg.cn/large/8c0b2220gy1g1aemgv57ej21hc0tze81.jpg)"></div>
     <div class="site-intro-meta">
         <!-- 标题  -->
         <h1 class="intro-title">
             <!-- 主页  -->
+            
+            新增的主题结构元素（六）
+            <!-- 404 -->
             
         </h1>
         <!-- 副标题 -->
         <p class="intro-subtitle">
             <!-- 主页副标题  -->
             
+            
+            <!-- 404 -->
+            
         </p>
         <!-- 文章页meta -->
+        
+            <div class="post-intros">
+                <!-- 文章页标签  -->
+                
+                    <div class="post-intro-tags">
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="前端知识">前端知识</a>
+    
+</div>
+                
+                
+                    <div class="post-intro-read">
+                        <span>字数统计: <span class="post-count word-count">0</span>阅读时长: <span class="post-count reading-time">1 min</span></span>
+                    </div>
+                
+                <div class="post-intro-meta">
+                    <span class="post-intro-calander iconfont-archer"></span>
+                    <span class="post-intro-time">2019/04/14</span>
+                    
+                    <span id="busuanzi_container_page_pv" class="busuanzi-pv">
+                        <span class="iconfont-archer"></span>
+                        <span id="busuanzi_value_page_pv"></span>
+                    </span>
+                    
+                    <span class="shareWrapper">
+                        <span class="iconfont-archer shareIcon"></span>
+                        <span class="shareText">Share</span>
+                        <ul class="shareList">
+                            <li class="iconfont-archer share-qr" data-type="qr">
+                                <div class="share-qrcode"></div>
+                            </li>
+                            <li class="iconfont-archer" data-type="weibo"></li>
+                            <li class="iconfont-archer" data-type="qzone"></li>
+                            <li class="iconfont-archer" data-type="twitter"></li>
+                            <li class="iconfont-archer" data-type="facebook"></li>
+                        </ul>
+                    </span>
+                </div>
+            </div>
         
     </div>
 </div>
@@ -338,370 +399,64 @@
 </script>        
         <img class="loading" src="/assets/loading.svg" style="display: block; margin: 6rem auto 0 auto; width: 6rem; height: 6rem;">
         <div class="container container-unloaded">
-            <main class="main index-page">
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/2019/03/22/快速生成树配置/">
-            
-                <span>快速生成树配置</span>
-        </a>
-        <div class="abstract-content">
-            拓扑图
-配置命令Switch1配置命令enable        //进入特权模式
-
-show spanning-tree        //查看生成树配置
-
-configure terminal        //全局配置模式
-
-hostname S1        //交换机更名
-
-int fa 0/10
-switchport access vlan 10        //把端口划分给Vlan 10
-exit
-
-int rang fa 0/1-2
-switchport mode trunk        //配置端口为trunk模式
-exit
-
-spanning-tree mode...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2019/03/22</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class="abstract-tags">
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Cisco基础">Cisco基础</a>
-    
-</div>
-            
-        </div>
+            <main class="main post-page">
+    <article class="article-entry">
+        <meta name="generator" content="Hexo 3.8.0">
     </article>
+    <!-- license  -->
     
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/2019/03/21/利用三层交换机实现Vlan间路由/">
-            
-                <span>利用三层交换机实现Vlan间路由</span>
-        </a>
-        <div class="abstract-content">
-            拓扑图
-配置命令配置二层交换机enable            //特权模式
-configure terminal        //全局配置模式
-
-vlan 2        //开启vlan
-exit
-vlan 3
-exit
-
-interface fa0/2        
-switchport access vlan 2        //配置端口在access模式，允许vlan2通过
-exit
-interface fa0/3
-switchport access vlan 3
-exit
-
-interface fa0/1
-switchport mode trunk        /...
+        <div class="license-wrapper">
+            <p>原文作者：<a href="http://yoursite.com">YaoRemu</a>
+            </p><p>原文链接：<a href="http://yoursite.com/2019/04/14/新增的主题结构元素（六）/">http://yoursite.com/2019/04/14/新增的主题结构元素（六）/</a>
+            </p><p>发表日期：<a href="http://yoursite.com/2019/04/14/新增的主题结构元素（六）/">April 14th 2019, 2:42:30 pm</a>
+            </p><p>更新日期：<a href="http://yoursite.com/2019/04/14/新增的主题结构元素（六）/">April 14th 2019, 2:42:40 pm</a>
+            </p><p>版权声明：本文采用<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可</p>
         </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2019/03/21</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class="abstract-tags">
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Cisco基础">Cisco基础</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/2019/03/20/cisco多交换机之间的端口聚合链路/">
-            
-                <span>cisco多交换机之间的端口聚合链路</span>
-        </a>
-        <div class="abstract-content">
-            拓扑图：
-
-相关知识：port-channel具备了逻辑端口的属性，真正成为一个独立的逻辑端口；端口汇聚是一种逻辑上的抽象过程，将一组具备相同属性的端口，抽象成一个逻辑端口；其不仅能增加网络的带宽，还能提供链路的备份功能，以及负载均衡；
-
-配置命令Switch0的配置命令hostname SwitchA        //更名
-int port-channel 1        //端口聚合模式
-exit
-
-int fa0/1
-channel-group 1 mode on    //将物理端口加入channel-group
-exit
-int fa0/2
-channel-group 1 ...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2019/03/20</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class="abstract-tags">
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Cisco基础">Cisco基础</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/2019/03/19/cisco多交换机上配置基于端口的Vlan隔离办公网络/">
-            
-                <span>cisco多交换机上配置基于端口的Vlan隔离办公网络</span>
-        </a>
-        <div class="abstract-content">
-            拓扑图
-配置命令配置左边的交换机enable                                //特权模式
-configure terminal                    //全局模式
-
-interface fa 0/1                    
-switchport mode trunk                //配置Trunk
-switchport trunk allowed vlan all    //trunk允许所有Vlan流量通行（默认trunk就是允许所有）
-
-vlan 10                          ...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2019/03/19</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class="abstract-tags">
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Cisco基础">Cisco基础</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/2019/03/18/MarkDown基础教学/">
-            
-                <span>MarkDown基础教学</span>
-        </a>
-        <div class="abstract-content">
-            基础语法标题# h1
-## h2
-### h3
-#### h4
-##### h5
-###### h6
-
-段落及区块引用> 这段文字被高亮显示...
-eg:
-
-这段文字被高亮显示…
-
-
-插入链接或图片[点击跳转百度](http://www.baidu.com)
-eg:点击跳转百度
-![图片](https://i.loli.net/2019/03/19/5c903bc01be37.gif)
-   eg:
-
-
-列表Markdown支持有序列表和无序列表两种形式：
-
-无序列表使用 * 或 + 或 - 标识
-* 黄瓜
-* 玉米
-* 茄子
-
-+ 黄瓜
-+ 玉米
-+ 茄子
-
-- 黄瓜
-- 玉米
-- 茄...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2019/03/18</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class="abstract-tags">
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="MarkDown基本语法">MarkDown基本语法</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/2019/03/18/ciscoTelnet/">
-            
-                <span>No3. Telnet</span>
-        </a>
-        <div class="abstract-content">
-            拓扑图:
-
-配置命令:
-首先开启Vlan:   enable  
-configure terminal  
-interface vlan 1
-no shutdown   
-eg: 
-配置交换机：设置Vlan1 IP及其子网掩码:  interface vlan 1  
-ip address 10.1.1.154 255.255.255.0
-exit
-设置进入系统视图的密码：enable password ****
-设置五条虚拟链接：line vty 0 4
-设置特权等级[级别越高权限越大]：privilege level 1 0 
-设置远程链接(Telnet)的密码：password c...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2019/03/18</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class="abstract-tags">
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Cisco基础">Cisco基础</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/2019/03/17/MySql服务安装/">
-            
-                <span>MySql服务安装</span>
-        </a>
-        <div class="abstract-content">
-            安装过程
-先添加安装文件中bin文件夹到用户环境变量(这样才可以使用命令)
-
-  
-
-mysqld –initialize（执行初始化【不添加用户名】/此处注意，如果安装提示出错，可以删除  [data]  文件夹后重试 ）
-
-
-
-mysqld install (安装MySql)
-
-  
-（由于之前已经安装过，所以这里提示 已存在）        
-
-net start mysql(启动MySql服务)
-
-  
-
-完成！  
-
-
-   注意：要正确配置[my.ini]中的文件！！！
-
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2019/03/17</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class="abstract-tags">
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="安装教程">安装教程</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/2019/03/16/简介/">
-            
-                <span class="stick-top iconfont-archer"></span>
-                
-                <span>关于我的博客</span>
-        </a>
-        <div class="abstract-content">
-            <p>~~  欢迎各位道友!~~<br><img src="http://ww1.sinaimg.cn/large/8c0b2220gy1g1af9mon7bj20zk0m8wjx.jpg" alt><br>
-        </p></div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2019/03/16</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class="abstract-tags">
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="日常">日常</a>
-    
-</div>
-            
-        </div>
-    </article>
     
     <!-- paginator  -->
+    <ul class="post-paginator">
+        <li class="next">
+            
+        </li>
+        <li class="previous">
+            
+                <div class="prevSlogan">Previous Post</div>
+                <a href="/2019/04/13/新增的主题结构元素（五）/" title="新增的主题结构元素（五）">
+                    <div class="prevTitle">新增的主题结构元素（五）</div>
+                </a>
+            
+        </li>
+    </ul>
+    <!-- 评论插件 -->
+    <!-- 来必力City版安装代码 -->
+
+<!-- City版安装代码已完成 -->
     
-    <nav class="page-nav">
-        <a class="extend prev" rel="prev" href="/archives/2019/03/">< PREV</a><a class="page-number" href="/archives/2019/03/">1</a><span class="page-number current">2</span>
-    </nav>
     
+    <!-- partial('_partial/comment/changyan') -->
+    <!--PC版-->
+
+
+    
+    
+    <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+    <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+    <div id="comment"></div>
+    <script>
+    new Valine({
+        el: '#comment' ,
+        notify:false, 
+        verify:false, 
+        appId: "SgWkCobuyHsQs2PICTiE4ea7-gzGzoHsz",
+        appKey: "v5krQ6EXt9olzSl8Ms7G7iSf",
+        placeholder: "",
+        path:window.location.pathname, 
+        avatar:'mm' 
+    });
+    </script>
+
+
+    <!-- 评论 -->
 </main>
             <!-- profile -->
             
@@ -789,6 +544,13 @@ net start mysql(启动MySql服务)
 </footer>
     </div>
     <!-- toc -->
+    
+    <div class="toc-wrapper" style="top:50vh;">
+        <div class="toc-catalog">
+            <span class="iconfont-archer catalog-icon"></span><span>CATALOG</span>
+        </div>
+        
+    </div>
     
     <div class="back-top iconfont-archer"></div>
     <div class="sidebar sidebar-hide">
@@ -1291,6 +1053,8 @@ var talkAPI = "";//如果有类似图灵机器人的聊天接口请填写接口�
     
     
     <!-- async load share.js -->
+    
+        <script src="/scripts/share.js" async></script>    
      
 
 
