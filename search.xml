@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[新增的非主体结构元素（一）]]></title>
+    <url>%2F2019%2F04%2F14%2F%E6%96%B0%E5%A2%9E%E7%9A%84%E9%9D%9E%E4%B8%BB%E4%BD%93%E7%BB%93%E6%9E%84%E5%85%83%E7%B4%A0%EF%BC%88%E4%B8%80%EF%BC%89%2F</url>
+    <content type="text"><![CDATA[在HTML5中，还增加了一些用来表示逻辑结构或者是附加信息的非主体结构元素 header元素 footer元素 hgroup元素 address元素 header元素header元素是一种具有引导和导航作用的结构元素，通常用来放置整个页面或页面内的一个内容区块的标题，但是也可以包含其他内容，例如数据表格、搜索歌单或相关的logo图片 以前我们是通过一个div包裹然后给它设定一个class或者id指定是header用来包含整个页面或页面内的区域块的一个标题 注意：header的出现不一定只有一次，它可以出现多次，不论是在整个页面来表示他的标题，或者说区域块来表示标题都是可以的 旧版的写法1234< /div>< /div>< /div> ##现在的写法 1234567891011 页面标题< /h1>< /header> Hello< /h1> < /header>< /article> 通常一个header元素至少包含一个h元素 完整的例子123456789101112 IT最新技术< /h1> 姚的博客< /a> 学习< /a>< /li> 技术< /a>< /li> 运动< /a>< /li> < /ul> < /nav>< /header>]]></content>
+      <categories>
+        <category>【极客】前端学习</category>
+      </categories>
+      <tags>
+        <tag>前端知识</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[新增的主题结构元素（七）]]></title>
     <url>%2F2019%2F04%2F14%2F%E6%96%B0%E5%A2%9E%E7%9A%84%E4%B8%BB%E9%A2%98%E7%BB%93%E6%9E%84%E5%85%83%E7%B4%A0%EF%BC%88%E4%B8%83%EF%BC%89%2F</url>
     <content type="text"><![CDATA[footer元素footer元素可以作为其上层父级内容区块或是一个根区块的脚注。footer通常包括其相关区块的脚注信息，如作者、相关阅读链接及版权信息等。 旧版本和新版本的书写区别旧版的书写方式12345678 版权信息< /a>< /li> 站点地图< /a>< /li> 联系方式< /a>< /li> < /ul>< /div> 新版的书写12345678 版权信息< /a>< /li> 站点地图< /a>< /li> 联系方式< /a>< /li> < /ul>< /footer> footer元素的使用与header元素的使用相似footer元素与header元素一样，一个页面也限制为必要使用一个数量，在当前的页面当中，未必只包含一个footer用来表示底部，它还可以在一个区域块当中进行表示（与header元素的使用比较相似）； eg: 123456789101112 这是一个文章的底部 < /footer>< /article> 这是一个文章的底部 < /footer>< /section> hgroup元素hgroup元素是将标题及其子标题进行分组的元素。hgroup元素通常会将h1~h6元素进行分组，譬如一个内容区块的标题及其子标题算一组 当我们需要为主标题加上一个子标题的时候，尤其是一些文章，或者是一些我们看到的广告，它会有子标题 当只有一个标题的时候，我们就没有必要去使用hgroup;当标题过多，第一个和第二个是同一级，而且他是属于第一个的子标题的时候，此时我们应该使用hgroup将其包裹起来，代表当前他是一个子标题 1234567891011121314151617181920212223 这是文章标题 < /h1> 这是一个子标题< /h2> < /hgroup> 2015-10-10< /time>< /p> < /header> 这是内容 < /div> 这是底部 < /footer>< /article> 内容区域块使用div重载，存在的样式都通过div来进行添加一些css样式]]></content>
