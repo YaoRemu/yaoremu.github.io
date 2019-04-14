@@ -22,7 +22,7 @@
     <meta name="description" content="欢迎来到YaoRemu的博客">
     <meta http-equiv="Cache-control" content="no-cache">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>路由器综合路由配置 · YaoRemu'Blog</title>
+    <title>YaoRemu'Blog</title>
     <style type="text/css">
     @font-face {
         font-family: 'Oswald-Regular';
@@ -203,23 +203,12 @@
 </head>
 
     
-        <body class="post-body">
     
-    
-<header class="header">
+<body><header class="header">
 
     <div class="read-progress"></div>
     <div class="header-sidebar-menu"></div>
     <!-- post页的toggle banner  -->
-    
-    <div class="banner">
-            <div class="blog-title">
-                <a href="/">Welcome to YaoRemu'Blog</a>
-            </div>
-            <div class="post-title">
-                <a href="#" class="post-name">路由器综合路由配置</a>
-            </div>
-    </div>
     
     <a class="home-link" href="/">Welcome to YaoRemu'Blog</a>
 </header>
@@ -231,74 +220,24 @@
 
 
 
-
-height:50vh;
 ">
     
     <!-- 主页  -->
-    
-    
-    <!-- 404页  -->
             
     <div class="site-intro-placeholder"></div>
-    <div class="site-intro-img" style="background-image: url(http://ww1.sinaimg.cn/large/8c0b2220gy1g1aemgv57ej21hc0tze81.jpg)"></div>
+    <div class="site-intro-img" style="background-image: url(/)"></div>
     <div class="site-intro-meta">
         <!-- 标题  -->
         <h1 class="intro-title">
             <!-- 主页  -->
-            
-            路由器综合路由配置
-            <!-- 404 -->
             
         </h1>
         <!-- 副标题 -->
         <p class="intro-subtitle">
             <!-- 主页副标题  -->
             
-            
-            <!-- 404 -->
-            
         </p>
         <!-- 文章页meta -->
-        
-            <div class="post-intros">
-                <!-- 文章页标签  -->
-                
-                    <div class="post-intro-tags">
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Cisco基础">Cisco基础</a>
-    
-</div>
-                
-                
-                    <div class="post-intro-read">
-                        <span>字数统计: <span class="post-count word-count">777</span>阅读时长: <span class="post-count reading-time">3 min</span></span>
-                    </div>
-                
-                <div class="post-intro-meta">
-                    <span class="post-intro-calander iconfont-archer"></span>
-                    <span class="post-intro-time">2019/03/27</span>
-                    
-                    <span id="busuanzi_container_page_pv" class="busuanzi-pv">
-                        <span class="iconfont-archer"></span>
-                        <span id="busuanzi_value_page_pv"></span>
-                    </span>
-                    
-                    <span class="shareWrapper">
-                        <span class="iconfont-archer shareIcon"></span>
-                        <span class="shareText">Share</span>
-                        <ul class="shareList">
-                            <li class="iconfont-archer share-qr" data-type="qr">
-                                <div class="share-qrcode"></div>
-                            </li>
-                            <li class="iconfont-archer" data-type="weibo"></li>
-                            <li class="iconfont-archer" data-type="qzone"></li>
-                            <li class="iconfont-archer" data-type="twitter"></li>
-                            <li class="iconfont-archer" data-type="facebook"></li>
-                        </ul>
-                    </span>
-                </div>
-            </div>
         
     </div>
 </div>
@@ -399,157 +338,56 @@ height:50vh;
 </script>        
         <img class="loading" src="/assets/loading.svg" style="display: block; margin: 6rem auto 0 auto; width: 6rem; height: 6rem;">
         <div class="container container-unloaded">
-            <main class="main post-page">
-    <article class="article-entry">
-        <meta name="generator" content="Hexo 3.8.0"><h1 id="拓扑图"><a href="#拓扑图" class="headerlink" title="拓扑图"></a>拓扑图</h1><p><img src="http://ww1.sinaimg.cn/large/8c0b2220gy1g1hepmn6jlj20he09674k.jpg" alt></p>
-<blockquote>
-<p>相关知识①：运行多个路由协议进程，系统软件提供了路由信息从一个路由进程重新分布到另一个路由进程的功能；路由的相互重分布可以再所有的IP路由协议之间进行。<br>相关命令：redistribute protocol …</p>
-</blockquote>
-<blockquote>
-<p>相关知识②：路由重分发，可在同一网内使用多种路由协议，为了实现多种路由协议的协同工作，路由器可以使用路由重分发(route redistribution) 将学习到的一种路由协议的路由通过另一种路由协议广播出去，这样网络的所有部分就可以互通了。为了实现重分发，路由器必须同时运行多种路由协议，这样每种路由协议才可以取路由表中的所有或部分其他协议的路由来进行广播；</p>
-</blockquote>
-<h1 id="配置命令"><a href="#配置命令" class="headerlink" title="配置命令"></a>配置命令</h1><h2 id="配置三层路由器Switch0"><a href="#配置三层路由器Switch0" class="headerlink" title="配置三层路由器Switch0"></a>配置三层路由器Switch0</h2><pre><code>enable
-configure terminal
-</code></pre><h3 id="开启Vlan"><a href="#开启Vlan" class="headerlink" title="开启Vlan"></a>开启Vlan</h3><pre><code>vlan 2
-exit
-</code></pre><h3 id="划分Vlan给端口fa0-10"><a href="#划分Vlan给端口fa0-10" class="headerlink" title="划分Vlan给端口fa0/10"></a>划分Vlan给端口fa0/10</h3><pre><code>interface fa0/10
-switchport access vlan 2
-exit
-</code></pre><blockquote>
-<p>注意：由于vlan1默认是划分给所有端口的，所以可以省略划分vlan1</p>
-</blockquote>
-<h3 id="配置Vlan"><a href="#配置Vlan" class="headerlink" title="配置Vlan"></a>配置Vlan</h3><pre><code>interface vlan 1
-ip address 192.168.1.1 255.255.255.0
-no shutdown
-exit
-interface vlan 2
-ip address 192.168.2.1 255.255.255.0
-no shutdown
-exit
-</code></pre><h3 id="查看Vlan信息"><a href="#查看Vlan信息" class="headerlink" title="查看Vlan信息"></a>查看Vlan信息</h3><pre><code>end
-show interface vlan 1
-</code></pre><h3 id="在路由器上启动rip协议"><a href="#在路由器上启动rip协议" class="headerlink" title="在路由器上启动rip协议"></a>在路由器上启动rip协议</h3><pre><code>configure terminal
-
-ip routing        <font color="#abcfe4">//开启三层交换机路由功能</font>
-
-router rip        <font color="#abcfe4">//配置RIP协议</font>
-network 192.168.1.0        <font color="#abcfe4">//宣告本地路由和相连路由之间的网段</font>
-network 192.168.2.0
-version 2        <font color="#abcfe4">//设置RIP版本</font>
-</code></pre><h2 id="配置路由器Router0"><a href="#配置路由器Router0" class="headerlink" title="配置路由器Router0"></a>配置路由器Router0</h2><pre><code>enable
-configure terminal
-hostname R1
-</code></pre><h3 id="配置端口"><a href="#配置端口" class="headerlink" title="配置端口"></a>配置端口</h3><pre><code>interface fa0/0
-ip address 192.168.2.2 255.255.255.0
-no shutdown
-exit
-
-interface fa0/1
-ip address 192.168.3.1 255.255.255.0
-no shutdown
-exit
-</code></pre><h3 id="在路由器启动rip协议"><a href="#在路由器启动rip协议" class="headerlink" title="在路由器启动rip协议"></a>在路由器启动rip协议</h3><pre><code>router rip
-network 192.168.2.0
-version 2
-</code></pre><h3 id="在路由器启动ospf协议"><a href="#在路由器启动ospf协议" class="headerlink" title="在路由器启动ospf协议"></a>在路由器启动ospf协议</h3><pre><code>router ospf 1        <font color="#abcfe4">//配置OSPF协议</font>
-network 192.168.3.0 0.0.0.255 area 0        <font color="#abcfe4">//宣告直连网络</font>
-</code></pre><h2 id="配置路由器Router1"><a href="#配置路由器Router1" class="headerlink" title="配置路由器Router1"></a>配置路由器Router1</h2><pre><code>enable
-configure terminal
-hostname R2
-</code></pre><h3 id="配置端口-1"><a href="#配置端口-1" class="headerlink" title="配置端口"></a>配置端口</h3><pre><code>interface fa0/1
-ip address 192.168.3.2 255.255.255.0
-no shutdown
-exit
-
-interface fa0/0
-ip address 192.168.4.1 255.255.255.0
-no shutdown
-exit
-</code></pre><h3 id="在路由器启动ospf协议-1"><a href="#在路由器启动ospf协议-1" class="headerlink" title="在路由器启动ospf协议"></a>在路由器启动ospf协议</h3><pre><code>router ospf 1
-network 192.168.3.0 0.0.0.255 area 0
-network 192.168.4.0 0.0.0.255 area 0
-</code></pre><h3 id="查看路由表"><a href="#查看路由表" class="headerlink" title="查看路由表"></a>查看路由表</h3><pre><code>end
-show ip route
-</code></pre><h1 id="实验结果"><a href="#实验结果" class="headerlink" title="实验结果"></a>实验结果</h1><h2 id="使用Router0（中间的路由器）测试与两台PC是否能够通信"><a href="#使用Router0（中间的路由器）测试与两台PC是否能够通信" class="headerlink" title="使用Router0（中间的路由器）测试与两台PC是否能够通信"></a>使用Router0（中间的路由器）测试与两台PC是否能够通信</h2><pre><code>ping 192.168.1.2 (success)
-ping 192.168.4.2 (success)
-</code></pre><h2 id="尝试PC0与PC1通信"><a href="#尝试PC0与PC1通信" class="headerlink" title="尝试PC0与PC1通信"></a>尝试PC0与PC1通信</h2><p>  <strong>（此时无法通信）</strong></p>
-<p><img src="http://ww1.sinaimg.cn/large/8c0b2220gy1g1hfjp4pfyj20d405hjrd.jpg" alt></p>
-<h2 id="配置Router0（中间的路由器）"><a href="#配置Router0（中间的路由器）" class="headerlink" title="配置Router0（中间的路由器）"></a>配置Router0（中间的路由器）</h2><pre><code>configure terminal
-</code></pre><h3 id="路由重分布"><a href="#路由重分布" class="headerlink" title="路由重分布"></a>路由重分布</h3><pre><code>router rip
-redistribute ospf 1        <font color="#abcfe4">//ospf路由重发布</font>
-exit
-
-router ospf 1
-redistribute rip subnets        <font color="#abcfe4">//rip路由重发布</font>
-end
-</code></pre><blockquote>
-<p>注意： 本例在Packet Tracer 5.2上能够正常运行，但是在Packet Tracer 5.3 上的Switch0不能学习到192.168.3.0/192.168.4.0的路由信息，所以需要给Switch0指定静态路由: ip route 0.0.0.0 0.0.0.0 192.168.2.2</p>
-</blockquote>
-<h2 id="再次Router1查看路由表"><a href="#再次Router1查看路由表" class="headerlink" title="再次Router1查看路由表"></a>再次Router1查看路由表</h2><p>  <strong>（查看路由重发布后该路由器学习到的路由）</strong></p>
-<pre><code>show ip route
-</code></pre><h2 id="再次尝试PC0与PC1通信"><a href="#再次尝试PC0与PC1通信" class="headerlink" title="再次尝试PC0与PC1通信"></a>再次尝试PC0与PC1通信</h2><p>  <strong>（成功通信）</strong></p>
-<p><img src="http://ww1.sinaimg.cn/large/8c0b2220gy1g1hfuc69dvj20cp06baa3.jpg" alt></p>
-
-    </article>
-    <!-- license  -->
+            <main class="main index-page">
     
-        <div class="license-wrapper">
-            <p>原文作者：<a href="http://yoursite.com">YaoRemu</a>
-            </p><p>原文链接：<a href="http://yoursite.com/2019/03/27/路由器综合路由配置/">http://yoursite.com/2019/03/27/路由器综合路由配置/</a>
-            </p><p>发表日期：<a href="http://yoursite.com/2019/03/27/路由器综合路由配置/">March 27th 2019, 3:50:26 pm</a>
-            </p><p>更新日期：<a href="http://yoursite.com/2019/03/27/路由器综合路由配置/">April 14th 2019, 3:06:14 pm</a>
-            </p><p>版权声明：本文采用<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可</p>
+    
+    
+    
+    
+    
+    <article class="index-post">
+        <a class="abstract-title" href="/2019/04/10/MarkDown进阶操作/">
+            
+                <span>MarkDown进阶操作</span>
+        </a>
+        <div class="abstract-content">
+            图片处理有时候希望图片变得小一点，或者让他靠左边，使得排版更加美观，但是默认没有提供这类操作，可以直接引入HTML来设置；
+基本形式
+！[图片描述]（图片链接）
+
+例子：
+
+！[头像]（ http://ww1.sinaimg.cn/large/8c0b2220gy1g1ae3jfoogj20du0duwf0.jpg ）
+
+
+自定义尺寸
+< img width=’150’ height=’150’ src=” http://ww1.sinaimg.cn/large/8c0b2220gy1g1ae3jfoogj20du0duwf0.jpg “>
+
+
+插入音乐在网易云音乐生成外连接，直接复制黏...
         </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2019/04/10</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class="abstract-tags">
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="MarkDown基本语法">MarkDown基本语法</a>
+    
+</div>
+            
+        </div>
+    </article>
     
     <!-- paginator  -->
-    <ul class="post-paginator">
-        <li class="next">
-            
-                <div class="nextSlogan">Next Post</div>
-                <a href="/2019/03/28/OSPF、RIP小记/" title="OSPF、RIP小记">
-                    <div class="nextTitle">OSPF、RIP小记</div>
-                </a>
-            
-        </li>
-        <li class="previous">
-            
-                <div class="prevSlogan">Previous Post</div>
-                <a href="/2019/03/26/路由器OSPF动态路由配置/" title="路由器OSPF动态路由配置">
-                    <div class="prevTitle">路由器OSPF动态路由配置</div>
-                </a>
-            
-        </li>
-    </ul>
-    <!-- 评论插件 -->
-    <!-- 来必力City版安装代码 -->
-
-<!-- City版安装代码已完成 -->
     
+    <nav class="page-nav">
+        <a class="extend prev" rel="prev" href="/archives/2019/04/">< PREV</a><a class="page-number" href="/archives/2019/04/">1</a><span class="page-number current">2</span>
+    </nav>
     
-    <!-- partial('_partial/comment/changyan') -->
-    <!--PC版-->
-
-
-    
-    
-    <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
-    <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
-    <div id="comment"></div>
-    <script>
-    new Valine({
-        el: '#comment' ,
-        notify:false, 
-        verify:false, 
-        appId: "SgWkCobuyHsQs2PICTiE4ea7-gzGzoHsz",
-        appKey: "v5krQ6EXt9olzSl8Ms7G7iSf",
-        placeholder: "",
-        path:window.location.pathname, 
-        avatar:'mm' 
-    });
-    </script>
-
-
-    <!-- 评论 -->
 </main>
             <!-- profile -->
             
@@ -637,13 +475,6 @@ end
 </footer>
     </div>
     <!-- toc -->
-    
-    <div class="toc-wrapper" style="top:50vh;">
-        <div class="toc-catalog">
-            <span class="iconfont-archer catalog-icon"></span><span>CATALOG</span>
-        </div>
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#拓扑图"><span class="toc-number">1.</span> <span class="toc-text">拓扑图</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#配置命令"><span class="toc-number">2.</span> <span class="toc-text">配置命令</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#配置三层路由器Switch0"><span class="toc-number">2.1.</span> <span class="toc-text">配置三层路由器Switch0</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#开启Vlan"><span class="toc-number">2.1.1.</span> <span class="toc-text">开启Vlan</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#划分Vlan给端口fa0-10"><span class="toc-number">2.1.2.</span> <span class="toc-text">划分Vlan给端口fa0/10</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#配置Vlan"><span class="toc-number">2.1.3.</span> <span class="toc-text">配置Vlan</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#查看Vlan信息"><span class="toc-number">2.1.4.</span> <span class="toc-text">查看Vlan信息</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#在路由器上启动rip协议"><span class="toc-number">2.1.5.</span> <span class="toc-text">在路由器上启动rip协议</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#配置路由器Router0"><span class="toc-number">2.2.</span> <span class="toc-text">配置路由器Router0</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#配置端口"><span class="toc-number">2.2.1.</span> <span class="toc-text">配置端口</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#在路由器启动rip协议"><span class="toc-number">2.2.2.</span> <span class="toc-text">在路由器启动rip协议</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#在路由器启动ospf协议"><span class="toc-number">2.2.3.</span> <span class="toc-text">在路由器启动ospf协议</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#配置路由器Router1"><span class="toc-number">2.3.</span> <span class="toc-text">配置路由器Router1</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#配置端口-1"><span class="toc-number">2.3.1.</span> <span class="toc-text">配置端口</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#在路由器启动ospf协议-1"><span class="toc-number">2.3.2.</span> <span class="toc-text">在路由器启动ospf协议</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#查看路由表"><span class="toc-number">2.3.3.</span> <span class="toc-text">查看路由表</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#实验结果"><span class="toc-number">3.</span> <span class="toc-text">实验结果</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#使用Router0（中间的路由器）测试与两台PC是否能够通信"><span class="toc-number">3.1.</span> <span class="toc-text">使用Router0（中间的路由器）测试与两台PC是否能够通信</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#尝试PC0与PC1通信"><span class="toc-number">3.2.</span> <span class="toc-text">尝试PC0与PC1通信</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#配置Router0（中间的路由器）"><span class="toc-number">3.3.</span> <span class="toc-text">配置Router0（中间的路由器）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#路由重分布"><span class="toc-number">3.3.1.</span> <span class="toc-text">路由重分布</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#再次Router1查看路由表"><span class="toc-number">3.4.</span> <span class="toc-text">再次Router1查看路由表</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#再次尝试PC0与PC1通信"><span class="toc-number">3.5.</span> <span class="toc-text">再次尝试PC0与PC1通信</span></a></li></ol></li></ol>
-    </div>
     
     <div class="back-top iconfont-archer"></div>
     <div class="sidebar sidebar-hide">
@@ -1156,8 +987,6 @@ var talkAPI = "";//如果有类似图灵机器人的聊天接口请填写接口�
     
     
     <!-- async load share.js -->
-    
-        <script src="/scripts/share.js" async></script>    
      
 
 

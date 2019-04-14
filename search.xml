@@ -1,9 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[新增的主题结构元素（七）]]></title>
+    <url>%2F2019%2F04%2F14%2F%E6%96%B0%E5%A2%9E%E7%9A%84%E4%B8%BB%E9%A2%98%E7%BB%93%E6%9E%84%E5%85%83%E7%B4%A0%EF%BC%88%E4%B8%83%EF%BC%89%2F</url>
+    <content type="text"><![CDATA[]]></content>
+  </entry>
+  <entry>
     <title><![CDATA[新增的主题结构元素（六）]]></title>
     <url>%2F2019%2F04%2F14%2F%E6%96%B0%E5%A2%9E%E7%9A%84%E4%B8%BB%E9%A2%98%E7%BB%93%E6%9E%84%E5%85%83%E7%B4%A0%EF%BC%88%E5%85%AD%EF%BC%89%2F</url>
-    <content type="text"><![CDATA[]]></content>
+    <content type="text"><![CDATA[address元素address元素的简介address元素用来在文档中呈现联系信息，包括文档作者或者文档维护者的名字、他们的网络链接、电子邮箱、真实地址、电话号码等。address应该不只用来呈现电子邮箱或真实地址，还用来展示跟文档相关的联系人的所有联系地址。 123456789101112131415 < /a> < /a>< /address> < /a> 欢迎来到Yaoremu的博客 < /address> 2015-10-10< /time> < /div>< /footer> HTML5的结构大纲编排的规则显示编排内容区域块显示编排是指明确的使用section等元素创建文档结构，在每个区域块使用标题，类似与< h1 > ~ < h6 >或< hgroup >等…… 隐示编排内容区域块所谓隐示编排指不明确使用section等元素，而是根据网页需求，来写各级的< h1 > ~ < h6 >或者< hgroup >，把各级内容区域块自动创建出来 标题分级从< h1 > ~ < h6 >它的级别是不同的，更具标题不同，那么级别也不同。如果新的出现的标题比上一个标题级别低，将生成下级内容区域块；如果新出现的标题比上一标题级别要高，或者两者级别相等的情况下，将生成新的区域块 不同区域块使用相同级别标题eg: 123456789101112131415161718192021222324252627282930 网页标题< /h1> 首页< /a>< /li> 帮助< /a>< /li> < /ul> < /nav>< /header> 文章主标题< /h1> 文章子标题< /h2> < /hgroup> 文章正文< /p> 评论标题< /h1> 评论正文< /p> < /article> < /div> < /section>< /article> 版权所有...< /small>< /footer>]]></content>
       <categories>
         <category>【极客】前端学习</category>
       </categories>
@@ -36,7 +41,7 @@
   <entry>
     <title><![CDATA[新增的主题结构元素（三）]]></title>
     <url>%2F2019%2F04%2F12%2F%E6%96%B0%E5%A2%9E%E7%9A%84%E4%B8%BB%E9%A2%98%E7%BB%93%E6%9E%84%E5%85%83%E7%B4%A0%EF%BC%88%E4%B8%89%EF%BC%89%2F</url>
-    <content type="text"><![CDATA[nav元素nav元素是一个可以用在页面导航的连接组，其中的导航元素链接到其他的页面或当前页面的其他部分。并不是所有的连接组都要被放进nav元素，只需要将主要的、基本的链接组放进nav元素即可。 nav元素的应用场景： 传统导航条 侧边栏导航 页内导航 翻页操作 nav元素通常承载一个列表元素 nav元素是可以多处使用的 12345678910111213141516171819202122232425262728293031 主页< /a>< /li> 开发文档< /a>< /li>< /nav> HTML5与CSS3的历史< /h1> HTML5历史< /a>< /li> CSS3历史< /a>< /li> < /ul> < /nav> < /header> HTML5历史< /h1> ....< /p> < /section> CSS3的历史< /h1> ....< /p> < /section> 删除< /a> 修改< /a> < /footer>< /article> 版权声明：< /small>< /p>< /footer> 标签定义文档中的节（section、区段）。比如：章节、页眉、页脚或文档中的其他部分。 注意：HTML5中不能使用menu元素代替nav元素。manu元素是用在一系列发出命令的菜单上的，是一种交互性的元素，确切点说是使用在web应用程序中的。]]></content>
+    <content type="text"><![CDATA[nav元素是一个可以用在页面导航的连接组，其中的导航元素链接到其他的页面或当前页面的其他部分。并不是所有的连接组都要被放进nav元素，只需要将主要的、基本的链接组放进nav元素即可。 nav元素的应用场景： 传统导航条 侧边栏导航 页内导航 翻页操作 nav元素通常承载一个列表元素 nav元素是可以多处使用的 12345678910111213141516171819202122232425262728293031 主页< /a>< /li> 开发文档< /a>< /li>< /nav> HTML5与CSS3的历史< /h1> HTML5历史< /a>< /li> CSS3历史< /a>< /li> < /ul> < /nav> < /header> HTML5历史< /h1> ....< /p> < /section> CSS3的历史< /h1> ....< /p> < /section> 删除< /a> 修改< /a> < /footer>< /article> 版权声明：< /small>< /p>< /footer> 标签定义文档中的节（section、区段）。比如：章节、页眉、页脚或文档中的其他部分。 注意：HTML5中不能使用menu元素代替nav元素。manu元素是用在一系列发出命令的菜单上的，是一种交互性的元素，确切点说是使用在web应用程序中的。]]></content>
       <categories>
         <category>【极客】前端学习</category>
       </categories>
@@ -301,8 +306,5 @@
     <title><![CDATA[关于我的博客]]></title>
     <url>%2F2019%2F03%2F16%2F%E7%AE%80%E4%BB%8B%2F</url>
     <content type="text"><![CDATA[~~ 欢迎各位道友!~~]]></content>
-      <tags>
-        <tag>日常</tag>
-      </tags>
   </entry>
 </search>
