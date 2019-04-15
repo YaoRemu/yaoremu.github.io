@@ -359,6 +359,76 @@ height:50vh;
     
     
     <article class="index-post">
+        <a class="abstract-title" href="/2019/03/27/路由器综合路由配置/">
+            
+                <span>路由器综合路由配置</span>
+        </a>
+        <div class="abstract-content">
+            拓扑图
+
+相关知识①：运行多个路由协议进程，系统软件提供了路由信息从一个路由进程重新分布到另一个路由进程的功能；路由的相互重分布可以再所有的IP路由协议之间进行。相关命令：redistribute protocol …
+
+
+相关知识②：路由重分发，可在同一网内使用多种路由协议，为了实现多种路由协议的协同工作，路由器可以使用路由重分发(route redistribution) 将学习到的一种路由协议的路由通过另一种路由协议广播出去，这样网络的所有部分就可以互通了。为了实现重分发，路由器必须同时运行多种路由协议，这样每种路由协议才可以取路由表中的所有或部分其他协议的路由来进行广播；
+
+配置...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2019/03/27</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class="abstract-tags">
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Cisco基础">Cisco基础</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
+        <a class="abstract-title" href="/2019/03/26/路由器OSPF动态路由配置/">
+            
+                <span>路由器OSPF动态路由配置</span>
+        </a>
+        <div class="abstract-content">
+            拓扑图
+
+相关知识①：OSPF(Open Shortest Path First 开放式最短路径优先)是一个内部网关协议(Interior Gateway Protocol，检测IGP)，用在单一自治系统(autonomous system,AS)内决策路由。与RIP相比，OSPF是链路状态协议，而RIP是距离矢量协议。
+
+
+相关知识②：OSPF开放式最短路径优先协议，是目前网络中应用最广泛的路由协议之一；OSPF路由协议通过向全网扩散本设备的链路状态信息，使网络中每台设备最终同步一个具有全网链路状态的数据库，然后路由器采用SPF算法，以自己为根，计算到达其他网络的最短路径，最终形成全网...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2019/03/26</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class="abstract-tags">
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Cisco基础">Cisco基础</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
         <a class="abstract-title" href="/2019/03/25/路由器RIP动态路由配置/">
             
                 <span>路由器RIP动态路由配置</span>
@@ -717,104 +787,10 @@ eg:点击跳转百度
         </div>
     </article>
     
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/2019/03/18/ciscoTelnet/">
-            
-                <span>No3. Telnet</span>
-        </a>
-        <div class="abstract-content">
-            拓扑图:
-
-配置命令:
-首先开启Vlan:   enable  
-configure terminal  
-interface vlan 1
-no shutdown   
-eg: 
-配置交换机：设置Vlan1 IP及其子网掩码:  interface vlan 1  
-ip address 10.1.1.154 255.255.255.0
-exit
-设置进入系统视图的密码：enable password ****
-设置五条虚拟链接：line vty 0 4
-设置特权等级[级别越高权限越大]：privilege level 1 0 
-设置远程链接(Telnet)的密码：password c...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2019/03/18</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class="abstract-tags">
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Cisco基础">Cisco基础</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/2019/03/17/MySql服务安装/">
-            
-                <span>MySql服务安装</span>
-        </a>
-        <div class="abstract-content">
-            安装过程
-先添加安装文件中bin文件夹到用户环境变量(这样才可以使用命令)
-
-  
-
-mysqld –initialize（执行初始化【不添加用户名】/此处注意，如果安装提示出错，可以删除  [data]  文件夹后重试 ）
-
-
-
-mysqld install (安装MySql)
-
-  
-（由于之前已经安装过，所以这里提示 已存在）        
-
-net start mysql(启动MySql服务)
-
-  
-
-完成！  
-
-
-   注意：要正确配置[my.ini]中的文件！！！
-
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2019/03/17</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class="abstract-tags">
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="安装教程">安装教程</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
     <!-- paginator  -->
     
     <nav class="page-nav">
-        <a class="extend prev" rel="prev" href="/page/2/">< PREV</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span>
+        <a class="extend prev" rel="prev" href="/page/2/">< PREV</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/4/">NEXT ></a>
     </nav>
     
 </main>
@@ -1208,9 +1184,23 @@ net start mysql(启动MySql服务)
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 30
+        Total : 32
         </div>
         <!-- search  -->
         
@@ -1237,6 +1227,16 @@ net start mysql(启动MySql服务)
     
     <div class="archive-year"> 2019 </div>
     <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">04/15</span><a class="archive-post-title" href="/2019/04/15/Valine-访问被api域名白名单拒绝/">Valine-访问被api域名白名单拒绝</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">04/15</span><a class="archive-post-title" href="/2019/04/15/为博客添加域名/">为博客添加域名</a>
+        </li>
     
     
         <li class="archive-post-item">
@@ -1394,6 +1394,8 @@ net start mysql(启动MySql服务)
     
         <span class="sidebar-tag-name" data-tags="Cisco笔记"><span class="iconfont-archer"></span>Cisco笔记</span>
     
+        <span class="sidebar-tag-name" data-tags="github搭建个人博客"><span class="iconfont-archer"></span>github搭建个人博客</span>
+    
         <span class="sidebar-tag-name" data-tags="安装教程"><span class="iconfont-archer"></span>安装教程</span>
     
         <span class="sidebar-tag-name" data-tags="Cisco基础"><span class="iconfont-archer"></span>Cisco基础</span>
@@ -1435,8 +1437,6 @@ net start mysql(启动MySql服务)
         <span class="sidebar-category-name" data-categories="教学"><span class="iconfont-archer"></span>教学</span>
     
         <span class="sidebar-category-name" data-categories="Cisco"><span class="iconfont-archer"></span>Cisco</span>
-    
-        <span class="sidebar-category-name" data-categories="安装"><span class="iconfont-archer"></span>安装</span>
     
     </div>
     <div class="iconfont-archer sidebar-categories-empty"></div>

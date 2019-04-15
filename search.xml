@@ -1,6 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Valine-访问被api域名白名单拒绝]]></title>
+    <url>%2F2019%2F04%2F15%2FValine-%E8%AE%BF%E9%97%AE%E8%A2%ABapi%E5%9F%9F%E5%90%8D%E7%99%BD%E5%90%8D%E5%8D%95%E6%8B%92%E7%BB%9D%2F</url>
+    <content type="text"><![CDATA[发现错误 打开LeanCloud控制台点击设置->安全中心 添加相关网站网址 回到网站刷新查看 成功解决！]]></content>
+      <categories>
+        <category>教学</category>
+      </categories>
+      <tags>
+        <tag>github搭建个人博客</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[为博客添加域名]]></title>
+    <url>%2F2019%2F04%2F15%2F%E4%B8%BA%E5%8D%9A%E5%AE%A2%E6%B7%BB%E5%8A%A0%E5%9F%9F%E5%90%8D%2F</url>
+    <content type="text"><![CDATA[阿里云上购买域名 购买后点击解析 修改IP以及主机记录获得博客IP的方法：在cmd页面ping博客”.github.io后缀”的域名 eg: 点击修改弹出如下窗口，填入相关信息 eg: 记录值中填入博客的IP以及修改主机记录（随意），其他选项默认 创建CNAME文件放入仓库在站点的source文件夹下创建CNAME文件 在CNAME中写入你购买的站点名 添加域名成功！]]></content>
+      <categories>
+        <category>教学</category>
+      </categories>
+      <tags>
+        <tag>github搭建个人博客</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[新增的非主体结构元素（一）]]></title>
     <url>%2F2019%2F04%2F14%2F%E6%96%B0%E5%A2%9E%E7%9A%84%E9%9D%9E%E4%B8%BB%E4%BD%93%E7%BB%93%E6%9E%84%E5%85%83%E7%B4%A0%EF%BC%88%E4%B8%80%EF%BC%89%2F</url>
     <content type="text"><![CDATA[在HTML5中，还增加了一些用来表示逻辑结构或者是附加信息的非主体结构元素 header元素 footer元素 hgroup元素 address元素 header元素header元素是一种具有引导和导航作用的结构元素，通常用来放置整个页面或页面内的一个内容区块的标题，但是也可以包含其他内容，例如数据表格、搜索歌单或相关的logo图片 以前我们是通过一个div包裹然后给它设定一个class或者id指定是header用来包含整个页面或页面内的区域块的一个标题 注意：header的出现不一定只有一次，它可以出现多次，不论是在整个页面来表示他的标题，或者说区域块来表示标题都是可以的 旧版的写法1234< /div>< /div>< /div> ##现在的写法 1234567891011 页面标题< /h1>< /header> Hello< /h1> < /header>< /article> 通常一个header元素至少包含一个h元素 完整的例子123456789101112 IT最新技术< /h1> 姚的博客< /a> 学习< /a>< /li> 技术< /a>< /li> 运动< /a>< /li> < /ul> < /nav>< /header>]]></content>
@@ -313,7 +335,7 @@
     <url>%2F2019%2F03%2F17%2FMySql%E6%9C%8D%E5%8A%A1%E5%AE%89%E8%A3%85%2F</url>
     <content type="text"><![CDATA[安装过程 先添加安装文件中bin文件夹到用户环境变量(这样才可以使用命令) mysqld –initialize（执行初始化【不添加用户名】/此处注意，如果安装提示出错，可以删除 [data] 文件夹后重试 ） mysqld install (安装MySql) （由于之前已经安装过，所以这里提示 已存在） net start mysql(启动MySql服务) 完成！ 注意：要正确配置[my.ini]中的文件！！！]]></content>
       <categories>
-        <category>安装</category>
+        <category>教学</category>
       </categories>
       <tags>
         <tag>安装教程</tag>

@@ -22,7 +22,7 @@
     <meta name="description" content="欢迎来到YaoRemu的博客">
     <meta http-equiv="Cache-control" content="no-cache">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>No3. Telnet · YaoRemu'Blog</title>
+    <title>YaoRemu'Blog</title>
     <style type="text/css">
     @font-face {
         font-family: 'Oswald-Regular';
@@ -77,8 +77,6 @@
 
     <link rel="preload" href="/css/style.css?v=20180824" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <link rel="stylesheet" href="/css/mobile.css?v=20180824" media="(max-width: 980px)">
-    
-    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     
     <!-- /*! loadCSS. [c]2017 Filament Group, Inc. MIT License */
 /* This file is meant as a standalone workflow for
@@ -203,23 +201,14 @@
 </head>
 
     
-        <body class="post-body">
+        <body class="home-body">
     
     
-<header class="header">
+<header class="header index-header">
 
     <div class="read-progress"></div>
     <div class="header-sidebar-menu"></div>
     <!-- post页的toggle banner  -->
-    
-    <div class="banner">
-            <div class="blog-title">
-                <a href="/">Welcome to YaoRemu'Blog</a>
-            </div>
-            <div class="post-title">
-                <a href="#" class="post-name">No3. Telnet</a>
-            </div>
-    </div>
     
     <a class="home-link" href="/">Welcome to YaoRemu'Blog</a>
 </header>
@@ -238,17 +227,17 @@ height:50vh;
     <!-- 主页  -->
     
     
-    <!-- 404页  -->
+    <!-- 文章页  -->
             
     <div class="site-intro-placeholder"></div>
-    <div class="site-intro-img" style="background-image: url(http://ww1.sinaimg.cn/large/8c0b2220gy1g1aemgv57ej21hc0tze81.jpg)"></div>
+    <div class="site-intro-img" style="background-image: url(http://ww1.sinaimg.cn/large/8c0b2220gy1g1aejyd30tj21c00u07a2.jpg)"></div>
     <div class="site-intro-meta">
         <!-- 标题  -->
         <h1 class="intro-title">
             <!-- 主页  -->
             
-            No3. Telnet
-            <!-- 404 -->
+            Welcome to YaoRemu'Blog
+            <!-- 文章页  -->
             
         </h1>
         <!-- 副标题 -->
@@ -256,49 +245,12 @@ height:50vh;
             <!-- 主页副标题  -->
             
             
-            <!-- 404 -->
+                如果真爱有颜色，那一定是蓝色.
+            
+            <!-- 文章页  -->
             
         </p>
         <!-- 文章页meta -->
-        
-            <div class="post-intros">
-                <!-- 文章页标签  -->
-                
-                    <div class="post-intro-tags">
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Cisco基础">Cisco基础</a>
-    
-</div>
-                
-                
-                    <div class="post-intro-read">
-                        <span>字数统计: <span class="post-count word-count">188</span>阅读时长: <span class="post-count reading-time">1 min</span></span>
-                    </div>
-                
-                <div class="post-intro-meta">
-                    <span class="post-intro-calander iconfont-archer"></span>
-                    <span class="post-intro-time">2019/03/18</span>
-                    
-                    <span id="busuanzi_container_page_pv" class="busuanzi-pv">
-                        <span class="iconfont-archer"></span>
-                        <span id="busuanzi_value_page_pv"></span>
-                    </span>
-                    
-                    <span class="shareWrapper">
-                        <span class="iconfont-archer shareIcon"></span>
-                        <span class="shareText">Share</span>
-                        <ul class="shareList">
-                            <li class="iconfont-archer share-qr" data-type="qr">
-                                <div class="share-qrcode"></div>
-                            </li>
-                            <li class="iconfont-archer" data-type="weibo"></li>
-                            <li class="iconfont-archer" data-type="qzone"></li>
-                            <li class="iconfont-archer" data-type="twitter"></li>
-                            <li class="iconfont-archer" data-type="facebook"></li>
-                        </ul>
-                    </span>
-                </div>
-            </div>
         
     </div>
 </div>
@@ -399,95 +351,189 @@ height:50vh;
 </script>        
         <img class="loading" src="/assets/loading.svg" style="display: block; margin: 6rem auto 0 auto; width: 6rem; height: 6rem;">
         <div class="container container-unloaded">
-            <main class="main post-page">
-    <article class="article-entry">
-        <meta name="generator" content="Hexo 3.8.0"><h4 id="拓扑图"><a href="#拓扑图" class="headerlink" title="拓扑图:"></a>拓扑图:</h4><p><img src="https://i.loli.net/2019/03/18/5c8f650c54adc.png" alt></p>
-<hr>
-<h4 id="配置命令"><a href="#配置命令" class="headerlink" title="配置命令:"></a>配置命令:</h4><ol>
-<li>首先开启Vlan:   <pre><code>enable  
+            <main class="main index-page">
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
+        <a class="abstract-title" href="/2019/03/18/ciscoTelnet/">
+            
+                <span>No3. Telnet</span>
+        </a>
+        <div class="abstract-content">
+            拓扑图:
+
+配置命令:
+首先开启Vlan:   enable  
 configure terminal  
 interface vlan 1
 no shutdown   
-</code></pre>eg:<img src="https://i.loli.net/2019/03/18/5c8f6503c7838.png" alt> </li>
-<li>配置交换机：<br>设置Vlan1 IP及其子网掩码:  <pre><code>interface vlan 1  
+eg: 
+配置交换机：设置Vlan1 IP及其子网掩码:  interface vlan 1  
 ip address 10.1.1.154 255.255.255.0
 exit
-</code></pre>设置进入系统视图的密码：<pre><code>enable password ****
-</code></pre>设置五条虚拟链接：<pre><code>line vty 0 4
-</code></pre>设置特权等级<font color="red">[级别越高权限越大]</font>：<pre><code>privilege level 1 0 
-</code></pre>设置远程链接(Telnet)的密码：<pre><code>password cisco
-</code></pre>设置login验证<font color="red">[如果只设置login,直接输入密码即可；如果设置了login local，则需要输入用户名以及密码]</font>:<pre><code>login
-</code></pre>退出VTY<font color="red">[VTY(Virtual typle terminal)虚拟类型终端]</font>的配置：<pre><code>exit
-</code></pre></li>
-<li>使用PC与交换机进行Telnet测试:<pre><code>Telnet 10.1.1.154
-(输入前面密码即可)  
-</code></pre>eg:<img src="https://i.loli.net/2019/03/18/5c8f64da1050f.png" alt></li>
-</ol>
-<hr>
-<h4 id="结果"><a href="#结果" class="headerlink" title="结果:"></a>结果:</h4><p><img src="https://i.loli.net/2019/03/18/5c8f64f558e75.png" alt></p>
-
-    </article>
-    <!-- license  -->
-    
-        <div class="license-wrapper">
-            <p>原文作者：<a href="http://yoursite.com">YaoRemu</a>
-            </p><p>原文链接：<a href="http://yoursite.com/2019/03/18/ciscoTelnet/">http://yoursite.com/2019/03/18/ciscoTelnet/</a>
-            </p><p>发表日期：<a href="http://yoursite.com/2019/03/18/ciscoTelnet/">March 18th 2019, 4:00:05 pm</a>
-            </p><p>更新日期：<a href="http://yoursite.com/2019/03/18/ciscoTelnet/">April 14th 2019, 3:02:24 pm</a>
-            </p><p>版权声明：本文采用<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可</p>
+设置进入系统视图的密码：enable password ****
+设置五条虚拟链接：line vty 0 4
+设置特权等级[级别越高权限越大]：privilege level 1 0 
+设置远程链接(Telnet)的密码：password c...
         </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2019/03/18</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class="abstract-tags">
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Cisco基础">Cisco基础</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
+        <a class="abstract-title" href="/2019/03/17/MySql服务安装/">
+            
+                <span>MySql服务安装</span>
+        </a>
+        <div class="abstract-content">
+            安装过程
+先添加安装文件中bin文件夹到用户环境变量(这样才可以使用命令)
+
+  
+
+mysqld –initialize（执行初始化【不添加用户名】/此处注意，如果安装提示出错，可以删除  [data]  文件夹后重试 ）
+
+
+
+mysqld install (安装MySql)
+
+  
+（由于之前已经安装过，所以这里提示 已存在）        
+
+net start mysql(启动MySql服务)
+
+  
+
+完成！  
+
+
+   注意：要正确配置[my.ini]中的文件！！！
+
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2019/03/17</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class="abstract-tags">
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="安装教程">安装教程</a>
+    
+</div>
+            
+        </div>
+    </article>
     
     <!-- paginator  -->
-    <ul class="post-paginator">
-        <li class="next">
-            
-                <div class="nextSlogan">Next Post</div>
-                <a href="/2019/03/18/MarkDown基础教学/" title="MarkDown基础教学">
-                    <div class="nextTitle">MarkDown基础教学</div>
-                </a>
-            
-        </li>
-        <li class="previous">
-            
-                <div class="prevSlogan">Previous Post</div>
-                <a href="/2019/03/17/MySql服务安装/" title="MySql服务安装">
-                    <div class="prevTitle">MySql服务安装</div>
-                </a>
-            
-        </li>
-    </ul>
-    <!-- 评论插件 -->
-    <!-- 来必力City版安装代码 -->
-
-<!-- City版安装代码已完成 -->
     
+    <nav class="page-nav">
+        <a class="extend prev" rel="prev" href="/page/3/">< PREV</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span>
+    </nav>
     
-    <!-- partial('_partial/comment/changyan') -->
-    <!--PC版-->
-
-
-    
-    
-    <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
-    <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
-    <div id="comment"></div>
-    <script>
-    new Valine({
-        el: '#comment' ,
-        notify:false, 
-        verify:false, 
-        appId: "SgWkCobuyHsQs2PICTiE4ea7-gzGzoHsz",
-        appKey: "v5krQ6EXt9olzSl8Ms7G7iSf",
-        placeholder: "",
-        path:window.location.pathname, 
-        avatar:'mm' 
-    });
-    </script>
-
-
-    <!-- 评论 -->
 </main>
             <!-- profile -->
+            
+            <div class="profile">
+    <img class="profile-avatar" alt="avatar" src="http://ww1.sinaimg.cn/large/8c0b2220gy1g1cs04vue4j20ht0ht0tz.jpg">
+    <div class="profile-name">YaoRemu</div>
+    
+    <div class="profile-signature">
+        Man proposes, god disposes.
+    </div>
+    
+    
+    <div class="profile-social">
+        
+    
+        
+            
+                <span class="iconfont-archer wechat" title="wechat">
+                  
+                  <img class="profile-qr" src="http://ww1.sinaimg.cn/large/8c0b2220gy1g1aea5wfucg208c08cjrx.gif">
+                </span>
+            
+        
+    
+        
+            
+                <span class="iconfont-archer qq" title="qq">
+                  
+                  <img class="profile-qr" src="http://ww1.sinaimg.cn/large/8c0b2220gy1g1aeafzefgg208c08caba.gif">
+                </span>
+            
+        
+    
+        
+            
+                <a href="https://www.weibo.com/u/2349539872?sudaref=s.weibo.com&display=0&retcode=6102&is_all=1" class="iconfont-archer weibo" target="_blank" title="weibo"></a>
+            
+        
+    
+        
+            
+                <a href="https://YaoRemu.github.io" class="iconfont-archer github" target="_blank" title="github"></a>
+            
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+    </div>
+    
+    
+    
+</div>
             
         </div>
         <footer class="footer footer-unloaded">
@@ -573,13 +619,6 @@ exit
 </footer>
     </div>
     <!-- toc -->
-    
-    <div class="toc-wrapper" style="top:50vh;">
-        <div class="toc-catalog">
-            <span class="iconfont-archer catalog-icon"></span><span>CATALOG</span>
-        </div>
-        <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#拓扑图"><span class="toc-number">1.</span> <span class="toc-text">拓扑图:</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#配置命令"><span class="toc-number">2.</span> <span class="toc-text">配置命令:</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#结果"><span class="toc-number">3.</span> <span class="toc-text">结果:</span></a></li></ol>
-    </div>
     
     <div class="back-top iconfont-archer"></div>
     <div class="sidebar sidebar-hide">
@@ -1128,8 +1167,6 @@ var talkAPI = "";//如果有类似图灵机器人的聊天接口请填写接口�
     
     
     <!-- async load share.js -->
-    
-        <script src="/scripts/share.js" async></script>    
      
 
 
