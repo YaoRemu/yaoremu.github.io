@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[表单新增的元素与属性]]></title>
+    <url>%2F2019%2F04%2F15%2F%E8%A1%A8%E5%8D%95%E6%96%B0%E5%A2%9E%E7%9A%84%E5%85%83%E7%B4%A0%E4%B8%8E%E5%B1%9E%E6%80%A7%2F</url>
+    <content type="text"><![CDATA[表单内元素的form属性在HTML4中，表单内的从属元素必须书写在表单内部，而在HTML5中，可以把他们书写在页面上任何地方，然后为该元素指定一个form属性，属性值为该表单的id，这样就可以声明该元素从属于指定表单了 123456 < /form>< /textarea> 这样做的好处是，如果你需要向页面添加一些样式，比较好添加，因为它们不会分散在表单之内了，所以添加相关的css效果，也会变得方便很多 表单内元素的formaction属性在HTML4中，一个表单之内的所有元素只能通过表单的action属性被统一提交到另一个页面，而在HTML5中可以为所有的提交按钮，增加不同的formaction属性，使单击不同的按钮时可以将表单提交到不同的页面 123456 提交到xx.jsp页面 提交到xx.jsp页面 提交到xx.jsp页面< /form> 表单内元素的formmethod属性在HTML4中，一个表单内只能有一个action属性用来对表单内所有元素统一指定提交页面，所以每个表单内页只有一个method属性来统一指定提交方法。在HTML5中，可以使用formmethod属性来对每一个表单元素指定不同的提交方法。 提交方法：提交时最常用的有像GET和POST两种方式 1234 提交 提交< /form> 表单内元素的formenctype属性在HTML4中，表单元素具有一个enctype属性，该属性用于指定在表单发送到服务器之前应该如何对表单内的数据进行编码； 在HTML5中，可以使用formenctype属性对表单元素分别指定不同的编码方式； 1234 < /form> formenctype的三种属性 text/plain属性：表单数据中的空格被转换为加号，但不对表单数据中的特殊字符进行编码 multipart/form-data属性：不对字符进行编码，在使用包含文件上传控件的表单时，必须使用改值 application/x-www-form-urlencoded属性：发送前编码所有字符，当表单元素的action属性为get时浏览器则用当前的编码方式把表单数据转换成一个字符]]></content>
+      <categories>
+        <category>【极客】前端学习</category>
+      </categories>
+      <tags>
+        <tag>前端知识</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Valine-访问被api域名白名单拒绝]]></title>
     <url>%2F2019%2F04%2F15%2FValine-%E8%AE%BF%E9%97%AE%E8%A2%ABapi%E5%9F%9F%E5%90%8D%E7%99%BD%E5%90%8D%E5%8D%95%E6%8B%92%E7%BB%9D%2F</url>
     <content type="text"><![CDATA[发现错误 打开LeanCloud控制台点击设置->安全中心 添加相关网站网址 回到网站刷新查看 成功解决！]]></content>
