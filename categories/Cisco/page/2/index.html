@@ -346,6 +346,139 @@
     
     
     <article class="index-post">
+        <a class="abstract-title" href="/2019/03/25/路由器RIP动态路由配置/">
+            
+                <span>路由器RIP动态路由配置</span>
+        </a>
+        <div class="abstract-content">
+            拓扑图
+
+相关知识①：动态路由是指路由器能够自动的建立自己的路由表，并且根据实际情况适时的进行调整；
+
+
+相关知识②：RIP(routing infromation protocol)路由信息协议：一种内部网关协议（IGP），是一种动态路由选择协议；RIP协议基于距离矢量算法，使用“跳数(metric)”来衡量到达目标地址的路由协议。（该协议的路由器只关心自己周围的世界，只与自己相连的路由器交换信息，范围在15跳之内）；
+
+
+相关知识③：RIPv1与RIPv2的区别：
+
+配置命令配置三层交换机enable
+configure terminal
+hostname S3560
+划分vlan给...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2019/03/25</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class="abstract-tags">
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Cisco基础">Cisco基础</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
+        <a class="abstract-title" href="/2019/03/24/路由器静态路由配置/">
+            
+                <span>路由器静态路由配置</span>
+        </a>
+        <div class="abstract-content">
+            拓扑图
+
+注：由于路由器[2811]初始时没有Serial接口，所以需要在图形化界面安装上[WIC-2T]组件；
+
+配置命令配置Router1各个端口enable
+configure terminal
+hostname R1
+
+interface fa0/1
+no shutdown        //开启端口
+ip address 192.168.1.1 255.255.255.0        //配置端口IP以及子网掩码
+exit
+
+interface serial 0/0/0        //配置串行接口
+no shutdown
+ip address 192.168.3.1 25...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2019/03/24</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class="abstract-tags">
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Cisco基础">Cisco基础</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
+        <a class="abstract-title" href="/2019/03/23/路由器单臂路由配置/">
+            
+                <span>路由器单臂路由配置</span>
+        </a>
+        <div class="abstract-content">
+            拓扑图
+配置命令配置Switchenable
+configure terminal
+
+vlan 2
+exit
+vlan 3
+exit
+
+interface fastEthernet 0/2
+switchport access vlan 2        //将端口划分给Vlan2
+exit
+
+interface fastEthernet 0/3
+switchport access vlan 3        //将端口划分给Vlan3
+exit
+
+interface fastEthernet 0/1        
+switchport mode trunk        //设置端口为...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2019/03/23</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class="abstract-tags">
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Cisco基础">Cisco基础</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
         <a class="abstract-title" href="/2019/03/22/快速生成树配置/">
             
                 <span>快速生成树配置</span>
@@ -892,9 +1025,30 @@ exit
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 33
+        Total : 36
         </div>
         <!-- search  -->
         
@@ -921,6 +1075,21 @@ exit
     
     <div class="archive-year"> 2019 </div>
     <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">04/16</span><a class="archive-post-title" href="/2019/04/16/环回接口（Loopback）/">环回接口（Loopback）</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">04/16</span><a class="archive-post-title" href="/2019/04/16/RIPv1基本配置/">RIPv1基本配置</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">04/16</span><a class="archive-post-title" href="/2019/04/16/RIP概述/">RIP概述</a>
+        </li>
     
     
         <li class="archive-post-item">
@@ -1089,15 +1258,19 @@ exit
     
         <span class="sidebar-tag-name" data-tags="前端知识"><span class="iconfont-archer"></span>前端知识</span>
     
+        <span class="sidebar-tag-name" data-tags="Cisco笔记"><span class="iconfont-archer"></span>Cisco笔记</span>
+    
         <span class="sidebar-tag-name" data-tags="MarkDown基本语法"><span class="iconfont-archer"></span>MarkDown基本语法</span>
     
         <span class="sidebar-tag-name" data-tags="安装教程"><span class="iconfont-archer"></span>安装教程</span>
     
-        <span class="sidebar-tag-name" data-tags="Cisco笔记"><span class="iconfont-archer"></span>Cisco笔记</span>
+        <span class="sidebar-tag-name" data-tags="Cisco强化学习"><span class="iconfont-archer"></span>Cisco强化学习</span>
+    
+        <span class="sidebar-tag-name" data-tags="github搭建个人博客"><span class="iconfont-archer"></span>github搭建个人博客</span>
     
         <span class="sidebar-tag-name" data-tags="Cisco基础"><span class="iconfont-archer"></span>Cisco基础</span>
     
-        <span class="sidebar-tag-name" data-tags="github搭建个人博客"><span class="iconfont-archer"></span>github搭建个人博客</span>
+        <span class="sidebar-tag-name" data-tags="Cisco知识点"><span class="iconfont-archer"></span>Cisco知识点</span>
     
     </div>
     <div class="iconfont-archer sidebar-tags-empty"></div>
@@ -1133,9 +1306,9 @@ exit
     
         <span class="sidebar-category-name" data-categories="【极客】前端学习"><span class="iconfont-archer"></span>【极客】前端学习</span>
     
-        <span class="sidebar-category-name" data-categories="教学"><span class="iconfont-archer"></span>教学</span>
-    
         <span class="sidebar-category-name" data-categories="Cisco"><span class="iconfont-archer"></span>Cisco</span>
+    
+        <span class="sidebar-category-name" data-categories="教学"><span class="iconfont-archer"></span>教学</span>
     
     </div>
     <div class="iconfont-archer sidebar-categories-empty"></div>

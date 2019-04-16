@@ -346,6 +346,116 @@
     
     
     <article class="index-post">
+        <a class="abstract-title" href="/2019/03/29/扩展IP访问控制列表配置/">
+            
+                <span>扩展IP访问控制列表配置</span>
+        </a>
+        <div class="abstract-content">
+            拓扑图
+
+知识点①：访问控制列表定义的典型规则主要有以下：源地址，目标地址，上层协议，时间区域；扩展IP访问列表（编号100-199、2000、2699）使用以上四种组合来进行转发或阻断分组；可以根据数据包的源IP、目的IP、源接口、目的接口、协议来定义规则，进行数据包的过滤。
+
+
+知识点②：扩展IP访问列表的配置包括以下两部分：①定义扩展IP访问列表；②将扩展IP访问列表应用于特定接口上；
+
+配置命令配置Router0端口enable
+configure terminal
+hostname R0
+
+interface fa0/0
+ip address 172.16.1.1 255.25...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2019/03/29</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class="abstract-tags">
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Cisco基础">Cisco基础</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
+        <a class="abstract-title" href="/2019/03/28/标准-IP-访问控制列表配置/">
+            
+                <span>标准 IP 访问控制列表配置</span>
+        </a>
+        <div class="abstract-content">
+            拓扑图
+
+相关知识①：ACLs 的全称为 接入控制列表(Access Control Lists),也称访问控制列表(Access Lists),俗称防火墙，在有的文档中还称包过滤。
+
+
+相关知识②：ACLs 通过定义一些规则对网络设备接口上的数据报文进行控制；运行通过或者丢失，从而提高网络可管理型和安全性；
+
+
+相关知识③：IP ACL分为两种：标准IP访问列表和扩展IP访问列表，编号范围为 1~99、1300~1999、100~199、2000~2699;标准IP访问控制列表：根据数据包的源地址定义规则，进行数据包的过滤；扩展IP访问控制列表：根据数据包的源IP、目的IP、源接口、目...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2019/03/28</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class="abstract-tags">
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Cisco基础">Cisco基础</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
+        <a class="abstract-title" href="/2019/03/28/OSPF、RIP小记/">
+            
+                <span>OSPF、RIP小记</span>
+        </a>
+        <div class="abstract-content">
+            OSPF可将OSPF比喻成导航，可以实时更新；
+RIP将RIP比喻成路标，是固定不变的，除非人为修改；
+
+
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2019/03/28</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class="abstract-tags">
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Cisco笔记">Cisco笔记</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
         <a class="abstract-title" href="/2019/03/27/路由器综合路由配置/">
             
                 <span>路由器综合路由配置</span>
@@ -629,145 +739,6 @@ switchport mode trunk        /...
             <div class="abstract-tags">
     
         <a class="post-tag" href="javascript:void(0);" data-tags="Cisco基础">Cisco基础</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/2019/03/20/cisco多交换机之间的端口聚合链路/">
-            
-                <span>cisco多交换机之间的端口聚合链路</span>
-        </a>
-        <div class="abstract-content">
-            拓扑图：
-
-相关知识：port-channel具备了逻辑端口的属性，真正成为一个独立的逻辑端口；端口汇聚是一种逻辑上的抽象过程，将一组具备相同属性的端口，抽象成一个逻辑端口；其不仅能增加网络的带宽，还能提供链路的备份功能，以及负载均衡；
-
-配置命令Switch0的配置命令hostname SwitchA        //更名
-int port-channel 1        //端口聚合模式
-exit
-
-int fa0/1
-channel-group 1 mode on    //将物理端口加入channel-group
-exit
-int fa0/2
-channel-group 1 ...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2019/03/20</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class="abstract-tags">
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Cisco基础">Cisco基础</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/2019/03/19/cisco多交换机上配置基于端口的Vlan隔离办公网络/">
-            
-                <span>cisco多交换机上配置基于端口的Vlan隔离办公网络</span>
-        </a>
-        <div class="abstract-content">
-            拓扑图
-配置命令配置左边的交换机enable                                //特权模式
-configure terminal                    //全局模式
-
-interface fa 0/1                    
-switchport mode trunk                //配置Trunk
-switchport trunk allowed vlan all    //trunk允许所有Vlan流量通行（默认trunk就是允许所有）
-
-vlan 10                          ...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2019/03/19</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class="abstract-tags">
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Cisco基础">Cisco基础</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/2019/03/18/MarkDown基础教学/">
-            
-                <span>MarkDown基础教学</span>
-        </a>
-        <div class="abstract-content">
-            基础语法标题# h1
-## h2
-### h3
-#### h4
-##### h5
-###### h6
-
-段落及区块引用> 这段文字被高亮显示...
-eg:
-
-这段文字被高亮显示…
-
-
-插入链接或图片[点击跳转百度](http://www.baidu.com)
-eg:点击跳转百度
-![图片](https://i.loli.net/2019/03/19/5c903bc01be37.gif)
-   eg:
-
-
-列表Markdown支持有序列表和无序列表两种形式：
-
-无序列表使用 * 或 + 或 - 标识
-* 黄瓜
-* 玉米
-* 茄子
-
-+ 黄瓜
-+ 玉米
-+ 茄子
-
-- 黄瓜
-- 玉米
-- 茄...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2019/03/18</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class="abstract-tags">
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="MarkDown基本语法">MarkDown基本语法</a>
     
 </div>
             
@@ -1113,9 +1084,30 @@ eg:点击跳转百度
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 33
+        Total : 36
         </div>
         <!-- search  -->
         
@@ -1142,6 +1134,21 @@ eg:点击跳转百度
     
     <div class="archive-year"> 2019 </div>
     <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">04/16</span><a class="archive-post-title" href="/2019/04/16/环回接口（Loopback）/">环回接口（Loopback）</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">04/16</span><a class="archive-post-title" href="/2019/04/16/RIPv1基本配置/">RIPv1基本配置</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">04/16</span><a class="archive-post-title" href="/2019/04/16/RIP概述/">RIP概述</a>
+        </li>
     
     
         <li class="archive-post-item">
@@ -1310,15 +1317,19 @@ eg:点击跳转百度
     
         <span class="sidebar-tag-name" data-tags="前端知识"><span class="iconfont-archer"></span>前端知识</span>
     
+        <span class="sidebar-tag-name" data-tags="Cisco笔记"><span class="iconfont-archer"></span>Cisco笔记</span>
+    
         <span class="sidebar-tag-name" data-tags="MarkDown基本语法"><span class="iconfont-archer"></span>MarkDown基本语法</span>
     
         <span class="sidebar-tag-name" data-tags="安装教程"><span class="iconfont-archer"></span>安装教程</span>
     
-        <span class="sidebar-tag-name" data-tags="Cisco笔记"><span class="iconfont-archer"></span>Cisco笔记</span>
+        <span class="sidebar-tag-name" data-tags="Cisco强化学习"><span class="iconfont-archer"></span>Cisco强化学习</span>
+    
+        <span class="sidebar-tag-name" data-tags="github搭建个人博客"><span class="iconfont-archer"></span>github搭建个人博客</span>
     
         <span class="sidebar-tag-name" data-tags="Cisco基础"><span class="iconfont-archer"></span>Cisco基础</span>
     
-        <span class="sidebar-tag-name" data-tags="github搭建个人博客"><span class="iconfont-archer"></span>github搭建个人博客</span>
+        <span class="sidebar-tag-name" data-tags="Cisco知识点"><span class="iconfont-archer"></span>Cisco知识点</span>
     
     </div>
     <div class="iconfont-archer sidebar-tags-empty"></div>
@@ -1354,9 +1365,9 @@ eg:点击跳转百度
     
         <span class="sidebar-category-name" data-categories="【极客】前端学习"><span class="iconfont-archer"></span>【极客】前端学习</span>
     
-        <span class="sidebar-category-name" data-categories="教学"><span class="iconfont-archer"></span>教学</span>
-    
         <span class="sidebar-category-name" data-categories="Cisco"><span class="iconfont-archer"></span>Cisco</span>
+    
+        <span class="sidebar-category-name" data-categories="教学"><span class="iconfont-archer"></span>教学</span>
     
     </div>
     <div class="iconfont-archer sidebar-categories-empty"></div>

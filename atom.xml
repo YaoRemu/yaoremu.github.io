@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-04-15T12:52:52.503Z</updated>
+  <updated>2019-04-16T04:05:02.513Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,84 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>环回接口（Loopback）</title>
+    <link href="http://yoursite.com/2019/04/16/%E7%8E%AF%E5%9B%9E%E6%8E%A5%E5%8F%A3%EF%BC%88Loopback%EF%BC%89/"/>
+    <id>http://yoursite.com/2019/04/16/环回接口（Loopback）/</id>
+    <published>2019-04-16T03:45:08.000Z</published>
+    <updated>2019-04-16T04:05:02.513Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;h1 id=&quot;概述&quot;&gt;&lt;a href=&quot;#概述&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="Cisco" scheme="http://yoursite.com/categories/Cisco/"/>
+    
+    
+      <category term="Cisco知识点" scheme="http://yoursite.com/tags/Cisco%E7%9F%A5%E8%AF%86%E7%82%B9/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>RIPv1基本配置</title>
+    <link href="http://yoursite.com/2019/04/16/RIPv1%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE/"/>
+    <id>http://yoursite.com/2019/04/16/RIPv1基本配置/</id>
+    <published>2019-04-16T03:16:40.000Z</published>
+    <updated>2019-04-16T04:53:51.387Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;h1 id=&quot;RIPv1基本配置&quot;&gt;&lt;a href=&quot;#RIPv1基本配置&quot; class=&quot;headerlink&quot; title=&quot;RIPv1基本配置&quot;&gt;&lt;/a&gt;RIPv1基本配置&lt;/h1&gt;&lt;p&gt;#拓扑图：&lt;br&gt;&lt;img
+        
+      
+    
+    </summary>
+    
+      <category term="Cisco" scheme="http://yoursite.com/categories/Cisco/"/>
+    
+    
+      <category term="Cisco强化学习" scheme="http://yoursite.com/tags/Cisco%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>RIP概述</title>
+    <link href="http://yoursite.com/2019/04/16/RIP%E6%A6%82%E8%BF%B0/"/>
+    <id>http://yoursite.com/2019/04/16/RIP概述/</id>
+    <published>2019-04-16T02:56:07.000Z</published>
+    <updated>2019-04-16T03:14:43.403Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;p&gt;动态路由协议包括距离向量路由协议和链路状态路由协议。RIP（Routing Information
+        
+      
+    
+    </summary>
+    
+      <category term="Cisco" scheme="http://yoursite.com/categories/Cisco/"/>
+    
+    
+      <category term="Cisco强化学习" scheme="http://yoursite.com/tags/Cisco%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
   
   <entry>
     <title>表单新增的元素与属性</title>
@@ -462,84 +540,6 @@
     
     
       <category term="Cisco基础" scheme="http://yoursite.com/tags/Cisco%E5%9F%BA%E7%A1%80/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>扩展IP访问控制列表配置</title>
-    <link href="http://yoursite.com/2019/03/29/%E6%89%A9%E5%B1%95IP%E8%AE%BF%E9%97%AE%E6%8E%A7%E5%88%B6%E5%88%97%E8%A1%A8%E9%85%8D%E7%BD%AE/"/>
-    <id>http://yoursite.com/2019/03/29/扩展IP访问控制列表配置/</id>
-    <published>2019-03-29T10:14:23.000Z</published>
-    <updated>2019-04-14T07:05:41.188Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;h1 id=&quot;拓扑图&quot;&gt;&lt;a href=&quot;#拓扑图&quot; class=&quot;headerlink&quot; title=&quot;拓扑图&quot;&gt;&lt;/a&gt;拓扑图&lt;/h1&gt;&lt;p&gt;&lt;img
-        
-      
-    
-    </summary>
-    
-      <category term="Cisco" scheme="http://yoursite.com/categories/Cisco/"/>
-    
-    
-      <category term="Cisco基础" scheme="http://yoursite.com/tags/Cisco%E5%9F%BA%E7%A1%80/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>标准 IP 访问控制列表配置</title>
-    <link href="http://yoursite.com/2019/03/28/%E6%A0%87%E5%87%86-IP-%E8%AE%BF%E9%97%AE%E6%8E%A7%E5%88%B6%E5%88%97%E8%A1%A8%E9%85%8D%E7%BD%AE/"/>
-    <id>http://yoursite.com/2019/03/28/标准-IP-访问控制列表配置/</id>
-    <published>2019-03-28T07:50:17.000Z</published>
-    <updated>2019-04-14T07:03:40.027Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;h1 id=&quot;拓扑图&quot;&gt;&lt;a href=&quot;#拓扑图&quot; class=&quot;headerlink&quot; title=&quot;拓扑图&quot;&gt;&lt;/a&gt;拓扑图&lt;/h1&gt;&lt;p&gt;&lt;img
-        
-      
-    
-    </summary>
-    
-      <category term="Cisco" scheme="http://yoursite.com/categories/Cisco/"/>
-    
-    
-      <category term="Cisco基础" scheme="http://yoursite.com/tags/Cisco%E5%9F%BA%E7%A1%80/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>OSPF、RIP小记</title>
-    <link href="http://yoursite.com/2019/03/28/OSPF%E3%80%81RIP%E5%B0%8F%E8%AE%B0/"/>
-    <id>http://yoursite.com/2019/03/28/OSPF、RIP小记/</id>
-    <published>2019-03-28T07:08:27.000Z</published>
-    <updated>2019-04-14T07:02:43.120Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;h1 id=&quot;OSPF&quot;&gt;&lt;a href=&quot;#OSPF&quot; class=&quot;headerlink&quot; title=&quot;OSPF&quot;&gt;&lt;/a&gt;OSPF&lt;/h1&gt;&lt;p&gt;可将OSPF比喻成导航，可以&lt;font
-        
-      
-    
-    </summary>
-    
-      <category term="Cisco" scheme="http://yoursite.com/categories/Cisco/"/>
-    
-    
-      <category term="Cisco笔记" scheme="http://yoursite.com/tags/Cisco%E7%AC%94%E8%AE%B0/"/>
     
   </entry>
   
