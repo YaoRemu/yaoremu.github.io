@@ -22,7 +22,7 @@
     <meta name="description" content="欢迎来到YaoRemu的博客">
     <meta http-equiv="Cache-control" content="no-cache">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>利用三层交换机实现Vlan间路由 · YaoRemu'Blog</title>
+    <title>YaoRemu'Blog</title>
     <style type="text/css">
     @font-face {
         font-family: 'Oswald-Regular';
@@ -203,23 +203,12 @@
 </head>
 
     
-        <body class="post-body">
     
-    
-<header class="header">
+<body><header class="header">
 
     <div class="read-progress"></div>
     <div class="header-sidebar-menu"></div>
     <!-- post页的toggle banner  -->
-    
-    <div class="banner">
-            <div class="blog-title">
-                <a href="/">Welcome to YaoRemu'Blog</a>
-            </div>
-            <div class="post-title">
-                <a href="#" class="post-name">利用三层交换机实现Vlan间路由</a>
-            </div>
-    </div>
     
     <a class="home-link" href="/">Welcome to YaoRemu'Blog</a>
 </header>
@@ -231,74 +220,24 @@
 
 
 
-
-height:50vh;
 ">
     
     <!-- 主页  -->
-    
-    
-    <!-- 404页  -->
             
     <div class="site-intro-placeholder"></div>
-    <div class="site-intro-img" style="background-image: url(http://ww1.sinaimg.cn/large/8c0b2220gy1g1aemgv57ej21hc0tze81.jpg)"></div>
+    <div class="site-intro-img" style="background-image: url(/)"></div>
     <div class="site-intro-meta">
         <!-- 标题  -->
         <h1 class="intro-title">
             <!-- 主页  -->
-            
-            利用三层交换机实现Vlan间路由
-            <!-- 404 -->
             
         </h1>
         <!-- 副标题 -->
         <p class="intro-subtitle">
             <!-- 主页副标题  -->
             
-            
-            <!-- 404 -->
-            
         </p>
         <!-- 文章页meta -->
-        
-            <div class="post-intros">
-                <!-- 文章页标签  -->
-                
-                    <div class="post-intro-tags">
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Cisco基础">Cisco基础</a>
-    
-</div>
-                
-                
-                    <div class="post-intro-read">
-                        <span>字数统计: <span class="post-count word-count">250</span>阅读时长: <span class="post-count reading-time">1 min</span></span>
-                    </div>
-                
-                <div class="post-intro-meta">
-                    <span class="post-intro-calander iconfont-archer"></span>
-                    <span class="post-intro-time">2019/03/21</span>
-                    
-                    <span id="busuanzi_container_page_pv" class="busuanzi-pv">
-                        <span class="iconfont-archer"></span>
-                        <span id="busuanzi_value_page_pv"></span>
-                    </span>
-                    
-                    <span class="shareWrapper">
-                        <span class="iconfont-archer shareIcon"></span>
-                        <span class="shareText">Share</span>
-                        <ul class="shareList">
-                            <li class="iconfont-archer share-qr" data-type="qr">
-                                <div class="share-qrcode"></div>
-                            </li>
-                            <li class="iconfont-archer" data-type="weibo"></li>
-                            <li class="iconfont-archer" data-type="qzone"></li>
-                            <li class="iconfont-archer" data-type="twitter"></li>
-                            <li class="iconfont-archer" data-type="facebook"></li>
-                        </ul>
-                    </span>
-                </div>
-            </div>
         
     </div>
 </div>
@@ -401,70 +340,15 @@ height:50vh;
         <div class="container container-unloaded">
             <main class="main post-page">
     <article class="article-entry">
-        <meta name="generator" content="Hexo 3.8.0"><h1 id="拓扑图"><a href="#拓扑图" class="headerlink" title="拓扑图"></a>拓扑图</h1><p><img src="http://ww1.sinaimg.cn/large/8c0b2220gy1g1ankpqz6bj20iw0f6jrt.jpg" alt></p>
-<h1 id="配置命令"><a href="#配置命令" class="headerlink" title="配置命令"></a>配置命令</h1><h2 id="配置二层交换机"><a href="#配置二层交换机" class="headerlink" title="配置二层交换机"></a>配置二层交换机</h2><pre><code>enable            <font color="#abcfe4">//特权模式</font>
-configure terminal        <font color="#abcfe4">//全局配置模式</font>
-
-vlan 2        //开启vlan
-exit
-vlan 3
-exit
-
-interface fa0/2        
-switchport access vlan 2        <font color="#abcfe4">//配置端口在access模式，允许vlan2通过</font>
-exit
-interface fa0/3
-switchport access vlan 3
-exit
-
-interface fa0/1
-switchport mode trunk        <font color="#abcfe4">//配置该端口为trunk模式</font>
-exit
-show vlan        <font color="#abcfe4">//查看vlan配置</font>
-</code></pre><h2 id="配置三层交换机"><a href="#配置三层交换机" class="headerlink" title="配置三层交换机"></a>配置三层交换机</h2><pre><code>enable
-configure terminal
-
-vlan 2
-exit
-vlan 3
-exit
-
-interface fa0/1
-switchport trunk encapsulation dot1q        <font color="#abcfe4">//给端口封装802.1q协议(dot1q),既trunk链路的中继协议</font>
-switchport mode trunk        <font color="#abcfe4">//配置该端口为trunk模式</font>
-exit
-
-interface fa0/2
-switchport access vlan 2
-exit
-
-interface vlan 2        <font color="#abcfe4">//配置vlan 2</font>
-ip address 192.168.1.1 255.255.255.0        <font color="#abcfe4">//配置IP及其子网掩码</font>
-no shutdown        <font color="#abcfe4">//开启vlan 2</font>
-exit
-interface vlan 3
-ip address 192.168.2.1 255.255.255.0
-no shutdown
-exit
-
-exit
-ip routing        <font color="#abcfe4">//启用三层交换机IP路由功能</font>            
-show ip route        <font color="#abcfe4">//查看路由表</font>
-</code></pre><h1 id="实验结果"><a href="#实验结果" class="headerlink" title="实验结果"></a>实验结果</h1><p>PC3分别ping测试PC1、PC2，实验结果为：</p>
-<blockquote>
-<p>PC3ping通PC1；PC3ping通PC2,实现了路由功能；  </p>
-</blockquote>
-<p>eg:</p>
-<p><img src="http://ww1.sinaimg.cn/large/8c0b2220gy1g1answdvmxj20dw0gemxo.jpg" alt></p>
-
+        <meta name="generator" content="Hexo 3.8.0">ydY4IFiE2y
     </article>
     <!-- license  -->
     
         <div class="license-wrapper">
             <p>原文作者：<a href="http://yoursite.com">YaoRemu</a>
-            </p><p>原文链接：<a href="http://yoursite.com/2019/03/21/利用三层交换机实现Vlan间路由/">http://yoursite.com/2019/03/21/利用三层交换机实现Vlan间路由/</a>
-            </p><p>发表日期：<a href="http://yoursite.com/2019/03/21/利用三层交换机实现Vlan间路由/">March 21st 2019, 7:39:02 pm</a>
-            </p><p>更新日期：<a href="http://yoursite.com/2019/03/21/利用三层交换机实现Vlan间路由/">April 14th 2019, 3:05:38 pm</a>
+            </p><p>原文链接：<a href="http://yoursite.com/baidu_verify_ydY4IFiE2y.html">http://yoursite.com/baidu_verify_ydY4IFiE2y.html</a>
+            </p><p>发表日期：<a href="http://yoursite.com/baidu_verify_ydY4IFiE2y.html">April 16th 2019, 6:16:15 pm</a>
+            </p><p>更新日期：<a href="http://yoursite.com/baidu_verify_ydY4IFiE2y.html">April 16th 2019, 6:16:15 pm</a>
             </p><p>版权声明：本文采用<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可</p>
         </div>
     
@@ -472,18 +356,8 @@ show ip route        <font color="#abcfe4">//查看路由表</font>
     <ul class="post-paginator">
         <li class="next">
             
-                <div class="nextSlogan">Next Post</div>
-                <a href="/2019/03/22/快速生成树配置/" title="快速生成树配置">
-                    <div class="nextTitle">快速生成树配置</div>
-                </a>
-            
         </li>
         <li class="previous">
-            
-                <div class="prevSlogan">Previous Post</div>
-                <a href="/2019/03/20/cisco多交换机之间的端口聚合链路/" title="cisco多交换机之间的端口聚合链路">
-                    <div class="prevTitle">cisco多交换机之间的端口聚合链路</div>
-                </a>
             
         </li>
     </ul>
@@ -604,13 +478,6 @@ show ip route        <font color="#abcfe4">//查看路由表</font>
 </footer>
     </div>
     <!-- toc -->
-    
-    <div class="toc-wrapper" style="top:50vh;">
-        <div class="toc-catalog">
-            <span class="iconfont-archer catalog-icon"></span><span>CATALOG</span>
-        </div>
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#拓扑图"><span class="toc-number">1.</span> <span class="toc-text">拓扑图</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#配置命令"><span class="toc-number">2.</span> <span class="toc-text">配置命令</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#配置二层交换机"><span class="toc-number">2.1.</span> <span class="toc-text">配置二层交换机</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#配置三层交换机"><span class="toc-number">2.2.</span> <span class="toc-text">配置三层交换机</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#实验结果"><span class="toc-number">3.</span> <span class="toc-text">实验结果</span></a></li></ol>
-    </div>
     
     <div class="back-top iconfont-archer"></div>
     <div class="sidebar sidebar-hide">
@@ -1211,8 +1078,6 @@ var talkAPI = "";//如果有类似图灵机器人的聊天接口请填写接口�
     
     
     <!-- async load share.js -->
-    
-        <script src="/scripts/share.js" async></script>    
      
 
 
