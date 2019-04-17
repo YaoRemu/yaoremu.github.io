@@ -359,6 +359,43 @@ height:50vh;
     
     
     <article class="index-post">
+        <a class="abstract-title" href="/2019/03/31/网络端口地址转换NAPT配置/">
+            
+                <span>网络端口地址转换NAPT配置</span>
+        </a>
+        <div class="abstract-content">
+            拓扑图
+
+相关知识①：NAT将网络划分为内部网络和外部网络两部分，局域网主机利用NAT访问网络时，是将局域网内部的本地地址转换为全局地址（互联网合法的IP地址）后转发数据包；
+
+
+相关知识②：NAT分为两种类型：NAT（网络地址转换）和NAPT（网络端口地址转换IP地址对应一个全局地址）；
+
+
+相关知识③：NAPT：使用不同的端口来映射多个内网IP地址到一个指定的外网IP地址，多对一。NAPT采用端口多路复用方式。内部网络的所有主机均可共享一个合法外部IP地址实现对Internet的访问，从而可以最大限度地节约IP地址资源。同时，又可以隐瞒内部的所有主机，有效的避免来自Internet的...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2019/03/31</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class="abstract-tags">
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Cisco基础">Cisco基础</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
         <a class="abstract-title" href="/2019/03/30/网络地址转换NAT配置/">
             
                 <span>网络地址转换NAT配置</span>
@@ -688,52 +725,6 @@ switchport mode trunk        //设置端口为...
             <!-- date  -->
             <div class="abstract-date">
                 <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2019/03/23</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class="abstract-tags">
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Cisco基础">Cisco基础</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/2019/03/22/快速生成树配置/">
-            
-                <span>快速生成树配置</span>
-        </a>
-        <div class="abstract-content">
-            拓扑图
-配置命令Switch1配置命令enable        //进入特权模式
-
-show spanning-tree        //查看生成树配置
-
-configure terminal        //全局配置模式
-
-hostname S1        //交换机更名
-
-int fa 0/10
-switchport access vlan 10        //把端口划分给Vlan 10
-exit
-
-int rang fa 0/1-2
-switchport mode trunk        //配置端口为trunk模式
-exit
-
-spanning-tree mode...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2019/03/22</span>
             </div>
             <!-- tags  -->
             
@@ -1185,9 +1176,16 @@ spanning-tree mode...
     
     
     
+    
+    
+    
+    
+    
+    
+    
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 36
+        Total : 37
         </div>
         <!-- search  -->
         
@@ -1214,6 +1212,11 @@ spanning-tree mode...
     
     <div class="archive-year"> 2019 </div>
     <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">04/17</span><a class="archive-post-title" href="/2019/04/17/表单新增的元素与属性（二）/">表单新增的元素与属性（二）</a>
+        </li>
     
     
         <li class="archive-post-item">
@@ -1395,11 +1398,11 @@ spanning-tree mode...
         <div class="sidebar-panel-tags">
     <div class="sidebar-tags-name">
     
-        <span class="sidebar-tag-name" data-tags="安装教程"><span class="iconfont-archer"></span>安装教程</span>
-    
         <span class="sidebar-tag-name" data-tags="前端知识"><span class="iconfont-archer"></span>前端知识</span>
     
         <span class="sidebar-tag-name" data-tags="MarkDown基本语法"><span class="iconfont-archer"></span>MarkDown基本语法</span>
+    
+        <span class="sidebar-tag-name" data-tags="安装教程"><span class="iconfont-archer"></span>安装教程</span>
     
         <span class="sidebar-tag-name" data-tags="Cisco笔记"><span class="iconfont-archer"></span>Cisco笔记</span>
     
@@ -1443,9 +1446,9 @@ spanning-tree mode...
         <div class="sidebar-panel-categories">
     <div class="sidebar-categories-name">
     
-        <span class="sidebar-category-name" data-categories="教学"><span class="iconfont-archer"></span>教学</span>
-    
         <span class="sidebar-category-name" data-categories="【极客】前端学习"><span class="iconfont-archer"></span>【极客】前端学习</span>
+    
+        <span class="sidebar-category-name" data-categories="教学"><span class="iconfont-archer"></span>教学</span>
     
         <span class="sidebar-category-name" data-categories="Cisco"><span class="iconfont-archer"></span>Cisco</span>
     
