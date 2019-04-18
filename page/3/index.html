@@ -359,6 +359,48 @@ height:50vh;
     
     
     <article class="index-post">
+        <a class="abstract-title" href="/2019/04/10/MarkDown进阶操作/">
+            
+                <span>MarkDown进阶操作</span>
+        </a>
+        <div class="abstract-content">
+            图片处理有时候希望图片变得小一点，或者让他靠左边，使得排版更加美观，但是默认没有提供这类操作，可以直接引入HTML来设置；
+基本形式
+！[图片描述]（图片链接）
+
+例子：
+
+！[头像]（ http://ww1.sinaimg.cn/large/8c0b2220gy1g1ae3jfoogj20du0duwf0.jpg ）
+
+
+自定义尺寸
+< img width=’150’ height=’150’ src=” http://ww1.sinaimg.cn/large/8c0b2220gy1g1ae3jfoogj20du0duwf0.jpg “>
+
+
+插入音乐在网易云音乐生成外连接，直接复制黏...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2019/04/10</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class="abstract-tags">
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="MarkDown基本语法">MarkDown基本语法</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
         <a class="abstract-title" href="/2019/03/31/网络端口地址转换NAPT配置/">
             
                 <span>网络端口地址转换NAPT配置</span>
@@ -678,53 +720,6 @@ ip address 192.168.3.1 25...
             <!-- date  -->
             <div class="abstract-date">
                 <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2019/03/24</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class="abstract-tags">
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Cisco基础">Cisco基础</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/2019/03/23/路由器单臂路由配置/">
-            
-                <span>路由器单臂路由配置</span>
-        </a>
-        <div class="abstract-content">
-            拓扑图
-配置命令配置Switchenable
-configure terminal
-
-vlan 2
-exit
-vlan 3
-exit
-
-interface fastEthernet 0/2
-switchport access vlan 2        //将端口划分给Vlan2
-exit
-
-interface fastEthernet 0/3
-switchport access vlan 3        //将端口划分给Vlan3
-exit
-
-interface fastEthernet 0/1        
-switchport mode trunk        //设置端口为...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2019/03/23</span>
             </div>
             <!-- tags  -->
             
@@ -1183,9 +1178,16 @@ switchport mode trunk        //设置端口为...
     
     
     
+    
+    
+    
+    
+    
+    
+    
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 37
+        Total : 38
         </div>
         <!-- search  -->
         
@@ -1212,6 +1214,11 @@ switchport mode trunk        //设置端口为...
     
     <div class="archive-year"> 2019 </div>
     <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">04/18</span><a class="archive-post-title" href="/2019/04/18/PHP生成验证码/">PHP生成验证码</a>
+        </li>
     
     
         <li class="archive-post-item">
@@ -1400,17 +1407,19 @@ switchport mode trunk        //设置端口为...
     
         <span class="sidebar-tag-name" data-tags="前端知识"><span class="iconfont-archer"></span>前端知识</span>
     
-        <span class="sidebar-tag-name" data-tags="MarkDown基本语法"><span class="iconfont-archer"></span>MarkDown基本语法</span>
-    
         <span class="sidebar-tag-name" data-tags="安装教程"><span class="iconfont-archer"></span>安装教程</span>
+    
+        <span class="sidebar-tag-name" data-tags="MarkDown基本语法"><span class="iconfont-archer"></span>MarkDown基本语法</span>
     
         <span class="sidebar-tag-name" data-tags="Cisco笔记"><span class="iconfont-archer"></span>Cisco笔记</span>
     
+        <span class="sidebar-tag-name" data-tags="PHP相关知识"><span class="iconfont-archer"></span>PHP相关知识</span>
+    
         <span class="sidebar-tag-name" data-tags="Cisco强化学习"><span class="iconfont-archer"></span>Cisco强化学习</span>
     
-        <span class="sidebar-tag-name" data-tags="github搭建个人博客"><span class="iconfont-archer"></span>github搭建个人博客</span>
-    
         <span class="sidebar-tag-name" data-tags="Cisco基础"><span class="iconfont-archer"></span>Cisco基础</span>
+    
+        <span class="sidebar-tag-name" data-tags="github搭建个人博客"><span class="iconfont-archer"></span>github搭建个人博客</span>
     
         <span class="sidebar-tag-name" data-tags="Cisco知识点"><span class="iconfont-archer"></span>Cisco知识点</span>
     
@@ -1451,6 +1460,8 @@ switchport mode trunk        //设置端口为...
         <span class="sidebar-category-name" data-categories="教学"><span class="iconfont-archer"></span>教学</span>
     
         <span class="sidebar-category-name" data-categories="Cisco"><span class="iconfont-archer"></span>Cisco</span>
+    
+        <span class="sidebar-category-name" data-categories="PHP"><span class="iconfont-archer"></span>PHP</span>
     
     </div>
     <div class="iconfont-archer sidebar-categories-empty"></div>

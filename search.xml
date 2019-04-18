@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[PHP生成验证码]]></title>
+    <url>%2F2019%2F04%2F18%2FPHP%E7%94%9F%E6%88%90%E9%AA%8C%E8%AF%81%E7%A0%81%2F</url>
+    <content type="text"><![CDATA[代码部分form.php文件： 12345678910111213if (isset($_REQUEST['authcode'])) { session_start(); if (strtolower($_REQUEST['authcode'])==$_SESSION['authcode']) { echo' 输出正确'; # code... }else{ echo $_REQUEST['authcode']; echo $_SESSION['authcode']; echo' 输出错误'; } exit();} captcha.php文件： 123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051//必须至于顶部,多服务器端记录验证码信息，便于用户输入后做校验session_start();//默认返回的是黑色的照片$image = imagecreatetruecolor(100, 30);//将背景设置为白色的$bgcolor = imagecolorallocate($image, 255, 255, 255);//将白色铺满地图imagefill($image, 0, 0, $bgcolor);//空字符串，每循环一次，追加到字符串后面 $captch_code='';//验证码为随机四个数字母字for ($i=0; $i]]></content>
+      <categories>
+        <category>PHP</category>
+      </categories>
+      <tags>
+        <tag>PHP相关知识</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[表单新增的元素与属性（二）]]></title>
     <url>%2F2019%2F04%2F17%2F%E8%A1%A8%E5%8D%95%E6%96%B0%E5%A2%9E%E7%9A%84%E5%85%83%E7%B4%A0%E4%B8%8E%E5%B1%9E%E6%80%A7%EF%BC%88%E4%BA%8C%EF%BC%89%2F</url>
     <content type="text"><![CDATA[formtarget属性在HTML4中，表单元素具有一个target属性，该属性用于指定在何处打开表单提交后所需要加载的页面。 在HTML5中，可以对多个按钮分别使用formtarget属性来指定提交后在何处打开所需加载的页面。 123456789101112 提交到xx.jsp页面 提交到xx.jsp页面 提交到xx.jsp页面 提交到xx.jsp页面 提交到xx.jsp页面< /form>< /form> formtarget的五个属性 _blank：在新的浏览器页面或窗口进行打开 _self：target属性的默认值，在相同的框架frame中打开 _parent：在当前框架的父框架中进行打开 _top：在当前窗口中打开， _framename：在指定框架中打开 autofocus属性为文本框，选择框或按钮控件加上autofocus属性，当画面打开时，该控件自动获得光标焦点 12345 < /form> autofocus属性一般是用在当前页面，当前的输入框或者是按钮或者是其他的内容处于第一优先级时，才会使用该属性 required属性HTML5中新增的required属性可以应用在大多数输入元素上，在提交时，如果元素中内容为空白，则不允许提交，同时在浏览器中显示相应的提升文字 12345 提交< /button>< /form> eg: labels属性在HTML5中，为所有可使用标签的表单元素、button、select元素等，定义一个labels属性，属性值为一个NodeList对象，代表该元素所绑定的标签元素所构成的集合 12345678910111213141516171819202122 function Validate(){ var txtName=document.getElementById("txt_name"); var button=document.getElementById("btnValidate"); var form=document.getElementById("testform"); if(txtName.value.trim()=="" ){ var label=document.createElement("label"); label.setAttribute("for","txt_name"); form.insertBefore(label,button); txtName.labels[1].innerHTML="请输入姓名"; txtName.labels[1].setAttribute("style","font-size:9px;color:red"); } }< /script> 姓名：< /label> < /form> label的for属性：for属性规定label与那个表单元素绑定 trim()：去除字符串的头尾空格]]></content>

@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-04-17T09:48:45.369Z</updated>
+  <updated>2019-04-18T04:43:26.965Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>PHP生成验证码</title>
+    <link href="http://yoursite.com/2019/04/18/PHP%E7%94%9F%E6%88%90%E9%AA%8C%E8%AF%81%E7%A0%81/"/>
+    <id>http://yoursite.com/2019/04/18/PHP生成验证码/</id>
+    <published>2019-04-18T04:13:26.000Z</published>
+    <updated>2019-04-18T04:43:26.965Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;h1 id=&quot;代码部分&quot;&gt;&lt;a href=&quot;#代码部分&quot; class=&quot;headerlink&quot; title=&quot;代码部分&quot;&gt;&lt;/a&gt;代码部分&lt;/h1&gt;&lt;p&gt;form.php文件：&lt;/p&gt;
+&lt;figure
+        
+      
+    
+    </summary>
+    
+      <category term="PHP" scheme="http://yoursite.com/categories/PHP/"/>
+    
+    
+      <category term="PHP相关知识" scheme="http://yoursite.com/tags/PHP%E7%9B%B8%E5%85%B3%E7%9F%A5%E8%AF%86/"/>
+    
+  </entry>
   
   <entry>
     <title>表单新增的元素与属性（二）</title>
@@ -514,32 +541,6 @@
     
     
       <category term="MarkDown基本语法" scheme="http://yoursite.com/tags/MarkDown%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>网络端口地址转换NAPT配置</title>
-    <link href="http://yoursite.com/2019/03/31/%E7%BD%91%E7%BB%9C%E7%AB%AF%E5%8F%A3%E5%9C%B0%E5%9D%80%E8%BD%AC%E6%8D%A2NAPT%E9%85%8D%E7%BD%AE/"/>
-    <id>http://yoursite.com/2019/03/31/网络端口地址转换NAPT配置/</id>
-    <published>2019-03-31T09:58:35.000Z</published>
-    <updated>2019-04-14T07:04:53.462Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;h1 id=&quot;拓扑图&quot;&gt;&lt;a href=&quot;#拓扑图&quot; class=&quot;headerlink&quot; title=&quot;拓扑图&quot;&gt;&lt;/a&gt;拓扑图&lt;/h1&gt;&lt;p&gt;&lt;img
-        
-      
-    
-    </summary>
-    
-      <category term="Cisco" scheme="http://yoursite.com/categories/Cisco/"/>
-    
-    
-      <category term="Cisco基础" scheme="http://yoursite.com/tags/Cisco%E5%9F%BA%E7%A1%80/"/>
     
   </entry>
   
