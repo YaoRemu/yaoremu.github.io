@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[PHP生成验证码]]></title>
     <url>%2F2019%2F04%2F18%2FPHP%E7%94%9F%E6%88%90%E9%AA%8C%E8%AF%81%E7%A0%81%2F</url>
-    <content type="text"><![CDATA[代码部分form.php文件： 12345678910111213if (isset($_REQUEST['authcode'])) { session_start(); if (strtolower($_REQUEST['authcode'])==$_SESSION['authcode']) { echo' 输出正确'; # code... }else{ echo $_REQUEST['authcode']; echo $_SESSION['authcode']; echo' 输出错误'; } exit();} captcha.php文件： 123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051//必须至于顶部,多服务器端记录验证码信息，便于用户输入后做校验session_start();//默认返回的是黑色的照片$image = imagecreatetruecolor(100, 30);//将背景设置为白色的$bgcolor = imagecolorallocate($image, 255, 255, 255);//将白色铺满地图imagefill($image, 0, 0, $bgcolor);//空字符串，每循环一次，追加到字符串后面 $captch_code='';//验证码为随机四个数字母字for ($i=0; $i]]></content>
+    <content type="text"><![CDATA[代码部分form.php文件 12345678910111213if (isset($_REQUEST['authcode'])) { session_start(); if (strtolower($_REQUEST['authcode'])==$_SESSION['authcode']) { echo' 输出正确'; # code... }else{ echo $_REQUEST['authcode']; echo $_SESSION['authcode']; echo' 输出错误'; } exit();} 本段代码的解析：先接受session值，将提交的值与验证码比较，如果输入正确，则显示‘输入正确’，否则依次输出提交的值、验证码的值和‘输入错误’ captcha.php文件123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051//必须至于顶部,多服务器端记录验证码信息，便于用户输入后做校验session_start();//默认返回的是黑色的照片$image = imagecreatetruecolor(100, 30);//将背景设置为白色的$bgcolor = imagecolorallocate($image, 255, 255, 255);//将白色铺满地图imagefill($image, 0, 0, $bgcolor);//空字符串，每循环一次，追加到字符串后面 $captch_code='';//验证码为随机四个数字母字for ($i=0; $i]]></content>
       <categories>
         <category>PHP</category>
       </categories>

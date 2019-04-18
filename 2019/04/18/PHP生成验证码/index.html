@@ -272,7 +272,7 @@ height:50vh;
                 
                 
                     <div class="post-intro-read">
-                        <span>字数统计: <span class="post-count word-count">148</span>阅读时长: <span class="post-count reading-time">1 min</span></span>
+                        <span>字数统计: <span class="post-count word-count">203</span>阅读时长: <span class="post-count reading-time">1 min</span></span>
                     </div>
                 
                 <div class="post-intro-meta">
@@ -401,22 +401,44 @@ height:50vh;
         <div class="container container-unloaded">
             <main class="main post-page">
     <article class="article-entry">
-        <meta name="generator" content="Hexo 3.8.0"><h1 id="代码部分"><a href="#代码部分" class="headerlink" title="代码部分"></a>代码部分</h1><p>form.php文件：</p>
+        <meta name="generator" content="Hexo 3.8.0"><h1 id="代码部分"><a href="#代码部分" class="headerlink" title="代码部分"></a>代码部分</h1><h2 id="form-php文件"><a href="#form-php文件" class="headerlink" title="form.php文件"></a>form.php文件</h2><p><img src="http://ww1.sinaimg.cn/large/8c0b2220gy1g26okls5yxj20xz0f7gns.jpg" alt></p>
 <figure class="highlight php"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (<span class="keyword">isset</span>($_REQUEST[<span class="string">'authcode'</span>])) {</span><br><span class="line">	session_start();</span><br><span class="line"></span><br><span class="line">	<span class="keyword">if</span> (strtolower($_REQUEST[<span class="string">'authcode'</span>])==$_SESSION[<span class="string">'authcode'</span>]) {</span><br><span class="line">		<span class="keyword">echo</span><span class="string">'<font color="#0000CC"> 输出正确</font>'</span>;</span><br><span class="line">		<span class="comment"># code...</span></span><br><span class="line">	}<span class="keyword">else</span>{</span><br><span class="line">		<span class="keyword">echo</span> $_REQUEST[<span class="string">'authcode'</span>];</span><br><span class="line">		<span class="keyword">echo</span> $_SESSION[<span class="string">'authcode'</span>];</span><br><span class="line">		<span class="keyword">echo</span><span class="string">'<font color="#CC0000"> 输出错误</font>'</span>;</span><br><span class="line">	}</span><br><span class="line">	<span class="keyword">exit</span>();</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
-<p><img src="http://ww1.sinaimg.cn/large/8c0b2220gy1g26okls5yxj20xz0f7gns.jpg" alt></p>
-<p>captcha.php文件：</p>
-<figure class="highlight php"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment">//必须至于顶部,多服务器端记录验证码信息，便于用户输入后做校验</span></span><br><span class="line">session_start();</span><br><span class="line"></span><br><span class="line"><span class="comment">//默认返回的是黑色的照片</span></span><br><span class="line">$image = imagecreatetruecolor(<span class="number">100</span>, <span class="number">30</span>);</span><br><span class="line"><span class="comment">//将背景设置为白色的</span></span><br><span class="line">$bgcolor = imagecolorallocate($image, <span class="number">255</span>, <span class="number">255</span>, <span class="number">255</span>);</span><br><span class="line"><span class="comment">//将白色铺满地图</span></span><br><span class="line">imagefill($image, <span class="number">0</span>, <span class="number">0</span>, $bgcolor);</span><br><span class="line"></span><br><span class="line"><span class="comment">//空字符串，每循环一次，追加到字符串后面  </span></span><br><span class="line">$captch_code=<span class="string">''</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">//验证码为随机四个数字母字</span></span><br><span class="line"><span class="keyword">for</span> ($i=<span class="number">0</span>; $i <<span class="number">4</span> ; $i++) { </span><br><span class="line">	$fontsize=<span class="number">6</span>;</span><br><span class="line">	$fontcolor=imagecolorallocate($image,rand(<span class="number">0</span>,<span class="number">120</span>),rand(<span class="number">0</span>,<span class="number">120</span>),rand(<span class="number">0</span>,<span class="number">120</span>));</span><br><span class="line">	<span class="comment">//子典。因为o和0，l和1冲突，所以我们字典中不包括易混淆的</span></span><br><span class="line">	$data=<span class="string">'abcdefghijkmnpqrstuvwxy3456789'</span>;</span><br><span class="line">	$fontcontent = substr($data,rand(<span class="number">0</span>,strlen($data)) ,<span class="number">1</span>);</span><br><span class="line">	$captch_code.= $fontcontent;</span><br><span class="line">	</span><br><span class="line">	$x=($i*<span class="number">100</span>/<span class="number">4</span>)+rand(<span class="number">5</span>,<span class="number">10</span>);</span><br><span class="line">	$y=rand(<span class="number">5</span>,<span class="number">10</span>);</span><br><span class="line">	</span><br><span class="line">	imagestring($image,$fontsize,$x,$y,$fontcontent,$fontcolor);</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">$_SESSION[<span class="string">'authcode'</span>] = $captch_code;</span><br><span class="line"><span class="comment">//为验证码增加干扰元素，控制好颜色，</span></span><br><span class="line"><span class="comment">//点   </span></span><br><span class="line"><span class="keyword">for</span> ($i=<span class="number">0</span>; $i < <span class="number">200</span>; $i++) { </span><br><span class="line">	$pointcolor = imagecolorallocate($image,rand(<span class="number">50</span>,<span class="number">200</span>),rand(<span class="number">50</span>,<span class="number">200</span>),rand(<span class="number">50</span>,<span class="number">200</span>));</span><br><span class="line">	imagesetpixel($image, rand(<span class="number">1</span>,<span class="number">99</span>), rand(<span class="number">1</span>,<span class="number">29</span>), $pointcolor);</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="comment">//为验证码增加干扰元素</span></span><br><span class="line"><span class="comment">//线   </span></span><br><span class="line"><span class="keyword">for</span> ($i=<span class="number">0</span>; $i < <span class="number">3</span>; $i++) { </span><br><span class="line">	$linecolor = imagecolorallocate($image,rand(<span class="number">80</span>,<span class="number">220</span>),rand(<span class="number">80</span>,<span class="number">220</span>),rand(<span class="number">80</span>,<span class="number">220</span>));</span><br><span class="line">	imageline($image, rand(<span class="number">1</span>,<span class="number">99</span>), rand(<span class="number">1</span>,<span class="number">29</span>),rand(<span class="number">1</span>,<span class="number">99</span>), rand(<span class="number">1</span>,<span class="number">29</span>) ,$linecolor);</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line">header(<span class="string">'content-type:image/png'</span>);</span><br><span class="line">imagepng($image);</span><br><span class="line"></span><br><span class="line"><span class="comment">//销毁</span></span><br><span class="line">imagedestroy($image);</span><br></pre></td></tr></tbody></table></figure>
+<blockquote>
+<p>本段代码的解析：先接受session值，将提交的值与验证码比较，如果输入正确，则显示‘输入正确’，否则依次输出提交的值、验证码的值和‘输入错误’</p>
+</blockquote>
+<h2 id="captcha-php文件"><a href="#captcha-php文件" class="headerlink" title="captcha.php文件"></a>captcha.php文件</h2><figure class="highlight php"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment">//必须至于顶部,多服务器端记录验证码信息，便于用户输入后做校验</span></span><br><span class="line">session_start();</span><br><span class="line"></span><br><span class="line"><span class="comment">//默认返回的是黑色的照片</span></span><br><span class="line">$image = imagecreatetruecolor(<span class="number">100</span>, <span class="number">30</span>);</span><br><span class="line"><span class="comment">//将背景设置为白色的</span></span><br><span class="line">$bgcolor = imagecolorallocate($image, <span class="number">255</span>, <span class="number">255</span>, <span class="number">255</span>);</span><br><span class="line"><span class="comment">//将白色铺满地图</span></span><br><span class="line">imagefill($image, <span class="number">0</span>, <span class="number">0</span>, $bgcolor);</span><br><span class="line"></span><br><span class="line"><span class="comment">//空字符串，每循环一次，追加到字符串后面  </span></span><br><span class="line">$captch_code=<span class="string">''</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">//验证码为随机四个数字母字</span></span><br><span class="line"><span class="keyword">for</span> ($i=<span class="number">0</span>; $i <<span class="number">4</span> ; $i++) { </span><br><span class="line">	$fontsize=<span class="number">6</span>;</span><br><span class="line">	$fontcolor=imagecolorallocate($image,rand(<span class="number">0</span>,<span class="number">120</span>),rand(<span class="number">0</span>,<span class="number">120</span>),rand(<span class="number">0</span>,<span class="number">120</span>));</span><br><span class="line">	<span class="comment">//子典。因为o和0，l和1冲突，所以我们字典中不包括易混淆的</span></span><br><span class="line">	$data=<span class="string">'abcdefghijkmnpqrstuvwxy3456789'</span>;</span><br><span class="line">	$fontcontent = substr($data,rand(<span class="number">0</span>,strlen($data)) ,<span class="number">1</span>);</span><br><span class="line">	$captch_code.= $fontcontent;</span><br><span class="line">	</span><br><span class="line">	$x=($i*<span class="number">100</span>/<span class="number">4</span>)+rand(<span class="number">5</span>,<span class="number">10</span>);</span><br><span class="line">	$y=rand(<span class="number">5</span>,<span class="number">10</span>);</span><br><span class="line">	</span><br><span class="line">	imagestring($image,$fontsize,$x,$y,$fontcontent,$fontcolor);</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">$_SESSION[<span class="string">'authcode'</span>] = $captch_code;</span><br><span class="line"><span class="comment">//为验证码增加干扰元素，控制好颜色，</span></span><br><span class="line"><span class="comment">//点   </span></span><br><span class="line"><span class="keyword">for</span> ($i=<span class="number">0</span>; $i < <span class="number">200</span>; $i++) { </span><br><span class="line">	$pointcolor = imagecolorallocate($image,rand(<span class="number">50</span>,<span class="number">200</span>),rand(<span class="number">50</span>,<span class="number">200</span>),rand(<span class="number">50</span>,<span class="number">200</span>));</span><br><span class="line">	imagesetpixel($image, rand(<span class="number">1</span>,<span class="number">99</span>), rand(<span class="number">1</span>,<span class="number">29</span>), $pointcolor);</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="comment">//为验证码增加干扰元素</span></span><br><span class="line"><span class="comment">//线   </span></span><br><span class="line"><span class="keyword">for</span> ($i=<span class="number">0</span>; $i < <span class="number">3</span>; $i++) { </span><br><span class="line">	$linecolor = imagecolorallocate($image,rand(<span class="number">80</span>,<span class="number">220</span>),rand(<span class="number">80</span>,<span class="number">220</span>),rand(<span class="number">80</span>,<span class="number">220</span>));</span><br><span class="line">	imageline($image, rand(<span class="number">1</span>,<span class="number">99</span>), rand(<span class="number">1</span>,<span class="number">29</span>),rand(<span class="number">1</span>,<span class="number">99</span>), rand(<span class="number">1</span>,<span class="number">29</span>) ,$linecolor);</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line">header(<span class="string">'content-type:image/png'</span>);</span><br><span class="line">imagepng($image);</span><br><span class="line"></span><br><span class="line"><span class="comment">//销毁</span></span><br><span class="line">imagedestroy($image);</span><br></pre></td></tr></tbody></table></figure>
 <h2 id="相关函数解释"><a href="#相关函数解释" class="headerlink" title="相关函数解释"></a>相关函数解释</h2><ul>
-<li>session_start()</li>
-<li>imagecreatetruecolor(100, 30)</li>
-<li>imagecolorallocate($image, 255, 255, 255)</li>
-<li>imagefill($image, 0, 0, $bgcolor)</li>
-<li>imagestring($image,$fontsize,$x,$y,$fontcontent,$fontcolor)</li>
-<li>imagesetpixel($image, rand(1,99), rand(1,29), $pointcolor)</li>
-<li>imageline($image, rand(1,99), rand(1,29),rand(1,99), rand(1,29) ,$linecolor)</li>
-<li>header(‘content-type:image/png’)</li>
-<li>imagepng($image)</li>
-<li>imagedestroy($image)</li>
+<li><font color="green">session_start()</font>：启动session绘画（session变量用于存储有关用户绘画的信息并且可供应用程序中的所有页面使用）</li>
+</ul>
+<blockquote>
+<p>注：使用session时，要保证在使用他之前，没有向浏览器输出过任何内容，所以通常被放置在第一行</p>
+</blockquote>
+<ul>
+<li><font color="green">header(‘content-type:image/png’)</font>：向客户端发送原始的HTTP报头</li>
+</ul>
+<h4 id="PHP图形处理函数："><a href="#PHP图形处理函数：" class="headerlink" title="PHP图形处理函数："></a>PHP图形处理函数：</h4><ul>
+<li><font color="green">imagecreatetruecolor(int x, int y)</font>：建立一副大小为x、y的黑色图像（默认为黑色），如果想改变颜色则需要用填充颜色函数imagefill($img,0,0,$color)</li>
+</ul>
+<ul>
+<li><font color="green">imagecolorallocate($image, 255, 255, 255)</font>：为指定图像分配颜色</li>
+</ul>
+<ul>
+<li><font color="green">imagefill($image, 0, 0, $bgcolor)</font>：填充颜色函数</li>
+</ul>
+<ul>
+<li><font color="green">imagestring($image,$fontsize,$x,$y,$fontcontent,$fontcolor)</font>：水平的画一行字符串</li>
+</ul>
+<ul>
+<li><font color="green">imagesetpixel($image, rand(1,99), rand(1,29), $pointcolor)</font>：或一个单一的像素（eg：点）</li>
+</ul>
+<ul>
+<li><p><font color="green">imageline($image, rand(1,99), rand(1,29),rand(1,99), rand(1,29) ,$linecolor)</font>：画一条线段</p>
+</li>
+<li><p><font color="green">imagepng($image)</font>：以PNG格式将图像输出到浏览器或文件</p>
+</li>
+</ul>
+<ul>
+<li><font color="green">imagedestroy($image)</font>：销毁图像</li>
 </ul>
 <h1 id="执行效果"><a href="#执行效果" class="headerlink" title="执行效果"></a>执行效果</h1><p><img src="http://ww1.sinaimg.cn/large/8c0b2220gy1g26omcp44xj20db05n74a.jpg" alt></p>
 
@@ -427,7 +449,7 @@ height:50vh;
             <p>原文作者：<a href="http://yoursite.com">YaoRemu</a>
             </p><p>原文链接：<a href="http://yoursite.com/2019/04/18/PHP生成验证码/">http://yoursite.com/2019/04/18/PHP生成验证码/</a>
             </p><p>发表日期：<a href="http://yoursite.com/2019/04/18/PHP生成验证码/">April 18th 2019, 12:13:26 pm</a>
-            </p><p>更新日期：<a href="http://yoursite.com/2019/04/18/PHP生成验证码/">April 18th 2019, 12:43:26 pm</a>
+            </p><p>更新日期：<a href="http://yoursite.com/2019/04/18/PHP生成验证码/">April 18th 2019, 2:11:57 pm</a>
             </p><p>版权声明：本文采用<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可</p>
         </div>
     
@@ -596,7 +618,7 @@ height:50vh;
         <div class="toc-catalog">
             <span class="iconfont-archer catalog-icon"></span><span>CATALOG</span>
         </div>
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#代码部分"><span class="toc-number">1.</span> <span class="toc-text">代码部分</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#相关函数解释"><span class="toc-number">1.1.</span> <span class="toc-text">相关函数解释</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#执行效果"><span class="toc-number">2.</span> <span class="toc-text">执行效果</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#代码部分"><span class="toc-number">1.</span> <span class="toc-text">代码部分</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#form-php文件"><span class="toc-number">1.1.</span> <span class="toc-text">form.php文件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#captcha-php文件"><span class="toc-number">1.2.</span> <span class="toc-text">captcha.php文件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#相关函数解释"><span class="toc-number">1.3.</span> <span class="toc-text">相关函数解释</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#PHP图形处理函数："><span class="toc-number">1.3.0.1.</span> <span class="toc-text">PHP图形处理函数：</span></a></li></ol></li></ol></li></ol><li class="toc-item toc-level-1"><a class="toc-link" href="#执行效果"><span class="toc-number">2.</span> <span class="toc-text">执行效果</span></a></li>
     </div>
     
     <div class="back-top iconfont-archer"></div>
@@ -1099,21 +1121,21 @@ height:50vh;
         <div class="sidebar-panel-tags">
     <div class="sidebar-tags-name">
     
-        <span class="sidebar-tag-name" data-tags="前端知识"><span class="iconfont-archer"></span>前端知识</span>
+        <span class="sidebar-tag-name" data-tags="MarkDown基本语法"><span class="iconfont-archer"></span>MarkDown基本语法</span>
     
         <span class="sidebar-tag-name" data-tags="安装教程"><span class="iconfont-archer"></span>安装教程</span>
     
-        <span class="sidebar-tag-name" data-tags="MarkDown基本语法"><span class="iconfont-archer"></span>MarkDown基本语法</span>
-    
         <span class="sidebar-tag-name" data-tags="Cisco笔记"><span class="iconfont-archer"></span>Cisco笔记</span>
     
-        <span class="sidebar-tag-name" data-tags="PHP相关知识"><span class="iconfont-archer"></span>PHP相关知识</span>
+        <span class="sidebar-tag-name" data-tags="前端知识"><span class="iconfont-archer"></span>前端知识</span>
     
         <span class="sidebar-tag-name" data-tags="Cisco强化学习"><span class="iconfont-archer"></span>Cisco强化学习</span>
     
-        <span class="sidebar-tag-name" data-tags="Cisco基础"><span class="iconfont-archer"></span>Cisco基础</span>
+        <span class="sidebar-tag-name" data-tags="PHP相关知识"><span class="iconfont-archer"></span>PHP相关知识</span>
     
         <span class="sidebar-tag-name" data-tags="github搭建个人博客"><span class="iconfont-archer"></span>github搭建个人博客</span>
+    
+        <span class="sidebar-tag-name" data-tags="Cisco基础"><span class="iconfont-archer"></span>Cisco基础</span>
     
         <span class="sidebar-tag-name" data-tags="Cisco知识点"><span class="iconfont-archer"></span>Cisco知识点</span>
     
@@ -1149,11 +1171,11 @@ height:50vh;
         <div class="sidebar-panel-categories">
     <div class="sidebar-categories-name">
     
-        <span class="sidebar-category-name" data-categories="【极客】前端学习"><span class="iconfont-archer"></span>【极客】前端学习</span>
-    
         <span class="sidebar-category-name" data-categories="教学"><span class="iconfont-archer"></span>教学</span>
     
         <span class="sidebar-category-name" data-categories="Cisco"><span class="iconfont-archer"></span>Cisco</span>
+    
+        <span class="sidebar-category-name" data-categories="【极客】前端学习"><span class="iconfont-archer"></span>【极客】前端学习</span>
     
         <span class="sidebar-category-name" data-categories="PHP"><span class="iconfont-archer"></span>PHP</span>
     
