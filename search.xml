@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[表单新增的元素与属性（三）]]></title>
+    <url>%2F2019%2F04%2F18%2F%E8%A1%A8%E5%8D%95%E6%96%B0%E5%A2%9E%E7%9A%84%E5%85%83%E7%B4%A0%E4%B8%8E%E5%B1%9E%E6%80%A7%EF%BC%88%E4%B8%89%EF%BC%89%2F</url>
+    <content type="text"><![CDATA[标签的control属性在HTML5中，可以在标签内部放置一个表单元素，并且通过该标签的control属性来访问该表单元素 1234567891011121314151617 function setValue(){ var label = document.getElementById("label"); var textbox = label.control; textbox.value="010010"; } 邮箱： 请输入六为数字 文本框的placeholder属性placeholder是指当前文本框处于未输入状态时显示的输入提示。当文本框处于未输入状态且未获取光标焦点时，模糊显示输入提示文字 placeholder属性相当于文本框的提示，方便我们对当前的输入框当中的输入内容有更好的了解 12 eg: 复选框的indeterminate属性对于复选框checkbox元素来说，过去只是选取与非选取这两种状态。在HTML5中，可以在JavaScript脚本代码中对该元素使用indeterminate属性，以说明复选框处于“尚未明确是否选取状态”。 12345属性测试 var cb = document.getElementById("cb"); cb.indeterminate = true; eg : 注：该属性表明checkbox有三种状态。 注：这两个属性的配合使用，我们指的是interminate与checkbox属性两种不同的属性，如果只考虑interminate与checkbox结合使用，可能会被认为复选框具有两种false或者两种true、或者是一种true一种false、另外一个false另外一个true，即四种状态来组合。但事实上，他只有三种状态，即选取、非选择和不明状态，所以写的时候，需要在JavaScript脚本中进行简单的处理。 image提交按钮的height属性和width属性针对于类型为image的input属性，HTML5新增了两个属性，height、width分别用来指定图片按钮的高度和宽度。 12345 姓名 eg:]]></content>
+      <categories>
+        <category>【极客】前端学习</category>
+      </categories>
+      <tags>
+        <tag>前端知识</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[PHP生成验证码]]></title>
     <url>%2F2019%2F04%2F18%2FPHP%E7%94%9F%E6%88%90%E9%AA%8C%E8%AF%81%E7%A0%81%2F</url>
     <content type="text"><![CDATA[代码部分form.php文件 12345678910111213if (isset($_REQUEST['authcode'])) { session_start(); if (strtolower($_REQUEST['authcode'])==$_SESSION['authcode']) { echo' 输出正确'; # code... }else{ echo $_REQUEST['authcode']; echo $_SESSION['authcode']; echo' 输出错误'; } exit();} 本段代码的解析：先接受session值，将提交的值与验证码比较，如果输入正确，则显示‘输入正确’，否则依次输出提交的值、验证码的值和‘输入错误’ captcha.php文件123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051//必须至于顶部,多服务器端记录验证码信息，便于用户输入后做校验session_start();//默认返回的是黑色的照片$image = imagecreatetruecolor(100, 30);//将背景设置为白色的$bgcolor = imagecolorallocate($image, 255, 255, 255);//将白色铺满地图imagefill($image, 0, 0, $bgcolor);//空字符串，每循环一次，追加到字符串后面 $captch_code='';//验证码为随机四个数字母字for ($i=0; $i]]></content>

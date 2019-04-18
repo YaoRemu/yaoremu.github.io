@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-04-18T06:11:57.591Z</updated>
+  <updated>2019-04-18T08:49:33.109Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>表单新增的元素与属性（三）</title>
+    <link href="http://yoursite.com/2019/04/18/%E8%A1%A8%E5%8D%95%E6%96%B0%E5%A2%9E%E7%9A%84%E5%85%83%E7%B4%A0%E4%B8%8E%E5%B1%9E%E6%80%A7%EF%BC%88%E4%B8%89%EF%BC%89/"/>
+    <id>http://yoursite.com/2019/04/18/表单新增的元素与属性（三）/</id>
+    <published>2019-04-18T08:13:44.000Z</published>
+    <updated>2019-04-18T08:49:33.109Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;h1 id=&quot;标签的control属性&quot;&gt;&lt;a href=&quot;#标签的control属性&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="【极客】前端学习" scheme="http://yoursite.com/categories/%E3%80%90%E6%9E%81%E5%AE%A2%E3%80%91%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+      <category term="前端知识" scheme="http://yoursite.com/tags/%E5%89%8D%E7%AB%AF%E7%9F%A5%E8%AF%86/"/>
+    
+  </entry>
   
   <entry>
     <title>PHP生成验证码</title>
@@ -514,32 +540,6 @@
     
     
       <category term="前端知识" scheme="http://yoursite.com/tags/%E5%89%8D%E7%AB%AF%E7%9F%A5%E8%AF%86/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>MarkDown进阶操作</title>
-    <link href="http://yoursite.com/2019/04/10/MarkDown%E8%BF%9B%E9%98%B6%E6%93%8D%E4%BD%9C/"/>
-    <id>http://yoursite.com/2019/04/10/MarkDown进阶操作/</id>
-    <published>2019-04-10T08:26:46.000Z</published>
-    <updated>2019-04-14T07:02:48.654Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;h1 id=&quot;图片处理&quot;&gt;&lt;a href=&quot;#图片处理&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="教学" scheme="http://yoursite.com/categories/%E6%95%99%E5%AD%A6/"/>
-    
-    
-      <category term="MarkDown基本语法" scheme="http://yoursite.com/tags/MarkDown%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/"/>
     
   </entry>
   
