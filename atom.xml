@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-04-18T08:49:33.109Z</updated>
+  <updated>2019-04-19T08:00:33.477Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>表单新增的元素与属性（四）</title>
+    <link href="http://yoursite.com/2019/04/19/%E8%A1%A8%E5%8D%95%E6%96%B0%E5%A2%9E%E7%9A%84%E5%85%83%E7%B4%A0%E4%B8%8E%E5%B1%9E%E6%80%A7%EF%BC%88%E5%9B%9B%EF%BC%89/"/>
+    <id>http://yoursite.com/2019/04/19/表单新增的元素与属性（四）/</id>
+    <published>2019-04-19T08:00:33.000Z</published>
+    <updated>2019-04-19T08:00:33.477Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;/body&gt;&lt;/html&gt;
+        
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>表单新增的元素与属性（三）</title>
@@ -505,32 +527,6 @@
         
         
           &lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;h1 id=&quot;推出理由及目标&quot;&gt;&lt;a href=&quot;#推出理由及目标&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="【极客】前端学习" scheme="http://yoursite.com/categories/%E3%80%90%E6%9E%81%E5%AE%A2%E3%80%91%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/"/>
-    
-    
-      <category term="前端知识" scheme="http://yoursite.com/tags/%E5%89%8D%E7%AB%AF%E7%9F%A5%E8%AF%86/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>新增的属性和废除的属性</title>
-    <link href="http://yoursite.com/2019/04/10/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0-%E5%85%A8%E5%B1%80%E5%B1%9E%E6%80%A7/"/>
-    <id>http://yoursite.com/2019/04/10/前端学习-全局属性/</id>
-    <published>2019-04-10T09:08:19.000Z</published>
-    <updated>2019-04-14T07:04:57.851Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;h1 id=&quot;contentEditable属性&quot;&gt;&lt;a href=&quot;#contentEditable属性&quot; class=&quot;headerlink&quot;
         
       
     
