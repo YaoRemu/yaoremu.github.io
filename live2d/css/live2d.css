@@ -2,9 +2,9 @@
     user-select: none;
     position: fixed;
     left: 30px;
-    bottom: 0;
-    width: 280px;
-    height: 520px;
+    bottom: 20px;
+    width: auto;
+    height: 300px;
     z-index: 10000;
     font-size: 0;
     transition: all .3s ease-in-out;
@@ -15,29 +15,7 @@
 }
 
 .message {
-    opacity: 0;
-    width: 300px;
-    height: auto;
-    margin: auto;
-    padding: 7px;
-    top: -80px;
-    left: -10px;
-    text-align: center;
-    border: 1px solid rgba(255,137,255,.4);
-    border-radius: 12px;
-    background-color: rgba(255,137,255,.2);
-    box-shadow: 0 3px 15px 2px rgba(255,137,255,.4);
-    font-size: 13px;
-    font-weight: 400;
-    text-overflow: ellipsis;
-    text-transform: uppercase;
-    overflow: hidden;
-    position: absolute;
-    animation-delay: 5s;
-    animation-duration: 50s;
-    animation-iteration-count: infinite;
-    animation-name: shake;
-    animation-timing-function: ease-in-out;
+
 }
 
 .hide-button {
