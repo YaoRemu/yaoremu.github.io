@@ -346,6 +346,53 @@
     
     
     <article class="index-post">
+        <a class="abstract-title" href="/2019/03/23/路由器单臂路由配置/">
+            
+                <span>路由器单臂路由配置</span>
+        </a>
+        <div class="abstract-content">
+            拓扑图
+配置命令配置Switchenable
+configure terminal
+
+vlan 2
+exit
+vlan 3
+exit
+
+interface fastEthernet 0/2
+switchport access vlan 2        //将端口划分给Vlan2
+exit
+
+interface fastEthernet 0/3
+switchport access vlan 3        //将端口划分给Vlan3
+exit
+
+interface fastEthernet 0/1        
+switchport mode trunk        //设置端口为...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2019/03/23</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class="abstract-tags">
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Cisco基础">Cisco基础</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
         <a class="abstract-title" href="/2019/03/22/快速生成树配置/">
             
                 <span>快速生成树配置</span>
@@ -1134,9 +1181,16 @@ net start mysql(启动MySql服务)
     
     
     
+    
+    
+    
+    
+    
+    
+    
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 48
+        Total : 49
         </div>
         <!-- search  -->
         
@@ -1163,6 +1217,11 @@ net start mysql(启动MySql服务)
     
     <div class="archive-year"> 2019 </div>
     <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">04/23</span><a class="archive-post-title" href="/2019/04/23/Bootstrap-CSS栅格、代码和表格/">Bootstrap CSS栅格、代码和表格</a>
+        </li>
     
     
         <li class="archive-post-item">

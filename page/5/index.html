@@ -359,6 +359,50 @@ height:50vh;
     
     
     <article class="index-post">
+        <a class="abstract-title" href="/2019/03/24/路由器静态路由配置/">
+            
+                <span>路由器静态路由配置</span>
+        </a>
+        <div class="abstract-content">
+            拓扑图
+
+注：由于路由器[2811]初始时没有Serial接口，所以需要在图形化界面安装上[WIC-2T]组件；
+
+配置命令配置Router1各个端口enable
+configure terminal
+hostname R1
+
+interface fa0/1
+no shutdown        //开启端口
+ip address 192.168.1.1 255.255.255.0        //配置端口IP以及子网掩码
+exit
+
+interface serial 0/0/0        //配置串行接口
+no shutdown
+ip address 192.168.3.1 25...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2019/03/24</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class="abstract-tags">
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Cisco基础">Cisco基础</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
         <a class="abstract-title" href="/2019/03/23/路由器单臂路由配置/">
             
                 <span>路由器单臂路由配置</span>
@@ -1248,9 +1292,16 @@ net start mysql(启动MySql服务)
     
     
     
+    
+    
+    
+    
+    
+    
+    
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 48
+        Total : 49
         </div>
         <!-- search  -->
         
@@ -1277,6 +1328,11 @@ net start mysql(启动MySql服务)
     
     <div class="archive-year"> 2019 </div>
     <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">04/23</span><a class="archive-post-title" href="/2019/04/23/Bootstrap-CSS栅格、代码和表格/">Bootstrap CSS栅格、代码和表格</a>
+        </li>
     
     
         <li class="archive-post-item">
