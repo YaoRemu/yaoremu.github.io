@@ -272,7 +272,7 @@ height:50vh;
                 
                 
                     <div class="post-intro-read">
-                        <span>字数统计: <span class="post-count word-count">586</span>阅读时长: <span class="post-count reading-time">2 min</span></span>
+                        <span>字数统计: <span class="post-count word-count">795</span>阅读时长: <span class="post-count reading-time">2 min</span></span>
                     </div>
                 
                 <div class="post-intro-meta">
@@ -424,6 +424,16 @@ height:50vh;
 <figure class="highlight html"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag"><<span class="name">p</span>></span>这是一段文字，用来<span class="tag"><<span class="name">mark</span>></span>测试<span class="tag"><</span>/<span class="attr">mark</span>></span>mark元素<span class="tag"><</span>/<span class="attr">p</span>><br></pre></td></tr></tbody></table></figure>
 <p>eg:</p>
 <p><img src="http://ww1.sinaimg.cn/large/8c0b2220gy1g2bcwb12yjj203z00omwz.jpg" alt></p>
+<h1 id="ol"><a href="#ol" class="headerlink" title="ol"></a>ol</h1><p> HTML5 中,将 ol 进行了改良，为它添加了 start属性 与 reversed属性</p>
+<h2 id="start属性"><a href="#start属性" class="headerlink" title="start属性"></a>start属性</h2><p>如果我们希望它不是在 1 开始， 而是在 5 开始，就可以使用 start属性</p>
+<figure class="highlight html"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag"><<span class="name">ol</span> <span class="attr">start</span>=<span class="string">"5"</span>></span></span><br><span class="line">	<span class="tag"><<span class="name">li</span>></span>列表1<span class="tag"><</span>/<span class="attr">li</span>></span><br><span class="line">	<span class="tag"><<span class="name">li</span>></span>列表2<span class="tag"><</span>/<span class="attr">li</span>></span><br><span class="line">	<span class="tag"><<span class="name">li</span>></span>列表3<span class="tag"><</span>/<span class="attr">li</span>></span><br><span class="line">	<span class="tag"><<span class="name">li</span>></span>列表4<span class="tag"><</span>/<span class="attr">li</span>></span><br><span class="line">	<span class="tag"><<span class="name">li</span>></span>列表5<span class="tag"><</span>/<span class="attr">li</span>></span><br><span class="line"><span class="tag"><</span>/<span class="attr">ol</span>></span><br></pre></td></tr></tbody></table></figure>
+<p><img src="http://ww1.sinaimg.cn/large/8c0b2220gy1g2ci4j4opxj202x02mgli.jpg" alt></p>
+<h2 id="reversed属性"><a href="#reversed属性" class="headerlink" title="reversed属性"></a>reversed属性</h2><p>使用 reversed 倒叙列表</p>
+<figure class="highlight html"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag"><<span class="name">ol</span> <span class="attr">start</span>=<span class="string">"5"</span> <span class="attr">reversed</span>></span></span><br><span class="line">	<span class="tag"><<span class="name">li</span>></span>列表1<span class="tag"><</span>/<span class="attr">li</span>></span><br><span class="line">	<span class="tag"><<span class="name">li</span>></span>列表2<span class="tag"><</span>/<span class="attr">li</span>></span><br><span class="line">	<span class="tag"><<span class="name">li</span>></span>列表3<span class="tag"><</span>/<span class="attr">li</span>></span><br><span class="line">	<span class="tag"><<span class="name">li</span>></span>列表4<span class="tag"><</span>/<span class="attr">li</span>></span><br><span class="line">	<span class="tag"><<span class="name">li</span>></span>列表5<span class="tag"><</span>/<span class="attr">li</span>></span><br><span class="line"><span class="tag"><</span>/<span class="attr">ol</span>></span><br></pre></td></tr></tbody></table></figure>
+<p><img src="http://ww1.sinaimg.cn/large/8c0b2220gy1g2ci6rhpg1j202x02la9y.jpg" alt></p>
+<h1 id="dl"><a href="#dl" class="headerlink" title="dl"></a>dl</h1><p>在 HTML5 中，将该元素进行重新定义，重新定义后的 dl列表 表示 多个名字的列表项，每一项都包含一条或多条带有名字的 dt元素，用来表示术语， dt 元素仅跟着一个或多个 dd 元素，在一个元素内不允许有相同名字的 dt 元素，不允许有重复的术语</p>
+<figure class="highlight html"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag"><<span class="name">dl</span>></span></span><br><span class="line">	<span class="tag"><<span class="name">dt</span>></span>Hello<span class="tag"><</span>/<span class="attr">dt</span>></span><br><span class="line">	<span class="tag"><<span class="name">d</span>></span>你好就是Hello<span class="tag"><</span>/<span class="attr">dd</span>></span><br><span class="line">	<span class="tag"><<span class="name">dt</span>></span>博客<span class="tag"><</span>/<span class="attr">dt</span>></span><br><span class="line">	<span class="tag"><<span class="name">d</span>></span>你喜欢看博客吗<span class="tag"><</span>/<span class="attr">dd</span>></span><br><span class="line"><span class="tag"><</span>/<span class="attr">dl</span>></span><br></pre></td></tr></tbody></table></figure>
+<p><img src="http://ww1.sinaimg.cn/large/8c0b2220gy1g2cidt8fmhj204k0270so.jpg" alt></p>
 
     </article>
     <!-- license  -->
@@ -432,7 +442,7 @@ height:50vh;
             <p>原文作者：<a href="http://yoursite.com">YaoRemu</a>
             </p><p>原文链接：<a href="http://yoursite.com/2019/04/22/HTML5增强的页面元素/">http://yoursite.com/2019/04/22/HTML5增强的页面元素/</a>
             </p><p>发表日期：<a href="http://yoursite.com/2019/04/22/HTML5增强的页面元素/">April 22nd 2019, 12:18:39 pm</a>
-            </p><p>更新日期：<a href="http://yoursite.com/2019/04/22/HTML5增强的页面元素/">April 22nd 2019, 1:40:42 pm</a>
+            </p><p>更新日期：<a href="http://yoursite.com/2019/04/22/HTML5增强的页面元素/">April 23rd 2019, 1:36:07 pm</a>
             </p><p>版权声明：本文采用<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可</p>
         </div>
     
@@ -606,7 +616,7 @@ height:50vh;
         <div class="toc-catalog">
             <span class="iconfont-archer catalog-icon"></span><span>CATALOG</span>
         </div>
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#课程概要"><span class="toc-number">1.</span> <span class="toc-text">课程概要</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#figure元素-以及-figcaption元素"><span class="toc-number">2.</span> <span class="toc-text">figure元素 以及 figcaption元素</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#figure元素"><span class="toc-number">2.1.</span> <span class="toc-text">figure元素</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#figcaption元素"><span class="toc-number">2.2.</span> <span class="toc-text">figcaption元素</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#details元素-和-summary元素"><span class="toc-number">3.</span> <span class="toc-text">details元素 和 summary元素</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#details元素"><span class="toc-number">3.1.</span> <span class="toc-text">details元素</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#summary元素"><span class="toc-number">3.2.</span> <span class="toc-text">summary元素</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#mark元素"><span class="toc-number">4.</span> <span class="toc-text">mark元素</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#课程概要"><span class="toc-number">1.</span> <span class="toc-text">课程概要</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#figure元素-以及-figcaption元素"><span class="toc-number">2.</span> <span class="toc-text">figure元素 以及 figcaption元素</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#figure元素"><span class="toc-number">2.1.</span> <span class="toc-text">figure元素</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#figcaption元素"><span class="toc-number">2.2.</span> <span class="toc-text">figcaption元素</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#details元素-和-summary元素"><span class="toc-number">3.</span> <span class="toc-text">details元素 和 summary元素</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#details元素"><span class="toc-number">3.1.</span> <span class="toc-text">details元素</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#summary元素"><span class="toc-number">3.2.</span> <span class="toc-text">summary元素</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#mark元素"><span class="toc-number">4.</span> <span class="toc-text">mark元素</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#ol"><span class="toc-number">5.</span> <span class="toc-text">ol</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#start属性"><span class="toc-number">5.1.</span> <span class="toc-text">start属性</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#reversed属性"><span class="toc-number">5.2.</span> <span class="toc-text">reversed属性</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#dl"><span class="toc-number">6.</span> <span class="toc-text">dl</span></a></li></ol>
     </div>
     
     <div class="back-top iconfont-archer"></div>
@@ -1251,9 +1261,9 @@ height:50vh;
     
         <span class="sidebar-tag-name" data-tags="Cisco笔记"><span class="iconfont-archer"></span>Cisco笔记</span>
     
-        <span class="sidebar-tag-name" data-tags="Cisco强化学习"><span class="iconfont-archer"></span>Cisco强化学习</span>
-    
         <span class="sidebar-tag-name" data-tags="PHP相关知识"><span class="iconfont-archer"></span>PHP相关知识</span>
+    
+        <span class="sidebar-tag-name" data-tags="Cisco强化学习"><span class="iconfont-archer"></span>Cisco强化学习</span>
     
         <span class="sidebar-tag-name" data-tags="github搭建个人博客"><span class="iconfont-archer"></span>github搭建个人博客</span>
     
@@ -1303,9 +1313,9 @@ height:50vh;
     
         <span class="sidebar-category-name" data-categories="PHP"><span class="iconfont-archer"></span>PHP</span>
     
-        <span class="sidebar-category-name" data-categories="Vue学习"><span class="iconfont-archer"></span>Vue学习</span>
-    
         <span class="sidebar-category-name" data-categories="素描"><span class="iconfont-archer"></span>素描</span>
+    
+        <span class="sidebar-category-name" data-categories="Vue学习"><span class="iconfont-archer"></span>Vue学习</span>
     
     </div>
     <div class="iconfont-archer sidebar-categories-empty"></div>

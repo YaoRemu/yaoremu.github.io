@@ -359,17 +359,14 @@ vue实例的生命周期
 vue-resource 实现 get、 post、 jsonp 请求
 Vue中的动画
 
-案例：品牌管理案例
+数组的新方法forEach、 somw 、 filter 、 findIndex、 这些都是数组的新方法，都会对数组中的每一项进行遍历，执行相关操作
+不同之处
+forEach： 无法被中止
+some： 可以通过 return true 中止
+filter： 进行过滤，把符合条件的，返回得到一个新数组
+findIndex： 找到对应对象的索引
 
-Vue不提倡操作 DOM
-
-
-jQuery帮我们封装了一些 DOM操作，它是用来操作 DOM 的； 而Vue是帮我们免除操作 DOM 的这个过程，所以 Vue 中一般不使用 jQuery
-
-
-在 Vue 中，使用事件绑定机制，为元素指定处理函数的时候，如果加了小括号，就可以给函数传参了
-
-12345678910111213141516171819202122232425262728293031...
+过滤器概念 Vue.js 允许你自定义过滤器，可以用作一些常见的文本格式...
         </div>
         <div class="abstract-post-meta">
             <!-- date  -->
@@ -1159,9 +1156,9 @@ Vue.js是一套构建用户界面的框架，值关注视图图层，它不仅�
     
         <span class="sidebar-tag-name" data-tags="Cisco笔记"><span class="iconfont-archer"></span>Cisco笔记</span>
     
-        <span class="sidebar-tag-name" data-tags="Cisco强化学习"><span class="iconfont-archer"></span>Cisco强化学习</span>
-    
         <span class="sidebar-tag-name" data-tags="PHP相关知识"><span class="iconfont-archer"></span>PHP相关知识</span>
+    
+        <span class="sidebar-tag-name" data-tags="Cisco强化学习"><span class="iconfont-archer"></span>Cisco强化学习</span>
     
         <span class="sidebar-tag-name" data-tags="github搭建个人博客"><span class="iconfont-archer"></span>github搭建个人博客</span>
     
@@ -1211,9 +1208,9 @@ Vue.js是一套构建用户界面的框架，值关注视图图层，它不仅�
     
         <span class="sidebar-category-name" data-categories="PHP"><span class="iconfont-archer"></span>PHP</span>
     
-        <span class="sidebar-category-name" data-categories="Vue学习"><span class="iconfont-archer"></span>Vue学习</span>
-    
         <span class="sidebar-category-name" data-categories="素描"><span class="iconfont-archer"></span>素描</span>
+    
+        <span class="sidebar-category-name" data-categories="Vue学习"><span class="iconfont-archer"></span>Vue学习</span>
     
     </div>
     <div class="iconfont-archer sidebar-categories-empty"></div>
