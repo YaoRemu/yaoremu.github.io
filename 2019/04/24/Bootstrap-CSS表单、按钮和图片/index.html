@@ -22,7 +22,7 @@
     <meta name="description" content="欢迎来到YaoRemu的博客">
     <meta http-equiv="Cache-control" content="no-cache">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>YaoRemu'Blog</title>
+    <title>Bootstrap CSS表单、按钮和图片 · YaoRemu'Blog</title>
     <style type="text/css">
     @font-face {
         font-family: 'Oswald-Regular';
@@ -203,12 +203,23 @@
 </head>
 
     
+        <body class="post-body">
     
-<body><header class="header">
+    
+<header class="header">
 
     <div class="read-progress"></div>
     <div class="header-sidebar-menu"></div>
     <!-- post页的toggle banner  -->
+    
+    <div class="banner">
+            <div class="blog-title">
+                <a href="/">Welcome to YaoRemu'Blog</a>
+            </div>
+            <div class="post-title">
+                <a href="#" class="post-name">Bootstrap CSS表单、按钮和图片</a>
+            </div>
+    </div>
     
     <a class="home-link" href="/">Welcome to YaoRemu'Blog</a>
 </header>
@@ -220,24 +231,74 @@
 
 
 
+
+height:50vh;
 ">
     
     <!-- 主页  -->
+    
+    
+    <!-- 404页  -->
             
     <div class="site-intro-placeholder"></div>
-    <div class="site-intro-img" style="background-image: url(/)"></div>
+    <div class="site-intro-img" style="background-image: url(http://ww1.sinaimg.cn/large/8c0b2220gy1g1aemgv57ej21hc0tze81.jpg)"></div>
     <div class="site-intro-meta">
         <!-- 标题  -->
         <h1 class="intro-title">
             <!-- 主页  -->
+            
+            Bootstrap CSS表单、按钮和图片
+            <!-- 404 -->
             
         </h1>
         <!-- 副标题 -->
         <p class="intro-subtitle">
             <!-- 主页副标题  -->
             
+            
+            <!-- 404 -->
+            
         </p>
         <!-- 文章页meta -->
+        
+            <div class="post-intros">
+                <!-- 文章页标签  -->
+                
+                    <div class="post-intro-tags">
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Bootstrap">Bootstrap</a>
+    
+</div>
+                
+                
+                    <div class="post-intro-read">
+                        <span>字数统计: <span class="post-count word-count">328</span>阅读时长: <span class="post-count reading-time">1 min</span></span>
+                    </div>
+                
+                <div class="post-intro-meta">
+                    <span class="post-intro-calander iconfont-archer"></span>
+                    <span class="post-intro-time">2019/04/24</span>
+                    
+                    <span id="busuanzi_container_page_pv" class="busuanzi-pv">
+                        <span class="iconfont-archer"></span>
+                        <span id="busuanzi_value_page_pv"></span>
+                    </span>
+                    
+                    <span class="shareWrapper">
+                        <span class="iconfont-archer shareIcon"></span>
+                        <span class="shareText">Share</span>
+                        <ul class="shareList">
+                            <li class="iconfont-archer share-qr" data-type="qr">
+                                <div class="share-qrcode"></div>
+                            </li>
+                            <li class="iconfont-archer" data-type="weibo"></li>
+                            <li class="iconfont-archer" data-type="qzone"></li>
+                            <li class="iconfont-archer" data-type="twitter"></li>
+                            <li class="iconfont-archer" data-type="facebook"></li>
+                        </ul>
+                    </span>
+                </div>
+            </div>
         
     </div>
 </div>
@@ -338,94 +399,123 @@
 </script>        
         <img class="loading" src="/assets/loading.svg" style="display: block; margin: 6rem auto 0 auto; width: 6rem; height: 6rem;">
         <div class="container container-unloaded">
-            <main class="main index-page">
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/2019/04/21/Vue-js第二课/">
-            
-                <span>Vue.js第二课</span>
-        </a>
-        <div class="abstract-content">
-            知识点梳理
-过滤器
-键盘修饰符以及自定义键盘修饰符
-自定义指令
-vue实例的生命周期
-vue-resource 实现 get、 post、 jsonp 请求
-Vue中的动画
-
-数组的新方法forEach、 somw 、 filter 、 findIndex、 这些都是数组的新方法，都会对数组中的每一项进行遍历，执行相关操作
-不同之处
-forEach： 无法被中止
-some： 可以通过 return true 中止
-filter： 进行过滤，把符合条件的，返回得到一个新数组
-findIndex： 找到对应对象的索引
-
-过滤器概念 Vue.js 允许你自定义过滤器，可以用作一些常见的文本格式...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2019/04/21</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class="abstract-tags">
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="前端知识">前端知识</a>
-    
-</div>
-            
-        </div>
+            <main class="main post-page">
+    <article class="article-entry">
+        <meta name="generator" content="Hexo 3.8.0"><h1 id="表单"><a href="#表单" class="headerlink" title="表单"></a>表单</h1><p>接下来介绍表单中几种最基本的实例：</p>
+<ul>
+<li>内联表单</li>
+<li>水平排列的表单</li>
+<li>被支持的控件</li>
+<li>静态控件</li>
+<li>焦点状态</li>
+<li>禁用状态</li>
+<li>只读状态</li>
+<li>校验状态</li>
+<li>控件尺寸</li>
+<li>辅助文本</li>
+</ul>
+<p><strong>eg:</strong></p>
+<p><img src="http://ww1.sinaimg.cn/large/8c0b2220gy1g2dt5cdqqjj20ub057jrn.jpg" alt></p>
+<figure class="highlight html"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag"><<span class="name">form</span> <span class="attr">role</span>=<span class="string">"form"</span>></span></span><br><span class="line">	<span class="tag"><<span class="name">div</span> <span class="attr">class</span>=<span class="string">"form-group"</span>></span></span><br><span class="line">		<span class="tag"><<span class="name">label</span>></span>email<span class="tag"><</span>/<span class="attr">label</span>></span><br><span class="line">		<span class="tag"><<span class="name">input</span> <span class="attr">type</span>=<span class="string">"email"</span> <span class="attr">class</span>=<span class="string">"form-control"</span> <span class="attr">placeholder</span>=<span class="string">"Enter email"</span>></span></span><br><span class="line">	<span class="tag"><</span>/<span class="attr">div</span>></span><br><span class="line">	<span class="tag"><<span class="name">div</span> <span class="attr">class</span>=<span class="string">"form-group"</span>></span></span><br><span class="line">		<span class="tag"><<span class="name">label</span>></span>密码<span class="tag"><</span>/<span class="attr">label</span>></span><br><span class="line">		<span class="tag"><<span class="name">input</span> <span class="attr">type</span>=<span class="string">"password"</span> <span class="attr">class</span>=<span class="string">"form-control"</span> <span class="attr">placeholder</span>=<span class="string">"password"</span>></span></span><br><span class="line">	<span class="tag"><</span>/<span class="attr">div</span>></span>	<br><span class="line">	<span class="tag"><<span class="name">div</span> <span class="attr">class</span>=<span class="string">"form-group"</span>></span></span><br><span class="line">		<span class="tag"><<span class="name">label</span>></span>选择文件<span class="tag"><</span>/<span class="attr">label</span>></span><br><span class="line">		<span class="tag"><<span class="name">input</span> <span class="attr">type</span>=<span class="string">"file"</span>></span></span><br><span class="line">		<span class="tag"><<span class="name">p</span> <span class="attr">class</span>=<span class="string">"help-block"</span>></span>选择你的文件<span class="tag"><</span>/<span class="attr">p</span>></span><br><span class="line">	<span class="tag"><</span>/<span class="attr">div</span>></span><br><span class="line"><span class="tag"><</span>/<span class="attr">form</span>></span><br></pre></td></tr></tbody></table></figure>
+<h2 id="内联表单"><a href="#内联表单" class="headerlink" title="内联表单"></a>内联表单</h2><p>创建一个内联表单，需要加上一个类 【 class=”form-inline” 】</p>
+<p>表单的默认样式的宽度是 100% 的，如果将其变为内联的方式，它的宽度就会 auto（自适应），并且变为了 1 行</p>
+<blockquote>
+<p>关于 label ：必须设置 label ，如果不设置 label，屏幕阅读器是无法正确识别的； 如果实在不需要，可以选择将其隐藏，使用 【  class=”sr-only” 】 属性</p>
+</blockquote>
+<figure class="highlight html"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag"><<span class="name">form</span> <span class="attr">role</span>=<span class="string">"form"</span> <span class="attr">class</span>=<span class="string">"form-inline"</span>></span></span><br><span class="line">	<span class="tag"><<span class="name">div</span> <span class="attr">class</span>=<span class="string">"form-group"</span>></span></span><br><span class="line">		<span class="tag"><<span class="name">label</span> <span class="attr">class</span>=<span class="string">"sr-only"</span>></span>email<span class="tag"><</span>/<span class="attr">label</span>></span><br><span class="line">		<span class="tag"><<span class="name">input</span> <span class="attr">type</span>=<span class="string">"email"</span> <span class="attr">class</span>=<span class="string">"form-control"</span> <span class="attr">placeholder</span>=<span class="string">"Enter email"</span>></span></span><br><span class="line">	<span class="tag"><</span>/<span class="attr">div</span>></span><br><span class="line">	<span class="tag"><<span class="name">div</span> <span class="attr">class</span>=<span class="string">"form-group"</span>></span></span><br><span class="line">		<span class="tag"><<span class="name">label</span> <span class="attr">class</span>=<span class="string">"sr-only"</span>></span>密码<span class="tag"><</span>/<span class="attr">label</span>></span><br><span class="line">		<span class="tag"><<span class="name">input</span> <span class="attr">type</span>=<span class="string">"password"</span> <span class="attr">class</span>=<span class="string">"form-control"</span> <span class="attr">placeholder</span>=<span class="string">"password"</span>></span></span><br><span class="line">	<span class="tag"><</span>/<span class="attr">div</span>></span>	<br><span class="line">	<span class="tag"><<span class="name">div</span> <span class="attr">class</span>=<span class="string">"form-group"</span>></span></span><br><span class="line">		<span class="tag"><<span class="name">label</span> <span class="attr">class</span>=<span class="string">"sr-only"</span>></span>选择文件<span class="tag"><</span>/<span class="attr">label</span>></span><br><span class="line">		<span class="tag"><<span class="name">input</span> <span class="attr">type</span>=<span class="string">"file"</span>></span></span><br><span class="line">		<span class="tag"><<span class="name">p</span> <span class="attr">class</span>=<span class="string">"help-block"</span>></span>选择你的文件<span class="tag"><</span>/<span class="attr">p</span>></span><br><span class="line">	<span class="tag"><</span>/<span class="attr">div</span>></span><br><span class="line"><span class="tag"><</span>/<span class="attr">form</span>></span><br></pre></td></tr></tbody></table></figure>
+<p><img src="http://ww1.sinaimg.cn/large/8c0b2220gy1g2dt6cporkj20ex02awen.jpg" alt></p>
+<h2 id="水平排列的表单"><a href="#水平排列的表单" class="headerlink" title="水平排列的表单"></a>水平排列的表单</h2><p>有的情况下我们会使用到水平排列的表单，而且有的时候回根据内容和页面的布局来调整一下它的布局方式, 设置类为 【 class=”form-horizontal” 】</p>
+<blockquote>
+<p>水平排列的表单需要我们主动去设置布局效果</p>
+</blockquote>
+<blockquote>
+<p>由于默认的 水平排列 布局有点怪异，所以下面虎用到 栅格化表格 来进行表单的布局</p>
+</blockquote>
+<figure class="highlight html"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag"><<span class="name">form</span> <span class="attr">class</span>=<span class="string">"form-horizontal"</span> <span class="attr">role</span>=<span class="string">"form"</span>></span></span><br><span class="line">	<span class="tag"><<span class="name">div</span> <span class="attr">class</span>=<span class="string">"form-group"</span>></span></span><br><span class="line">		<span class="tag"><<span class="name">label</span> <span class="attr">class</span>=<span class="string">"col-sm-2 control-label"</span>></span>Email<span class="tag"><</span>/<span class="attr">label</span>></span><br><span class="line">		<span class="tag"><<span class="name">div</span> <span class="attr">class</span>=<span class="string">"col-sm-10"</span>></span></span><br><span class="line">			<span class="tag"><<span class="name">input</span> <span class="attr">type</span>=<span class="string">"email"</span> <span class="attr">class</span>=<span class="string">"form-control"</span> <span class="attr">placeholder</span>=<span class="string">"Email"</span>></span></span><br><span class="line">		<span class="tag"><</span>/<span class="attr">div</span>></span><br><span class="line">	<span class="tag"><</span>/<span class="attr">div</span>></span><br><span class="line">	<span class="tag"><<span class="name">div</span> <span class="attr">class</span>=<span class="string">"form-group"</span>></span></span><br><span class="line">		<span class="tag"><<span class="name">label</span> <span class="attr">class</span>=<span class="string">"col-sm-2 control-label"</span>></span>password<span class="tag"><</span>/<span class="attr">label</span>></span><br><span class="line">		<span class="tag"><<span class="name">div</span> <span class="attr">class</span>=<span class="string">"col-sm-10"</span>></span></span><br><span class="line">			<span class="tag"><<span class="name">input</span> <span class="attr">type</span>=<span class="string">"password"</span> <span class="attr">class</span>=<span class="string">"form-control"</span> <span class="attr">placeholder</span>=<span class="string">"password"</span>></span></span><br><span class="line">		<span class="tag"><</span>/<span class="attr">div</span>></span><br><span class="line">	<span class="tag"><</span>/<span class="attr">div</span>></span>	<br><span class="line"></span><br><span class="line">	<span class="tag"><<span class="name">div</span> <span class="attr">class</span>=<span class="string">"form-group"</span>></span></span><br><span class="line">		<span class="tag"><<span class="name">div</span> <span class="attr">class</span>=<span class="string">"col-sm-offset-2 col-sm-10"</span>></span></span><br><span class="line">			<span class="tag"><<span class="name">div</span> <span class="attr">class</span>=<span class="string">"checkbox"</span>></span></span><br><span class="line">				<span class="tag"><<span class="name">label</span>></span></span><br><span class="line">					<span class="tag"><<span class="name">input</span> <span class="attr">type</span>=<span class="string">"checkbox"</span>></span>记住密码</span><br><span class="line">				<span class="tag"><</span>/<span class="attr">label</span>></span><br><span class="line">			<span class="tag"><</span>/<span class="attr">div</span>></span><br><span class="line">		<span class="tag"><</span>/<span class="attr">div</span>></span><br><span class="line">	<span class="tag"><</span>/<span class="attr">div</span>></span><br><span class="line"></span><br><span class="line">	<span class="tag"><<span class="name">div</span> <span class="attr">class</span>=<span class="string">"form-group"</span>></span></span><br><span class="line">		<span class="tag"><<span class="name">div</span> <span class="attr">class</span>=<span class="string">"col-sm-offset-2 col-sm-10"</span>></span></span><br><span class="line">				<span class="tag"><<span class="name">button</span> <span class="attr">type</span>=<span class="string">"submit"</span> <span class="attr">class</span>=<span class="string">"btn btn-default"</span>></span>登录<span class="tag"><</span>/<span class="attr">button</span>></span><br><span class="line">		<span class="tag"><</span>/<span class="attr">div</span>></span><br><span class="line">	<span class="tag"><</span>/<span class="attr">div</span>></span><br><span class="line"></span><br><span class="line"><span class="tag"><</span>/<span class="attr">form</span>></span><br></pre></td></tr></tbody></table></figure>
     </article>
+    <!-- license  -->
     
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/2019/04/19/Vue-js第一课/">
-            
-                <span>Vue.js第一课</span>
-        </a>
-        <div class="abstract-content">
-            什么是Vue.js
-Vue.js是目前最火的一个前端框架，React是最流行的一个前端框架（React除了开发网站，还可以开发手机App；Vue语法也是可以用于进行手机App开发的，需要借助于Weex）
-
-Vue.js是最前端主流框架之一，和Angular.js、React.js一起，并成为前端三大主流框架
-
-Vue.js是一套构建用户界面的框架，值关注视图图层，它不仅易与上手，还便于与第三方库或既有项目整合。（Vue有配套的第三方类库，可以整合起来做大型项目的开发）
-
-前端的主要工作？主要负责MVC中的V这一层，主要的工作就是和界面打交道
-
-
-为什么要学习流行框架
-企业为了提高开发效率...
+        <div class="license-wrapper">
+            <p>原文作者：<a href="http://yoursite.com">YaoRemu</a>
+            </p><p>原文链接：<a href="http://yoursite.com/2019/04/24/Bootstrap-CSS表单、按钮和图片/">http://yoursite.com/2019/04/24/Bootstrap-CSS表单、按钮和图片/</a>
+            </p><p>发表日期：<a href="http://yoursite.com/2019/04/24/Bootstrap-CSS表单、按钮和图片/">April 24th 2019, 4:19:31 pm</a>
+            </p><p>更新日期：<a href="http://yoursite.com/2019/04/24/Bootstrap-CSS表单、按钮和图片/">April 24th 2019, 5:04:53 pm</a>
+            </p><p>版权声明：本文采用<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可</p>
         </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2019/04/19</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class="abstract-tags">
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="前端知识">前端知识</a>
-    
-</div>
-            
-        </div>
-    </article>
     
     <!-- paginator  -->
+    <ul class="post-paginator">
+        <li class="next">
+            
+        </li>
+        <li class="previous">
+            
+                <div class="prevSlogan">Previous Post</div>
+                <a href="/2019/04/24/操作系统（科普章节）/" title="操作系统（科普章节）">
+                    <div class="prevTitle">操作系统（科普章节）</div>
+                </a>
+            
+        </li>
+    </ul>
+
+
+
+    <!-- 评论插件 -->
+    <!-- 来必力City版安装代码 -->
+
+<!-- City版安装代码已完成 -->
     
+    
+    <!-- partial('_partial/comment/changyan') -->
+    <!--PC版-->
+
+
+    
+    
+    <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+    <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+    <div id="comment"></div>
+    <script>
+    new Valine({
+        el: '#comment' ,
+        notify:false, 
+        verify:false, 
+        appId: "SgWkCobuyHsQs2PICTiE4ea7-gzGzoHsz",
+        appKey: "v5krQ6EXt9olzSl8Ms7G7iSf",
+        placeholder: "",
+        path:window.location.pathname, 
+        avatar:'mm' 
+    });
+    </script>
+
+
+    <!-- 评论 -->
+
+
+
+    <script src="/js/tctip-1.0.3.min.js"></script>
+    <script>
+       new tctip({
+       top: '20%',
+       
+       button: {
+          id: 9,
+          type: 'zanzhu'
+        },
+        list: [
+         {
+           type: 'alipay',
+           qrImg: 'http://ww1.sinaimg.cn/large/8c0b2220gy1g25njlruhej205j05kdgd.jpg'
+         }, {
+           type: 'wechat',
+           qrImg: 'http://ww1.sinaimg.cn/large/8c0b2220gy1g25njlryftj206d06c3z2.jpg'
+         }
+        ]
+      }).init()
+</script>
+
+
+
 </main>
             <!-- profile -->
             
@@ -513,6 +603,13 @@ Vue.js是一套构建用户界面的框架，值关注视图图层，它不仅�
 </footer>
     </div>
     <!-- toc -->
+    
+    <div class="toc-wrapper" style="top:50vh;">
+        <div class="toc-catalog">
+            <span class="iconfont-archer catalog-icon"></span><span>CATALOG</span>
+        </div>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#表单"><span class="toc-number">1.</span> <span class="toc-text">表单</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#内联表单"><span class="toc-number">1.1.</span> <span class="toc-text">内联表单</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#水平排列的表单"><span class="toc-number">1.2.</span> <span class="toc-text">水平排列的表单</span></a></li></ol></li></ol>
+    </div>
     
     <div class="back-top iconfont-archer"></div>
     <div class="sidebar sidebar-hide">
@@ -1315,6 +1412,8 @@ var talkAPI = "";//如果有类似图灵机器人的聊天接口请填写接口�
     
     
     <!-- async load share.js -->
+    
+        <script src="/scripts/share.js" async></script>    
      
     <!--爱心-->
     <script type="text/javascript" src="/js/src/clicklove.js"></script>

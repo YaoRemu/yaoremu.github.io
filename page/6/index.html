@@ -78,8 +78,6 @@
     <link rel="preload" href="/css/style.css?v=20180824" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <link rel="stylesheet" href="/css/mobile.css?v=20180824" media="(max-width: 980px)">
     
-    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    
     <!-- /*! loadCSS. [c]2017 Filament Group, Inc. MIT License */
 /* This file is meant as a standalone workflow for
 - testing support for link[rel=preload]
@@ -203,8 +201,10 @@
 </head>
 
     
+        <body class="home-body">
     
-<body><header class="header">
+    
+<header class="header index-header">
 
     <div class="read-progress"></div>
     <div class="header-sidebar-menu"></div>
@@ -220,21 +220,34 @@
 
 
 
+
+height:50vh;
 ">
     
     <!-- 主页  -->
+    
+    
+    <!-- 文章页  -->
             
     <div class="site-intro-placeholder"></div>
-    <div class="site-intro-img" style="background-image: url(/)"></div>
+    <div class="site-intro-img" style="background-image: url(http://ww1.sinaimg.cn/large/8c0b2220gy1g1aejyd30tj21c00u07a2.jpg)"></div>
     <div class="site-intro-meta">
         <!-- 标题  -->
         <h1 class="intro-title">
             <!-- 主页  -->
             
+            Welcome to YaoRemu'Blog
+            <!-- 文章页  -->
+            
         </h1>
         <!-- 副标题 -->
         <p class="intro-subtitle">
             <!-- 主页副标题  -->
+            
+            
+                如果真爱有颜色，那一定是蓝色.
+            
+            <!-- 文章页  -->
             
         </p>
         <!-- 文章页meta -->
@@ -346,78 +359,45 @@
     
     
     <article class="index-post">
-        <a class="abstract-title" href="/2019/04/21/Vue-js第二课/">
+        <a class="abstract-title" href="/2019/03/17/MySql服务安装/">
             
-                <span>Vue.js第二课</span>
+                <span>MySql服务安装</span>
         </a>
         <div class="abstract-content">
-            知识点梳理
-过滤器
-键盘修饰符以及自定义键盘修饰符
-自定义指令
-vue实例的生命周期
-vue-resource 实现 get、 post、 jsonp 请求
-Vue中的动画
+            安装过程
+先添加安装文件中bin文件夹到用户环境变量(这样才可以使用命令)
 
-数组的新方法forEach、 somw 、 filter 、 findIndex、 这些都是数组的新方法，都会对数组中的每一项进行遍历，执行相关操作
-不同之处
-forEach： 无法被中止
-some： 可以通过 return true 中止
-filter： 进行过滤，把符合条件的，返回得到一个新数组
-findIndex： 找到对应对象的索引
+  
 
-过滤器概念 Vue.js 允许你自定义过滤器，可以用作一些常见的文本格式...
+mysqld –initialize（执行初始化【不添加用户名】/此处注意，如果安装提示出错，可以删除  [data]  文件夹后重试 ）
+
+
+
+mysqld install (安装MySql)
+
+  
+（由于之前已经安装过，所以这里提示 已存在）        
+
+net start mysql(启动MySql服务)
+
+  
+
+完成！  
+
+
+   注意：要正确配置[my.ini]中的文件！！！
+
         </div>
         <div class="abstract-post-meta">
             <!-- date  -->
             <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2019/04/21</span>
+                <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2019/03/17</span>
             </div>
             <!-- tags  -->
             
             <div class="abstract-tags">
     
-        <a class="post-tag" href="javascript:void(0);" data-tags="前端知识">前端知识</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/2019/04/19/Vue-js第一课/">
-            
-                <span>Vue.js第一课</span>
-        </a>
-        <div class="abstract-content">
-            什么是Vue.js
-Vue.js是目前最火的一个前端框架，React是最流行的一个前端框架（React除了开发网站，还可以开发手机App；Vue语法也是可以用于进行手机App开发的，需要借助于Weex）
-
-Vue.js是最前端主流框架之一，和Angular.js、React.js一起，并成为前端三大主流框架
-
-Vue.js是一套构建用户界面的框架，值关注视图图层，它不仅易与上手，还便于与第三方库或既有项目整合。（Vue有配套的第三方类库，可以整合起来做大型项目的开发）
-
-前端的主要工作？主要负责MVC中的V这一层，主要的工作就是和界面打交道
-
-
-为什么要学习流行框架
-企业为了提高开发效率...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2019/04/19</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class="abstract-tags">
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="前端知识">前端知识</a>
+        <a class="post-tag" href="javascript:void(0);" data-tags="安装教程">安装教程</a>
     
 </div>
             
@@ -426,8 +406,91 @@ Vue.js是一套构建用户界面的框架，值关注视图图层，它不仅�
     
     <!-- paginator  -->
     
+    <nav class="page-nav">
+        <a class="extend prev" rel="prev" href="/page/5/">< PREV</a><a class="page-number" href="/">1</a><span class="space">…</span><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><span class="page-number current">6</span>
+    </nav>
+    
 </main>
             <!-- profile -->
+            
+            <div class="profile">
+    <img class="profile-avatar" alt="avatar" src="http://ww1.sinaimg.cn/large/8c0b2220gy1g1cs04vue4j20ht0ht0tz.jpg">
+    <div class="profile-name">YaoRemu</div>
+    
+    <div class="profile-signature">
+        Man proposes, god disposes.
+    </div>
+    
+    
+    <div class="profile-social">
+        
+    
+        
+            
+                <span class="iconfont-archer wechat" title="wechat">
+                  
+                  <img class="profile-qr" src="http://ww1.sinaimg.cn/large/8c0b2220gy1g1aea5wfucg208c08cjrx.gif">
+                </span>
+            
+        
+    
+        
+            
+                <span class="iconfont-archer qq" title="qq">
+                  
+                  <img class="profile-qr" src="http://ww1.sinaimg.cn/large/8c0b2220gy1g1aeafzefgg208c08caba.gif">
+                </span>
+            
+        
+    
+        
+            
+                <a href="https://www.weibo.com/u/2349539872?sudaref=s.weibo.com&display=0&retcode=6102&is_all=1" class="iconfont-archer weibo" target="_blank" title="weibo"></a>
+            
+        
+    
+        
+            
+                <a href="https://YaoRemu.github.io" class="iconfont-archer github" target="_blank" title="github"></a>
+            
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+    </div>
+    
+    
+    
+</div>
             
         </div>
         <footer class="footer footer-unloaded">
