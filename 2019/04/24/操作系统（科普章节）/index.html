@@ -22,7 +22,7 @@
     <meta name="description" content="欢迎来到YaoRemu的博客">
     <meta http-equiv="Cache-control" content="no-cache">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>YaoRemu'Blog</title>
+    <title>操作系统（科普章节） · YaoRemu'Blog</title>
     <style type="text/css">
     @font-face {
         font-family: 'Oswald-Regular';
@@ -77,6 +77,8 @@
 
     <link rel="preload" href="/css/style.css?v=20180824" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <link rel="stylesheet" href="/css/mobile.css?v=20180824" media="(max-width: 980px)">
+    
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     
     <!-- /*! loadCSS. [c]2017 Filament Group, Inc. MIT License */
 /* This file is meant as a standalone workflow for
@@ -201,14 +203,23 @@
 </head>
 
     
-        <body class="home-body">
+        <body class="post-body">
     
     
-<header class="header index-header">
+<header class="header">
 
     <div class="read-progress"></div>
     <div class="header-sidebar-menu"></div>
     <!-- post页的toggle banner  -->
+    
+    <div class="banner">
+            <div class="blog-title">
+                <a href="/">Welcome to YaoRemu'Blog</a>
+            </div>
+            <div class="post-title">
+                <a href="#" class="post-name">操作系统（科普章节）</a>
+            </div>
+    </div>
     
     <a class="home-link" href="/">Welcome to YaoRemu'Blog</a>
 </header>
@@ -227,17 +238,17 @@ height:50vh;
     <!-- 主页  -->
     
     
-    <!-- 文章页  -->
+    <!-- 404页  -->
             
     <div class="site-intro-placeholder"></div>
-    <div class="site-intro-img" style="background-image: url(http://ww1.sinaimg.cn/large/8c0b2220gy1g1aejyd30tj21c00u07a2.jpg)"></div>
+    <div class="site-intro-img" style="background-image: url(http://ww1.sinaimg.cn/large/8c0b2220gy1g1aemgv57ej21hc0tze81.jpg)"></div>
     <div class="site-intro-meta">
         <!-- 标题  -->
         <h1 class="intro-title">
             <!-- 主页  -->
             
-            Welcome to YaoRemu'Blog
-            <!-- 文章页  -->
+            操作系统（科普章节）
+            <!-- 404 -->
             
         </h1>
         <!-- 副标题 -->
@@ -245,12 +256,49 @@ height:50vh;
             <!-- 主页副标题  -->
             
             
-                如果真爱有颜色，那一定是蓝色.
-            
-            <!-- 文章页  -->
+            <!-- 404 -->
             
         </p>
         <!-- 文章页meta -->
+        
+            <div class="post-intros">
+                <!-- 文章页标签  -->
+                
+                    <div class="post-intro-tags">
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="从零开始的Python学习">从零开始的Python学习</a>
+    
+</div>
+                
+                
+                    <div class="post-intro-read">
+                        <span>字数统计: <span class="post-count word-count">12</span>阅读时长: <span class="post-count reading-time">1 min</span></span>
+                    </div>
+                
+                <div class="post-intro-meta">
+                    <span class="post-intro-calander iconfont-archer"></span>
+                    <span class="post-intro-time">2019/04/24</span>
+                    
+                    <span id="busuanzi_container_page_pv" class="busuanzi-pv">
+                        <span class="iconfont-archer"></span>
+                        <span id="busuanzi_value_page_pv"></span>
+                    </span>
+                    
+                    <span class="shareWrapper">
+                        <span class="iconfont-archer shareIcon"></span>
+                        <span class="shareText">Share</span>
+                        <ul class="shareList">
+                            <li class="iconfont-archer share-qr" data-type="qr">
+                                <div class="share-qrcode"></div>
+                            </li>
+                            <li class="iconfont-archer" data-type="weibo"></li>
+                            <li class="iconfont-archer" data-type="qzone"></li>
+                            <li class="iconfont-archer" data-type="twitter"></li>
+                            <li class="iconfont-archer" data-type="facebook"></li>
+                        </ul>
+                    </span>
+                </div>
+            </div>
         
     </div>
 </div>
@@ -351,468 +399,96 @@ height:50vh;
 </script>        
         <img class="loading" src="/assets/loading.svg" style="display: block; margin: 6rem auto 0 auto; width: 6rem; height: 6rem;">
         <div class="container container-unloaded">
-            <main class="main index-page">
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/2019/03/16/简介/">
-            
-                <span class="stick-top iconfont-archer"></span>
-                
-                <span>关于我的博客</span>
-        </a>
-        <div class="abstract-content">
-            <p>~~  欢迎各位道友!~~<br><img src="http://ww1.sinaimg.cn/large/8c0b2220gy1g1af9mon7bj20zk0m8wjx.jpg" alt><br>
-        </p></div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2019/03/16</span>
-            </div>
-            <!-- tags  -->
-            
-        </div>
+            <main class="main post-page">
+    <article class="article-entry">
+        <meta name="generator" content="Hexo 3.8.0"><h1 id="操作系统作为接口的示意图"><a href="#操作系统作为接口的示意图" class="headerlink" title="操作系统作为接口的示意图"></a>操作系统作为接口的示意图</h1><p><img src="http://ww1.sinaimg.cn/large/8c0b2220gy1g2dm01jtpmj20c2089my3.jpg" alt></p>
+
     </article>
+    <!-- license  -->
     
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/2019/04/24/操作系统（科普章节）/">
-            
-                <span>操作系统（科普章节）</span>
-        </a>
-        <div class="abstract-content">
-            操作系统作为接口的示意图
-
+        <div class="license-wrapper">
+            <p>原文作者：<a href="http://yoursite.com">YaoRemu</a>
+            </p><p>原文链接：<a href="http://yoursite.com/2019/04/24/操作系统（科普章节）/">http://yoursite.com/2019/04/24/操作系统（科普章节）/</a>
+            </p><p>发表日期：<a href="http://yoursite.com/2019/04/24/操作系统（科普章节）/">April 24th 2019, 12:24:14 pm</a>
+            </p><p>更新日期：<a href="http://yoursite.com/2019/04/24/操作系统（科普章节）/">April 24th 2019, 12:26:48 pm</a>
+            </p><p>版权声明：本文采用<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可</p>
         </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2019/04/24</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class="abstract-tags">
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="从零开始的Python学习">从零开始的Python学习</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/2019/04/23/Bootstrap-CSS栅格、代码和表格/">
-            
-                <span>Bootstrap CSS栅格、代码和表格</span>
-        </a>
-        <div class="abstract-content">
-            CSS栅格概述设置全局的CSS样式，基本的HTML元素均可以通过 class 设置，并且得到增强的效果，而且 Bootstrap着重介绍了 栅格系统（grid system）,也就意味着 栅格系统 非常重要，使用起来非常方便
-Containers 容器栅格系统是 依赖容器 而存在的，Bootstrap 需要为页面内容和 栅格系统 包裹一个 容器Containers
-好处给我们提供了一些 padding 属性，也就是像 margin 属性都有去设置一下，所以我们在使用的时候一定要包裹一个容器
-123	...
-或者是使用下面这种方式，表示 百分百最宽 ，也就是能达到最大的使用范围，占据全部视...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2019/04/23</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class="abstract-tags">
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Bootstrap">Bootstrap</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/2019/04/22/全局CSS样式-排版/">
-            
-                <span>全局CSS样式-排版</span>
-        </a>
-        <div class="abstract-content">
-            
-由于我们暂时只是测试，所以我们不用去添加刚才我们所添加的那个响应式布局的标题
-
-排版排版包含：标题、页面主体、内联文本元素、对齐、改变大小写、缩略语、地址、引用 和 列表
-标题HTML5 中，所有标题标签从 H1 ~ H6 均是可以使用的，另外还提供了了 【 .h1 】 ~ 【 .h6 】 类，为的是给内联属性的文本赋值一些标题的样式
-在标题后面通常会有一个相对于标题小一点甚至颜色淡一点的副标题，它也提供了一个 small 标签来进行赋值操作， 也提供了 【 .small 】 类的元素来作为副标题
-
-注意： 它与最基本的 H1 ~ H6 （不使用 Bootstrap） 还是有区别的 
-...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2019/04/22</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class="abstract-tags">
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Bootstrap">Bootstrap</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/2019/04/22/入门例子创建/">
-            
-                <span>入门例子创建</span>
-        </a>
-        <div class="abstract-content">
-            在 Bootstrap官网 我们在它展示的例子中我们可以看到一个简单的例子，只有导航和文字的页面
-
-接下来我们完成这样一面的搭建，我们来看一下，Bootstrap 来完成这样一个页面到底有多简单，以及他给我们封装的样式到底如何使用
-
-现在暂时先不考虑这个页面中我们为什么要使用它所给定的一些固定的格式
-
-12345678910111213141516171819202122232425262728293031323334353637383940414243//添加一个 meta标签 因为它是一个响应式布局，我们通过一个 meta标签来设置//主要是提供自适应功能，表示宽度等于当前设备的宽度...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2019/04/22</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class="abstract-tags">
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Bootstrap">Bootstrap</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/2019/04/22/素描/">
-            
-                <span>素描</span>
-        </a>
-        <div class="abstract-content">
-            如何排线握笔姿势将铅笔放在四根手指的上面，大拇指盖住它，食指和拇指用力，剩余的三根手指收起，握住笔
-eg:
-
-
-注意： 握笔千万不要太用力，要保持一个放松的状态，让自己的手腕保持放松（软下来）
-
-排线手法运腕法最基本的排线手法； 排线过程中是手腕在运动，整个手凌空于整个画面之上，并没有压在画面上去画
-要点
-靠手腕的力量去运动，快速的铺出均匀而密集的线条
-
-
-运腕法多用于 大面积 的绘画
-
-eg:
-
-
-注意： 线条不是来回的画，每一根线条都是独立的
-
-小拇指支撑运腕法使用上面讲述的握笔姿势，将小拇指提出来，顶在画面上
-特点
-边缘整齐
-画出线条的力道比运腕法更大 
-线条更加的密集
-
-
-小拇指...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2019/04/22</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class="abstract-tags">
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="画画">画画</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/2019/04/22/HTML5增强的页面元素/">
-            
-                <span>HTML5增强的页面元素</span>
-        </a>
-        <div class="abstract-content">
-            课程概要
-新增的 figure元素、 figcaption元素
-新增的 details元素与 summary元素
-新增的 mark元素
-新增的 progress元素
-新增的 meter元素
-改良的 ol列表
-改良的 dl列表
-加以严格限制的 cite元素 和重新定义的 small元素
-
-figure元素 以及 figcaption元素figure元素figure元素是一种组合元素，带有可选标题，figure元素用来表示网页上的一块独立的内容，将其从网页上移除之后，不会对网页的其他内容产生影响，figure元素 所表示的内容可以是图片、统计图或者是代码示例等
-figcaption元素表示 ...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2019/04/22</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class="abstract-tags">
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="前端知识">前端知识</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/2019/04/21/Bootstrap简介/">
-            
-                <span>Bootstrap简介</span>
-        </a>
-        <div class="abstract-content">
-            Bootstrap介绍
-Bootstrap 是最受欢迎的 HTML 、CSS 、JS 的框架，用于开发响应式布局，移动设备优先的Web项目
-
-Bootstrap 是为所有开发者，所有应用场景而设计的， Bootstrap 的前端是让开发更加快速，简单。所有的开发者都能快速上手、所有的功能都能适配、所有的项目都适用
-
-
-三个优点
-预处理脚本： 虽然我们可以直接使用 Bootstrap 提供的 CSS 样式表，但是 Bootstrap 的源码是基于最流行的 CSS 预处理脚本 Less 和Sass，你可以采用预编译的 CSS 文件快速开发，也可以从源码中定制自己需要的样式
-
-响应式布局： 一...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2019/04/21</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class="abstract-tags">
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Bootstrap">Bootstrap</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/2019/04/21/Vue-js第二课/">
-            
-                <span>Vue.js第二课</span>
-        </a>
-        <div class="abstract-content">
-            知识点梳理
-过滤器
-键盘修饰符以及自定义键盘修饰符
-自定义指令
-vue实例的生命周期
-vue-resource 实现 get、 post、 jsonp 请求
-Vue中的动画
-
-数组的新方法forEach、 somw 、 filter 、 findIndex、 这些都是数组的新方法，都会对数组中的每一项进行遍历，执行相关操作
-不同之处
-forEach： 无法被中止
-some： 可以通过 return true 中止
-filter： 进行过滤，把符合条件的，返回得到一个新数组
-findIndex： 找到对应对象的索引
-
-过滤器概念 Vue.js 允许你自定义过滤器，可以用作一些常见的文本格式...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2019/04/21</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class="abstract-tags">
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="前端知识">前端知识</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/2019/04/20/表单新增的元素与属性（五）/">
-            
-                <span>表单新增的元素与属性（五）</span>
-        </a>
-        <div class="abstract-content">
-            在HTML5中，大幅度的增加了与改良了input元素的种类，可以简单的使用元素来实现HTML5之前需要使用JavaScript脚本才能实现的许多功能
-增加与改良的input元素
-url类型、emali类型、date类型、time类型、datetime类型、datetime-local类型、month类型、week类型、number类型、range类型、search类型、Tel类型、color类型
-
-url类型如果提交的不是一个网址，则会弹出提示请求输入网址,达到了一个检验的效果
-1234		
-eg:
-
-email类型email的input元素是一种专门用来输入email地址的文本框，如果...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2019/04/20</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class="abstract-tags">
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="前端知识">前端知识</a>
-    
-</div>
-            
-        </div>
-    </article>
     
     <!-- paginator  -->
+    <ul class="post-paginator">
+        <li class="next">
+            
+        </li>
+        <li class="previous">
+            
+                <div class="prevSlogan">Previous Post</div>
+                <a href="/2019/04/23/Bootstrap-CSS栅格、代码和表格/" title="Bootstrap CSS栅格、代码和表格">
+                    <div class="prevTitle">Bootstrap CSS栅格、代码和表格</div>
+                </a>
+            
+        </li>
+    </ul>
+
+
+
+    <!-- 评论插件 -->
+    <!-- 来必力City版安装代码 -->
+
+<!-- City版安装代码已完成 -->
     
-    <nav class="page-nav">
-        <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">…</span><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/2/">NEXT ></a>
-    </nav>
     
+    <!-- partial('_partial/comment/changyan') -->
+    <!--PC版-->
+
+
+    
+    
+    <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+    <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+    <div id="comment"></div>
+    <script>
+    new Valine({
+        el: '#comment' ,
+        notify:false, 
+        verify:false, 
+        appId: "SgWkCobuyHsQs2PICTiE4ea7-gzGzoHsz",
+        appKey: "v5krQ6EXt9olzSl8Ms7G7iSf",
+        placeholder: "",
+        path:window.location.pathname, 
+        avatar:'mm' 
+    });
+    </script>
+
+
+    <!-- 评论 -->
+
+
+
+    <script src="/js/tctip-1.0.3.min.js"></script>
+    <script>
+       new tctip({
+       top: '20%',
+       
+       button: {
+          id: 9,
+          type: 'zanzhu'
+        },
+        list: [
+         {
+           type: 'alipay',
+           qrImg: 'http://ww1.sinaimg.cn/large/8c0b2220gy1g25njlruhej205j05kdgd.jpg'
+         }, {
+           type: 'wechat',
+           qrImg: 'http://ww1.sinaimg.cn/large/8c0b2220gy1g25njlryftj206d06c3z2.jpg'
+         }
+        ]
+      }).init()
+</script>
+
+
+
 </main>
             <!-- profile -->
-            
-            <div class="profile">
-    <img class="profile-avatar" alt="avatar" src="http://ww1.sinaimg.cn/large/8c0b2220gy1g1cs04vue4j20ht0ht0tz.jpg">
-    <div class="profile-name">YaoRemu</div>
-    
-    <div class="profile-signature">
-        Man proposes, god disposes.
-    </div>
-    
-    
-    <div class="profile-social">
-        
-    
-        
-            
-                <span class="iconfont-archer wechat" title="wechat">
-                  
-                  <img class="profile-qr" src="http://ww1.sinaimg.cn/large/8c0b2220gy1g1aea5wfucg208c08cjrx.gif">
-                </span>
-            
-        
-    
-        
-            
-                <span class="iconfont-archer qq" title="qq">
-                  
-                  <img class="profile-qr" src="http://ww1.sinaimg.cn/large/8c0b2220gy1g1aeafzefgg208c08caba.gif">
-                </span>
-            
-        
-    
-        
-            
-                <a href="https://www.weibo.com/u/2349539872?sudaref=s.weibo.com&display=0&retcode=6102&is_all=1" class="iconfont-archer weibo" target="_blank" title="weibo"></a>
-            
-        
-    
-        
-            
-                <a href="https://YaoRemu.github.io" class="iconfont-archer github" target="_blank" title="github"></a>
-            
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-
-    </div>
-    
-    
-    
-</div>
             
         </div>
         <footer class="footer footer-unloaded">
@@ -898,6 +574,13 @@ email类型email的input元素是一种专门用来输入email地址的文本框
 </footer>
     </div>
     <!-- toc -->
+    
+    <div class="toc-wrapper" style="top:50vh;">
+        <div class="toc-catalog">
+            <span class="iconfont-archer catalog-icon"></span><span>CATALOG</span>
+        </div>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#操作系统作为接口的示意图"><span class="toc-number">1.</span> <span class="toc-text">操作系统作为接口的示意图</span></a></li></ol>
+    </div>
     
     <div class="back-top iconfont-archer"></div>
     <div class="sidebar sidebar-hide">
@@ -1688,6 +1371,8 @@ var talkAPI = "";//如果有类似图灵机器人的聊天接口请填写接口�
     
     
     <!-- async load share.js -->
+    
+        <script src="/scripts/share.js" async></script>    
      
     <!--爱心-->
     <script type="text/javascript" src="/js/src/clicklove.js"></script>
