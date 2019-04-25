@@ -3,7 +3,13 @@
   <entry>
     <title><![CDATA[按钮和图片]]></title>
     <url>%2F2019%2F04%2F25%2F%E6%8C%89%E9%92%AE%E5%92%8C%E5%9B%BE%E7%89%87%2F</url>
-    <content type="text"><![CDATA[]]></content>
+    <content type="text"><![CDATA[按钮在 Bootstrap 中，它给我们提供了很多样式的按钮。 比如说： 默认的、成功的、信息的、警告的或者链接的等等 123456789 default //默认 primary success //成功 info //信息 warning //警告 Link //链接 danger //危险 通过栅格系统，改变按钮的大小 123456 info info info info 可以通过设置 【 btn-block 】 属性让按钮充满父级容器1hello 那我们只能使用 button 吗？不是的。 通常情况下，button元素 和链接 a元素 是比较相似的，我们在 a 元素中也可以这么来用，eg： 1default 可以看到，其实它的区别与 按钮 的区别并不大，只不过按钮是未激活的，而 a标签 是激活的，并且比较大。 所以我们不单单只能使用 button 也可以使用 a标签 去替代掉 button，因为我们在多数开发的时候，a标签 出现的几率要高一些 也可以使用 input标签 来表示按钮; eg: 1 可以看到，几种不同设置按钮的方法差别并不大，所以可以根据自己的需求随意来进行使用，需要注意的是，作者建议我们使用 button ，因为像 input 在 Firefox 中可能会出现一些问题，可能会有bug，它 的高的办法是没法统一的 图片在现代的 Bootstrap 版本中，它的图片也是响应式图片变化，它是如何做到的呢？ 它是把它的宽度，设为最大化，而高度自适应，但是这样会导致图片失帧，所以我们可以采取 SVG 的方式，去给它不失帧或者改变样式。 它也提供了一些圆角图片的效果 123 //圆形图片 //自带圆角的正方形图片 //自带边框效果 SVG（可缩放矢量图形）：可缩放矢量图形是基于 可扩展标记语言（标准通用标记语言的子集），用于描述二维矢量图形的一种图形格式]]></content>
+      <categories>
+        <category>【极客】前端学习</category>
+      </categories>
+      <tags>
+        <tag>Bootstrap</tag>
+      </tags>
   </entry>
   <entry>
     <title><![CDATA[Bootstrap CSS表单、按钮和图片]]></title>

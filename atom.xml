@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-04-25T08:28:47.481Z</updated>
+  <updated>2019-04-25T09:19:26.266Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://yoursite.com/2019/04/25/%E6%8C%89%E9%92%AE%E5%92%8C%E5%9B%BE%E7%89%87/"/>
     <id>http://yoursite.com/2019/04/25/按钮和图片/</id>
     <published>2019-04-25T08:28:47.000Z</published>
-    <updated>2019-04-25T08:28:47.481Z</updated>
+    <updated>2019-04-25T09:19:26.266Z</updated>
     
     <summary type="html">
     
@@ -29,12 +29,16 @@
       
         
         
-          &lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;/body&gt;&lt;/html&gt;
+          &lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;h1 id=&quot;按钮&quot;&gt;&lt;a href=&quot;#按钮&quot; class=&quot;headerlink&quot; title=&quot;按钮&quot;&gt;&lt;/a&gt;按钮&lt;/h1&gt;&lt;p&gt;在 Bootstrap 中，它给我们提供了很多样式的按钮。 比如说：
         
       
     
     </summary>
     
+      <category term="【极客】前端学习" scheme="http://yoursite.com/categories/%E3%80%90%E6%9E%81%E5%AE%A2%E3%80%91%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+      <category term="Bootstrap" scheme="http://yoursite.com/tags/Bootstrap/"/>
     
   </entry>
   
