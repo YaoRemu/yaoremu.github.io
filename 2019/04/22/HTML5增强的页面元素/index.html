@@ -443,9 +443,22 @@ height:50vh;
 </blockquote>
 <h1 id="progress元素"><a href="#progress元素" class="headerlink" title="progress元素"></a>progress元素</h1><p>代表任务的完成进度，这个进度可以是不确定的，表示进度正在执行或者不清楚当前工作量有没有完成，也可以使用从0到某个数字，比如：从0到100中的一个数字来表示当前的完成进度情况；</p>
 <p>这个元素表示当前任务完成具体情况的一个属性，max属性完成代表当前的工作量，它有一个最大值和最小值，分别用来规定一个范围，比如从0到100，那么最小值是0，最大值是100； 也可能工作比较繁重，那么可以从 0 到 1000，他的比例会相应的增加</p>
-<p>javascript:<br></p><figure class="highlight javascript"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//没有达到想要的效果是，当前 js 是一个单线程，它是要执行完整个的 for循环，然后再执行内容</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">btn</span>(<span class="params"></span>)</span>{	<span class="comment">//按钮事件</span></span><br><span class="line">	<span class="comment">//for(var i = 0,i <= 100; i++){ 由于是单线程，所以它先执行完for，再去执行括号中的语句< span><!--=--></span><br><span class="line">		<span class="comment">//setTimeout(function(){</span></span><br><span class="line">		<span class="comment">//	updateprogress(i);</span></span><br><span class="line">		<span class="comment">//},2000)</span></span><br><span class="line">	<span class="comment">//}</span></span><br><span class="line">	<span class="keyword">var</span> i =<span class="number">0</span>;</span><br><span class="line">	<span class="function"><span class="keyword">function</span> <span class="title">thread_one</span>(<span class="params"></span>)</span>{	<span class="comment">//不使用循环，直接调用函数来实现</span></span><br><span class="line">		<span class="keyword">if</span>(i<=<span class="number">100<!--=<span--></span>){</span><br><span class="line">			i++;</span><br><span class="line">			updateprogress(i);</span><br><span class="line">		}</span><br><span class="line">	}</span><br><span class="line">	setInterval(three_one,<span class="number">100</span>);</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">updateprogress</span>(<span class="params">newValue</span>)</span>{		<span class="comment">//进度条的增长</span></span><br><span class="line">	<span class="comment">//alert(newValue);		//测试</span></span><br><span class="line">	<span class="keyword">var</span> progressVar = <span class="built_in">document</span>.getElementById(<span class="string">"p"</span>)</span><br><span class="line">	progressBar.value = newValue;</span><br><span class="line">	progressBar.getElementsByTagName(<span class="string">'span'</span>)[<span class="number">0</span>].textContent = newValue;</span><br><span class="line">}</span><br></span></pre></td></tr></tbody></table></figure><p></p>
+<p>javascript:<br></p><figure class="highlight javascript"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//没有达到想要的效果是，当前 js 是一个单线程，它是要执行完整个的 for循环，然后再执行内容</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">btn</span>(<span class="params"></span>)</span>{	<span class="comment">//按钮事件</span></span><br><span class="line">	<span class="comment">//for(var i = 0,i <= 100; i++){ 由于是单线程，所以它先执行完for，再去执行括号中的语句< span><!--=--></span><br><span class="line">		<span class="comment">//setTimeout(function(){</span></span><br><span class="line">		<span class="comment">//	updateprogress(i);</span></span><br><span class="line">		<span class="comment">//},2000)</span></span><br><span class="line">	<span class="comment">//}</span></span><br><span class="line">	<span class="keyword">var</span> i =<span class="number">0</span>;</span><br><span class="line">	<span class="function"><span class="keyword">function</span> <span class="title">thread_one</span>(<span class="params"></span>)</span>{	<span class="comment">//不使用循环，直接调用函数来实现</span></span><br><span class="line">		<span class="keyword">if</span>(i<=<span class="number">100<!--=<span--></span>){</span><br><span class="line">			i++;</span><br><span class="line">			updateprogress(i);</span><br><span class="line">		}</span><br><span class="line">	}</span><br><span class="line">	setInterval(thread_one,<span class="number">100</span>);</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">updateprogress</span>(<span class="params">newValue</span>)</span>{		<span class="comment">//进度条的增长</span></span><br><span class="line">	<span class="comment">//alert(newValue);		//测试</span></span><br><span class="line">	<span class="keyword">var</span> progressVar = <span class="built_in">document</span>.getElementById(<span class="string">"p"</span>)</span><br><span class="line">	progressVar.value = newValue;</span><br><span class="line">	progressVar.getElementsByTagName(<span class="string">'span'</span>)[<span class="number">0</span>].textContent = newValue;</span><br><span class="line">}</span><br></span></pre></td></tr></tbody></table></figure><p></p>
 <p>html:<br></p><figure class="highlight html"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag"><<span class="name">section</span>></span></span><br><span class="line">	<span class="tag"><<span class="name">h2</span>></span>progress元素的使用<span class="tag"><</span>/<span class="attr">h2</span>></span><br><span class="line">	<span class="tag"><<span class="name">p</span>></span>完成的百分百<span class="tag"><<span class="name">progress</span> <span class="attr">style</span>=<span class="string">"background-color: #269abc"</span> <span class="attr">id</span>=<span class="string">"p"</span> <span class="attr">max</span>=<span class="string">"100"</span>></span><span class="tag"><<span class="name">span</span>></span>0<span class="tag"><</span>/<span class="attr">span</span>></span>%<span class="tag"><</span>/<span class="attr">progress</span>><span class="tag"><</span>/<span class="attr">p</span>><br><span class="line">	<span class="tag"><<span class="name">input</span> <span class="attr">type</span>=<span class="string">"button"</span> <span class="attr">onclick</span>=<span class="string">""</span> <span class="attr">value</span>=<span class="string">"点击"</span>></span></span><br><span class="line"><span class="tag"><</span>/<span class="attr">section</span>></span><br></pre></td></tr></tbody></table></figure><p></p>
 <p><img src="http://ww1.sinaimg.cn/large/8c0b2220gy1g2dzud0mvcj206j02sdfw.jpg" alt></p>
+<h1 id="meter元素"><a href="#meter元素" class="headerlink" title="meter元素"></a>meter元素</h1><p>meter元素 表示规定范围内的数值量，例如：规定范围内的数值量、某个候选人投票占的总票数的比例</p>
+<p>该元素拥有6个属性：</p>
+<ul>
+<li>value 当前的值</li>
+<li>min 最小值</li>
+<li>max 最大值</li>
+<li>low 下限</li>
+<li>high 上限</li>
+<li>optimum 最佳值</li>
+</ul>
+<figure class="highlight html"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag"><<span class="name">meter</span> <span class="attr">value</span>=<span class="string">"40"</span> <span class="attr">min</span>=<span class="string">"0"</span> <span class="attr">max</span>=<span class="string">"100"</span> <span class="attr">low</span>=<span class="string">"10"</span> <span class="attr">high</span>=<span class="string">"90"</span> <span class="attr">optimum</span>=<span class="string">"80"</span>></span><span class="tag"><</span>/<span class="attr">meter</span>></span><br><span class="line"></span><br><span class="line"><span class="tag"><<span class="name">meter</span>></span>40/100<span class="tag"><</span>/<span class="attr">meter</span>></span><br></pre></td></tr></tbody></table></figure>
+<p>可以看到，文字不会影响到 meter元素，具体数值还是需要 value 来进行设置</p>
+<p><img src="http://ww1.sinaimg.cn/large/8c0b2220gy1g2f4w734qnj204o00y744.jpg" alt></p>
 
     </article>
     <!-- license  -->
@@ -454,7 +467,7 @@ height:50vh;
             <p>原文作者：<a href="http://yoursite.com">YaoRemu</a>
             </p><p>原文链接：<a href="http://yoursite.com/2019/04/22/HTML5增强的页面元素/">http://yoursite.com/2019/04/22/HTML5增强的页面元素/</a>
             </p><p>发表日期：<a href="http://yoursite.com/2019/04/22/HTML5增强的页面元素/">April 22nd 2019, 12:18:39 pm</a>
-            </p><p>更新日期：<a href="http://yoursite.com/2019/04/22/HTML5增强的页面元素/">April 24th 2019, 8:55:44 pm</a>
+            </p><p>更新日期：<a href="http://yoursite.com/2019/04/22/HTML5增强的页面元素/">April 25th 2019, 8:06:49 pm</a>
             </p><p>版权声明：本文采用<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可</p>
         </div>
     
@@ -628,7 +641,7 @@ height:50vh;
         <div class="toc-catalog">
             <span class="iconfont-archer catalog-icon"></span><span>CATALOG</span>
         </div>
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#课程概要"><span class="toc-number">1.</span> <span class="toc-text">课程概要</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#figure元素-以及-figcaption元素"><span class="toc-number">2.</span> <span class="toc-text">figure元素 以及 figcaption元素</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#figure元素"><span class="toc-number">2.1.</span> <span class="toc-text">figure元素</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#figcaption元素"><span class="toc-number">2.2.</span> <span class="toc-text">figcaption元素</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#details元素-和-summary元素"><span class="toc-number">3.</span> <span class="toc-text">details元素 和 summary元素</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#details元素"><span class="toc-number">3.1.</span> <span class="toc-text">details元素</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#summary元素"><span class="toc-number">3.2.</span> <span class="toc-text">summary元素</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#mark元素"><span class="toc-number">4.</span> <span class="toc-text">mark元素</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#ol"><span class="toc-number">5.</span> <span class="toc-text">ol</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#start属性"><span class="toc-number">5.1.</span> <span class="toc-text">start属性</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#reversed属性"><span class="toc-number">5.2.</span> <span class="toc-text">reversed属性</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#dl"><span class="toc-number">6.</span> <span class="toc-text">dl</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#cite元素"><span class="toc-number">7.</span> <span class="toc-text">cite元素</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#small元素"><span class="toc-number">8.</span> <span class="toc-text">small元素</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#progress元素"><span class="toc-number">9.</span> <span class="toc-text">progress元素</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#课程概要"><span class="toc-number">1.</span> <span class="toc-text">课程概要</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#figure元素-以及-figcaption元素"><span class="toc-number">2.</span> <span class="toc-text">figure元素 以及 figcaption元素</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#figure元素"><span class="toc-number">2.1.</span> <span class="toc-text">figure元素</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#figcaption元素"><span class="toc-number">2.2.</span> <span class="toc-text">figcaption元素</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#details元素-和-summary元素"><span class="toc-number">3.</span> <span class="toc-text">details元素 和 summary元素</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#details元素"><span class="toc-number">3.1.</span> <span class="toc-text">details元素</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#summary元素"><span class="toc-number">3.2.</span> <span class="toc-text">summary元素</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#mark元素"><span class="toc-number">4.</span> <span class="toc-text">mark元素</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#ol"><span class="toc-number">5.</span> <span class="toc-text">ol</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#start属性"><span class="toc-number">5.1.</span> <span class="toc-text">start属性</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#reversed属性"><span class="toc-number">5.2.</span> <span class="toc-text">reversed属性</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#dl"><span class="toc-number">6.</span> <span class="toc-text">dl</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#cite元素"><span class="toc-number">7.</span> <span class="toc-text">cite元素</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#small元素"><span class="toc-number">8.</span> <span class="toc-text">small元素</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#progress元素"><span class="toc-number">9.</span> <span class="toc-text">progress元素</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#meter元素"><span class="toc-number">10.</span> <span class="toc-text">meter元素</span></a></li></ol>
     </div>
     
     <div class="back-top iconfont-archer"></div>
@@ -1009,9 +1022,16 @@ height:50vh;
     
     
     
+    
+    
+    
+    
+    
+    
+    
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 52
+        Total : 53
         </div>
         <!-- search  -->
         
@@ -1038,6 +1058,11 @@ height:50vh;
     
     <div class="archive-year"> 2019 </div>
     <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">04/25</span><a class="archive-post-title" href="/2019/04/25/HTML5编辑API之Range对象/">HTML5编辑API之Range对象</a>
+        </li>
     
     
         <li class="archive-post-item">
@@ -1299,19 +1324,19 @@ height:50vh;
         <div class="sidebar-panel-tags">
     <div class="sidebar-tags-name">
     
+        <span class="sidebar-tag-name" data-tags="Bootstrap"><span class="iconfont-archer"></span>Bootstrap</span>
+    
         <span class="sidebar-tag-name" data-tags="前端知识"><span class="iconfont-archer"></span>前端知识</span>
     
         <span class="sidebar-tag-name" data-tags="MarkDown基本语法"><span class="iconfont-archer"></span>MarkDown基本语法</span>
     
-        <span class="sidebar-tag-name" data-tags="Bootstrap"><span class="iconfont-archer"></span>Bootstrap</span>
+        <span class="sidebar-tag-name" data-tags="Cisco笔记"><span class="iconfont-archer"></span>Cisco笔记</span>
     
         <span class="sidebar-tag-name" data-tags="安装教程"><span class="iconfont-archer"></span>安装教程</span>
     
-        <span class="sidebar-tag-name" data-tags="Cisco笔记"><span class="iconfont-archer"></span>Cisco笔记</span>
+        <span class="sidebar-tag-name" data-tags="PHP相关知识"><span class="iconfont-archer"></span>PHP相关知识</span>
     
         <span class="sidebar-tag-name" data-tags="Cisco强化学习"><span class="iconfont-archer"></span>Cisco强化学习</span>
-    
-        <span class="sidebar-tag-name" data-tags="PHP相关知识"><span class="iconfont-archer"></span>PHP相关知识</span>
     
         <span class="sidebar-tag-name" data-tags="github搭建个人博客"><span class="iconfont-archer"></span>github搭建个人博客</span>
     

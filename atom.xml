@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-04-25T09:23:04.943Z</updated>
+  <updated>2019-04-25T12:39:40.835Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>HTML5编辑API之Range对象</title>
+    <link href="http://yoursite.com/2019/04/25/HTML5%E7%BC%96%E8%BE%91API%E4%B9%8BRange%E5%AF%B9%E8%B1%A1/"/>
+    <id>http://yoursite.com/2019/04/25/HTML5编辑API之Range对象/</id>
+    <published>2019-04-25T12:19:29.000Z</published>
+    <updated>2019-04-25T12:39:40.835Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;h1 id=&quot;课程概要&quot;&gt;&lt;a href=&quot;#课程概要&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="【极客】前端学习" scheme="http://yoursite.com/categories/%E3%80%90%E6%9E%81%E5%AE%A2%E3%80%91%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+      <category term="前端知识" scheme="http://yoursite.com/tags/%E5%89%8D%E7%AB%AF%E7%9F%A5%E8%AF%86/"/>
+    
+  </entry>
   
   <entry>
     <title>按钮和图片</title>
@@ -206,7 +232,7 @@
     <link href="http://yoursite.com/2019/04/22/HTML5%E5%A2%9E%E5%BC%BA%E7%9A%84%E9%A1%B5%E9%9D%A2%E5%85%83%E7%B4%A0/"/>
     <id>http://yoursite.com/2019/04/22/HTML5增强的页面元素/</id>
     <published>2019-04-22T04:18:39.000Z</published>
-    <updated>2019-04-24T12:55:44.365Z</updated>
+    <updated>2019-04-25T12:06:49.619Z</updated>
     
     <summary type="html">
     
@@ -512,32 +538,6 @@
     
     
       <category term="Cisco强化学习" scheme="http://yoursite.com/tags/Cisco%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>表单新增的元素与属性</title>
-    <link href="http://yoursite.com/2019/04/15/%E8%A1%A8%E5%8D%95%E6%96%B0%E5%A2%9E%E7%9A%84%E5%85%83%E7%B4%A0%E4%B8%8E%E5%B1%9E%E6%80%A7/"/>
-    <id>http://yoursite.com/2019/04/15/表单新增的元素与属性/</id>
-    <published>2019-04-15T12:07:40.000Z</published>
-    <updated>2019-04-15T12:52:52.503Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;h1 id=&quot;表单内元素的form属性&quot;&gt;&lt;a href=&quot;#表单内元素的form属性&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="【极客】前端学习" scheme="http://yoursite.com/categories/%E3%80%90%E6%9E%81%E5%AE%A2%E3%80%91%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/"/>
-    
-    
-      <category term="前端知识" scheme="http://yoursite.com/tags/%E5%89%8D%E7%AB%AF%E7%9F%A5%E8%AF%86/"/>
     
   </entry>
   
