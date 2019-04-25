@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[HTML5编辑API之Range对象]]></title>
     <url>%2F2019%2F04%2F25%2FHTML5%E7%BC%96%E8%BE%91API%E4%B9%8BRange%E5%AF%B9%E8%B1%A1%2F</url>
-    <content type="text"><![CDATA[课程概要 Range对象 Range对象的基本概念 selectNode / SelectNodeContents / deleteContents 方法 setStart / setEND setStartBefore / setStartAfter /setEndBefore / setENDAfter 方法 Range对象的基本概念一个 Range对象 代表页面上的一段连续区域。 通过 Range对象 ， 可以获取 或 修改网页上的任何区域 123456789101112131415161718192021function rangeTest(){ var html; showRangeDiv = document.getElementById("showRange") //获得选取的内容 selection = document.getSelection() if(selection.rangeCount>0){ html = "你选取了>"+selection.rangeCount + "]]></content>
+    <content type="text"><![CDATA[课程概要 Range对象 Range对象的基本概念 selectNode / SelectNodeContents / deleteContents 方法 setStart / setEND setStartBefore / setStartAfter /setEndBefore / setENDAfter 方法 Range对象的基本概念一个 Range对象 代表页面上的一段连续区域。 通过 Range对象 ， 可以获取 或 修改网页上的任何区域 123456789101112131415161718192021function rangeTest(){ var html; showRangeDiv = document.getElementById("showRange") //获得选取的内容个数 selection = document.getSelection() if(selection.rangeCount>0){ html = "你选取了>"+selection.rangeCount + "]]></content>
       <categories>
         <category>【极客】前端学习</category>
       </categories>
