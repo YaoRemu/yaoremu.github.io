@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-04-26T07:26:34.801Z</updated>
+  <updated>2019-04-26T13:34:29.706Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>下拉菜单</title>
+    <link href="http://yoursite.com/2019/04/26/%E4%B8%8B%E6%8B%89%E8%8F%9C%E5%8D%95/"/>
+    <id>http://yoursite.com/2019/04/26/下拉菜单/</id>
+    <published>2019-04-26T12:53:45.000Z</published>
+    <updated>2019-04-26T13:34:29.706Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;blockquote&gt;
+&lt;p&gt;下面需要使用到 Bootstrap 的 JS文件 以及
+        
+      
+    
+    </summary>
+    
+      <category term="【极客】前端学习" scheme="http://yoursite.com/categories/%E3%80%90%E6%9E%81%E5%AE%A2%E3%80%91%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+      <category term="Bootstrap" scheme="http://yoursite.com/tags/Bootstrap/"/>
+    
+  </entry>
   
   <entry>
     <title>文件和目录（理解）</title>
@@ -48,7 +75,7 @@
     <link href="http://yoursite.com/2019/04/25/HTML5%E7%BC%96%E8%BE%91API%E4%B9%8BRange%E5%AF%B9%E8%B1%A1/"/>
     <id>http://yoursite.com/2019/04/25/HTML5编辑API之Range对象/</id>
     <published>2019-04-25T12:19:29.000Z</published>
-    <updated>2019-04-26T04:17:52.255Z</updated>
+    <updated>2019-04-26T12:44:08.439Z</updated>
     
     <summary type="html">
     
@@ -513,32 +540,6 @@
     
     
       <category term="Cisco知识点" scheme="http://yoursite.com/tags/Cisco%E7%9F%A5%E8%AF%86%E7%82%B9/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>RIPv1基本配置</title>
-    <link href="http://yoursite.com/2019/04/16/RIPv1%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE/"/>
-    <id>http://yoursite.com/2019/04/16/RIPv1基本配置/</id>
-    <published>2019-04-16T03:16:40.000Z</published>
-    <updated>2019-04-16T04:53:51.387Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;h1 id=&quot;RIPv1基本配置&quot;&gt;&lt;a href=&quot;#RIPv1基本配置&quot; class=&quot;headerlink&quot; title=&quot;RIPv1基本配置&quot;&gt;&lt;/a&gt;RIPv1基本配置&lt;/h1&gt;&lt;p&gt;#拓扑图：&lt;br&gt;&lt;img
-        
-      
-    
-    </summary>
-    
-      <category term="Cisco" scheme="http://yoursite.com/categories/Cisco/"/>
-    
-    
-      <category term="Cisco强化学习" scheme="http://yoursite.com/tags/Cisco%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0/"/>
     
   </entry>
   
