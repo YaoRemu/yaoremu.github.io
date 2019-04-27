@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-04-26T13:39:24.331Z</updated>
+  <updated>2019-04-27T04:39:07.627Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,54 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>常用Linux命令的基本使用</title>
+    <link href="http://yoursite.com/2019/04/27/%E5%B8%B8%E7%94%A8Linux%E5%91%BD%E4%BB%A4%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/"/>
+    <id>http://yoursite.com/2019/04/27/常用Linux命令的基本使用/</id>
+    <published>2019-04-27T04:39:07.000Z</published>
+    <updated>2019-04-27T04:39:07.627Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;/body&gt;&lt;/html&gt;
+        
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Ubuntu图形界面入门</title>
+    <link href="http://yoursite.com/2019/04/27/Ubuntu%E5%9B%BE%E5%BD%A2%E7%95%8C%E9%9D%A2%E5%85%A5%E9%97%A8/"/>
+    <id>http://yoursite.com/2019/04/27/Ubuntu图形界面入门/</id>
+    <published>2019-04-27T04:19:56.000Z</published>
+    <updated>2019-04-27T04:38:25.265Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;h1 id=&quot;Ubuntu的任务栏&quot;&gt;&lt;a href=&quot;#Ubuntu的任务栏&quot; class=&quot;headerlink&quot; title=&quot;Ubuntu的任务栏&quot;&gt;&lt;/a&gt;Ubuntu的任务栏&lt;/h1&gt;&lt;p&gt;&lt;img
+        
+      
+    
+    </summary>
+    
+      <category term="Python" scheme="http://yoursite.com/categories/Python/"/>
+    
+    
+      <category term="从零开始的Python学习" scheme="http://yoursite.com/tags/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E7%9A%84Python%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
   
   <entry>
     <title>下拉菜单</title>
@@ -488,58 +536,6 @@
     
     
       <category term="PHP相关知识" scheme="http://yoursite.com/tags/PHP%E7%9B%B8%E5%85%B3%E7%9F%A5%E8%AF%86/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>表单新增的元素与属性（二）</title>
-    <link href="http://yoursite.com/2019/04/17/%E8%A1%A8%E5%8D%95%E6%96%B0%E5%A2%9E%E7%9A%84%E5%85%83%E7%B4%A0%E4%B8%8E%E5%B1%9E%E6%80%A7%EF%BC%88%E4%BA%8C%EF%BC%89/"/>
-    <id>http://yoursite.com/2019/04/17/表单新增的元素与属性（二）/</id>
-    <published>2019-04-17T08:46:01.000Z</published>
-    <updated>2019-04-17T09:48:45.369Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;h1 id=&quot;formtarget属性&quot;&gt;&lt;a href=&quot;#formtarget属性&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="【极客】前端学习" scheme="http://yoursite.com/categories/%E3%80%90%E6%9E%81%E5%AE%A2%E3%80%91%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/"/>
-    
-    
-      <category term="前端知识" scheme="http://yoursite.com/tags/%E5%89%8D%E7%AB%AF%E7%9F%A5%E8%AF%86/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>环回接口（Loopback）</title>
-    <link href="http://yoursite.com/2019/04/16/%E7%8E%AF%E5%9B%9E%E6%8E%A5%E5%8F%A3%EF%BC%88Loopback%EF%BC%89/"/>
-    <id>http://yoursite.com/2019/04/16/环回接口（Loopback）/</id>
-    <published>2019-04-16T03:45:08.000Z</published>
-    <updated>2019-04-16T04:05:02.513Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;h1 id=&quot;概述&quot;&gt;&lt;a href=&quot;#概述&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="Cisco" scheme="http://yoursite.com/categories/Cisco/"/>
-    
-    
-      <category term="Cisco知识点" scheme="http://yoursite.com/tags/Cisco%E7%9F%A5%E8%AF%86%E7%82%B9/"/>
     
   </entry>
   

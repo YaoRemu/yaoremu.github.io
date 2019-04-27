@@ -1,6 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[常用Linux命令的基本使用]]></title>
+    <url>%2F2019%2F04%2F27%2F%E5%B8%B8%E7%94%A8Linux%E5%91%BD%E4%BB%A4%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8%2F</url>
+    <content type="text"><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title><![CDATA[Ubuntu图形界面入门]]></title>
+    <url>%2F2019%2F04%2F27%2FUbuntu%E5%9B%BE%E5%BD%A2%E7%95%8C%E9%9D%A2%E5%85%A5%E9%97%A8%2F</url>
+    <content type="text"><![CDATA[Ubuntu的任务栏 搜素按钮任务栏最上方的按钮可以搜素软件 窗口操作按钮 Ubuntu 中，窗口操作按钮在窗口的左上角 菜单条 注意： Ubuntu操作系统 的菜单栏在窗口的最顶端，与 Windows操作系统有区别。 另外，Ubuntu操作系统 的图形界面中同一时间激活的窗口只能有一个]]></content>
+      <categories>
+        <category>Python</category>
+      </categories>
+      <tags>
+        <tag>从零开始的Python学习</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[下拉菜单]]></title>
     <url>%2F2019%2F04%2F26%2F%E4%B8%8B%E6%8B%89%E8%8F%9C%E5%8D%95%2F</url>
     <content type="text"><![CDATA[下面需要使用到 Bootstrap 的 JS文件 以及 JQuery文件 接下来讲述4个内容点： 字体图标 下拉菜单 按钮组件 按钮式下拉菜单 字体图标可以根据官网给我们的指示来看，首先，先来了解一下组件： 无数个复用的组件，包括 字体图标、 下拉菜单、 导航、 警告框、 弹出框 … Bootstrap官网 一共给我们提供了一共 200个 字体图标，当然这些字体图标也不是它自己的，这些图标是来源于 Glyphicon Halfings 的组织 如何使用 ?使用的时候，出于性能的考虑，所有的图标都需要一个 基类 和 对应图标的 子类，而且之间是有一个空格存在的 eg: 1 而且使用的时候一定要注意，不能和其他组件混合使用，它不能在同一元素上与其他类共同存在。并且，他的使用一定要基于一个 span 标签，也就是所有的图标类必须承载在 span标签 当中 下拉菜单Bootstrap 中也给我们提供了一些下拉菜单的使用 注意： Bootstrap 的 JS 文件是依赖于 JQuery ， 所以使用时先引入 JQuery 1234567891011121314151617 下拉菜单 一 二 三 四]]></content>
