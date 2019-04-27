@@ -264,9 +264,15 @@ height:50vh;
             <div class="post-intros">
                 <!-- 文章页标签  -->
                 
+                    <div class="post-intro-tags">
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="从零开始的Python学习">从零开始的Python学习</a>
+    
+</div>
+                
                 
                     <div class="post-intro-read">
-                        <span>字数统计: <span class="post-count word-count">0</span>阅读时长: <span class="post-count reading-time">1 min</span></span>
+                        <span>字数统计: <span class="post-count word-count">508</span>阅读时长: <span class="post-count reading-time">1 min</span></span>
                     </div>
                 
                 <div class="post-intro-meta">
@@ -395,7 +401,99 @@ height:50vh;
         <div class="container container-unloaded">
             <main class="main post-page">
     <article class="article-entry">
-        <meta name="generator" content="Hexo 3.8.0">
+        <meta name="generator" content="Hexo 3.8.0"><h1 id="学习-Linux-终端命令的原因"><a href="#学习-Linux-终端命令的原因" class="headerlink" title="学习 Linux 终端命令的原因"></a>学习 Linux 终端命令的原因</h1><ul>
+<li>Linux 刚面世时并没有图形界面，所有的操作全靠命令完成， 如 <strong>磁盘操作、 文件存取、 目录操作、 进程管理、 文件权限</strong> 设定等</li>
+<li>在职场中，大量的 <strong>服务器维护工作</strong> 都是在 远程 通过 <strong>SSH客户端</strong> 来完成的， 并没有图形界面， 所有的维护工作都需要通过命令来完成</li>
+<li>在职场中， 作为后端程序员， 必须要或多或少掌握一些 Linux 常用的终端命令</li>
+<li>Linux发行版本 中命令大概有 200 多个，但是常用的命令只有10多个而已</li>
+</ul>
+<h2 id="学习终端命令的技巧"><a href="#学习终端命令的技巧" class="headerlink" title="学习终端命令的技巧"></a>学习终端命令的技巧</h2><ul>
+<li>不需要死记硬背，对于常用命令，用的多了，自然就记住了</li>
+<li>不要尝试一次学会所有的命令， 有些命令是非常不常用的， 临时遇到，临时百度就可以 </li>
+</ul>
+<h1 id="常用的Linux命令的基本使用"><a href="#常用的Linux命令的基本使用" class="headerlink" title="常用的Linux命令的基本使用"></a>常用的Linux命令的基本使用</h1><blockquote>
+<p>小技巧</p>
+<ul>
+<li>ctrl + shift + = ： <strong>放大</strong>终端窗口的字体显示</li>
+<li>ctrl + - ： <strong>缩小</strong>终端窗口字体显示</li>
+</ul>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">序号</th>
+<th style="text-align:left">命令</th>
+<th style="text-align:left">对应英文</th>
+<th style="text-align:left">作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">1</td>
+<td style="text-align:left">ls</td>
+<td style="text-align:left">list</td>
+<td style="text-align:left">查看当前文件夹下的内容</td>
+</tr>
+<tr>
+<td style="text-align:left">2</td>
+<td style="text-align:left">pwd</td>
+<td style="text-align:left">print work directory</td>
+<td style="text-align:left">查看当前所在文件夹</td>
+</tr>
+<tr>
+<td style="text-align:left">3</td>
+<td style="text-align:left">cd[目录名]</td>
+<td style="text-align:left">change directory</td>
+<td style="text-align:left">切换文件夹</td>
+</tr>
+<tr>
+<td style="text-align:left">4</td>
+<td style="text-align:left">touch[文件名]</td>
+<td style="text-align:left">touch</td>
+<td style="text-align:left">如果文件不存在，新建文件</td>
+</tr>
+<tr>
+<td style="text-align:left">5</td>
+<td style="text-align:left">mkdir[目录名]</td>
+<td style="text-align:left">make directory</td>
+<td style="text-align:left">创建目录</td>
+</tr>
+<tr>
+<td style="text-align:left">6</td>
+<td style="text-align:left">rm[文件名]</td>
+<td style="text-align:left">remove</td>
+<td style="text-align:left">删除指定的文件名</td>
+</tr>
+<tr>
+<td style="text-align:left">7</td>
+<td style="text-align:left">clear</td>
+<td style="text-align:left">clear</td>
+<td style="text-align:left">清屏</td>
+</tr>
+</tbody>
+</table>
+<h2 id="ls"><a href="#ls" class="headerlink" title="ls"></a>ls</h2><p>查看当前文件夹下的内容</p>
+<p><img src="http://ww1.sinaimg.cn/large/8c0b2220gy1g2h6uo4zv9j20lq07w0x1.jpg" alt></p>
+<h2 id="pwd"><a href="#pwd" class="headerlink" title="pwd"></a>pwd</h2><p>查看当前所在文件夹</p>
+<p><img src="http://ww1.sinaimg.cn/large/8c0b2220gy1g2h6zmn7izj209x011745.jpg" alt></p>
+<p>第一个斜线表示 <strong>根目录</strong>，home表示家目录，yaoremu表示用户名</p>
+<h2 id="cd-目录名"><a href="#cd-目录名" class="headerlink" title="cd[目录名]"></a>cd[目录名]</h2><p>切换文件夹</p>
+<p><img src="http://ww1.sinaimg.cn/large/8c0b2220gy1g2h7k22utej20bo014gli.jpg" alt></p>
+<blockquote>
+<p><strong>注意</strong>： Linux 是 区分大小写 的</p>
+</blockquote>
+<h2 id="touch-文件名"><a href="#touch-文件名" class="headerlink" title="touch[文件名]"></a>touch[文件名]</h2><p>如果文件不存在，新建文件</p>
+<p><img src="http://ww1.sinaimg.cn/large/8c0b2220gy1g2h7naof7oj20h1051t99.jpg" alt></p>
+<h2 id="mkdir-目录名"><a href="#mkdir-目录名" class="headerlink" title="mkdir[目录名]"></a>mkdir[目录名]</h2><p>创建目录</p>
+<p><img src="http://ww1.sinaimg.cn/large/8c0b2220gy1g2h7pl6vvrj20dm04zdgf.jpg" alt></p>
+<h2 id="rm-文件名"><a href="#rm-文件名" class="headerlink" title="rm[文件名]"></a>rm[文件名]</h2><p>删除指定的文件名</p>
+<p><img src="http://ww1.sinaimg.cn/large/8c0b2220gy1g2h7r6ou84j20e905aaak.jpg" alt></p>
+<blockquote>
+<p><strong>注意</strong>： 使用 rm[文件名] 命令，最直接删除的就是一个文件。 要删除目录时需要一些额外的设置</p>
+</blockquote>
+<h2 id="clear"><a href="#clear" class="headerlink" title="clear"></a>clear</h2><p>清屏</p>
+<p><img src="http://ww1.sinaimg.cn/large/8c0b2220gy1g2h7w87bbsj20du07zdfq.jpg" alt></p>
+
     </article>
     <!-- license  -->
     
@@ -403,7 +501,7 @@ height:50vh;
             <p>原文作者：<a href="http://yoursite.com">YaoRemu</a>
             </p><p>原文链接：<a href="http://yoursite.com/2019/04/27/常用Linux命令的基本使用/">http://yoursite.com/2019/04/27/常用Linux命令的基本使用/</a>
             </p><p>发表日期：<a href="http://yoursite.com/2019/04/27/常用Linux命令的基本使用/">April 27th 2019, 12:39:07 pm</a>
-            </p><p>更新日期：<a href="http://yoursite.com/2019/04/27/常用Linux命令的基本使用/">April 27th 2019, 12:39:07 pm</a>
+            </p><p>更新日期：<a href="http://yoursite.com/2019/04/27/常用Linux命令的基本使用/">April 27th 2019, 3:22:01 pm</a>
             </p><p>版权声明：本文采用<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可</p>
         </div>
     
@@ -572,7 +670,7 @@ height:50vh;
         <div class="toc-catalog">
             <span class="iconfont-archer catalog-icon"></span><span>CATALOG</span>
         </div>
-        
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#学习-Linux-终端命令的原因"><span class="toc-number">1.</span> <span class="toc-text">学习 Linux 终端命令的原因</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#学习终端命令的技巧"><span class="toc-number">1.1.</span> <span class="toc-text">学习终端命令的技巧</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#常用的Linux命令的基本使用"><span class="toc-number">2.</span> <span class="toc-text">常用的Linux命令的基本使用</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#ls"><span class="toc-number">2.1.</span> <span class="toc-text">ls</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#pwd"><span class="toc-number">2.2.</span> <span class="toc-text">pwd</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#cd-目录名"><span class="toc-number">2.3.</span> <span class="toc-text">cd[目录名]</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#touch-文件名"><span class="toc-number">2.4.</span> <span class="toc-text">touch[文件名]</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#mkdir-目录名"><span class="toc-number">2.5.</span> <span class="toc-text">mkdir[目录名]</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#rm-文件名"><span class="toc-number">2.6.</span> <span class="toc-text">rm[文件名]</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#clear"><span class="toc-number">2.7.</span> <span class="toc-text">clear</span></a></li></ol></li></ol>
     </div>
     
     <div class="back-top iconfont-archer"></div>
@@ -1307,9 +1405,9 @@ height:50vh;
     
         <span class="sidebar-tag-name" data-tags="前端知识"><span class="iconfont-archer"></span>前端知识</span>
     
-        <span class="sidebar-tag-name" data-tags="MarkDown基本语法"><span class="iconfont-archer"></span>MarkDown基本语法</span>
-    
         <span class="sidebar-tag-name" data-tags="Cisco笔记"><span class="iconfont-archer"></span>Cisco笔记</span>
+    
+        <span class="sidebar-tag-name" data-tags="MarkDown基本语法"><span class="iconfont-archer"></span>MarkDown基本语法</span>
     
         <span class="sidebar-tag-name" data-tags="安装教程"><span class="iconfont-archer"></span>安装教程</span>
     
@@ -1319,9 +1417,9 @@ height:50vh;
     
         <span class="sidebar-tag-name" data-tags="从零开始的Python学习"><span class="iconfont-archer"></span>从零开始的Python学习</span>
     
-        <span class="sidebar-tag-name" data-tags="github搭建个人博客"><span class="iconfont-archer"></span>github搭建个人博客</span>
-    
         <span class="sidebar-tag-name" data-tags="Cisco基础"><span class="iconfont-archer"></span>Cisco基础</span>
+    
+        <span class="sidebar-tag-name" data-tags="github搭建个人博客"><span class="iconfont-archer"></span>github搭建个人博客</span>
     
         <span class="sidebar-tag-name" data-tags="Cisco知识点"><span class="iconfont-archer"></span>Cisco知识点</span>
     
@@ -1361,9 +1459,9 @@ height:50vh;
     
         <span class="sidebar-category-name" data-categories="【极客】前端学习"><span class="iconfont-archer"></span>【极客】前端学习</span>
     
-        <span class="sidebar-category-name" data-categories="教学"><span class="iconfont-archer"></span>教学</span>
-    
         <span class="sidebar-category-name" data-categories="Cisco"><span class="iconfont-archer"></span>Cisco</span>
+    
+        <span class="sidebar-category-name" data-categories="教学"><span class="iconfont-archer"></span>教学</span>
     
         <span class="sidebar-category-name" data-categories="PHP"><span class="iconfont-archer"></span>PHP</span>
     
