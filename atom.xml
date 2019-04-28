@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-04-28T05:06:19.441Z</updated>
+  <updated>2019-04-28T07:34:49.113Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,11 +17,63 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Bootstrap输入框组</title>
+    <link href="http://yoursite.com/2019/04/28/Bootstrap%E8%BE%93%E5%85%A5%E6%A1%86%E7%BB%84/"/>
+    <id>http://yoursite.com/2019/04/28/Bootstrap输入框组/</id>
+    <published>2019-04-28T07:31:48.000Z</published>
+    <updated>2019-04-28T07:34:49.113Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;h1 id=&quot;主要内容&quot;&gt;&lt;a href=&quot;#主要内容&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="【极客】前端学习" scheme="http://yoursite.com/categories/%E3%80%90%E6%9E%81%E5%AE%A2%E3%80%91%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+      <category term="Bootstrap" scheme="http://yoursite.com/tags/Bootstrap/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>文件和目录常用命令</title>
+    <link href="http://yoursite.com/2019/04/28/%E6%96%87%E4%BB%B6%E5%92%8C%E7%9B%AE%E5%BD%95%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/"/>
+    <id>http://yoursite.com/2019/04/28/文件和目录常用命令/</id>
+    <published>2019-04-28T06:40:28.000Z</published>
+    <updated>2019-04-28T07:19:21.553Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;h1 id=&quot;目标&quot;&gt;&lt;a href=&quot;#目标&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="Python" scheme="http://yoursite.com/categories/Python/"/>
+    
+    
+      <category term="从零开始的Python学习" scheme="http://yoursite.com/tags/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E7%9A%84Python%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Linux终端命令格式</title>
     <link href="http://yoursite.com/2019/04/28/Linux%E7%BB%88%E7%AB%AF%E5%91%BD%E4%BB%A4%E6%A0%BC%E5%BC%8F/"/>
     <id>http://yoursite.com/2019/04/28/Linux终端命令格式/</id>
     <published>2019-04-28T04:37:52.000Z</published>
-    <updated>2019-04-28T05:06:19.441Z</updated>
+    <updated>2019-04-28T06:39:09.782Z</updated>
     
     <summary type="html">
     
@@ -47,7 +99,7 @@
     <link href="http://yoursite.com/2019/04/27/%E6%8C%89%E9%92%AE%E7%BB%84/"/>
     <id>http://yoursite.com/2019/04/27/按钮组/</id>
     <published>2019-04-27T08:23:27.000Z</published>
-    <updated>2019-04-27T10:31:10.085Z</updated>
+    <updated>2019-04-28T07:32:36.173Z</updated>
     
     <summary type="html">
     
@@ -61,6 +113,10 @@
     
     </summary>
     
+      <category term="【极客】前端学习" scheme="http://yoursite.com/categories/%E3%80%90%E6%9E%81%E5%AE%A2%E3%80%91%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+      <category term="Bootstrap" scheme="http://yoursite.com/tags/Bootstrap/"/>
     
   </entry>
   
@@ -475,58 +531,6 @@
         
           &lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;p&gt;在HTML5中，大幅度的增加了与改良了input元素的种类，可以简单的使用元素来实现HTML5之前需要使用JavaScript脚本才能实现的许多功能&lt;/p&gt;
 &lt;h1 id=&quot;增加与改良的input元素&quot;&gt;&lt;a
-        
-      
-    
-    </summary>
-    
-      <category term="【极客】前端学习" scheme="http://yoursite.com/categories/%E3%80%90%E6%9E%81%E5%AE%A2%E3%80%91%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/"/>
-    
-    
-      <category term="前端知识" scheme="http://yoursite.com/tags/%E5%89%8D%E7%AB%AF%E7%9F%A5%E8%AF%86/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Vue.js第一课</title>
-    <link href="http://yoursite.com/2019/04/19/Vue-js%E7%AC%AC%E4%B8%80%E8%AF%BE/"/>
-    <id>http://yoursite.com/2019/04/19/Vue-js第一课/</id>
-    <published>2019-04-19T11:03:29.000Z</published>
-    <updated>2019-04-21T06:15:38.873Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;h1 id=&quot;什么是Vue-js&quot;&gt;&lt;a href=&quot;#什么是Vue-js&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="Vue学习" scheme="http://yoursite.com/categories/Vue%E5%AD%A6%E4%B9%A0/"/>
-    
-    
-      <category term="前端知识" scheme="http://yoursite.com/tags/%E5%89%8D%E7%AB%AF%E7%9F%A5%E8%AF%86/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>表单新增的元素与属性（四）</title>
-    <link href="http://yoursite.com/2019/04/19/%E8%A1%A8%E5%8D%95%E6%96%B0%E5%A2%9E%E7%9A%84%E5%85%83%E7%B4%A0%E4%B8%8E%E5%B1%9E%E6%80%A7%EF%BC%88%E5%9B%9B%EF%BC%89/"/>
-    <id>http://yoursite.com/2019/04/19/表单新增的元素与属性（四）/</id>
-    <published>2019-04-19T08:00:33.000Z</published>
-    <updated>2019-04-19T08:33:39.832Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;h1 id=&quot;文本框的list属性&quot;&gt;&lt;a href=&quot;#文本框的list属性&quot; class=&quot;headerlink&quot;
         
       
     
