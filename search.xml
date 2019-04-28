@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[透视]]></title>
+    <url>%2F2019%2F04%2F28%2F%E9%80%8F%E8%A7%86%2F</url>
+    <content type="text"><![CDATA[三点透视 两点透视第一种 第二种 一点透视 五点透视]]></content>
+      <categories>
+        <category>素描</category>
+      </categories>
+      <tags>
+        <tag>画画</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[导航]]></title>
     <url>%2F2019%2F04%2F28%2F%E5%AF%BC%E8%88%AA%2F</url>
     <content type="text"><![CDATA[导航分为几个方向： 标签页 胶囊式标签页 两端对齐标签页 禁用的链接 添加下拉菜单 基本的标签页 role 的添加会导致一些问题的避免 HTML1234567891011 home Hello World JavaScript1234$("#mytab a").click(function(e){ e.preventDefault(); $(this).tab("show");} 由于没有点击选中的效果，所以需要引入它需要使用的一个插件 胶囊式标签页胶囊我们都看过，其实就是颜色不一样 HTML1234567891011 home Hello World JavaScript1234$("#mytab a").click(function(e){ e.preventDefault(); $(this).tab("show");} 另外，如果我们希望垂直展示，我们只需要在外层 ul 添加一个垂直展示的方式 【 nav-stacked 】 即可 两端对齐标签页两端对齐的标签页只需要添加一个 class 【 nav-justified 】 即可 HTML1234567891011 home Hello World JavaScript1234$("#mytab a").click(function(e){ e.preventDefault(); $(this).tab("show");} 禁用的链接有时候需要一些 使用户无法点击的情况，只需要在不想让用户点击的 li 标签中禁止点击即可 HTML1234567891011 home Hello World JavaScript1234$("#mytab a").click(function(e){ e.preventDefault(); $(this).tab("show");} 添加下拉菜单如果 world 下有很多子分类，意味着我们需要给 world 添加一个可下拉式的菜单效果 HTML123456789101112131415161718192021 home Hello World hello1 hello2 hello3 hello4 JavaScript1234$("#mytab a").click(function(e){ e.preventDefault(); $(this).tab("show");}]]></content>

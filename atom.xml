@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-04-28T09:36:18.986Z</updated>
+  <updated>2019-04-28T13:26:49.508Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>透视</title>
+    <link href="http://yoursite.com/2019/04/28/%E9%80%8F%E8%A7%86/"/>
+    <id>http://yoursite.com/2019/04/28/透视/</id>
+    <published>2019-04-28T13:00:26.000Z</published>
+    <updated>2019-04-28T13:26:49.508Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;h1 id=&quot;三点透视&quot;&gt;&lt;a href=&quot;#三点透视&quot; class=&quot;headerlink&quot; title=&quot;三点透视&quot;&gt;&lt;/a&gt;三点透视&lt;/h1&gt;&lt;p&gt;&lt;img
+        
+      
+    
+    </summary>
+    
+      <category term="素描" scheme="http://yoursite.com/categories/%E7%B4%A0%E6%8F%8F/"/>
+    
+    
+      <category term="画画" scheme="http://yoursite.com/tags/%E7%94%BB%E7%94%BB/"/>
+    
+  </entry>
   
   <entry>
     <title>导航</title>
@@ -521,32 +547,6 @@
     
     
       <category term="Bootstrap" scheme="http://yoursite.com/tags/Bootstrap/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Vue.js第二课</title>
-    <link href="http://yoursite.com/2019/04/21/Vue-js%E7%AC%AC%E4%BA%8C%E8%AF%BE/"/>
-    <id>http://yoursite.com/2019/04/21/Vue-js第二课/</id>
-    <published>2019-04-21T06:19:57.000Z</published>
-    <updated>2019-04-28T12:52:21.935Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;h1 id=&quot;知识点梳理&quot;&gt;&lt;a href=&quot;#知识点梳理&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="Vue学习" scheme="http://yoursite.com/categories/Vue%E5%AD%A6%E4%B9%A0/"/>
-    
-    
-      <category term="前端知识" scheme="http://yoursite.com/tags/%E5%89%8D%E7%AB%AF%E7%9F%A5%E8%AF%86/"/>
     
   </entry>
   
