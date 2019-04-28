@@ -1,14 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[导航]]></title>
+    <url>%2F2019%2F04%2F28%2F%E5%AF%BC%E8%88%AA%2F</url>
+    <content type="text"><![CDATA[导航分为几个方向： 标签页 胶囊式标签页 两端对齐标签页 禁用的链接 添加下拉菜单 基本的标签页 role 的添加会导致一些问题的避免 HTML1234567891011 home Hello World JavaScript1234$("#mytab a").click(function(e){ e.preventDefault(); $(this).tab("show");} 由于没有点击选中的效果，所以需要引入它需要使用的一个插件 胶囊式标签页胶囊我们都看过，其实就是颜色不一样 HTML1234567891011 home Hello World JavaScript1234$("#mytab a").click(function(e){ e.preventDefault(); $(this).tab("show");} 另外，如果我们希望垂直展示，我们只需要在外层 ul 添加一个垂直展示的方式 【 nav-stacked 】 即可 两端对齐标签页两端对齐的标签页只需要添加一个 class 【 nav-justified 】 即可 HTML1234567891011 home Hello World JavaScript1234$("#mytab a").click(function(e){ e.preventDefault(); $(this).tab("show");} 禁用的链接有时候需要一些 使用户无法点击的情况，只需要在不想让用户点击的 li 标签中禁止点击即可 HTML1234567891011 home Hello World JavaScript1234$("#mytab a").click(function(e){ e.preventDefault(); $(this).tab("show");} 添加下拉菜单如果 world 下有很多子分类，意味着我们需要给 world 添加一个可下拉式的菜单效果 HTML123456789101112131415161718192021 home Hello World hello1 hello2 hello3 hello4 JavaScript1234$("#mytab a").click(function(e){ e.preventDefault(); $(this).tab("show");}]]></content>
+      <categories>
+        <category>Bootstrap</category>
+      </categories>
+      <tags>
+        <tag>【极客】前端学习</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Bootstrap输入框组]]></title>
     <url>%2F2019%2F04%2F28%2FBootstrap%E8%BE%93%E5%85%A5%E6%A1%86%E7%BB%84%2F</url>
     <content type="text"><![CDATA[主要内容 输入框组 导航 导航条 输入框组 基本的输入框 输入框的尺寸 多添加的多选框和单选框 多添加按钮 多添加下拉式按钮 多添加分裂式按钮下拉菜单 基本的输入框1234567891011121314151617 @ .00 $ .00 输入框的尺寸输入框的尺寸是根据屏幕的自适应来操作的，比如：响应式布局，针对于手机 、 ipad 和 显示器 时的显示是不一样的,根据不同的屏幕选择不同的内容 1234567891011121314151617 @ .00 $ .00 多添加的多选框和单选框12345678910 多添加按钮12345678910 Go！ 多添加下拉式按钮通常会在输入框前面有一个下拉菜单，因为选项特别多，所以在前面还可以添加下拉菜单的效果 1234567891011121314151617181920 Action Hello Hello Hello Hello Hello]]></content>
       <categories>
-        <category>【极客】前端学习</category>
+        <category>Bootstrap</category>
       </categories>
       <tags>
-        <tag>Bootstrap</tag>
+        <tag>【极客】前端学习</tag>
       </tags>
   </entry>
   <entry>

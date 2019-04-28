@@ -22,7 +22,7 @@
     <meta name="description" content="欢迎来到YaoRemu的博客">
     <meta http-equiv="Cache-control" content="no-cache">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>YaoRemu'Blog</title>
+    <title>导航 · YaoRemu'Blog</title>
     <style type="text/css">
     @font-face {
         font-family: 'Oswald-Regular';
@@ -203,12 +203,23 @@
 </head>
 
     
+        <body class="post-body">
     
-<body><header class="header">
+    
+<header class="header">
 
     <div class="read-progress"></div>
     <div class="header-sidebar-menu"></div>
     <!-- post页的toggle banner  -->
+    
+    <div class="banner">
+            <div class="blog-title">
+                <a href="/">Welcome to YaoRemu'Blog</a>
+            </div>
+            <div class="post-title">
+                <a href="#" class="post-name">导航</a>
+            </div>
+    </div>
     
     <a class="home-link" href="/">Welcome to YaoRemu'Blog</a>
 </header>
@@ -220,24 +231,74 @@
 
 
 
+
+height:50vh;
 ">
     
     <!-- 主页  -->
+    
+    
+    <!-- 404页  -->
             
     <div class="site-intro-placeholder"></div>
-    <div class="site-intro-img" style="background-image: url(/)"></div>
+    <div class="site-intro-img" style="background-image: url(http://ww1.sinaimg.cn/large/8c0b2220gy1g1aemgv57ej21hc0tze81.jpg)"></div>
     <div class="site-intro-meta">
         <!-- 标题  -->
         <h1 class="intro-title">
             <!-- 主页  -->
+            
+            导航
+            <!-- 404 -->
             
         </h1>
         <!-- 副标题 -->
         <p class="intro-subtitle">
             <!-- 主页副标题  -->
             
+            
+            <!-- 404 -->
+            
         </p>
         <!-- 文章页meta -->
+        
+            <div class="post-intros">
+                <!-- 文章页标签  -->
+                
+                    <div class="post-intro-tags">
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="【极客】前端学习">【极客】前端学习</a>
+    
+</div>
+                
+                
+                    <div class="post-intro-read">
+                        <span>字数统计: <span class="post-count word-count">328</span>阅读时长: <span class="post-count reading-time">1 min</span></span>
+                    </div>
+                
+                <div class="post-intro-meta">
+                    <span class="post-intro-calander iconfont-archer"></span>
+                    <span class="post-intro-time">2019/04/28</span>
+                    
+                    <span id="busuanzi_container_page_pv" class="busuanzi-pv">
+                        <span class="iconfont-archer"></span>
+                        <span id="busuanzi_value_page_pv"></span>
+                    </span>
+                    
+                    <span class="shareWrapper">
+                        <span class="iconfont-archer shareIcon"></span>
+                        <span class="shareText">Share</span>
+                        <ul class="shareList">
+                            <li class="iconfont-archer share-qr" data-type="qr">
+                                <div class="share-qrcode"></div>
+                            </li>
+                            <li class="iconfont-archer" data-type="weibo"></li>
+                            <li class="iconfont-archer" data-type="qzone"></li>
+                            <li class="iconfont-archer" data-type="twitter"></li>
+                            <li class="iconfont-archer" data-type="facebook"></li>
+                        </ul>
+                    </span>
+                </div>
+            </div>
         
     </div>
 </div>
@@ -338,391 +399,128 @@
 </script>        
         <img class="loading" src="/assets/loading.svg" style="display: block; margin: 6rem auto 0 auto; width: 6rem; height: 6rem;">
         <div class="container container-unloaded">
-            <main class="main index-page">
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/2019/04/11/新增的元素和废除的元素/">
-            
-                <span>新增的元素和废除的元素</span>
-        </a>
-        <div class="abstract-content">
-            新增的元素新增的结构元素section、article、aside、header、hgroup、footer、nav、figure
+            <main class="main post-page">
+    <article class="article-entry">
+        <meta name="generator" content="Hexo 3.8.0"><p>导航分为几个方向：</p>
+<ul>
+<li>标签页</li>
+<li>胶囊式标签页</li>
+<li>两端对齐标签页</li>
+<li>禁用的链接</li>
+<li>添加下拉菜单</li>
+</ul>
+<h1 id="基本的标签页"><a href="#基本的标签页" class="headerlink" title="基本的标签页"></a>基本的标签页</h1><blockquote>
+<p><strong>role</strong> 的添加会导致一些问题的避免</p>
+</blockquote>
+<p><strong>HTML</strong><br></p><figure class="highlight html"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag"><<span class="name">div</span> <span class="attr">class</span>=<span class="string">"container"</span>></span></span><br><span class="line">	<span class="tag"><<span class="name">ul</span> <span class="attr">id</span>=<span class="string">"mytab"</span> <span class="attr">class</span>=<span class="string">"nav nav-tabs"</span> <span class="attr">role</span>=<span class="string">"tablist"</span>></span></span><br><span class="line">		<span class="tag"><<span class="name">li</span> <span class="attr">role</span>=<span class="string">"presentation"</span> <span class="attr">class</span>=<span class="string">"active"</span>></span><span class="tag"><<span class="name">a</span> <span class="attr">href</span>=<span class="string">""</span>></span>home<span class="tag"><</span>/<span class="attr">a</span>></span><span class="tag"><</span>/<span class="attr">li</span>><br><span class="line">		<span class="tag"><<span class="name">li</span> <span class="attr">role</span>=<span class="string">"presentation"</span>></span><span class="tag"><<span class="name">a</span> <span class="attr">href</span>=<span class="string">""</span>></span>Hello<span class="tag"><</span>/<span class="attr">a</span>></span><span class="tag"><</span>/<span class="attr">li</span>><br><span class="line">		<span class="tag"><<span class="name">li</span> <span class="attr">role</span>=<span class="string">"presentation"</span>></span><span class="tag"><<span class="name">a</span> <span class="attr">href</span>=<span class="string">""</span>></span>World<span class="tag"><</span>/<span class="attr">a</span>></span><span class="tag"><</span>/<span class="attr">li</span>><br><span class="line">	<span class="tag"><</span>/<span class="attr">ul</span>></span><br><span class="line"><span class="tag"><</span>/<span class="attr">div</span>></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="tag"><<span class="name">script</span> <span class="attr">src</span>=<span class="string">"./lib/jquery.min.js"</span>></span><span class="javascript"><<span class="regexp">/</</span>script></span></span><br><span class="line"><span class="xml"><span class="tag"><<span class="name">script</span> <span class="attr">src</span>=<span class="string">"./lib/bootstrap.js"</span>></span><span class="javascript"><<span class="regexp">/</</span>script></span></span></span><br></pre></td></tr></tbody></table></figure><p></p>
+<p><strong>JavaScript</strong><br></p><figure class="highlight javascript"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">"#mytab a"</span>).click(<span class="function"><span class="keyword">function</span>(<span class="params">e</span>)</span>{</span><br><span class="line">	e.preventDefault();</span><br><span class="line">	$(<span class="keyword">this</span>).tab(<span class="string">"show"</span>);</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure><p></p>
+<p><img src="http://ww1.sinaimg.cn/large/8c0b2220gy1g2ign8nookj204t01q0sl.jpg" alt></p>
+<blockquote>
+<p>由于没有点击选中的效果，所以需要引入它需要使用的一个插件</p>
+</blockquote>
+<h1 id="胶囊式标签页"><a href="#胶囊式标签页" class="headerlink" title="胶囊式标签页"></a>胶囊式标签页</h1><p>胶囊我们都看过，其实就是颜色不一样</p>
+<p><strong>HTML</strong><br></p><figure class="highlight html"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag"><<span class="name">div</span> <span class="attr">class</span>=<span class="string">"container"</span>></span></span><br><span class="line">	<span class="tag"><<span class="name">ul</span> <span class="attr">id</span>=<span class="string">"mytab"</span> <span class="attr">class</span>=<span class="string">"nav nav-pills"</span> <span class="attr">role</span>=<span class="string">"tablist"</span>></span></span><br><span class="line">		<span class="tag"><<span class="name">li</span> <span class="attr">role</span>=<span class="string">"presentation"</span> <span class="attr">class</span>=<span class="string">"active"</span>></span><span class="tag"><<span class="name">a</span> <span class="attr">href</span>=<span class="string">""</span>></span>home<span class="tag"><</span>/<span class="attr">a</span>></span><span class="tag"><</span>/<span class="attr">li</span>><br><span class="line">		<span class="tag"><<span class="name">li</span> <span class="attr">role</span>=<span class="string">"presentation"</span>></span><span class="tag"><<span class="name">a</span> <span class="attr">href</span>=<span class="string">""</span>></span>Hello<span class="tag"><</span>/<span class="attr">a</span>></span><span class="tag"><</span>/<span class="attr">li</span>><br><span class="line">		<span class="tag"><<span class="name">li</span> <span class="attr">role</span>=<span class="string">"presentation"</span>></span><span class="tag"><<span class="name">a</span> <span class="attr">href</span>=<span class="string">""</span>></span>World<span class="tag"><</span>/<span class="attr">a</span>></span><span class="tag"><</span>/<span class="attr">li</span>><br><span class="line">	<span class="tag"><</span>/<span class="attr">ul</span>></span><br><span class="line"><span class="tag"><</span>/<span class="attr">div</span>></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="tag"><<span class="name">script</span> <span class="attr">src</span>=<span class="string">"./lib/jquery.min.js"</span>></span><span class="javascript"><<span class="regexp">/</</span>script></span></span><br><span class="line"><span class="xml"><span class="tag"><<span class="name">script</span> <span class="attr">src</span>=<span class="string">"./lib/bootstrap.js"</span>></span><span class="javascript"><<span class="regexp">/</</span>script></span></span></span><br></pre></td></tr></tbody></table></figure><p></p>
+<p><strong>JavaScript</strong><br></p><figure class="highlight javascript"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">"#mytab a"</span>).click(<span class="function"><span class="keyword">function</span>(<span class="params">e</span>)</span>{</span><br><span class="line">	e.preventDefault();</span><br><span class="line">	$(<span class="keyword">this</span>).tab(<span class="string">"show"</span>);</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure><p></p>
+<p><img src="http://ww1.sinaimg.cn/large/8c0b2220gy1g2igpyddwnj207s029dfm.jpg" alt></p>
+<p>另外，如果我们希望垂直展示，我们只需要在外层 ul 添加一个垂直展示的方式 【 nav-stacked 】 即可</p>
+<p><img src="http://ww1.sinaimg.cn/large/8c0b2220gy1g2igsf3z7fj20xq04wmwz.jpg" alt></p>
+<h1 id="两端对齐标签页"><a href="#两端对齐标签页" class="headerlink" title="两端对齐标签页"></a>两端对齐标签页</h1><p>两端对齐的标签页只需要添加一个 class 【 nav-justified 】 即可</p>
+<p><strong>HTML</strong><br></p><figure class="highlight html"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag"><<span class="name">div</span> <span class="attr">class</span>=<span class="string">"container"</span>></span></span><br><span class="line">	<span class="tag"><<span class="name">ul</span> <span class="attr">id</span>=<span class="string">"mytab"</span> <span class="attr">class</span>=<span class="string">"nav nav-pills nav-justified"</span> <span class="attr">role</span>=<span class="string">"tablist"</span>></span></span><br><span class="line">		<span class="tag"><<span class="name">li</span> <span class="attr">role</span>=<span class="string">"presentation"</span> <span class="attr">class</span>=<span class="string">"active"</span>></span><span class="tag"><<span class="name">a</span> <span class="attr">href</span>=<span class="string">""</span>></span>home<span class="tag"><</span>/<span class="attr">a</span>></span><span class="tag"><</span>/<span class="attr">li</span>><br><span class="line">		<span class="tag"><<span class="name">li</span> <span class="attr">role</span>=<span class="string">"presentation"</span>></span><span class="tag"><<span class="name">a</span> <span class="attr">href</span>=<span class="string">""</span>></span>Hello<span class="tag"><</span>/<span class="attr">a</span>></span><span class="tag"><</span>/<span class="attr">li</span>><br><span class="line">		<span class="tag"><<span class="name">li</span> <span class="attr">role</span>=<span class="string">"presentation"</span>></span><span class="tag"><<span class="name">a</span> <span class="attr">href</span>=<span class="string">""</span>></span>World<span class="tag"><</span>/<span class="attr">a</span>></span><span class="tag"><</span>/<span class="attr">li</span>><br><span class="line">	<span class="tag"><</span>/<span class="attr">ul</span>></span><br><span class="line"><span class="tag"><</span>/<span class="attr">div</span>></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="tag"><<span class="name">script</span> <span class="attr">src</span>=<span class="string">"./lib/jquery.min.js"</span>></span><span class="javascript"><<span class="regexp">/</</span>script></span></span><br><span class="line"><span class="xml"><span class="tag"><<span class="name">script</span> <span class="attr">src</span>=<span class="string">"./lib/bootstrap.js"</span>></span><span class="javascript"><<span class="regexp">/</</span>script></span></span></span><br></pre></td></tr></tbody></table></figure><p></p>
+<p><strong>JavaScript</strong><br></p><figure class="highlight javascript"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">"#mytab a"</span>).click(<span class="function"><span class="keyword">function</span>(<span class="params">e</span>)</span>{</span><br><span class="line">	e.preventDefault();</span><br><span class="line">	$(<span class="keyword">this</span>).tab(<span class="string">"show"</span>);</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure><p></p>
+<p><img src="http://ww1.sinaimg.cn/large/8c0b2220gy1g2igyc0yooj20yj02rglf.jpg" alt></p>
+<h1 id="禁用的链接"><a href="#禁用的链接" class="headerlink" title="禁用的链接"></a>禁用的链接</h1><p>有时候需要一些 使用户无法点击的情况，只需要在不想让用户点击的 li 标签中禁止点击即可</p>
+<p><strong>HTML</strong><br></p><figure class="highlight html"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag"><<span class="name">div</span> <span class="attr">class</span>=<span class="string">"container"</span>></span></span><br><span class="line">	<span class="tag"><<span class="name">ul</span> <span class="attr">id</span>=<span class="string">"mytab"</span> <span class="attr">class</span>=<span class="string">"nav nav-pills nav-justified"</span> <span class="attr">role</span>=<span class="string">"tablist"</span>></span></span><br><span class="line">		<span class="tag"><<span class="name">li</span> <span class="attr">role</span>=<span class="string">"presentation"</span> <span class="attr">class</span>=<span class="string">"active"</span>></span><span class="tag"><<span class="name">a</span> <span class="attr">href</span>=<span class="string">""</span>></span>home<span class="tag"><</span>/<span class="attr">a</span>></span><span class="tag"><</span>/<span class="attr">li</span>><br><span class="line">		<span class="tag"><<span class="name">li</span> <span class="attr">role</span>=<span class="string">"presentation"</span>></span><span class="tag"><<span class="name">a</span> <span class="attr">href</span>=<span class="string">""</span>></span>Hello<span class="tag"><</span>/<span class="attr">a</span>></span><span class="tag"><</span>/<span class="attr">li</span>><br><span class="line">		<span class="tag"><<span class="name">li</span> <span class="attr">role</span>=<span class="string">"presentation"</span> <span class="attr">class</span>=<span class="string">"disabled"</span>></span><span class="tag"><<span class="name">a</span> <span class="attr">href</span>=<span class="string">""</span>></span>World<span class="tag"><</span>/<span class="attr">a</span>></span><span class="tag"><</span>/<span class="attr">li</span>><br><span class="line">	<span class="tag"><</span>/<span class="attr">ul</span>></span><br><span class="line"><span class="tag"><</span>/<span class="attr">div</span>></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="tag"><<span class="name">script</span> <span class="attr">src</span>=<span class="string">"./lib/jquery.min.js"</span>></span><span class="javascript"><<span class="regexp">/</</span>script></span></span><br><span class="line"><span class="xml"><span class="tag"><<span class="name">script</span> <span class="attr">src</span>=<span class="string">"./lib/bootstrap.js"</span>></span><span class="javascript"><<span class="regexp">/</</span>script></span></span></span><br></pre></td></tr></tbody></table></figure><p></p>
+<p><strong>JavaScript</strong><br></p><figure class="highlight javascript"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">"#mytab a"</span>).click(<span class="function"><span class="keyword">function</span>(<span class="params">e</span>)</span>{</span><br><span class="line">	e.preventDefault();</span><br><span class="line">	$(<span class="keyword">this</span>).tab(<span class="string">"show"</span>);</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure><p></p>
+<p><img src="http://ww1.sinaimg.cn/large/8c0b2220gy1g2ih2v50a5j20n701saa1.jpg" alt></p>
+<h1 id="添加下拉菜单"><a href="#添加下拉菜单" class="headerlink" title="添加下拉菜单"></a>添加下拉菜单</h1><p>如果 world 下有很多子分类，意味着我们需要给 world 添加一个可下拉式的菜单效果</p>
+<p><strong>HTML</strong><br></p><figure class="highlight html"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag"><<span class="name">div</span> <span class="attr">class</span>=<span class="string">"container"</span>></span></span><br><span class="line">	<span class="tag"><<span class="name">ul</span> <span class="attr">id</span>=<span class="string">"mytab"</span> <span class="attr">class</span>=<span class="string">"nav nav-pills nav-justified"</span> <span class="attr">role</span>=<span class="string">"tablist"</span>></span></span><br><span class="line">		<span class="tag"><<span class="name">li</span> <span class="attr">role</span>=<span class="string">"presentation"</span> <span class="attr">class</span>=<span class="string">"active"</span>></span><span class="tag"><<span class="name">a</span> <span class="attr">href</span>=<span class="string">""</span>></span>home<span class="tag"><</span>/<span class="attr">a</span>></span><span class="tag"><</span>/<span class="attr">li</span>><br><span class="line">		<span class="tag"><<span class="name">li</span> <span class="attr">role</span>=<span class="string">"presentation"</span>></span><span class="tag"><<span class="name">a</span> <span class="attr">href</span>=<span class="string">""</span>></span>Hello<span class="tag"><</span>/<span class="attr">a</span>></span><span class="tag"><</span>/<span class="attr">li</span>><br><span class="line">		<span class="tag"><<span class="name">li</span> <span class="attr">role</span>=<span class="string">"presentation"</span> <span class="attr">class</span>=<span class="string">"dropdown"</span>></span></span><br><span class="line">			<span class="tag"><<span class="name">a</span> <span class="attr">href</span>=<span class="string">""</span> <span class="attr">class</span>=<span class="string">"dropdown-toggle"</span> <span class="attr">data-toggle</span>=<span class="string">"dropdown"</span>></span>World</span><br><span class="line">				<span class="tag"><<span class="name">span</span> <span class="attr">class</span>=<span class="string">"caret"</span>></span><span class="tag"><</span>/<span class="attr">span</span>></span><br><span class="line">			<span class="tag"><</span>/<span class="attr">a</span>></span><br><span class="line">			<span class="tag"><<span class="name">ul</span> <span class="attr">class</span>=<span class="string">"dropdown-menu"</span> <span class="attr">role</span>=<span class="string">"menu"</span>></span></span><br><span class="line">				<span class="tag"><<span class="name">li</span> <span class="attr">role</span>=<span class="string">"presentation"</span>></span><span class="tag"><<span class="name">a</span> <span class="attr">role</span>=<span class="string">"menuitem"</span> <span class="attr">tabindex</span>=<span class="string">"-1"</span> <span class="attr">href</span>=<span class="string">""</span>></span>hello1<span class="tag"><</span>/<span class="attr">a</span>></span><span class="tag"><</span>/<span class="attr">li</span>><br><span class="line">				<span class="tag"><<span class="name">li</span> <span class="attr">role</span>=<span class="string">"presentation"</span>></span><span class="tag"><<span class="name">a</span> <span class="attr">role</span>=<span class="string">"menuitem"</span> <span class="attr">tabindex</span>=<span class="string">"-1"</span> <span class="attr">href</span>=<span class="string">""</span>></span>hello2<span class="tag"><</span>/<span class="attr">a</span>></span><span class="tag"><</span>/<span class="attr">li</span>><br><span class="line">				<span class="tag"><<span class="name">li</span> <span class="attr">role</span>=<span class="string">"presentation"</span>></span><span class="tag"><<span class="name">a</span> <span class="attr">role</span>=<span class="string">"menuitem"</span> <span class="attr">tabindex</span>=<span class="string">"-1"</span> <span class="attr">href</span>=<span class="string">""</span>></span>hello3<span class="tag"><</span>/<span class="attr">a</span>></span><span class="tag"><</span>/<span class="attr">li</span>><br><span class="line">				<span class="tag"><<span class="name">li</span> <span class="attr">role</span>=<span class="string">"presentation"</span>></span><span class="tag"><<span class="name">a</span> <span class="attr">role</span>=<span class="string">"menuitem"</span> <span class="attr">tabindex</span>=<span class="string">"-1"</span> <span class="attr">href</span>=<span class="string">""</span>></span>hello4<span class="tag"><</span>/<span class="attr">a</span>></span><span class="tag"><</span>/<span class="attr">li</span>><br><span class="line">			<span class="tag"><</span>/<span class="attr">ul</span>></span><br><span class="line">		<span class="tag"><</span>/<span class="attr">li</span>></span><br><span class="line">	<span class="tag"><</span>/<span class="attr">ul</span>></span><br><span class="line"><span class="tag"><</span>/<span class="attr">div</span>></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="tag"><<span class="name">script</span> <span class="attr">src</span>=<span class="string">"./lib/jquery.min.js"</span>></span><span class="javascript"><<span class="regexp">/</</span>script></span></span><br><span class="line"><span class="xml"><span class="tag"><<span class="name">script</span> <span class="attr">src</span>=<span class="string">"./lib/bootstrap.js"</span>></span><span class="javascript"><<span class="regexp">/</</span>script></span></span></span><br></pre></td></tr></tbody></table></figure><p></p>
+<p><strong>JavaScript</strong><br></p><figure class="highlight javascript"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">"#mytab a"</span>).click(<span class="function"><span class="keyword">function</span>(<span class="params">e</span>)</span>{</span><br><span class="line">	e.preventDefault();</span><br><span class="line">	$(<span class="keyword">this</span>).tab(<span class="string">"show"</span>);</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure><p></p>
+<p><img src="http://ww1.sinaimg.cn/large/8c0b2220gy1g2ihfbhjtwj20y3064mx6.jpg" alt></p>
 
-section：页面中的内容块（eg：章节、页眉、页脚……），可以与< h1>~< h6>等元素结合使用，表示文档的结构
-
-article：页面中的一块与上下文不相干的独立内容（eg：博客中的一篇文章、报纸中的一篇文章）
-
-aside：表示article元素内容之外的，与article元素内容相关的补助信息
-
-header：表示页面中的一个内容区域块，通常用它来表示标题
-
-hgroup：用于对整个页面或者页面中的一个内容块的标题进行结合
-
-footer：表...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2019/04/11</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class="abstract-tags">
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="前端知识">前端知识</a>
-    
-</div>
-            
-        </div>
     </article>
+    <!-- license  -->
     
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/2019/04/10/HTML5与HTML4区别/">
-            
-                <span>HTML5与HTML4区别</span>
-        </a>
-        <div class="abstract-content">
-            推出理由及目标HTML5的储蓄，对于Web来说的意义是非常重大的，因为他的意图是想把目前Web上纯在的各种问题一并解决掉了。
-
-Web浏览器之间的兼容性很低  （规范不统一，没有标准化）
-
-文档结构不够明确  （之前表示文档的标题、正文都是使用< div>来排版，结构比较混乱）
-
-Web应用程序的功能收到了限制
-
-
-世界知名浏览器厂商对HTML5的支持：微软（IE9以下不支持）、Google、苹果、opera、Mozilla
-语法的改变内容类型文件扩展符（.html、.htm）与内容类型（text.html）保持不变；
-DOCTYPE声明在HTML4中，我们要明确的指出是哪一个版本；而在...
+        <div class="license-wrapper">
+            <p>原文作者：<a href="http://yoursite.com">YaoRemu</a>
+            </p><p>原文链接：<a href="http://yoursite.com/2019/04/28/导航/">http://yoursite.com/2019/04/28/导航/</a>
+            </p><p>发表日期：<a href="http://yoursite.com/2019/04/28/导航/">April 28th 2019, 4:52:40 pm</a>
+            </p><p>更新日期：<a href="http://yoursite.com/2019/04/28/导航/">April 28th 2019, 5:36:18 pm</a>
+            </p><p>版权声明：本文采用<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可</p>
         </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2019/04/10</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class="abstract-tags">
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="前端知识">前端知识</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/2019/04/10/前端学习-全局属性/">
-            
-                <span>新增的属性和废除的属性</span>
-        </a>
-        <div class="abstract-content">
-            contentEditable属性允许用户编辑元素中的内容，取值为true【可编辑】、false【不可编辑】eg:
-
-designMode属性指定整个页面是否可以编辑（只能在JavaScript中修改编辑），取值：on【可编辑】、off【不可编辑】
-hidden属性通知浏览器不渲染该元素，使该元素为不可见状态，取值：true【可见状态】、false【不可见状态】eg:不可见状态
-
-spellcheck属性针对input元素与textarea文本输入框提供的新属性，对用户输入的文本内容进行拼写和文本检查eg:
-
-
-tabindex属性不断敲击tab键，让窗口或页面中的控件获得焦点，对窗口中...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2019/04/10</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class="abstract-tags">
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="前端知识">前端知识</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/2019/04/10/MarkDown进阶操作/">
-            
-                <span>MarkDown进阶操作</span>
-        </a>
-        <div class="abstract-content">
-            图片处理有时候希望图片变得小一点，或者让他靠左边，使得排版更加美观，但是默认没有提供这类操作，可以直接引入HTML来设置；
-基本形式
-！[图片描述]（图片链接）
-
-例子：
-
-！[头像]（ http://ww1.sinaimg.cn/large/8c0b2220gy1g1ae3jfoogj20du0duwf0.jpg ）
-
-
-自定义尺寸
-< img width=’150’ height=’150’ src=” http://ww1.sinaimg.cn/large/8c0b2220gy1g1ae3jfoogj20du0duwf0.jpg “>
-
-
-插入音乐在网易云音乐生成外连接，直接复制黏...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2019/04/10</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class="abstract-tags">
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="MarkDown基本语法">MarkDown基本语法</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/2019/03/31/网络端口地址转换NAPT配置/">
-            
-                <span>网络端口地址转换NAPT配置</span>
-        </a>
-        <div class="abstract-content">
-            拓扑图
-
-相关知识①：NAT将网络划分为内部网络和外部网络两部分，局域网主机利用NAT访问网络时，是将局域网内部的本地地址转换为全局地址（互联网合法的IP地址）后转发数据包；
-
-
-相关知识②：NAT分为两种类型：NAT（网络地址转换）和NAPT（网络端口地址转换IP地址对应一个全局地址）；
-
-
-相关知识③：NAPT：使用不同的端口来映射多个内网IP地址到一个指定的外网IP地址，多对一。NAPT采用端口多路复用方式。内部网络的所有主机均可共享一个合法外部IP地址实现对Internet的访问，从而可以最大限度地节约IP地址资源。同时，又可以隐瞒内部的所有主机，有效的避免来自Internet的...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2019/03/31</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class="abstract-tags">
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Cisco基础">Cisco基础</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/2019/03/30/网络地址转换NAT配置/">
-            
-                <span>网络地址转换NAT配置</span>
-        </a>
-        <div class="abstract-content">
-            拓扑图
-
-相关知识①：网络地址转换NAT（Network Address Translation）,被广泛应用于各种类型Internet接入方式和各种类型的网络中。原因很简单，NAT不仅完美地解决了IP地址不足的问题，而且还能够有效地避免来自网络外部的攻击，隐藏并保护网络内部的计算机。
-
-
-相关知识②：默认情况下，内部IP地址是无法被路由到外网的，内部主机10.1.1.1要与外部Internet通信，IP包到达NAT路由器时，IP包头的源地址10.1.1.1被替换成一个合法的外网IP，并在NAT转发表中保存这条记录。 当外部主机发送一个应答到内网时，NAT路由器收到后，查看当前NAT转换...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2019/03/30</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class="abstract-tags">
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Cisco基础">Cisco基础</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/2019/03/29/扩展IP访问控制列表配置/">
-            
-                <span>扩展IP访问控制列表配置</span>
-        </a>
-        <div class="abstract-content">
-            拓扑图
-
-知识点①：访问控制列表定义的典型规则主要有以下：源地址，目标地址，上层协议，时间区域；扩展IP访问列表（编号100-199、2000、2699）使用以上四种组合来进行转发或阻断分组；可以根据数据包的源IP、目的IP、源接口、目的接口、协议来定义规则，进行数据包的过滤。
-
-
-知识点②：扩展IP访问列表的配置包括以下两部分：①定义扩展IP访问列表；②将扩展IP访问列表应用于特定接口上；
-
-配置命令配置Router0端口enable
-configure terminal
-hostname R0
-
-interface fa0/0
-ip address 172.16.1.1 255.25...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2019/03/29</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class="abstract-tags">
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Cisco基础">Cisco基础</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/2019/03/28/标准-IP-访问控制列表配置/">
-            
-                <span>标准 IP 访问控制列表配置</span>
-        </a>
-        <div class="abstract-content">
-            拓扑图
-
-相关知识①：ACLs 的全称为 接入控制列表(Access Control Lists),也称访问控制列表(Access Lists),俗称防火墙，在有的文档中还称包过滤。
-
-
-相关知识②：ACLs 通过定义一些规则对网络设备接口上的数据报文进行控制；运行通过或者丢失，从而提高网络可管理型和安全性；
-
-
-相关知识③：IP ACL分为两种：标准IP访问列表和扩展IP访问列表，编号范围为 1~99、1300~1999、100~199、2000~2699;标准IP访问控制列表：根据数据包的源地址定义规则，进行数据包的过滤；扩展IP访问控制列表：根据数据包的源IP、目的IP、源接口、目...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2019/03/28</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class="abstract-tags">
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Cisco基础">Cisco基础</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/2019/03/28/OSPF、RIP小记/">
-            
-                <span>OSPF、RIP小记</span>
-        </a>
-        <div class="abstract-content">
-            OSPF可将OSPF比喻成导航，可以实时更新；
-RIP将RIP比喻成路标，是固定不变的，除非人为修改；
-
-
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2019/03/28</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class="abstract-tags">
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Cisco笔记">Cisco笔记</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/2019/03/27/路由器综合路由配置/">
-            
-                <span>路由器综合路由配置</span>
-        </a>
-        <div class="abstract-content">
-            拓扑图
-
-相关知识①：运行多个路由协议进程，系统软件提供了路由信息从一个路由进程重新分布到另一个路由进程的功能；路由的相互重分布可以再所有的IP路由协议之间进行。相关命令：redistribute protocol …
-
-
-相关知识②：路由重分发，可在同一网内使用多种路由协议，为了实现多种路由协议的协同工作，路由器可以使用路由重分发(route redistribution) 将学习到的一种路由协议的路由通过另一种路由协议广播出去，这样网络的所有部分就可以互通了。为了实现重分发，路由器必须同时运行多种路由协议，这样每种路由协议才可以取路由表中的所有或部分其他协议的路由来进行广播；
-
-配置...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2019/03/27</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class="abstract-tags">
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Cisco基础">Cisco基础</a>
-    
-</div>
-            
-        </div>
-    </article>
     
     <!-- paginator  -->
+    <ul class="post-paginator">
+        <li class="next">
+            
+        </li>
+        <li class="previous">
+            
+                <div class="prevSlogan">Previous Post</div>
+                <a href="/2019/04/28/Bootstrap输入框组/" title="Bootstrap输入框组">
+                    <div class="prevTitle">Bootstrap输入框组</div>
+                </a>
+            
+        </li>
+    </ul>
+
+
+
+    <!-- 评论插件 -->
+    <!-- 来必力City版安装代码 -->
+
+<!-- City版安装代码已完成 -->
     
-    <nav class="page-nav">
-        <a class="extend prev" rel="prev" href="/archives/2019/page/4/">< PREV</a><a class="page-number" href="/archives/2019/">1</a><span class="space">…</span><a class="page-number" href="/archives/2019/page/3/">3</a><a class="page-number" href="/archives/2019/page/4/">4</a><span class="page-number current">5</span><a class="page-number" href="/archives/2019/page/6/">6</a><a class="page-number" href="/archives/2019/page/7/">7</a><a class="extend next" rel="next" href="/archives/2019/page/6/">NEXT ></a>
-    </nav>
     
+    <!-- partial('_partial/comment/changyan') -->
+    <!--PC版-->
+
+
+    
+    
+    <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+    <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+    <div id="comment"></div>
+    <script>
+    new Valine({
+        el: '#comment' ,
+        notify:false, 
+        verify:false, 
+        appId: "SgWkCobuyHsQs2PICTiE4ea7-gzGzoHsz",
+        appKey: "v5krQ6EXt9olzSl8Ms7G7iSf",
+        placeholder: "",
+        path:window.location.pathname, 
+        avatar:'mm' 
+    });
+    </script>
+
+
+    <!-- 评论 -->
+
+
+
+    <script src="/js/tctip-1.0.3.min.js"></script>
+    <script>
+       new tctip({
+       top: '20%',
+       
+       button: {
+          id: 9,
+          type: 'zanzhu'
+        },
+        list: [
+         {
+           type: 'alipay',
+           qrImg: 'http://ww1.sinaimg.cn/large/8c0b2220gy1g25njlruhej205j05kdgd.jpg'
+         }, {
+           type: 'wechat',
+           qrImg: 'http://ww1.sinaimg.cn/large/8c0b2220gy1g25njlryftj206d06c3z2.jpg'
+         }
+        ]
+      }).init()
+</script>
+
+
+
 </main>
             <!-- profile -->
             
@@ -810,6 +608,13 @@ RIP将RIP比喻成路标，是固定不变的，除非人为修改；
 </footer>
     </div>
     <!-- toc -->
+    
+    <div class="toc-wrapper" style="top:50vh;">
+        <div class="toc-catalog">
+            <span class="iconfont-archer catalog-icon"></span><span>CATALOG</span>
+        </div>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#基本的标签页"><span class="toc-number">1.</span> <span class="toc-text">基本的标签页</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#胶囊式标签页"><span class="toc-number">2.</span> <span class="toc-text">胶囊式标签页</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#两端对齐标签页"><span class="toc-number">3.</span> <span class="toc-text">两端对齐标签页</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#禁用的链接"><span class="toc-number">4.</span> <span class="toc-text">禁用的链接</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#添加下拉菜单"><span class="toc-number">5.</span> <span class="toc-text">添加下拉菜单</span></a></li></ol>
+    </div>
     
     <div class="back-top iconfont-archer"></div>
     <div class="sidebar sidebar-hide">
@@ -1748,6 +1553,8 @@ var talkAPI = "";//如果有类似图灵机器人的聊天接口请填写接口�
     
     
     <!-- async load share.js -->
+    
+        <script src="/scripts/share.js" async></script>    
      
     <!--爱心-->
     <script type="text/javascript" src="/js/src/clicklove.js"></script>
