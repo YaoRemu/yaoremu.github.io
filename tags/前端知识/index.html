@@ -346,84 +346,6 @@
     
     
     <article class="index-post">
-        <a class="abstract-title" href="/2019/04/25/HTML5编辑API之Range对象/">
-            
-                <span>HTML5编辑API之Range对象</span>
-        </a>
-        <div class="abstract-content">
-            课程概要
-Range对象
-Range对象的基本概念
-selectNode / SelectNodeContents / deleteContents 方法
-setStart / setEND setStartBefore / setStartAfter /setEndBefore / setENDAfter 方法
-
-
-
-Range对象的基本概念一个 Range对象 代表页面上的一段连续区域。 通过 Range对象 ， 可以获取 或 修改网页上的任何区域
-12345678910111213141516171819202122function rangeTest(){	var html;	s...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2019/04/25</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class="abstract-tags">
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="前端知识">前端知识</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/2019/04/22/HTML5增强的页面元素/">
-            
-                <span>HTML5增强的页面元素</span>
-        </a>
-        <div class="abstract-content">
-            课程概要
-新增的 figure元素、 figcaption元素
-新增的 details元素与 summary元素
-新增的 mark元素
-新增的 progress元素
-新增的 meter元素
-改良的 ol列表
-改良的 dl列表
-加以严格限制的 cite元素 和重新定义的 small元素
-
-figure元素 以及 figcaption元素figure元素figure元素是一种组合元素，带有可选标题，figure元素用来表示网页上的一块独立的内容，将其从网页上移除之后，不会对网页的其他内容产生影响，figure元素 所表示的内容可以是图片、统计图或者是代码示例等
-figcaption元素表示 ...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2019/04/22</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class="abstract-tags">
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="前端知识">前端知识</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
         <a class="abstract-title" href="/2019/04/21/Vue-js第二课/">
             
                 <span>Vue.js第二课</span>
@@ -450,43 +372,6 @@ findIndex： 找到对应对象的索引
             <!-- date  -->
             <div class="abstract-date">
                 <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2019/04/21</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class="abstract-tags">
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="前端知识">前端知识</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/2019/04/20/表单新增的元素与属性（五）/">
-            
-                <span>表单新增的元素与属性（五）</span>
-        </a>
-        <div class="abstract-content">
-            在HTML5中，大幅度的增加了与改良了input元素的种类，可以简单的使用元素来实现HTML5之前需要使用JavaScript脚本才能实现的许多功能
-增加与改良的input元素
-url类型、emali类型、date类型、time类型、datetime类型、datetime-local类型、month类型、week类型、number类型、range类型、search类型、Tel类型、color类型
-
-url类型如果提交的不是一个网址，则会弹出提示请求输入网址,达到了一个检验的效果
-1234		
-eg:
-
-email类型email的input元素是一种专门用来输入email地址的文本框，如果...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2019/04/20</span>
             </div>
             <!-- tags  -->
             
@@ -545,173 +430,25 @@ Vue.js是一套构建用户界面的框架，值关注视图图层，它不仅�
     
     
     <article class="index-post">
-        <a class="abstract-title" href="/2019/04/19/表单新增的元素与属性（四）/">
+        <a class="abstract-title" href="/2019/04/10/前端学习-全局属性/">
             
-                <span>表单新增的元素与属性（四）</span>
+                <span>新增的属性和废除的属性</span>
         </a>
         <div class="abstract-content">
-            文本框的list属性在HTML5中，为单行文本框增加了一个list属性，该属性的值为某个datalist元素的id。datalist元素也是HTML5中新增的元素，该元素类似于选择框，但是用户想要设定的值不在选项列表之内时，允许自行输入。datalist元素本身并不显示，而是当文本框获得焦点时以提示输入的方式显示。(类似于下拉菜单)
-123456789				HTML5学习		Android学习		IOS学习	
+            contentEditable属性允许用户编辑元素中的内容，取值为true【可编辑】、false【不可编辑】eg:
 
-datalist属性默认是看不到的，但是为了在每个浏览器中兼容，所以还是自己设置style的display属性
+designMode属性指定整个页面是否可以编辑（只能在JavaScript中修改编辑），取值：on【可编辑】、off【不可编辑】
+hidden属性通知浏览器不渲染该元素，使该元素为不可见状态，取值：true【可见状态】、false【不可见状态】eg:不可见状态
 
-eg:
+spellcheck属性针对input元素与textarea文本输入框提供的新属性，对用户输入的文本内容进行拼写和文本检查eg:
 
-文本框的autocomplete属性帮助输入所用的自...
+
+tabindex属性不断敲击tab键，让窗口或页面中的控件获得焦点，对窗口中...
         </div>
         <div class="abstract-post-meta">
             <!-- date  -->
             <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2019/04/19</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class="abstract-tags">
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="前端知识">前端知识</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/2019/04/18/表单新增的元素与属性（三）/">
-            
-                <span>表单新增的元素与属性（三）</span>
-        </a>
-        <div class="abstract-content">
-            标签的control属性在HTML5中，可以在标签内部放置一个表单元素，并且通过该标签的control属性来访问该表单元素
-1234567891011121314151617	function setValue(){		var label = document.getElementById("label");		var textbox = label.control;		textbox.value="010010";	}			邮箱：				请输入六为数字		
-文本框的placeholder属性placeholder是指当前文本框处于未输入状态时显示的输入提示。当文本框处于未输入状态且未获...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2019/04/18</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class="abstract-tags">
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="前端知识">前端知识</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/2019/04/17/表单新增的元素与属性（二）/">
-            
-                <span>表单新增的元素与属性（二）</span>
-        </a>
-        <div class="abstract-content">
-            formtarget属性在HTML4中，表单元素具有一个target属性，该属性用于指定在何处打开表单提交后所需要加载的页面。
-在HTML5中，可以对多个按钮分别使用formtarget属性来指定提交后在何处打开所需加载的页面。
-123456789101112	提交到xx.jsp页面	提交到xx.jsp页面	提交到xx.jsp页面	提交到xx.jsp页面	提交到xx.jsp页面< /form>< /form>
-formtarget的五个属性
-_blank：在新的浏览器页面或窗口进行打开
-
-
-_self：target属性的默认值，在相同的框架frame中打开
-
-
-_parent：在当前框架...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2019/04/17</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class="abstract-tags">
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="前端知识">前端知识</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/2019/04/15/表单新增的元素与属性/">
-            
-                <span>表单新增的元素与属性</span>
-        </a>
-        <div class="abstract-content">
-            表单内元素的form属性在HTML4中，表单内的从属元素必须书写在表单内部，而在HTML5中，可以把他们书写在页面上任何地方，然后为该元素指定一个form属性，属性值为该表单的id，这样就可以声明该元素从属于指定表单了
-123456	< /form>< /textarea>
-
-这样做的好处是，如果你需要向页面添加一些样式，比较好添加，因为它们不会分散在表单之内了，所以添加相关的css效果，也会变得方便很多
-
-表单内元素的formaction属性在HTML4中，一个表单之内的所有元素只能通过表单的action属性被统一提交到另一个页面，而在HTML5中可以为所有的提交按钮，增加不同的for...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2019/04/15</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class="abstract-tags">
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="前端知识">前端知识</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/2019/04/14/新增的非主体结构元素（一）/">
-            
-                <span>新增的非主体结构元素（一）</span>
-        </a>
-        <div class="abstract-content">
-            在HTML5中，还增加了一些用来表示逻辑结构或者是附加信息的非主体结构元素
-
-header元素
-
-footer元素
-
-hgroup元素
-
-address元素
-
-
-header元素header元素是一种具有引导和导航作用的结构元素，通常用来放置整个页面或页面内的一个内容区块的标题，但是也可以包含其他内容，例如数据表格、搜索歌单或相关的logo图片
-
-以前我们是通过一个div包裹然后给它设定一个class或者id指定是header用来包含整个页面或页面内的区域块的一个标题
-
-
-注意：header的出现不一定只有一次，它可以出现多次，不论是在整个页面来表示他的标题，或者说区域块来表示标题都是可...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2019/04/14</span>
+                <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2019/04/10</span>
             </div>
             <!-- tags  -->
             
@@ -725,10 +462,6 @@ header元素header元素是一种具有引导和导航作用的结构元素，�
     </article>
     
     <!-- paginator  -->
-    
-    <nav class="page-nav">
-        <span class="page-number current">1</span><a class="page-number" href="/tags/前端知识/page/2/">2</a><a class="extend next" rel="next" href="/tags/前端知识/page/2/">NEXT ></a>
-    </nav>
     
 </main>
             <!-- profile -->
@@ -1273,9 +1006,16 @@ header元素header元素是一种具有引导和导航作用的结构元素，�
     
     
     
+    
+    
+    
+    
+    
+    
+    
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 63
+        Total : 64
         </div>
         <!-- search  -->
         
@@ -1302,6 +1042,11 @@ header元素header元素是一种具有引导和导航作用的结构元素，�
     
     <div class="archive-year"> 2019 </div>
     <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">04/29</span><a class="archive-post-title" href="/2019/04/29/导航条/">导航条</a>
+        </li>
     
     
         <li class="archive-post-item">
@@ -1620,19 +1365,15 @@ header元素header元素是一种具有引导和导航作用的结构元素，�
     
         <span class="sidebar-tag-name" data-tags="【极客】前端学习"><span class="iconfont-archer"></span>【极客】前端学习</span>
     
-        <span class="sidebar-tag-name" data-tags="Bootstrap"><span class="iconfont-archer"></span>Bootstrap</span>
-    
-        <span class="sidebar-tag-name" data-tags="前端知识"><span class="iconfont-archer"></span>前端知识</span>
+        <span class="sidebar-tag-name" data-tags="从零开始的Python学习"><span class="iconfont-archer"></span>从零开始的Python学习</span>
     
         <span class="sidebar-tag-name" data-tags="MarkDown基本语法"><span class="iconfont-archer"></span>MarkDown基本语法</span>
     
-        <span class="sidebar-tag-name" data-tags="从零开始的Python学习"><span class="iconfont-archer"></span>从零开始的Python学习</span>
-    
         <span class="sidebar-tag-name" data-tags="安装教程"><span class="iconfont-archer"></span>安装教程</span>
     
-        <span class="sidebar-tag-name" data-tags="Cisco强化学习"><span class="iconfont-archer"></span>Cisco强化学习</span>
-    
         <span class="sidebar-tag-name" data-tags="Cisco笔记"><span class="iconfont-archer"></span>Cisco笔记</span>
+    
+        <span class="sidebar-tag-name" data-tags="Cisco强化学习"><span class="iconfont-archer"></span>Cisco强化学习</span>
     
         <span class="sidebar-tag-name" data-tags="PHP相关知识"><span class="iconfont-archer"></span>PHP相关知识</span>
     
@@ -1640,9 +1381,11 @@ header元素header元素是一种具有引导和导航作用的结构元素，�
     
         <span class="sidebar-tag-name" data-tags="Cisco基础"><span class="iconfont-archer"></span>Cisco基础</span>
     
-        <span class="sidebar-tag-name" data-tags="画画"><span class="iconfont-archer"></span>画画</span>
+        <span class="sidebar-tag-name" data-tags="前端知识"><span class="iconfont-archer"></span>前端知识</span>
     
         <span class="sidebar-tag-name" data-tags="Cisco知识点"><span class="iconfont-archer"></span>Cisco知识点</span>
+    
+        <span class="sidebar-tag-name" data-tags="画画"><span class="iconfont-archer"></span>画画</span>
     
     </div>
     <div class="iconfont-archer sidebar-tags-empty"></div>
@@ -1678,15 +1421,17 @@ header元素header元素是一种具有引导和导航作用的结构元素，�
     
         <span class="sidebar-category-name" data-categories="Bootstrap"><span class="iconfont-archer"></span>Bootstrap</span>
     
-        <span class="sidebar-category-name" data-categories="【极客】前端学习"><span class="iconfont-archer"></span>【极客】前端学习</span>
-    
-        <span class="sidebar-category-name" data-categories="教学"><span class="iconfont-archer"></span>教学</span>
+        <span class="sidebar-category-name" data-categories="前端知识"><span class="iconfont-archer"></span>前端知识</span>
     
         <span class="sidebar-category-name" data-categories="Python"><span class="iconfont-archer"></span>Python</span>
+    
+        <span class="sidebar-category-name" data-categories="教学"><span class="iconfont-archer"></span>教学</span>
     
         <span class="sidebar-category-name" data-categories="Cisco"><span class="iconfont-archer"></span>Cisco</span>
     
         <span class="sidebar-category-name" data-categories="PHP"><span class="iconfont-archer"></span>PHP</span>
+    
+        <span class="sidebar-category-name" data-categories="【极客】前端学习"><span class="iconfont-archer"></span>【极客】前端学习</span>
     
         <span class="sidebar-category-name" data-categories="素描"><span class="iconfont-archer"></span>素描</span>
     
