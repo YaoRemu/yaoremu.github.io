@@ -272,7 +272,7 @@ height:50vh;
                 
                 
                     <div class="post-intro-read">
-                        <span>字数统计: <span class="post-count word-count">402</span>阅读时长: <span class="post-count reading-time">1 min</span></span>
+                        <span>字数统计: <span class="post-count word-count">943</span>阅读时长: <span class="post-count reading-time">3 min</span></span>
                     </div>
                 
                 <div class="post-intro-meta">
@@ -491,10 +491,35 @@ height:50vh;
 </tr>
 <tr>
 <td style="text-align:left">-h</td>
-<td style="text-align:left">配合 -l 以人性化的方式显示文件大小</td>
+<td style="text-align:left"><strong>配合</strong> -l 以人性化的方式显示文件大小</td>
 </tr>
 </tbody>
 </table>
+<p>在 ubuntu 中 默认情况下，敲入 ls 终端命令之后，显示文件的方向是以水平方向 <strong>横排显示</strong> 的，同时 ubuntu 中默认情况下：</p>
+<ul>
+<li>文件夹，会使用蓝色字体显示</li>
+<li>文件，会使用白色字体显示</li>
+</ul>
+<p><img src="http://ww1.sinaimg.cn/large/8c0b2220gy1g2jec3eut7j20k402wmz7.jpg" alt></p>
+<h4 id="l-选项"><a href="#l-选项" class="headerlink" title="-l 选项"></a>-l 选项</h4><p><img src="http://ww1.sinaimg.cn/large/8c0b2220gy1g2jelwx2puj20jg085k1s.jpg" alt></p>
+<p>我们可以看到，文件列表以纵向方向来显示的，同时我们可以看到文件的<strong>详细信息</strong>，我们可以看到文件夹以及文件创建的 <strong>时间以及日期</strong>、<strong>磁盘空间大小</strong></p>
+<p>另外，前面出现了两列 python ，等在后面章节讲到用户已经群组的时候会单独的介绍</p>
+<p>然后，在终端窗口的最前面，有<strong>一堆的字母</strong>，其中第一列字母是小写字母 d，如果是目录，会在第一列中以小写字母 d 来标识，如果不是目录，就没有小写字母 d</p>
+<h4 id="h-选项"><a href="#h-选项" class="headerlink" title="-h 选项"></a>-h 选项</h4><p>单独使用 ls -h 是 没有效果的。 eg：</p>
+<p><img src="http://ww1.sinaimg.cn/large/8c0b2220gy1g2jelann3fj20ju01p760.jpg" alt></p>
+<p>因为 -h 需要<strong>配合</strong> -l 一起使用。 eg：</p>
+<p><img src="http://ww1.sinaimg.cn/large/8c0b2220gy1g2jenxy1lrj20ij07zk0t.jpg" alt></p>
+<p>我们可以看到，整体显示的信息与 只使用 -l 的结果是差不多的，唯一的区别是 <strong>文件和目录大小</strong>，这就是以人性化的方式来显示文件大小。 eg：</p>
+<p><img src="http://ww1.sinaimg.cn/large/8c0b2220gy1g2jeqbujsbj20c207vaf5.jpg" alt></p>
+<h3 id="扩展"><a href="#扩展" class="headerlink" title="扩展"></a>扩展</h3><h4 id="命令的输入方式"><a href="#命令的输入方式" class="headerlink" title="命令的输入方式"></a>命令的输入方式</h4><p>在 linux 中，终端命令的选项，如果我们要有多个选项，我们可以 <strong>分开来输入</strong>，也可以 <strong>合在一起</strong> 来输入。 eg：</p>
+<p><img src="http://ww1.sinaimg.cn/large/8c0b2220gy1g2jeuzune6j20i1083ajj.jpg" alt></p>
+<p>我们可以看到，输出的效果与命令分开写的效果是完全一样的</p>
+<p><img src="http://ww1.sinaimg.cn/large/8c0b2220gy1g2jf5yv0xyj20k30dyn08.jpg" alt></p>
+<blockquote>
+<p>【 . 】 开头的文件表示文件是隐藏的</p>
+</blockquote>
+<p><strong>注意：</strong>隐藏文件和隐藏文件夹是怎么出现在 用户 的家目录中？</p>
+<p>因为我们在 Ubuntu 中，安装有各种各样的软件，这些隐藏文件夹和隐藏文件，就是来专门配置系统上安装的各个应用软件的，所以在我们日常使用的时候，不需要理会这些文件。 例如： 【 .vim 】 是专门用来配置终端上的配置器软件。 在日常使用中，这些隐藏文件和隐藏文件夹保持不变即可</p>
 
     </article>
     <!-- license  -->
@@ -503,7 +528,7 @@ height:50vh;
             <p>原文作者：<a href="http://yoursite.com">YaoRemu</a>
             </p><p>原文链接：<a href="http://yoursite.com/2019/04/28/文件和目录常用命令/">http://yoursite.com/2019/04/28/文件和目录常用命令/</a>
             </p><p>发表日期：<a href="http://yoursite.com/2019/04/28/文件和目录常用命令/">April 28th 2019, 2:40:28 pm</a>
-            </p><p>更新日期：<a href="http://yoursite.com/2019/04/28/文件和目录常用命令/">April 28th 2019, 3:19:21 pm</a>
+            </p><p>更新日期：<a href="http://yoursite.com/2019/04/28/文件和目录常用命令/">April 29th 2019, 1:05:13 pm</a>
             </p><p>版权声明：本文采用<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可</p>
         </div>
     
@@ -677,7 +702,7 @@ height:50vh;
         <div class="toc-catalog">
             <span class="iconfont-archer catalog-icon"></span><span>CATALOG</span>
         </div>
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#目标"><span class="toc-number">1.</span> <span class="toc-text">目标</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#查看目录内容"><span class="toc-number">2.</span> <span class="toc-text">查看目录内容</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#终端实用技巧"><span class="toc-number">2.1.</span> <span class="toc-text">终端实用技巧</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#自动补全"><span class="toc-number">2.1.1.</span> <span class="toc-text">自动补全</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#曾经使用过的命令"><span class="toc-number">2.1.2.</span> <span class="toc-text">曾经使用过的命令</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ls命令说明"><span class="toc-number">2.2.</span> <span class="toc-text">ls命令说明</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Linux下文件和目录的特点"><span class="toc-number">2.2.1.</span> <span class="toc-text">Linux下文件和目录的特点</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ls常用选项"><span class="toc-number">2.2.2.</span> <span class="toc-text">ls常用选项</span></a></li></ol></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#目标"><span class="toc-number">1.</span> <span class="toc-text">目标</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#查看目录内容"><span class="toc-number">2.</span> <span class="toc-text">查看目录内容</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#终端实用技巧"><span class="toc-number">2.1.</span> <span class="toc-text">终端实用技巧</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#自动补全"><span class="toc-number">2.1.1.</span> <span class="toc-text">自动补全</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#曾经使用过的命令"><span class="toc-number">2.1.2.</span> <span class="toc-text">曾经使用过的命令</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ls命令说明"><span class="toc-number">2.2.</span> <span class="toc-text">ls命令说明</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Linux下文件和目录的特点"><span class="toc-number">2.2.1.</span> <span class="toc-text">Linux下文件和目录的特点</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ls常用选项"><span class="toc-number">2.2.2.</span> <span class="toc-text">ls常用选项</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#l-选项"><span class="toc-number">2.2.2.1.</span> <span class="toc-text">-l 选项</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#h-选项"><span class="toc-number">2.2.2.2.</span> <span class="toc-text">-h 选项</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#扩展"><span class="toc-number">2.2.3.</span> <span class="toc-text">扩展</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#命令的输入方式"><span class="toc-number">2.2.3.1.</span> <span class="toc-text">命令的输入方式</span></a></li></ol></li></ol></li></ol></li></ol>
     </div>
     
     <div class="back-top iconfont-archer"></div>
@@ -1480,17 +1505,17 @@ height:50vh;
         <div class="sidebar-panel-tags">
     <div class="sidebar-tags-name">
     
+        <span class="sidebar-tag-name" data-tags="Bootstrap"><span class="iconfont-archer"></span>Bootstrap</span>
+    
         <span class="sidebar-tag-name" data-tags="【极客】前端学习"><span class="iconfont-archer"></span>【极客】前端学习</span>
     
         <span class="sidebar-tag-name" data-tags="前端知识"><span class="iconfont-archer"></span>前端知识</span>
     
-        <span class="sidebar-tag-name" data-tags="Bootstrap"><span class="iconfont-archer"></span>Bootstrap</span>
-    
-        <span class="sidebar-tag-name" data-tags="安装教程"><span class="iconfont-archer"></span>安装教程</span>
-    
         <span class="sidebar-tag-name" data-tags="MarkDown基本语法"><span class="iconfont-archer"></span>MarkDown基本语法</span>
     
         <span class="sidebar-tag-name" data-tags="从零开始的Python学习"><span class="iconfont-archer"></span>从零开始的Python学习</span>
+    
+        <span class="sidebar-tag-name" data-tags="安装教程"><span class="iconfont-archer"></span>安装教程</span>
     
         <span class="sidebar-tag-name" data-tags="Cisco笔记"><span class="iconfont-archer"></span>Cisco笔记</span>
     
@@ -1538,9 +1563,9 @@ height:50vh;
         <div class="sidebar-panel-categories">
     <div class="sidebar-categories-name">
     
-        <span class="sidebar-category-name" data-categories="Bootstrap"><span class="iconfont-archer"></span>Bootstrap</span>
-    
         <span class="sidebar-category-name" data-categories="【极客】前端学习"><span class="iconfont-archer"></span>【极客】前端学习</span>
+    
+        <span class="sidebar-category-name" data-categories="Bootstrap"><span class="iconfont-archer"></span>Bootstrap</span>
     
         <span class="sidebar-category-name" data-categories="教学"><span class="iconfont-archer"></span>教学</span>
     
