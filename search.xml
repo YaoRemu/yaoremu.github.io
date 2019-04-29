@@ -479,14 +479,14 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[新增的属性和废除的属性]]></title>
+    <title><![CDATA[全局属性]]></title>
     <url>%2F2019%2F04%2F10%2F%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0-%E5%85%A8%E5%B1%80%E5%B1%9E%E6%80%A7%2F</url>
     <content type="text"><![CDATA[contentEditable属性允许用户编辑元素中的内容，取值为true【可编辑】、false【不可编辑】eg: designMode属性指定整个页面是否可以编辑（只能在JavaScript中修改编辑），取值：on【可编辑】、off【不可编辑】 hidden属性通知浏览器不渲染该元素，使该元素为不可见状态，取值：true【可见状态】、false【不可见状态】eg:不可见状态 spellcheck属性针对input元素与textarea文本输入框提供的新属性，对用户输入的文本内容进行拼写和文本检查eg: tabindex属性不断敲击tab键，让窗口或页面中的控件获得焦点，对窗口中的所有控件进行遍历，每一个tableindex属性表示该接口是第几个访问到的eg:]]></content>
       <categories>
-        <category>【极客】前端学习</category>
+        <category>前端知识</category>
       </categories>
       <tags>
-        <tag>前端知识</tag>
+        <tag>【极客】前端学习</tag>
       </tags>
   </entry>
   <entry>
