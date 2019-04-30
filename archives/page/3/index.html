@@ -1,1821 +1,1681 @@
-<!DOCTYPE html><html lang="zh-CN"><head><link rel="stylesheet" href="/live2d/css/live2d.css">
-    <!-- title -->
+<!DOCTYPE html><html lang="zh-CN"><head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+  
+  <title itemprop="name">archive_a | YaoZhao'Blog</title>
+  
+    <link rel="shortcut icon" href="/images/favicon.ico">
+  
+  <meta http-equiv="x-dns-prefetch-control" content="on">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+SerifMerriweather|Merriweather+Sans|Source+Code+Pro|Ubuntu:400,700|Noto+Serif+SC" media="all">
+  <link rel="dns-prefetch" href="//cdn.jsdelivr.net">
+  <link rel="stylesheet" id="saukra_css-css" href="/css/style.css" type="text/css" media="all">
+  <link rel="stylesheet" href="/css/lib.min.css" media="all">
+  <link rel="stylesheet" href="/css/font.css" media="all">
+  <link rel="stylesheet" href="/css/insight.css" media="all">
+  <link rel="stylesheet" href="/css/jquery.fancybox.min.css" media="all">
+  <link rel="stylesheet" href="/css/zoom.css" media="all">
+  <link rel="stylesheet" type="text/css" href="/css/sharejs.css">
+<!--   <link rel="stylesheet" id="saukra_css-css" href="https://2heng.xin/wp-content/cache/autoptimize/css/autoptimize_ad42a61f4c7d4bdd9f91afcff6b5dda5.css
+" type="text/css" media="all"> -->
+  <script>
+  /*Initial Variables*/
+  var mashiro_option = new Object();
+  var mashiro_global = new Object();
+  mashiro_option.NProgressON = true;
+  /* 
+   * 邮箱信息之类的东西可以填在这里，这些js变量基本都作用于sakura-app.js
+   * 这样的设置仅是为了方便在基于PHP开发的主题中设置js变量，既然移植到了Node上，我想或许可以精简这一逻辑吧
+   */
+  mashiro_option.email_domain = "";
+  mashiro_option.email_name = "";
+  mashiro_option.cookie_version_control = "";
+  mashiro_option.qzone_autocomplete = false;
+  mashiro_option.site_name = "さくら荘そのhojun";
+  mashiro_option.author_name = "hojun";
+  mashiro_option.site_url = "https://sakura.hojun.cn";
+  mashiro_option.v_appId = "GyC3NzMvd0hT9Yyd2hYIC0MN-gzGzoHsz";
+  mashiro_option.v_appKey = "mgOpfzbkHYqU92CV4IDlAUHQ";
+  mashiro_option.mathjax = "0";
+  mashiro_option.qq_api_url = "https://api.mashiro.top/qqinfo/"; 
+  mashiro_option.qq_avatar_api_url = "https://api.mashiro.top/qqinfo/";
 
+  // mashiro_option.jsdelivr_css_src = "https://cdn.jsdelivr.net/gh/moezx/cdn@3.4.5/css/lib.min.css";
+  // mashiro_option.float_player_on = true;
 
-
-
-<!-- keywords -->
-
-
-
-
-<meta name="generator" content="Hexo 3.8.0">
-    <meta charset="utf-8">
-    <meta name="baidu-site-verification" content="X1i9zY8G8D">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <meta name="author" content="YaoRemu">
-    <meta name="renderer" content="webkit">
-    <meta name="copyright" content="YaoRemu">
-    
-    <meta name="keywords" content="YaoRemu,YaoZhao,blog">
-    
-    <meta name="description" content="欢迎来到YaoRemu的博客">
-    <meta http-equiv="Cache-control" content="no-cache">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>YaoRemu'Blog</title>
-    <style type="text/css">
-    @font-face {
-        font-family: 'Oswald-Regular';
-        src: url("/font/Oswald-Regular.ttf");
-    }
-
-    body {
-        margin: 0;
-    }
-
-    header,
-    footer,
-    .back-top,
-    .sidebar,
-    .container,
-    .site-intro-meta,
-    .toc-wrapper {
-        display: none;
-    }
-
-    .site-intro {
-        position: relative;
-        z-index: 3;
-        width: 100%;
-        /* height: 50vh; */
-        overflow: hidden;
-    }
-
-    .site-intro-placeholder {
-        position: absolute;
-        z-index: -2;
-        top: 0;
-        left: 0;
-        width: calc(100% + 300px);
-        height: 100%;
-        background: repeating-linear-gradient(-45deg, #444 0, #444 80px, #333 80px, #333 160px);
-        background-position: center center;
-        transform: translate3d(-226px, 0, 0);
-        animation: gradient-move 2.5s ease-out 0s infinite;
-    }
-
-    @keyframes gradient-move {
-        0% {
-            transform: translate3d(-226px, 0, 0);
-        }
-        100% {
-            transform: translate3d(0, 0, 0);
-        }
-    }
-
-</style>
-
-    <link rel="preload" href="/css/style.css?v=20180824" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <link rel="stylesheet" href="/css/mobile.css?v=20180824" media="(max-width: 980px)">
-    
-    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    
-    <!-- /*! loadCSS. [c]2017 Filament Group, Inc. MIT License */
-/* This file is meant as a standalone workflow for
-- testing support for link[rel=preload]
-- enabling async CSS loading in browsers that do not support rel=preload
-- applying rel preload css once loaded, whether supported or not.
-*/ -->
-<script>
-(function( w ){
-	"use strict";
-	// rel=preload support test
-	if( !w.loadCSS ){
-		w.loadCSS = function(){};
-	}
-	// define on the loadCSS obj
-	var rp = loadCSS.relpreload = {};
-	// rel=preload feature support test
-	// runs once and returns a function for compat purposes
-	rp.support = (function(){
-		var ret;
-		try {
-			ret = w.document.createElement( "link" ).relList.supports( "preload" );
-		} catch (e) {
-			ret = false;
-		}
-		return function(){
-			return ret;
-		};
-	})();
-
-	// if preload isn't supported, get an asynchronous load by using a non-matching media attribute
-	// then change that media back to its intended value on load
-	rp.bindMediaToggle = function( link ){
-		// remember existing media attr for ultimate state, or default to 'all'
-		var finalMedia = link.media || "all";
-
-		function enableStylesheet(){
-			link.media = finalMedia;
-		}
-
-		// bind load handlers to enable media
-		if( link.addEventListener ){
-			link.addEventListener( "load", enableStylesheet );
-		} else if( link.attachEvent ){
-			link.attachEvent( "onload", enableStylesheet );
-		}
-
-		// Set rel and non-applicable media type to start an async request
-		// note: timeout allows this to happen async to let rendering continue in IE
-		setTimeout(function(){
-			link.rel = "stylesheet";
-			link.media = "only x";
-		});
-		// also enable media after 3 seconds,
-		// which will catch very old browsers (android 2.x, old firefox) that don't support onload on link
-		setTimeout( enableStylesheet, 3000 );
-	};
-
-	// loop through link elements in DOM
-	rp.poly = function(){
-		// double check this to prevent external calls from running
-		if( rp.support() ){
-			return;
-		}
-		var links = w.document.getElementsByTagName( "link" );
-		for( var i = 0; i < links.length; i++ ){
-			var link = links[ i ];
-			// qualify links to those with rel=preload and as=style attrs
-			if( link.rel === "preload" && link.getAttribute( "as" ) === "style" && !link.getAttribute( "data-loadcss" ) ){
-				// prevent rerunning on link
-				link.setAttribute( "data-loadcss", true );
-				// bind listeners to toggle media back
-				rp.bindMediaToggle( link );
-			}
-		}
-	};
-
-	// if unsupported, run the polyfill
-	if( !rp.support() ){
-		// run once at least
-		rp.poly();
-
-		// rerun poly on an interval until onload
-		var run = w.setInterval( rp.poly, 500 );
-		if( w.addEventListener ){
-			w.addEventListener( "load", function(){
-				rp.poly();
-				w.clearInterval( run );
-			} );
-		} else if( w.attachEvent ){
-			w.attachEvent( "onload", function(){
-				rp.poly();
-				w.clearInterval( run );
-			} );
-		}
-	}
-
-
-	// commonjs
-	if( typeof exports !== "undefined" ){
-		exports.loadCSS = loadCSS;
-	}
-	else {
-		w.loadCSS = loadCSS;
-	}
-}( typeof global !== "undefined" ? global : this ) );
-</script>
-
-    <link rel="icon" href="http://ww1.sinaimg.cn/large/8c0b2220gy1g1aeuvx4roj20680683yf.jpg">
-    <link rel="preload" href="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.min.js" as="script">
-    <link rel="preload" href="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js" as="script">
-    <link rel="preload" href="/scripts/main.js" as="script">
-    <link rel="preload" as="font" href="/font/Oswald-Regular.ttf" crossorigin>
-    <link rel="preload" as="font" href="https://at.alicdn.com/t/font_327081_1dta1rlogw17zaor.woff" crossorigin>
-    
-    <!-- fancybox -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js" defer></script>
-    <!-- 百度统计  -->
-    
-    <!-- 谷歌统计  -->
-    
+  /*End of Initial Variables*/
+  </script>
+  <script type="text/javascript">
+  var bg = "https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/cover/(1).jpg.webp,https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/cover/(2).jpg.webp,https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/cover/(3).jpg.webp,https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/cover/(4).jpg.webp,https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/cover/(5).jpg.webp,https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/cover/(6).jpg.webp,https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/cover/(7).jpg.webp,https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/cover/(8).jpg.webp".split(",");
+  var bgindex = Math.floor(Math.random()*bg.length);
+  if (!!window.ActiveXObject || "ActiveXObject" in window) { //is IE?
+    alert('朋友，IE浏览器未适配哦~');
+  }
+  </script>
+  <style type="text/css">
+  .hljs-ln{border-collapse:collapse}.hljs-ln td{padding:0}.hljs-ln-n:before{content:attr(data-line-number)}
+  </style>
+  <style type="text/css">.site-top .lower nav{display:block !important;}.author-profile i,.post-like a,.post-share .show-share,.sub-text,.we-info a,span.sitename,.post-more i:hover,#pagination a:hover,.post-content a:hover,.float-content i:hover{color:#FE9600}.feature i,.download,.navigator i:hover,.links ul li:before,.ar-time i,span.ar-circle,.object,.comment .comment-reply-link,.siren-checkbox-radio:checked + .siren-checkbox-radioInput:after{background:#FE9600}::-webkit-scrollbar-thumb{background:#FE9600}.download,.navigator i:hover,.link-title,.links ul li:hover,#pagination a:hover,.comment-respond input[type='submit']:hover{border-color:#FE9600}.entry-content a:hover,.site-info a:hover,.comment h4 a,#comments-navi a.prev,#comments-navi a.next,.comment h4 a:hover,.site-top ul li a:hover,.entry-title a:hover,#archives-temp h3,span.page-numbers.current,.sorry li a:hover,.site-title a:hover,i.iconfont.js-toggle-search.iconsearch:hover,.comment-respond input[type='submit']:hover{color:#FE9600}.comments .comments-main{display:block !important;}.comments .comments-hidden{display:none !important;}background-position:center center;background-attachment:inherit;}
+  </style>
 </head>
+<body class="page-template page-template-user page-template-page-analytics page-template-userpage-analytics-php page page-id-1297 chinese-font serif isWebKit">
 
-    
-    
-<body><header class="header">
-
-    <div class="read-progress"></div>
-    <div class="header-sidebar-menu"></div>
-    <!-- post页的toggle banner  -->
-    
-    <a class="home-link" href="/">Welcome to YaoRemu'Blog</a>
+  <div class="scrollbar" id="bar">
+  </div>
+  <a href="#" class="cd-top faa-float animated"></a>
+  <section id="main-container">
+    <div class="headertop filter-dot">
+  <div id="banner_wave_1"></div>
+  <div id="banner_wave_2"></div>
+  <figure id="centerbg" class="centerbg">
+    <div class="focusinfo no-select">
+      <div class="header-tou">
+        <a href="https://sakura.hojun.cn">
+          <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/custom/avatar.jpg">
+        </a>
+      </div>
+      <div class="header-info">
+        <p>Live your life with passion! With some drive!</p>
+        <div class="top-social_v2">
+          <li id="bg-pre">
+            <img class="flipx" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/next-b.svg">
+          </li>
+          
+            
+              
+                <li>
+                  <a href="http://github.com/honjun" target="_blank" class="social-github" title="github">
+                    <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/social/github.png">
+                  </a>
+                </li>
+              
+            
+              
+                <li>
+                  <a href="http://weibo.com/mashirozx?is_all=1" target="_blank" class="social-github" title="sina">
+                    <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/social/sina.png">
+                  </a>
+                </li>
+              
+            
+              
+                <li>
+                  <a href="http://weibo.com/mashirozx?is_all=1" target="_blank" class="social-github" title="wangyiyun">
+                    <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/social/wangyiyun.png">
+                  </a>
+                </li>
+              
+            
+              
+                <li>
+                  <a href="http://weibo.com/mashirozx?is_all=1" target="_blank" class="social-github" title="zhihu">
+                    <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/social/zhihu.png">
+                  </a>
+                </li>
+              
+            
+              
+                <li>
+                  <a href="http://weibo.com/mashirozx?is_all=1" target="_blank" class="social-github" title="email">
+                    <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/social/email.svg">
+                  </a>
+                </li>
+              
+            
+              
+                <li class="wechat">
+                  <a href="/#">
+                    <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/social/wechat.png">
+                  </a>
+                  <div class="wechatInner">
+                    <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/custom/wechat.jpg">
+                  </div>
+                </li>
+              
+            
+          
+          <li id="bg-next">
+            <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/next-b.svg">
+          </li>
+        </div>
+      </div>
+    </div>
+  </figure>
+  <div id="video-container" style>
+    <video style="object-fit: fill" id="bgvideo" class="video" video-name src width="auto" preload="auto">
+    </video>
+    <div id="video-btn" class="loadvideo videolive">
+    </div>
+    <div id="video-add">
+    </div>
+    <div class="video-stu">
+    </div>
+  </div>
+  <div class="headertop-down faa-float animated" onclick="headertop_down()">
+    <span>
+      <i class="fa fa-chevron-down" aria-hidden="true">
+      </i>
+    </span>
+  </div>
+</div>
+    <div id="page" class="site wrapper">
+      <header class="site-header no-select gizle sabit" role="banner">
+  <div class="site-top">
+    <div class="site-branding">
+      <span class="site-title">
+        <span class="logolink moe-mashiro">
+          <a href="/">
+            <span class="sakurasono">さくら荘その</span>
+            <span class="shironeko">hojun</span>
+          </a>
+        </span>
+      </span>
+    </div>
+    <div class="searchbox search-form-submit">
+      <i class="iconfont js-toggle-search iconsearch icon-search">
+      </i>
+    </div>
+    <div id="show-nav" class="showNav mobile-fit">
+      <div class="line line1">
+      </div>
+      <div class="line line2">
+      </div>
+      <div class="line line3">
+      </div>
+    </div>
+    <div class="lower-cantiner">
+      <div class="lower">
+        <nav class="mobile-fit-control hide">
+          <ul id="menu-new" class="menu">
+            
+              <li>
+                <a href="/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-fort-awesome faa-shake" aria-hidden="true"></i>
+                    首页
+                  </span>
+                </a>
+                
+              </li>
+            
+              <li>
+                <a href="/archives">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-archive faa-shake" aria-hidden="true"></i>
+                    归档
+                  </span>
+                </a>
+                
+                  <ul class="sub-menu">
+                    
+                      <li>
+                        <a href="/categories/技术/">
+                          <i class="fa fa-code" aria-hidden="true"></i>
+                          技术
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/categories/生活/">
+                          <i class="fa fa-file-text-o" aria-hidden="true"></i>
+                          生活
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/categories/资源/">
+                          <i class="fa fa-cloud-download" aria-hidden="true"></i>
+                          资源
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/categories/随想/">
+                          <i class="fa fa-commenting-o" aria-hidden="true"></i>
+                          随想
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/categories/转载/">
+                          <i class="fa fa-book" aria-hidden="true"></i>
+                          转载
+                        </a>
+                      </li>
+                    
+                  </ul>
+                
+              </li>
+            
+              <li>
+                <a href="javascript:;">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-list-ul faa-vertical" aria-hidden="true"></i>
+                    清单
+                  </span>
+                </a>
+                
+                  <ul class="sub-menu">
+                    
+                      <li>
+                        <a href="/tags/悦读/">
+                          <i class="fa fa-th-list faa-bounce" aria-hidden="true"></i>
+                          书单
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/bangumi/">
+                          <i class="fa fa-film faa-vertical" aria-hidden="true"></i>
+                          番组
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/music/">
+                          <i class="fa fa-headphones" aria-hidden="true"></i>
+                          歌单
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/tags/图集/">
+                          <i class="fa fa-photo" aria-hidden="true"></i>
+                          图集
+                        </a>
+                      </li>
+                    
+                  </ul>
+                
+              </li>
+            
+              <li>
+                <a href="/comment/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-pencil-square-o faa-tada" aria-hidden="true"></i>
+                    留言板
+                  </span>
+                </a>
+                
+              </li>
+            
+              <li>
+                <a href="/links/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-link faa-shake" aria-hidden="true"></i>
+                    友人帐
+                  </span>
+                </a>
+                
+              </li>
+            
+              <li>
+                <a href="/donate/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-heart faa-pulse" aria-hidden="true"></i>
+                    赞赏
+                  </span>
+                </a>
+                
+              </li>
+            
+              <li>
+                <a href="/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-leaf faa-wrench" aria-hidden="true"></i>
+                    关于
+                  </span>
+                </a>
+                
+                  <ul class="sub-menu">
+                    
+                      <li>
+                        <a href="/about/">
+                          <i class="fa fa-meetup" aria-hidden="true"></i>
+                          我？
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/theme-sakura/">
+                          <i class="fa iconfont icon-sakura" aria-hidden="true"></i>
+                          主题
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/lab/">
+                          <i class="fa fa-cogs" aria-hidden="true"></i>
+                          Lab
+                        </a>
+                      </li>
+                    
+                  </ul>
+                
+              </li>
+            
+              <li>
+                <a href="/client/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-android faa-vertical" aria-hidden="true"></i>
+                    客户端
+                  </span>
+                </a>
+                
+              </li>
+            
+              <li>
+                <a href="/atom.xml">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-rss faa-pulse" aria-hidden="true"></i>
+                    RSS
+                  </span>
+                </a>
+                
+              </li>
+            
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
 </header>
-    <div class="wrapper">
-        <div class="site-intro" style="
 
+      <div class="blank" style="padding-top: 75px;">
+</div>
+<div id="content" class="site-content">
+  <div id="main">
+    <header class="page-header">
+      <h1 class="cat-title">
+      归档</h1>
+      <span class="cat-des">
+        <p>
+        Archives</p>
+      </span>
+    </header>
+    <div id="main-part">
+      <article class="art">
+        <div class="art-main">
+          <div class="art-content">
+            <div id="archives">
+              <p style="text-align:right;">
+                [<span id="al_expand_collapse" style="cursor: s-resize;">
+                全部展开/收缩</span>
+              ]</p>
+              
+              
+              
+              
+              
+                
+                <h3 class="al_year">2019年</h3>
+              
+              
+                
+                <ul class="al_mon_list">
+                  <li class="al_li">
+                    <span class="al_mon" style="cursor: s-resize;">
+                      04月(<span id="post-num">
+                      3</span>
+                    篇文章)</span>
+                    <ul class="al_post_list" style>
+              
+                      <li>
+                        <a href="/2019/04/30/Vue-js第三课/">
+                          <span style="color:#0bf;">
+                          30日12:44:06</span>
+                          Vue-js第三课
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/04/29/媒体对象/">
+                          <span style="color:#0bf;">
+                          29日17:22:11</span>
+                          媒体对象（评论模块）
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/04/29/导航条/">
+                          <span style="color:#0bf;">
+                          29日15:59:43</span>
+                          导航条
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/04/28/透视/">
+                          <span style="color:#0bf;">
+                          28日21:00:26</span>
+                          透视
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/04/28/导航/">
+                          <span style="color:#0bf;">
+                          28日16:52:40</span>
+                          导航
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/04/28/Bootstrap输入框组/">
+                          <span style="color:#0bf;">
+                          28日15:31:48</span>
+                          Bootstrap输入框组
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/04/28/文件和目录常用命令/">
+                          <span style="color:#0bf;">
+                          28日14:40:28</span>
+                          文件和目录常用命令
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/04/28/Linux终端命令格式/">
+                          <span style="color:#0bf;">
+                          28日12:37:52</span>
+                          Linux终端命令格式
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/04/27/按钮组/">
+                          <span style="color:#0bf;">
+                          27日16:23:27</span>
+                          按钮组
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/04/27/常用Linux命令的基本使用/">
+                          <span style="color:#0bf;">
+                          27日12:39:07</span>
+                          常用Linux命令的基本使用
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/04/27/Ubuntu图形界面入门/">
+                          <span style="color:#0bf;">
+                          27日12:19:56</span>
+                          Ubuntu图形界面入门
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/04/26/下拉菜单/">
+                          <span style="color:#0bf;">
+                          26日20:53:45</span>
+                          下拉菜单
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/04/26/文件和目录（理解）/">
+                          <span style="color:#0bf;">
+                          26日13:00:57</span>
+                          文件和目录（理解）
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/04/25/HTML5编辑API之Range对象/">
+                          <span style="color:#0bf;">
+                          25日20:19:29</span>
+                          HTML5编辑API之Range对象
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/04/25/按钮和图片/">
+                          <span style="color:#0bf;">
+                          25日16:28:47</span>
+                          按钮和图片
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/04/24/Bootstrap-CSS表单、按钮和图片/">
+                          <span style="color:#0bf;">
+                          24日16:19:31</span>
+                          Bootstrap CSS表单、按钮和图片
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/04/24/操作系统（科普章节）/">
+                          <span style="color:#0bf;">
+                          24日12:24:14</span>
+                          操作系统（科普章节）
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/04/23/Bootstrap-CSS栅格、代码和表格/">
+                          <span style="color:#0bf;">
+                          23日08:20:14</span>
+                          Bootstrap CSS栅格、代码和表格
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/04/22/全局CSS样式-排版/">
+                          <span style="color:#0bf;">
+                          22日15:46:44</span>
+                          全局CSS样式-排版
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/04/22/入门例子创建/">
+                          <span style="color:#0bf;">
+                          22日15:03:22</span>
+                          入门例子创建
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/04/22/素描/">
+                          <span style="color:#0bf;">
+                          22日13:39:19</span>
+                          素描
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/04/22/HTML5增强的页面元素/">
+                          <span style="color:#0bf;">
+                          22日12:18:39</span>
+                          HTML5增强的页面元素
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/04/21/Bootstrap简介/">
+                          <span style="color:#0bf;">
+                          21日17:18:58</span>
+                          Bootstrap简介
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/04/21/Vue-js第二课/">
+                          <span style="color:#0bf;">
+                          21日14:19:57</span>
+                          Vue.js第二课
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/04/20/表单新增的元素与属性（五）/">
+                          <span style="color:#0bf;">
+                          20日19:44:30</span>
+                          表单新增的元素与属性（五）
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/04/19/Vue-js第一课/">
+                          <span style="color:#0bf;">
+                          19日19:03:29</span>
+                          Vue.js第一课
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/04/19/表单新增的元素与属性（四）/">
+                          <span style="color:#0bf;">
+                          19日16:00:33</span>
+                          表单新增的元素与属性（四）
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/04/18/表单新增的元素与属性（三）/">
+                          <span style="color:#0bf;">
+                          18日16:13:44</span>
+                          表单新增的元素与属性（三）
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/04/18/PHP生成验证码/">
+                          <span style="color:#0bf;">
+                          18日12:13:26</span>
+                          PHP生成验证码
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/04/17/表单新增的元素与属性（二）/">
+                          <span style="color:#0bf;">
+                          17日16:46:01</span>
+                          表单新增的元素与属性（二）
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/04/16/环回接口（Loopback）/">
+                          <span style="color:#0bf;">
+                          16日11:45:08</span>
+                          环回接口（Loopback）
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/04/16/RIPv1基本配置/">
+                          <span style="color:#0bf;">
+                          16日11:16:40</span>
+                          RIPv1基本配置
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/04/16/RIP概述/">
+                          <span style="color:#0bf;">
+                          16日10:56:07</span>
+                          RIP概述
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/04/15/表单新增的元素与属性/">
+                          <span style="color:#0bf;">
+                          15日20:07:40</span>
+                          表单新增的元素与属性
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/04/15/Valine-访问被api域名白名单拒绝/">
+                          <span style="color:#0bf;">
+                          15日17:01:37</span>
+                          Valine-访问被api域名白名单拒绝
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/04/15/为博客添加域名/">
+                          <span style="color:#0bf;">
+                          15日16:32:11</span>
+                          为博客添加域名
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/04/14/新增的非主体结构元素（一）/">
+                          <span style="color:#0bf;">
+                          14日16:17:09</span>
+                          新增的非主体结构元素（一）
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/04/14/新增的主题结构元素（七）/">
+                          <span style="color:#0bf;">
+                          14日15:49:26</span>
+                          新增的主题结构元素（七）
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/04/14/新增的主题结构元素（六）/">
+                          <span style="color:#0bf;">
+                          14日14:42:30</span>
+                          新增的主题结构元素（六）
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/04/13/新增的主题结构元素（五）/">
+                          <span style="color:#0bf;">
+                          13日20:25:46</span>
+                          新增的主题结构元素（五）
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/04/13/新增的主题结构元素（四）/">
+                          <span style="color:#0bf;">
+                          13日19:48:11</span>
+                          新增的主题结构元素（四）
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/04/12/新增的主题结构元素（三）/">
+                          <span style="color:#0bf;">
+                          12日14:24:38</span>
+                          新增的主题结构元素（三）
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/04/12/新增的主题结构元素（二）/">
+                          <span style="color:#0bf;">
+                          12日13:41:59</span>
+                          新增的主题结构元素（二）
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/04/11/新增的主题结构元素（一）/">
+                          <span style="color:#0bf;">
+                          11日13:44:09</span>
+                          新增的主题结构元素（一）
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/04/11/新增的元素和废除的元素/">
+                          <span style="color:#0bf;">
+                          11日12:11:36</span>
+                          新增的元素和废除的元素
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/04/10/HTML5与HTML4区别/">
+                          <span style="color:#0bf;">
+                          10日17:53:56</span>
+                          HTML5与HTML4区别
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/04/10/前端学习-全局属性/">
+                          <span style="color:#0bf;">
+                          10日17:08:19</span>
+                          全局属性
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/04/10/MarkDown进阶操作/">
+                          <span style="color:#0bf;">
+                          10日16:26:46</span>
+                          MarkDown进阶操作
+                        </a>
+                      </li>
+                      
+                    </ul>
+                  </li>
+                </ul>
+              
+              
+              
+              
+              
+              
+                
+                <ul class="al_mon_list">
+                  <li class="al_li">
+                    <span class="al_mon" style="cursor: s-resize;">
+                      03月(<span id="post-num">
+                      3</span>
+                    篇文章)</span>
+                    <ul class="al_post_list" style>
+              
+                      <li>
+                        <a href="/2019/03/31/网络端口地址转换NAPT配置/">
+                          <span style="color:#0bf;">
+                          31日17:58:35</span>
+                          网络端口地址转换NAPT配置
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/03/30/网络地址转换NAT配置/">
+                          <span style="color:#0bf;">
+                          30日15:12:04</span>
+                          网络地址转换NAT配置
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/03/29/扩展IP访问控制列表配置/">
+                          <span style="color:#0bf;">
+                          29日18:14:23</span>
+                          扩展IP访问控制列表配置
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/03/28/标准-IP-访问控制列表配置/">
+                          <span style="color:#0bf;">
+                          28日15:50:17</span>
+                          标准 IP 访问控制列表配置
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/03/28/OSPF、RIP小记/">
+                          <span style="color:#0bf;">
+                          28日15:08:27</span>
+                          OSPF、RIP小记
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/03/27/路由器综合路由配置/">
+                          <span style="color:#0bf;">
+                          27日15:50:26</span>
+                          路由器综合路由配置
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/03/26/路由器OSPF动态路由配置/">
+                          <span style="color:#0bf;">
+                          26日08:47:01</span>
+                          路由器OSPF动态路由配置
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/03/25/路由器RIP动态路由配置/">
+                          <span style="color:#0bf;">
+                          25日14:08:52</span>
+                          路由器RIP动态路由配置
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/03/24/路由器静态路由配置/">
+                          <span style="color:#0bf;">
+                          24日08:13:41</span>
+                          路由器静态路由配置
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/03/23/路由器单臂路由配置/">
+                          <span style="color:#0bf;">
+                          23日08:20:40</span>
+                          路由器单臂路由配置
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/03/22/快速生成树配置/">
+                          <span style="color:#0bf;">
+                          22日13:34:22</span>
+                          快速生成树配置
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/03/21/利用三层交换机实现Vlan间路由/">
+                          <span style="color:#0bf;">
+                          21日19:39:02</span>
+                          利用三层交换机实现Vlan间路由
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/03/20/cisco多交换机之间的端口聚合链路/">
+                          <span style="color:#0bf;">
+                          20日14:17:27</span>
+                          cisco多交换机之间的端口聚合链路
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/03/19/cisco多交换机上配置基于端口的Vlan隔离办公网络/">
+                          <span style="color:#0bf;">
+                          19日18:07:32</span>
+                          cisco多交换机上配置基于端口的Vlan隔离办公网络
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/03/18/MarkDown基础教学/">
+                          <span style="color:#0bf;">
+                          18日16:00:05</span>
+                          MarkDown基础教学
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/03/18/ciscoTelnet/">
+                          <span style="color:#0bf;">
+                          18日16:00:05</span>
+                          No3. Telnet
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/03/17/MySql服务安装/">
+                          <span style="color:#0bf;">
+                          17日15:52:24</span>
+                          MySql服务安装
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/03/16/简介/">
+                          <span style="color:#0bf;">
+                          16日21:04:18</span>
+                          关于我的博客
+                        </a>
+                      </li>
+                      
+                    </ul>
+                  </li>
+                </ul>
+              
+              
+            </div>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</div>
 
-
-
-
-
-">
-    
-    <!-- 主页  -->
-            
-    <div class="site-intro-placeholder"></div>
-    <div class="site-intro-img" style="background-image: url(/)"></div>
-    <div class="site-intro-meta">
-        <!-- 标题  -->
-        <h1 class="intro-title">
-            <!-- 主页  -->
-            
-        </h1>
-        <!-- 副标题 -->
-        <p class="intro-subtitle">
-            <!-- 主页副标题  -->
-            
-        </p>
-        <!-- 文章页meta -->
-        
+    </div>    
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something...">
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
     </div>
 </div>
-        <script>
- 
-  // get user agent
-  var browser = {
-    versions: function () {
-      var u = window.navigator.userAgent;
-      return {
-        userAgent: u,
-        trident: u.indexOf('Trident') > -1, //IE内核
-        presto: u.indexOf('Presto') > -1, //opera内核
-        webKit: u.indexOf('AppleWebKit') > -1, //苹果、谷歌内核
-        gecko: u.indexOf('Gecko') > -1 && u.indexOf('KHTML') == -1, //火狐内核
-        mobile: !!u.match(/AppleWebKit.*Mobile.*/), //是否为移动终端
-        ios: !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/), //ios终端
-        android: u.indexOf('Android') > -1 || u.indexOf('Linux') > -1, //android终端或者uc浏览器
-        iPhone: u.indexOf('iPhone') > -1 || u.indexOf('Mac') > -1, //是否为iPhone或者安卓QQ浏览器
-        iPad: u.indexOf('iPad') > -1, //是否为iPad
-        webApp: u.indexOf('Safari') == -1, //是否为web应用程序，没有头部与底部
-        weixin: u.indexOf('MicroMessenger') == -1, //是否为微信浏览器
-        uc: u.indexOf('UCBrowser') > -1 //是否为android下的UC浏览器
-      };
-    }()
-  }
-  console.log("userAgent:" + browser.versions.userAgent);
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Posts',
+            // PAGES: 'Pages',
+            CATEGORIES: 'Categories',
+            TAGS: 'Tags',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+    <!-- <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2019 YaoRemu<br>
+      powered_by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer> -->
+<footer id="colophon" class="site-footer" role="contentinfo">
+  <div class="site-info">
+    <div class="footertext">
+      <div class="img-preload">
+        <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/wordpress-rotating-ball-o.svg">
+        <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/disqus-preloader.svg">
+      </div>
+      <p style="color: #666666;">© 2018</p>
+    </div>
+    <div class="footer-device">
+    <p style="font-family: 'Ubuntu', sans-serif;">
+        <span style="color: #b9b9b9;">Theme <a href="https://github.com/honjun/hexo-theme-sakura" target="_blank" style="color: #b9b9b9;;text-decoration: underline dotted rgba(0, 0, 0, .1);">Sakura</a> <i class="iconfont icon-sakura rotating" style="color: #ffc0cb;display:inline-block"></i> by <a href="https://2heng.xin/" target="_blank" style="color: #b9b9b9;;text-decoration: underline dotted rgba(0, 0, 0, .1);">Mashiro</a>&<a href="https://www.hojun.cn/" target="_blank" style="color: #b9b9b9;;text-decoration: underline dotted rgba(0, 0, 0, .1);">Hojun</a>, Powered by Hexo, Hosted by Coding Pages
+        </span>
+      </p>
+    </div>
+  </div><!-- .site-info -->
+</footer>
 
-  // callback
-  function fontLoaded() {
-    console.log('font loaded');
-    if (document.getElementsByClassName('site-intro-meta')) {
-      document.getElementsByClassName('intro-title')[0].classList.add('intro-fade-in');
-      document.getElementsByClassName('intro-subtitle')[0].classList.add('intro-fade-in');
-      var postIntros = document.getElementsByClassName('post-intros')[0]
-      if (postIntros) {
-        postIntros.classList.add('post-fade-in');
+
+
+<!-- <script src="/js/tocbot.js"></script> -->
+<script type="text/javascript" src="/js/lib.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+<script type="text/javascript" src="/js/InsightSearch.js"></script>
+<script type="text/javascript" src="/js/jquery.fancybox.min.js"></script>
+<script type="text/javascript" src="/js/zoom.min.js"></script>
+<script type="text/javascript" src="/js/sakura-app.js"></script>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src="//unpkg.com/valine@1.3.4/dist/Valine.min.js"></script>
+<!-- 不蒜子 网页计数器 -->
+<script src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.min.js"></script> -->
+<script type="text/javascript">
+/* <![CDATA[ */
+if (/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
+  var Poi = {"pjax":"1","movies":{"url": "https://cdn.jsdelivr.net/gh/honjun/hojun@1.2","name":"Unbroken.mp4","live":"close"},"windowheight":"fixed","codelamp":"close","ajaxurl":"","order":"asc","formpostion":"bottom"};
+} else {
+  var Poi = {"pjax":"1","movies":{"url": "https://cdn.jsdelivr.net/gh/honjun/hojun@1.2","name":"Unbroken.mp4","live":"open"},"windowheight":"auto","codelamp":"close","ajaxurl":"","order":"asc","formpostion":"bottom"};
+}
+/* ]]> */
+
+</script>
+<script>
+$(document).ready(function() {
+  if ($(".toc").length > 0 && document.body.clientWidth > 1200) {
+    if ($(".pattern-center").length > 0) { //有图的情况
+      tocbot.init({
+          // Where to render the table of contents.
+          tocSelector: '.toc', // 放置目录的容器
+          // Where to grab the headings to build the table of contents.
+          contentSelector: '.entry-content', // 正文内容所在
+          // Which headings to grab inside of the contentSelector element.
+          scrollSmooth: true,
+          headingSelector: 'h1, h2, h3, h4, h5', // 需要索引的标题级别
+          headingsOffset: -400,
+          scrollSmoothOffset: -85
+      });
+    } else {
+      tocbot.init({
+          // Where to render the table of contents.
+          tocSelector: '.toc', // 放置目录的容器
+          // Where to grab the headings to build the table of contents.
+          contentSelector: '.entry-content', // 正文内容所在
+          // Which headings to grab inside of the contentSelector element.
+          scrollSmooth: true,
+          headingSelector: 'h1, h2, h3, h4, h5', // 需要索引的标题级别
+          headingsOffset: -85,
+          scrollSmoothOffset: -85
+      });
+    }
+    var offsetTop = $('.toc').offset().top - 95;
+    window.onscroll = function() {
+      var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
+      if (scrollTop >= offsetTop) {
+        $('.toc').addClass('toc-fixed');
+      } else {
+        $('.toc').removeClass('toc-fixed');
       }
     }
   }
+});
+</script>
 
-  // UC不支持跨域，所以直接显示
-  function asyncCb(){
-    if (browser.versions.uc) {
-      console.log("UCBrowser");
-      fontLoaded();
-    } else {
-      WebFont.load({
-        custom: {
-          families: ['Oswald-Regular']
-        },
-        loading: function () {  //所有字体开始加载
-          // console.log('loading');
-        },
-        active: function () {  //所有字体已渲染
-          fontLoaded();
-        },
-        inactive: function () { //字体预加载失败，无效字体或浏览器不支持加载
-          console.log('inactive: timeout');
-          fontLoaded();
-        },
-        timeout: 5000 // Set the timeout to two seconds
-      });
-    }
-  }
-
-  function asyncErr(){
-    console.warn('script load from CDN failed, will load local script')
-  }
-
-  // load webfont-loader async, and add callback function
-  function async(u, cb, err) {
-    var d = document, t = 'script',
-      o = d.createElement(t),
-      s = d.getElementsByTagName(t)[0];
-    o.src = u;
-    if (cb) { o.addEventListener('load', function (e) { cb(null, e); }, false); }
-    if (err) { o.addEventListener('error', function (e) { err(null, e); }, false); }
-    s.parentNode.insertBefore(o, s);
-  }
-
-  var asyncLoadWithFallBack = function(arr, success, reject) {
-      var currReject = function(){
-        reject()
-        arr.shift()
-        if(arr.length)
-          async(arr[0], success, currReject)
-        }
-
-      async(arr[0], success, currReject)
-  }
-
-  asyncLoadWithFallBack([
-    "https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.min.js", 
-    "https://cdn.bootcss.com/webfont/1.6.28/webfontloader.js",
-    "/lib/webfontloader.min.js"
-  ], asyncCb, asyncErr)
-</script>        
-        <img class="loading" src="/assets/loading.svg" style="display: block; margin: 6rem auto 0 auto; width: 6rem; height: 6rem;">
-        <div class="container container-unloaded">
-            <main class="main index-page">
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/2019/04/22/素描/">
-            
-                <span>素描</span>
-        </a>
-        <div class="abstract-content">
-            如何排线握笔姿势将铅笔放在四根手指的上面，大拇指盖住它，食指和拇指用力，剩余的三根手指收起，握住笔
-eg:
-
-
-注意： 握笔千万不要太用力，要保持一个放松的状态，让自己的手腕保持放松（软下来）
-
-排线手法运腕法最基本的排线手法； 排线过程中是手腕在运动，整个手凌空于整个画面之上，并没有压在画面上去画
-要点
-靠手腕的力量去运动，快速的铺出均匀而密集的线条
-
-
-运腕法多用于 大面积 的绘画
-
-eg:
-
-
-注意： 线条不是来回的画，每一根线条都是独立的
-
-小拇指支撑运腕法使用上面讲述的握笔姿势，将小拇指提出来，顶在画面上
-特点
-边缘整齐
-画出线条的力道比运腕法更大 
-线条更加的密集
-
-
-小拇指...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2019/04/22</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class="abstract-tags">
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="画画">画画</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/2019/04/22/HTML5增强的页面元素/">
-            
-                <span>HTML5增强的页面元素</span>
-        </a>
-        <div class="abstract-content">
-            课程概要
-新增的 figure元素、 figcaption元素
-新增的 details元素与 summary元素
-新增的 mark元素
-新增的 progress元素
-新增的 meter元素
-改良的 ol列表
-改良的 dl列表
-加以严格限制的 cite元素 和重新定义的 small元素
-
-figure元素 以及 figcaption元素figure元素figure元素是一种组合元素，带有可选标题，figure元素用来表示网页上的一块独立的内容，将其从网页上移除之后，不会对网页的其他内容产生影响，figure元素 所表示的内容可以是图片、统计图或者是代码示例等
-figcaption元素表示 ...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2019/04/22</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class="abstract-tags">
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="【极客】前端学习">【极客】前端学习</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/2019/04/21/Bootstrap简介/">
-            
-                <span>Bootstrap简介</span>
-        </a>
-        <div class="abstract-content">
-            Bootstrap介绍
-Bootstrap 是最受欢迎的 HTML 、CSS 、JS 的框架，用于开发响应式布局，移动设备优先的Web项目
-
-Bootstrap 是为所有开发者，所有应用场景而设计的， Bootstrap 的前端是让开发更加快速，简单。所有的开发者都能快速上手、所有的功能都能适配、所有的项目都适用
-
-
-三个优点
-预处理脚本： 虽然我们可以直接使用 Bootstrap 提供的 CSS 样式表，但是 Bootstrap 的源码是基于最流行的 CSS 预处理脚本 Less 和Sass，你可以采用预编译的 CSS 文件快速开发，也可以从源码中定制自己需要的样式
-
-响应式布局： 一...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2019/04/21</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class="abstract-tags">
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="【极客】前端学习">【极客】前端学习</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/2019/04/21/Vue-js第二课/">
-            
-                <span>Vue.js第二课</span>
-        </a>
-        <div class="abstract-content">
-            知识点梳理
-过滤器
-键盘修饰符以及自定义键盘修饰符
-自定义指令
-vue实例的生命周期
-vue-resource 实现 get、 post、 jsonp 请求
-Vue中的动画
-
-数组的新方法forEach、 somw 、 filter 、 findIndex、 这些都是数组的新方法，都会对数组中的每一项进行遍历，执行相关操作
-不同之处
-forEach： 无法被中止
-some： 可以通过 return true 中止
-filter： 进行过滤，把符合条件的，返回得到一个新数组
-findIndex： 找到对应对象的索引
-
-过滤器概念 Vue.js 允许你自定义过滤器，可以用作一些常见的文本格式...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2019/04/21</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class="abstract-tags">
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="前端知识">前端知识</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/2019/04/20/表单新增的元素与属性（五）/">
-            
-                <span>表单新增的元素与属性（五）</span>
-        </a>
-        <div class="abstract-content">
-            在HTML5中，大幅度的增加了与改良了input元素的种类，可以简单的使用元素来实现HTML5之前需要使用JavaScript脚本才能实现的许多功能
-增加与改良的input元素
-url类型、emali类型、date类型、time类型、datetime类型、datetime-local类型、month类型、week类型、number类型、range类型、search类型、Tel类型、color类型
-
-url类型如果提交的不是一个网址，则会弹出提示请求输入网址,达到了一个检验的效果
-1234		
-eg:
-
-email类型email的input元素是一种专门用来输入email地址的文本框，如果...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2019/04/20</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class="abstract-tags">
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="【极客】前端学习">【极客】前端学习</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/2019/04/19/Vue-js第一课/">
-            
-                <span>Vue.js第一课</span>
-        </a>
-        <div class="abstract-content">
-            什么是Vue.js
-Vue.js是目前最火的一个前端框架，React是最流行的一个前端框架（React除了开发网站，还可以开发手机App；Vue语法也是可以用于进行手机App开发的，需要借助于Weex）
-
-Vue.js是最前端主流框架之一，和Angular.js、React.js一起，并成为前端三大主流框架
-
-Vue.js是一套构建用户界面的框架，值关注视图图层，它不仅易与上手，还便于与第三方库或既有项目整合。（Vue有配套的第三方类库，可以整合起来做大型项目的开发）
-
-前端的主要工作？主要负责MVC中的V这一层，主要的工作就是和界面打交道
-
-
-为什么要学习流行框架
-企业为了提高开发效率...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2019/04/19</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class="abstract-tags">
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="前端知识">前端知识</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/2019/04/19/表单新增的元素与属性（四）/">
-            
-                <span>表单新增的元素与属性（四）</span>
-        </a>
-        <div class="abstract-content">
-            文本框的list属性在HTML5中，为单行文本框增加了一个list属性，该属性的值为某个datalist元素的id。datalist元素也是HTML5中新增的元素，该元素类似于选择框，但是用户想要设定的值不在选项列表之内时，允许自行输入。datalist元素本身并不显示，而是当文本框获得焦点时以提示输入的方式显示。(类似于下拉菜单)
-123456789				HTML5学习		Android学习		IOS学习	
-
-datalist属性默认是看不到的，但是为了在每个浏览器中兼容，所以还是自己设置style的display属性
-
-eg:
-
-文本框的autocomplete属性帮助输入所用的自...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2019/04/19</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class="abstract-tags">
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="【极客】前端学习">【极客】前端学习</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/2019/04/18/表单新增的元素与属性（三）/">
-            
-                <span>表单新增的元素与属性（三）</span>
-        </a>
-        <div class="abstract-content">
-            标签的control属性在HTML5中，可以在标签内部放置一个表单元素，并且通过该标签的control属性来访问该表单元素
-1234567891011121314151617	function setValue(){		var label = document.getElementById("label");		var textbox = label.control;		textbox.value="010010";	}			邮箱：				请输入六为数字		
-文本框的placeholder属性placeholder是指当前文本框处于未输入状态时显示的输入提示。当文本框处于未输入状态且未获...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2019/04/18</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class="abstract-tags">
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="【极客】前端学习">【极客】前端学习</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/2019/04/18/PHP生成验证码/">
-            
-                <span>PHP生成验证码</span>
-        </a>
-        <div class="abstract-content">
-            代码部分form.php文件
-12345678910111213if (isset($_REQUEST['authcode'])) {	session_start();	if (strtolower($_REQUEST['authcode'])==$_SESSION['authcode']) {		echo' 输出正确';		# code...	}else{		echo $_REQUEST['authcode'];		echo $_SESSION['authcode'];		echo' 输出错误';	}	exit();}
-
-本段代码的解析：先接受session值，将提交的值与验证码比较，...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2019/04/18</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class="abstract-tags">
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="PHP相关知识">PHP相关知识</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/2019/04/17/表单新增的元素与属性（二）/">
-            
-                <span>表单新增的元素与属性（二）</span>
-        </a>
-        <div class="abstract-content">
-            formtarget属性在HTML4中，表单元素具有一个target属性，该属性用于指定在何处打开表单提交后所需要加载的页面。
-在HTML5中，可以对多个按钮分别使用formtarget属性来指定提交后在何处打开所需加载的页面。
-123456789101112	提交到xx.jsp页面	提交到xx.jsp页面	提交到xx.jsp页面	提交到xx.jsp页面	提交到xx.jsp页面< /form>< /form>
-formtarget的五个属性
-_blank：在新的浏览器页面或窗口进行打开
-
-
-_self：target属性的默认值，在相同的框架frame中打开
-
-
-_parent：在当前框架...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2019/04/17</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class="abstract-tags">
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="【极客】前端学习">【极客】前端学习</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    <!-- paginator  -->
-    
-    <nav class="page-nav">
-        <a class="extend prev" rel="prev" href="/archives/page/2/">< PREV</a><a class="page-number" href="/archives/">1</a><a class="page-number" href="/archives/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/archives/page/4/">4</a><a class="page-number" href="/archives/page/5/">5</a><span class="space">…</span><a class="page-number" href="/archives/page/7/">7</a><a class="extend next" rel="next" href="/archives/page/4/">NEXT ></a>
-    </nav>
-    
-</main>
-            <!-- profile -->
-            
-        </div>
-        <footer class="footer footer-unloaded">
-    <!-- social  -->
-    
-    <div class="social">
-        
-    
-        
-            
-                <span class="iconfont-archer wechat" title="wechat">
-                  
-                  <img class="profile-qr" src="http://ww1.sinaimg.cn/large/8c0b2220gy1g1aea5wfucg208c08cjrx.gif">
-                </span>
-            
-        
-    
-        
-            
-                <span class="iconfont-archer qq" title="qq">
-                  
-                  <img class="profile-qr" src="http://ww1.sinaimg.cn/large/8c0b2220gy1g1aeafzefgg208c08caba.gif">
-                </span>
-            
-        
-    
-        
-            
-                <a href="https://www.weibo.com/u/2349539872?sudaref=s.weibo.com&display=0&retcode=6102&is_all=1" class="iconfont-archer weibo" target="_blank" title="weibo"></a>
-            
-        
-    
-        
-            
-                <a href="https://YaoRemu.github.io" class="iconfont-archer github" target="_blank" title="github"></a>
-            
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-
+    <div class="openNav no-select" style="height: 50px;">
+      <div class="iconflat no-select" style="width: 50px; height: 50px;">
+        <div class="icon"></div>
+      </div>
+      <div class="site-branding search-form-submit">
+        <i class="iconfont js-toggle-search iconsearch icon-search"></i>
+      </div>
     </div>
-    
-    <!-- powered by Hexo  -->
-
-    <!-- 不蒜子  -->
-    
-    <div class="busuanzi-container">
-    
-     
-    <span id="busuanzi_container_site_pv">PV: <span id="busuanzi_value_site_pv"></span> :)</span>
-    
-    </div>
-    
-</footer>
-    </div>
-    <!-- toc -->
-    
-    <div class="back-top iconfont-archer"></div>
-    <div class="sidebar sidebar-hide">
-    <ul class="sidebar-tabs sidebar-tabs-active-0">
-        <li class="sidebar-tab-archives"><span class="iconfont-archer"></span><span class="tab-name">Archive</span></li>
-        <li class="sidebar-tab-tags"><span class="iconfont-archer"></span><span class="tab-name">Tag</span></li>
-        <li class="sidebar-tab-categories"><span class="iconfont-archer"></span><span class="tab-name">Cate</span></li>
-    </ul>
-    <div class="sidebar-content sidebar-content-show-archive">
-          <div class="sidebar-panel-archives">
-    <!-- 在ejs中将archive按照时间排序 -->
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    <div class="total-and-search">
-        <div class="total-archive">
-        Total : 66
-        </div>
-        <!-- search  -->
-        
-    </div>
-    
-    <div class="post-archive">
-    
-    
-    
-    
-    <div class="archive-year"> Invalid date </div>
-    <ul class="year-list">
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href="/2019/03/16/简介/">关于我的博客</a>
-        </li>
-    
-    
-    
-    
-    
-        </ul>
-    
-    <div class="archive-year"> 2019 </div>
-    <ul class="year-list">
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">04/30</span><a class="archive-post-title" href="/2019/04/30/Vue-js第三课/">Vue-js第三课</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">04/29</span><a class="archive-post-title" href="/2019/04/29/媒体对象/">媒体对象（评论模块）</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">04/29</span><a class="archive-post-title" href="/2019/04/29/导航条/">导航条</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">04/28</span><a class="archive-post-title" href="/2019/04/28/透视/">透视</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">04/28</span><a class="archive-post-title" href="/2019/04/28/导航/">导航</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">04/28</span><a class="archive-post-title" href="/2019/04/28/Bootstrap输入框组/">Bootstrap输入框组</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">04/28</span><a class="archive-post-title" href="/2019/04/28/文件和目录常用命令/">文件和目录常用命令</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">04/28</span><a class="archive-post-title" href="/2019/04/28/Linux终端命令格式/">Linux终端命令格式</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">04/27</span><a class="archive-post-title" href="/2019/04/27/按钮组/">按钮组</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">04/27</span><a class="archive-post-title" href="/2019/04/27/常用Linux命令的基本使用/">常用Linux命令的基本使用</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">04/27</span><a class="archive-post-title" href="/2019/04/27/Ubuntu图形界面入门/">Ubuntu图形界面入门</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">04/26</span><a class="archive-post-title" href="/2019/04/26/下拉菜单/">下拉菜单</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">04/26</span><a class="archive-post-title" href="/2019/04/26/文件和目录（理解）/">文件和目录（理解）</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">04/25</span><a class="archive-post-title" href="/2019/04/25/HTML5编辑API之Range对象/">HTML5编辑API之Range对象</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">04/25</span><a class="archive-post-title" href="/2019/04/25/按钮和图片/">按钮和图片</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">04/24</span><a class="archive-post-title" href="/2019/04/24/Bootstrap-CSS表单、按钮和图片/">Bootstrap CSS表单、按钮和图片</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">04/24</span><a class="archive-post-title" href="/2019/04/24/操作系统（科普章节）/">操作系统（科普章节）</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">04/23</span><a class="archive-post-title" href="/2019/04/23/Bootstrap-CSS栅格、代码和表格/">Bootstrap CSS栅格、代码和表格</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">04/22</span><a class="archive-post-title" href="/2019/04/22/全局CSS样式-排版/">全局CSS样式-排版</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">04/22</span><a class="archive-post-title" href="/2019/04/22/入门例子创建/">入门例子创建</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">04/22</span><a class="archive-post-title" href="/2019/04/22/素描/">素描</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">04/22</span><a class="archive-post-title" href="/2019/04/22/HTML5增强的页面元素/">HTML5增强的页面元素</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">04/21</span><a class="archive-post-title" href="/2019/04/21/Bootstrap简介/">Bootstrap简介</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">04/21</span><a class="archive-post-title" href="/2019/04/21/Vue-js第二课/">Vue.js第二课</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">04/20</span><a class="archive-post-title" href="/2019/04/20/表单新增的元素与属性（五）/">表单新增的元素与属性（五）</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">04/19</span><a class="archive-post-title" href="/2019/04/19/Vue-js第一课/">Vue.js第一课</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">04/19</span><a class="archive-post-title" href="/2019/04/19/表单新增的元素与属性（四）/">表单新增的元素与属性（四）</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">04/18</span><a class="archive-post-title" href="/2019/04/18/表单新增的元素与属性（三）/">表单新增的元素与属性（三）</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">04/18</span><a class="archive-post-title" href="/2019/04/18/PHP生成验证码/">PHP生成验证码</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">04/17</span><a class="archive-post-title" href="/2019/04/17/表单新增的元素与属性（二）/">表单新增的元素与属性（二）</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">04/16</span><a class="archive-post-title" href="/2019/04/16/环回接口（Loopback）/">环回接口（Loopback）</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">04/16</span><a class="archive-post-title" href="/2019/04/16/RIPv1基本配置/">RIPv1基本配置</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">04/16</span><a class="archive-post-title" href="/2019/04/16/RIP概述/">RIP概述</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">04/15</span><a class="archive-post-title" href="/2019/04/15/表单新增的元素与属性/">表单新增的元素与属性</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">04/15</span><a class="archive-post-title" href="/2019/04/15/Valine-访问被api域名白名单拒绝/">Valine-访问被api域名白名单拒绝</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">04/15</span><a class="archive-post-title" href="/2019/04/15/为博客添加域名/">为博客添加域名</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">04/14</span><a class="archive-post-title" href="/2019/04/14/新增的非主体结构元素（一）/">新增的非主体结构元素（一）</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">04/14</span><a class="archive-post-title" href="/2019/04/14/新增的主题结构元素（七）/">新增的主题结构元素（七）</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">04/14</span><a class="archive-post-title" href="/2019/04/14/新增的主题结构元素（六）/">新增的主题结构元素（六）</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">04/13</span><a class="archive-post-title" href="/2019/04/13/新增的主题结构元素（五）/">新增的主题结构元素（五）</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">04/13</span><a class="archive-post-title" href="/2019/04/13/新增的主题结构元素（四）/">新增的主题结构元素（四）</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">04/12</span><a class="archive-post-title" href="/2019/04/12/新增的主题结构元素（三）/">新增的主题结构元素（三）</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">04/12</span><a class="archive-post-title" href="/2019/04/12/新增的主题结构元素（二）/">新增的主题结构元素（二）</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">04/11</span><a class="archive-post-title" href="/2019/04/11/新增的主题结构元素（一）/">新增的主题结构元素（一）</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">04/11</span><a class="archive-post-title" href="/2019/04/11/新增的元素和废除的元素/">新增的元素和废除的元素</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">04/10</span><a class="archive-post-title" href="/2019/04/10/HTML5与HTML4区别/">HTML5与HTML4区别</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">04/10</span><a class="archive-post-title" href="/2019/04/10/前端学习-全局属性/">全局属性</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">04/10</span><a class="archive-post-title" href="/2019/04/10/MarkDown进阶操作/">MarkDown进阶操作</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">03/31</span><a class="archive-post-title" href="/2019/03/31/网络端口地址转换NAPT配置/">网络端口地址转换NAPT配置</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">03/30</span><a class="archive-post-title" href="/2019/03/30/网络地址转换NAT配置/">网络地址转换NAT配置</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">03/29</span><a class="archive-post-title" href="/2019/03/29/扩展IP访问控制列表配置/">扩展IP访问控制列表配置</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">03/28</span><a class="archive-post-title" href="/2019/03/28/标准-IP-访问控制列表配置/">标准 IP 访问控制列表配置</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">03/28</span><a class="archive-post-title" href="/2019/03/28/OSPF、RIP小记/">OSPF、RIP小记</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">03/27</span><a class="archive-post-title" href="/2019/03/27/路由器综合路由配置/">路由器综合路由配置</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">03/26</span><a class="archive-post-title" href="/2019/03/26/路由器OSPF动态路由配置/">路由器OSPF动态路由配置</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">03/25</span><a class="archive-post-title" href="/2019/03/25/路由器RIP动态路由配置/">路由器RIP动态路由配置</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">03/24</span><a class="archive-post-title" href="/2019/03/24/路由器静态路由配置/">路由器静态路由配置</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">03/23</span><a class="archive-post-title" href="/2019/03/23/路由器单臂路由配置/">路由器单臂路由配置</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">03/22</span><a class="archive-post-title" href="/2019/03/22/快速生成树配置/">快速生成树配置</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">03/21</span><a class="archive-post-title" href="/2019/03/21/利用三层交换机实现Vlan间路由/">利用三层交换机实现Vlan间路由</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">03/20</span><a class="archive-post-title" href="/2019/03/20/cisco多交换机之间的端口聚合链路/">cisco多交换机之间的端口聚合链路</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">03/19</span><a class="archive-post-title" href="/2019/03/19/cisco多交换机上配置基于端口的Vlan隔离办公网络/">cisco多交换机上配置基于端口的Vlan隔离办公网络</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">03/18</span><a class="archive-post-title" href="/2019/03/18/MarkDown基础教学/">MarkDown基础教学</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">03/18</span><a class="archive-post-title" href="/2019/03/18/ciscoTelnet/">No3. Telnet</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">03/17</span><a class="archive-post-title" href="/2019/03/17/MySql服务安装/">MySql服务安装</a>
-        </li>
-    
-    </ul></div>
+  </section>
+  <div id="mo-nav" class>
+  <div class="m-avatar">
+    <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/custom/avatar.jpg">
   </div>
-        <div class="sidebar-panel-tags">
-    <div class="sidebar-tags-name">
+  <p style="text-align: center; color: #333; font-weight: 900; font-family: 'Ubuntu', sans-serif; letter-spacing: 1.5px">さくら荘そのhojun</p>
+  <p style="text-align: center; word-spacing: 20px;">
     
-        <span class="sidebar-tag-name" data-tags="【极客】前端学习"><span class="iconfont-archer"></span>【极客】前端学习</span>
+      
+        <a href="http://github.com/honjun" class="fa fa-github" target="_blank" style="color: #333; margin-left:20px"></a>
+      
+        <a href="http://weibo.com/mashirozx?is_all=1" class="fa fa-weibo" target="_blank" style="color: #dd4b39; margin-left:20px"></a>
+      
+        <a href="https://wpa.qq.com/msgrd?v=3&uin=954655431&site=qq&menu=yes" class="fa fa-qq" target="_blank" style="color: #25c6fe; margin-left:20px"></a>
+      
     
-        <span class="sidebar-tag-name" data-tags="从零开始的Python学习"><span class="iconfont-archer"></span>从零开始的Python学习</span>
+  </p>
+  <ul id="menu-new-1" class="menu">
     
-        <span class="sidebar-tag-name" data-tags="MarkDown基本语法"><span class="iconfont-archer"></span>MarkDown基本语法</span>
+      <li>
+        <a href="/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-fort-awesome faa-shake" aria-hidden="true"></i>
+            首页
+          </span>
+        </a>
+        
+      </li>
     
-        <span class="sidebar-tag-name" data-tags="安装教程"><span class="iconfont-archer"></span>安装教程</span>
+      <li>
+        <a href="/archives">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-archive faa-shake" aria-hidden="true"></i>
+            归档
+          </span>
+        </a>
+        
+          <ul class="sub-menu">
+            
+              <li>
+                <a href="/categories/技术/">
+                  <i class="fa fa-code" aria-hidden="true"></i>
+                  技术
+                </a>
+              </li>
+            
+              <li>
+                <a href="/categories/生活/">
+                  <i class="fa fa-file-text-o" aria-hidden="true"></i>
+                  生活
+                </a>
+              </li>
+            
+              <li>
+                <a href="/categories/资源/">
+                  <i class="fa fa-cloud-download" aria-hidden="true"></i>
+                  资源
+                </a>
+              </li>
+            
+              <li>
+                <a href="/categories/随想/">
+                  <i class="fa fa-commenting-o" aria-hidden="true"></i>
+                  随想
+                </a>
+              </li>
+            
+              <li>
+                <a href="/categories/转载/">
+                  <i class="fa fa-book" aria-hidden="true"></i>
+                  转载
+                </a>
+              </li>
+            
+          </ul>
+        
+      </li>
     
-        <span class="sidebar-tag-name" data-tags="Cisco笔记"><span class="iconfont-archer"></span>Cisco笔记</span>
+      <li>
+        <a href="javascript:;">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-list-ul faa-vertical" aria-hidden="true"></i>
+            清单
+          </span>
+        </a>
+        
+          <ul class="sub-menu">
+            
+              <li>
+                <a href="/tags/悦读/">
+                  <i class="fa fa-th-list faa-bounce" aria-hidden="true"></i>
+                  书单
+                </a>
+              </li>
+            
+              <li>
+                <a href="/bangumi/">
+                  <i class="fa fa-film faa-vertical" aria-hidden="true"></i>
+                  番组
+                </a>
+              </li>
+            
+              <li>
+                <a href="/music/">
+                  <i class="fa fa-headphones" aria-hidden="true"></i>
+                  歌单
+                </a>
+              </li>
+            
+              <li>
+                <a href="/tags/图集/">
+                  <i class="fa fa-photo" aria-hidden="true"></i>
+                  图集
+                </a>
+              </li>
+            
+          </ul>
+        
+      </li>
     
-        <span class="sidebar-tag-name" data-tags="PHP相关知识"><span class="iconfont-archer"></span>PHP相关知识</span>
+      <li>
+        <a href="/comment/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-pencil-square-o faa-tada" aria-hidden="true"></i>
+            留言板
+          </span>
+        </a>
+        
+      </li>
     
-        <span class="sidebar-tag-name" data-tags="Cisco强化学习"><span class="iconfont-archer"></span>Cisco强化学习</span>
+      <li>
+        <a href="/links/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-link faa-shake" aria-hidden="true"></i>
+            友人帐
+          </span>
+        </a>
+        
+      </li>
     
-        <span class="sidebar-tag-name" data-tags="github搭建个人博客"><span class="iconfont-archer"></span>github搭建个人博客</span>
+      <li>
+        <a href="/donate/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-heart faa-pulse" aria-hidden="true"></i>
+            赞赏
+          </span>
+        </a>
+        
+      </li>
     
-        <span class="sidebar-tag-name" data-tags="前端知识"><span class="iconfont-archer"></span>前端知识</span>
+      <li>
+        <a href="/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-leaf faa-wrench" aria-hidden="true"></i>
+            关于
+          </span>
+        </a>
+        
+          <ul class="sub-menu">
+            
+              <li>
+                <a href="/about/">
+                  <i class="fa fa-meetup" aria-hidden="true"></i>
+                  我？
+                </a>
+              </li>
+            
+              <li>
+                <a href="/theme-sakura/">
+                  <i class="fa iconfont icon-sakura" aria-hidden="true"></i>
+                  主题
+                </a>
+              </li>
+            
+              <li>
+                <a href="/lab/">
+                  <i class="fa fa-cogs" aria-hidden="true"></i>
+                  Lab
+                </a>
+              </li>
+            
+          </ul>
+        
+      </li>
     
-        <span class="sidebar-tag-name" data-tags="Cisco基础"><span class="iconfont-archer"></span>Cisco基础</span>
+      <li>
+        <a href="/client/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-android faa-vertical" aria-hidden="true"></i>
+            客户端
+          </span>
+        </a>
+        
+      </li>
     
-        <span class="sidebar-tag-name" data-tags="Cisco知识点"><span class="iconfont-archer"></span>Cisco知识点</span>
+      <li>
+        <a href="/atom.xml">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-rss faa-pulse" aria-hidden="true"></i>
+            RSS
+          </span>
+        </a>
+        
+      </li>
     
-        <span class="sidebar-tag-name" data-tags="画画"><span class="iconfont-archer"></span>画画</span>
-    
-    </div>
-    <div class="iconfont-archer sidebar-tags-empty"></div>
-    <div class="tag-load-fail" style="display: none; color: #ccc; font-size: 0.6rem;">
-    缺失模块。<br>
-    1、请确保node版本大于6.2<br>
-    2、在博客根目录（注意不是archer根目录）执行以下命令：<br>
-    <span style="color: #f75357; font-size: 1rem; line-height: 2rem;">npm i hexo-generator-json-content --save</span><br>
-    3、在根目录_config.yml里添加配置：
-    <pre style="color: #787878; font-size: 0.6rem;">jsonContent:
-  meta: false
-  pages: false
-  posts:
-    title: true
-    date: true
-    path: true
-    text: false
-    raw: false
-    content: false
-    slug: false
-    updated: false
-    comments: false
-    link: false
-    permalink: false
-    excerpt: false
-    categories: true
-    tags: true</pre>
-    </div> 
-    <div class="sidebar-tags-list"></div>
+  </ul>
+  <p style="text-align: center; font-size: 13px; color: #b9b9b9;">© 2019 hexo-sakura</p>
 </div>
-        <div class="sidebar-panel-categories">
-    <div class="sidebar-categories-name">
-    
-        <span class="sidebar-category-name" data-categories="Bootstrap"><span class="iconfont-archer"></span>Bootstrap</span>
-    
-        <span class="sidebar-category-name" data-categories="前端知识"><span class="iconfont-archer"></span>前端知识</span>
-    
-        <span class="sidebar-category-name" data-categories="Python"><span class="iconfont-archer"></span>Python</span>
-    
-        <span class="sidebar-category-name" data-categories="教学"><span class="iconfont-archer"></span>教学</span>
-    
-        <span class="sidebar-category-name" data-categories="Cisco"><span class="iconfont-archer"></span>Cisco</span>
-    
-        <span class="sidebar-category-name" data-categories="PHP"><span class="iconfont-archer"></span>PHP</span>
-    
-        <span class="sidebar-category-name" data-categories="Vue学习"><span class="iconfont-archer"></span>Vue学习</span>
-    
-        <span class="sidebar-category-name" data-categories="素描"><span class="iconfont-archer"></span>素描</span>
-    
-    </div>
-    <div class="iconfont-archer sidebar-categories-empty"></div>
-    <div class="sidebar-categories-list"></div>
-</div>
-    </div>
-</div> 
-    <script>
-    var siteMeta = {
-        root: "/",
-        author: "YaoRemu"
-    }
-</script>
-
-
-
-<div id="landlord" style="left:5px;bottom:0px;">
-    <div class="message" style="opacity:0"></div>
-    <canvas id="live2d" width="500" height="560" class="live2d"></canvas>
-    <div class="live_talk_input_body">
-    	<div class="live_talk_input_name_body">
-        	<input name="name" type="text" class="live_talk_name white_input" id="AIuserName" autocomplete="off" placeholder="你的名字">
-        </div>
-        <div class="live_talk_input_text_body">
-        	<input name="talk" type="text" class="live_talk_talk white_input" id="AIuserText" autocomplete="off" placeholder="要和我聊什么呀？">
-            <button type="button" class="live_talk_send_btn" id="talk_send">发送</button>
-        </div>
-    </div>
-    <input name="live_talk" id="live_talk" value="1" type="hidden">
-    <div class="live_ico_box">
-    	<div class="live_ico_item type_info" id="showInfoBtn"></div>
-    	<div class="live_ico_item type_talk" id="showTalkBtn"></div>
-        <div class="live_ico_item type_music" id="musicButton"></div>
-
-        <div class="live_ico_item type_quit" id="hideButton"></div>
-        <input name="live_statu_val" id="live_statu_val" value="0" type="hidden">
-        <audio src style="display:none;" id="live2d_bgm" data-bgm="0" preload="none"></audio>
-        <input name="live2dBGM" value="http://up.xiaopg6.com/view.php/40e20ef1dd9d198a1aa07b09c31d9e0e.mp3" type="hidden">
-        <input name="live2dBGM" value="http://up.xiaopg6.com/view.php/c79cfeec5cb3376d835abd0d708b68d7.mp3" type="hidden">
-        <input id="duType" value="douqilai,l2d_caihong" type="hidden">
-    </div>
-</div>
-<div id="open_live2d">召唤蕾姆</div>
-<script type="text/javascript" src="https://apps.bdimg.com/libs/jquery/1.7.1/jquery.min.js"></script>
+<button onclick="topFunction()" class="mobile-cd-top" id="moblieGoTop" title="Go to top" style="display: none;"><i class="fa fa-chevron-up" aria-hidden="true"></i></button>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10/dist/APlayer.min.css">
+<script src="https://cdn.jsdelivr.net/npm/aplayer@1.10/dist/APlayer.min.js"></script>
+<style>
+  .aplayer .aplayer-lrc {
+    height: 35px;
+  }
+  .aplayer .aplayer-lrc p{
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 18px !important;
+  }
+  .aplayer .aplayer-lrc p.aplayer-lrc-current{
+    color: #FF1493;
+  }
+  .aplayer.aplayer-narrow .aplayer-body{
+    left: -66px !important;
+  }
+  .aplayer.aplayer-fixed .aplayer-lrc {
+    display: none;
+  }
+  .aplayer .aplayer-lrc.aplayer-lrc-hide {
+      display:none !important;
+  }
+  .aplayer.aplayer-fixed .lrc-show {
+    display: block;
+    background: rgba(255, 255, 255, 0.8);
+  }
+</style>
+<div class="aplayer" data-id="2660651585" data-server="netease" data-type="playlist" data-fixed="true" data-autoplay="false" data-loop="all" data-order="random" data-preload="auto" data-volume="0.7" data-mutex="true" < div>
+<script src="https://cdn.jsdelivr.net/npm/meting@1.2/dist/Meting.min.js"></script>
 <script>
-var message_Path = '/live2d/';//资源目录，如果目录不对请更改
-var talkAPI = "";//如果有类似图灵机器人的聊天接口请填写接口路径
-</script>
-<script type="text/javascript" src="/live2d/js/live2d.js"></script>
-<script type="text/javascript" src="/live2d/js/message.js"></script>
-    <!-- CDN failover -->
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
-    <script type="text/javascript">
-        if (typeof window.$ === 'undefined')
-        {
-            console.warn('jquery load from jsdelivr failed, will load local script')
-            document.write('<script src="/lib/jquery.min.js">\x3C/script>')
-        }
-    </script>
-    <script src="/scripts/main.js"></script>
-
-    <!-- algolia -->
-    
-
-
-
-
-
-    <!-- busuanzi  -->
-    
-    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-    
-    <!-- CNZZ  -->
-    
-    
-    <!-- async load share.js -->
-     
-    <!--爱心-->
-    <script type="text/javascript" src="/js/src/clicklove.js"></script>
-
-
-
-    
-
-
+  $(function(){
+    $('body').on('click', '.aplayer', function(){
+      if($('.aplayer-button').hasClass('aplayer-play')) {
+        $('.aplayer-lrc').removeClass('lrc-show');
+      } else {
+        $('.aplayer-lrc').addClass('lrc-show');
+      }
+    })
+  });
+</script></div>
 
 <script type="text/javascript" charset="utf-8" src="/js/lazyload-plugin/lazyload.intersectionObserver.min.js"></script></body></html>
