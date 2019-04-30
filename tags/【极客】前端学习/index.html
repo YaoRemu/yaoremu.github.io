@@ -347,6 +347,88 @@
     
     
     <article class="index-post">
+        <a class="abstract-title" href="/2019/04/30/Well/">
+            
+                <span>Well</span>
+        </a>
+        <div class="abstract-content">
+            概要
+具有响应式特性的嵌入内容
+Well
+
+具有响应式特性的嵌入内容根据嵌入的内容，我们可以给它指定一个容器，那么这个容器也会自动的去创建一个固定的 比，我们不叫常见的可能有 16 : 9 、 4 : 3 。那么我们可以使用这两种 比 来进行实现
+它适用于 < iframe> 、 < embed> 、 < video> 、< object> 
+
+注意： 我们在使用 iframe 的时候，不需要使用边框，因为它本身就已经存在了
+
+12345				
+
+我们可以看到整个的页面，因为它是 16 : 9 ，所以两边是空白的。 当我们把当前页面进行缩小的时候，可以看到他的比例也在相应的缩小，即它是...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2019/04/30</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class="abstract-tags">
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="【极客】前端学习">【极客】前端学习</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
+        <a class="abstract-title" href="/2019/04/30/面板/">
+            
+                <span>面板</span>
+        </a>
+        <div class="abstract-content">
+            面板类别
+基本的实现
+带标题的面板
+情景效果
+带表格的面板
+含有列表面板
+
+虽然面板不是每一次都会使用到，但是有的时候需要在将一些盒子包含在盒子当中，对于这种情况我们可以尝试使用面板
+基本的实现12345			hello World!	
+
+我们看到，表现出来的效果并不是很好看，是因为我们在当前的 div 中并没有承载当前要显示的盒子的内容，所以接下来在 面板 中再创建一个div：
+1234567						hello World!			
+
+带标题的面板12345678910111213						学习网站							希望你能来我的博客，我永远欢迎你			希望你能来我的博客，我永远欢迎你...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2019/04/30</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class="abstract-tags">
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="【极客】前端学习">【极客】前端学习</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
         <a class="abstract-title" href="/2019/04/29/媒体对象/">
             
                 <span>媒体对象（评论模块）</span>
@@ -669,91 +751,10 @@ Range对象的基本概念一个 Range对象 代表页面上的一段连续区�
         </div>
     </article>
     
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/2019/04/24/Bootstrap-CSS表单、按钮和图片/">
-            
-                <span>Bootstrap CSS表单、按钮和图片</span>
-        </a>
-        <div class="abstract-content">
-            表单接下来介绍表单中几种最基本的实例：
-
-内联表单
-水平排列的表单
-被支持的控件
-静态标签
-焦点状态
-禁用状态
-只读状态
-校验状态
-控件尺寸
-辅助文本
-
-eg:
-
-123456789101112131415			email						密码							选择文件				选择你的文件	
-内联表单创建一个内联表单，需要加上一个类 【 class=”form-inline” 】
-表单的默认样式的宽度是 100% 的，如果将其变为内联的方式，它的宽度就会 auto（自适应），并且变为了 1 行
-
-关于 label ：必须设置 label ，如果不设置 label，屏幕阅读器是无法正确识别的； 如果...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2019/04/24</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class="abstract-tags">
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="【极客】前端学习">【极客】前端学习</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/2019/04/23/Bootstrap-CSS栅格、代码和表格/">
-            
-                <span>Bootstrap CSS栅格、代码和表格</span>
-        </a>
-        <div class="abstract-content">
-            CSS栅格概述设置全局的CSS样式，基本的HTML元素均可以通过 class 设置，并且得到增强的效果，而且 Bootstrap着重介绍了 栅格系统（grid system）,也就意味着 栅格系统 非常重要，使用起来非常方便
-Containers 容器栅格系统是 依赖容器 而存在的，Bootstrap 需要为页面内容和 栅格系统 包裹一个 容器Containers
-好处给我们提供了一些 padding 属性，也就是像 margin 属性都有去设置一下，所以我们在使用的时候一定要包裹一个容器
-123	...
-或者是使用下面这种方式，表示 百分百最宽 ，也就是能达到最大的使用范围，占据全部视...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2019/04/23</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class="abstract-tags">
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="【极客】前端学习">【极客】前端学习</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
     <!-- paginator  -->
     
     <nav class="page-nav">
-        <span class="page-number current">1</span><a class="page-number" href="/tags/【极客】前端学习/page/2/">2</a><a class="page-number" href="/tags/【极客】前端学习/page/3/">3</a><a class="extend next" rel="next" href="/tags/【极客】前端学习/page/2/">NEXT ></a>
+        <span class="page-number current">1</span><a class="page-number" href="/tags/【极客】前端学习/page/2/">2</a><a class="page-number" href="/tags/【极客】前端学习/page/3/">3</a><a class="page-number" href="/tags/【极客】前端学习/page/4/">4</a><a class="extend next" rel="next" href="/tags/【极客】前端学习/page/2/">NEXT ></a>
     </nav>
     
 </main>
@@ -1320,9 +1321,23 @@ Containers 容器栅格系统是 依赖容器 而存在的，Bootstrap 需要为
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 66
+        Total : 68
         </div>
         <!-- search  -->
         
@@ -1349,6 +1364,16 @@ Containers 容器栅格系统是 依赖容器 而存在的，Bootstrap 需要为
     
     <div class="archive-year"> 2019 </div>
     <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">04/30</span><a class="archive-post-title" href="/2019/04/30/Well/">Well</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">04/30</span><a class="archive-post-title" href="/2019/04/30/面板/">面板</a>
+        </li>
     
     
         <li class="archive-post-item">

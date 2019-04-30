@@ -1,6 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Well]]></title>
+    <url>%2F2019%2F04%2F30%2FWell%2F</url>
+    <content type="text"><![CDATA[概要 具有响应式特性的嵌入内容 Well 具有响应式特性的嵌入内容根据嵌入的内容，我们可以给它指定一个容器，那么这个容器也会自动的去创建一个固定的 比，我们不叫常见的可能有 16 : 9 、 4 : 3 。那么我们可以使用这两种 比 来进行实现 它适用于 < iframe> 、 < embed> 、 < video> 、< object> 注意： 我们在使用 iframe 的时候，不需要使用边框，因为它本身就已经存在了 12345 我们可以看到整个的页面，因为它是 16 : 9 ，所以两边是空白的。 当我们把当前页面进行缩小的时候，可以看到他的比例也在相应的缩小，即它是 响应式 的 wellwell 的使用比较简单，把 well 用在元素上，能有 嵌入 的简单效果 12345 Look,i'm in a well. 可以看到，这是一个 well 的默认效果，它还给我们提供了适应不通种分辨率的类，默认是适应正常的屏幕，lg 是大的、 sm 是小的 12345 Look,i'm in a well. 可以看到它变小了，我们可以根据需求的不同，来进行相应的调整]]></content>
+      <categories>
+        <category>Bootstrap</category>
+      </categories>
+      <tags>
+        <tag>【极客】前端学习</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[面板]]></title>
+    <url>%2F2019%2F04%2F30%2F%E9%9D%A2%E6%9D%BF%2F</url>
+    <content type="text"><![CDATA[面板类别 基本的实现 带标题的面板 情景效果 带表格的面板 含有列表面板 虽然面板不是每一次都会使用到，但是有的时候需要在将一些盒子包含在盒子当中，对于这种情况我们可以尝试使用面板 基本的实现12345 hello World! 我们看到，表现出来的效果并不是很好看，是因为我们在当前的 div 中并没有承载当前要显示的盒子的内容，所以接下来在 面板 中再创建一个div： 1234567 hello World! 带标题的面板12345678910111213 学习网站 希望你能来我的博客，我永远欢迎你 希望你能来我的博客，我永远欢迎你 希望你能来我的博客，我永远欢迎你 希望你能来我的博客，我永远欢迎你 可以看到题目有背景加深的效果，下方是具体的内容 有的时候不单单会带标题，有可能会带脚注，下方也希望有一个备注 12345678910111213141516 学习网站 希望你能来我的博客，我永远欢迎你 希望你能来我的博客，我永远欢迎你 希望你能来我的博客，我永远欢迎你 希望你能来我的博客，我永远欢迎你 blog.yz0.top 我们可以看到一个带脚备注的面板 情景效果我们要根据不同的需求来提供不通种的情景效果，更改 panel-default 即可，eg: 12345678910111213141516 学习网站 希望你能来我的博客，我永远欢迎你 希望你能来我的博客，我永远欢迎你 希望你能来我的博客，我永远欢迎你 希望你能来我的博客，我永远欢迎你 blog.yz0.top 可以看到了头部和底部的颜色发生了编号 带表格的面板1234567891011121314151617181920212223242526272829303132333435363738394041 表格面板 以下是表格面板演示 表格标题 表格标题 表格标题 表格单元格 表格单元格 表格单元格 表格单元格 表格单元格 表格单元格 表格单元格 表格单元格 表格单元格 表格单元格 表格单元格 表格单元格 可以看到，在文字内容 下方多添加了一个表格，当然可以根据需要对 颜色 或者 内容进行修改 带列表面板123456789101112131415161718192021222324252627 Hello World hello1 hello1 hello1 hello1 hello1 可以看到一个列表的面板]]></content>
+      <categories>
+        <category>Bootstrap</category>
+      </categories>
+      <tags>
+        <tag>【极客】前端学习</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Vue-js第三课]]></title>
     <url>%2F2019%2F04%2F30%2FVue-js%E7%AC%AC%E4%B8%89%E8%AF%BE%2F</url>
     <content type="text"><![CDATA[这一课，要基于之前学习的 Vue-resource来实现品牌管理的改造，之前我们都是在本地来创建数据，现在我们可以用 Vue-resource 来请求 远端的数据库了 先开启node服务器： 创建一个html 注意：要导入 v-resource 的包 12345678910111213141516171819202122232425262728293031323334353637383940414243444546 添加品牌 Name： Id Name Ctime Operation {{ item.id }} {{ item.name }} {{ item.ctime }} 删除 123456789101112131415var vm = new Vue({ el: '#app', data: { name: '', list: [ { id: 1, name: '五菱宏光', ctime: new Date() }, { id: 2, name: '众泰', ctime: new Date() } ] }, methods: { add(){ } }}); 品牌数据列表 提供的地址： http://www.liulongbin.top:3005/api/getnewslist请求方式： get作用： 获取品牌数据 json 数据返回数据格式： json 发起请求12345678910111213141516171819202122232425262728293031323334353637383940414243444546 添加品牌 Name： Id Name Ctime Operation {{ item.id }} {{ item.name }} {{ item.ctime }} 删除 123456789101112131415161718192021222324252627282930313233343536373839404142var vm = new Vue({ el: '#app', data: { name: '', list: [//存放所有品牌列表的数组 { id: 1, name: '五菱宏光', ctime: new Date() }, { id: 2, name: '众泰', ctime: new Date() } ] }, created(){//当 vm 实例的 data 和 methods 初始化完毕后，vm实例 会自动执行 created 这个生命周期函数 this.getAllList() }, methods: { add(){ }, getAllList(){//获取的所有的品牌列表 //分析： //1.由于已经导入了 Vue-resource这个包，所以，可以直接通过 this.$http 来发起数据请求 //2.获取列表的时候，要发起一个 get请求 //3.this.$http.get('url').then(function(result){}) //4.当通过 then 指定回调函数之后，在回调函数中，可以拿到数据服务器返回的 result //5.先判断 result.status 是否等于0，如果等于0，就成功了，可以把 result.message 赋值给 this.list；如果不等于0，可以弹框提醒获取失败！ this.$http.get('http://www.liulongbin.top:3005/api/getnewslist').then(result => { //注意：通过 $http 获取到的数据，都在 result.body 中放着 var result = result.body if(result.status === 0){ //成功了 //覆盖 list this.list = result.message } else { //失败了 alert('获取数据失败') } }) } }}); 页面加载的时候就会加载 Vue实例对象。 当 new 一个 Vue 的时候，并不是直接 new 就可以了，而是在 整个 new 的过程中，会执行一系列的生命周期函数执行到 beforeCreate()函数 的时候，我们只是单纯创建了 Vue实例，只是把生命周期函数和一些内置的事件触发好了，但是 data 和 method 这两个属性都没有初始化执行到 created()函数 ，data 和 methods 初始化完毕，我们可以把函数放在 created() 中， 让 vm 实例自己帮我们调用该方法，这时候就会发起一个 ajax 请求。 过程解析：这时候，一边在发 ajax请求的时候，服务器也在继续往后执行，随着继续编译模板的时候，可能在编译的时候，数据就已经请求回来了，此时还没有放到页面中去，但是数据已经请求回来了，已经被放到了 list 上，只要页面已被挂载，数据就可以看到了。 所以 发 ajax 要尽早 ，这样能够让我们去并行的完成各项操作，提前的将数据放进 data 或者 method 中。 比如：能不能调用 mounted 来发数据？ 在这个时候发送则不合适，因为这个时候发的话，虚拟DOM 已经挂载到了页面上，这时候只有一些假数据。如果这时候发送 ajax请求，服务器 发送过来的数据就没法在 页面上显示，就很矛盾了]]></content>

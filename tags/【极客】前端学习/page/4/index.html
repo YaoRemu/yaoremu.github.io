@@ -23,7 +23,7 @@
     <meta name="description" content="欢迎来到YaoRemu的博客">
     <meta http-equiv="Cache-control" content="no-cache">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>标准 IP 访问控制列表配置 · YaoRemu'Blog</title>
+    <title>YaoRemu'Blog</title>
     <style type="text/css">
     @font-face {
         font-family: 'Oswald-Regular';
@@ -204,23 +204,12 @@
 </head>
 
     
-        <body class="post-body">
     
-    
-<header class="header">
+<body><header class="header">
 
     <div class="read-progress"></div>
     <div class="header-sidebar-menu"></div>
     <!-- post页的toggle banner  -->
-    
-    <div class="banner">
-            <div class="blog-title">
-                <a href="/">Welcome to YaoRemu'Blog</a>
-            </div>
-            <div class="post-title">
-                <a href="#" class="post-name">标准 IP 访问控制列表配置</a>
-            </div>
-    </div>
     
     <a class="home-link" href="/">Welcome to YaoRemu'Blog</a>
 </header>
@@ -232,74 +221,24 @@
 
 
 
-
-height:50vh;
 ">
     
     <!-- 主页  -->
-    
-    
-    <!-- 404页  -->
             
     <div class="site-intro-placeholder"></div>
-    <div class="site-intro-img" style="background-image: url(http://ww1.sinaimg.cn/large/8c0b2220gy1g1aemgv57ej21hc0tze81.jpg)"></div>
+    <div class="site-intro-img" style="background-image: url(/)"></div>
     <div class="site-intro-meta">
         <!-- 标题  -->
         <h1 class="intro-title">
             <!-- 主页  -->
-            
-            标准 IP 访问控制列表配置
-            <!-- 404 -->
             
         </h1>
         <!-- 副标题 -->
         <p class="intro-subtitle">
             <!-- 主页副标题  -->
             
-            
-            <!-- 404 -->
-            
         </p>
         <!-- 文章页meta -->
-        
-            <div class="post-intros">
-                <!-- 文章页标签  -->
-                
-                    <div class="post-intro-tags">
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Cisco基础">Cisco基础</a>
-    
-</div>
-                
-                
-                    <div class="post-intro-read">
-                        <span>字数统计: <span class="post-count word-count">595</span>阅读时长: <span class="post-count reading-time">2 min</span></span>
-                    </div>
-                
-                <div class="post-intro-meta">
-                    <span class="post-intro-calander iconfont-archer"></span>
-                    <span class="post-intro-time">2019/03/28</span>
-                    
-                    <span id="busuanzi_container_page_pv" class="busuanzi-pv">
-                        <span class="iconfont-archer"></span>
-                        <span id="busuanzi_value_page_pv"></span>
-                    </span>
-                    
-                    <span class="shareWrapper">
-                        <span class="iconfont-archer shareIcon"></span>
-                        <span class="shareText">Share</span>
-                        <ul class="shareList">
-                            <li class="iconfont-archer share-qr" data-type="qr">
-                                <div class="share-qrcode"></div>
-                            </li>
-                            <li class="iconfont-archer" data-type="weibo"></li>
-                            <li class="iconfont-archer" data-type="qzone"></li>
-                            <li class="iconfont-archer" data-type="twitter"></li>
-                            <li class="iconfont-archer" data-type="facebook"></li>
-                        </ul>
-                    </span>
-                </div>
-            </div>
         
     </div>
 </div>
@@ -400,163 +339,91 @@ height:50vh;
 </script>        
         <img class="loading" src="/assets/loading.svg" style="display: block; margin: 6rem auto 0 auto; width: 6rem; height: 6rem;">
         <div class="container container-unloaded">
-            <main class="main post-page">
-    <article class="article-entry">
-        <meta name="generator" content="Hexo 3.8.0"><h1 id="拓扑图"><a href="#拓扑图" class="headerlink" title="拓扑图"></a>拓扑图</h1><p><img src="http://ww1.sinaimg.cn/large/8c0b2220ly1g1ikm675grj20f407pq34.jpg" alt></p>
-<blockquote>
-<p>相关知识①：ACLs 的全称为 接入控制列表(Access Control Lists),也称访问控制列表(Access Lists),俗称防火墙，在有的文档中还称包过滤。</p>
-</blockquote>
-<blockquote>
-<p>相关知识②：ACLs 通过定义一些规则对网络设备接口上的数据报文进行控制；运行通过或者丢失，从而提高网络可管理型和安全性；</p>
-</blockquote>
-<blockquote>
-<p>相关知识③：IP ACL分为两种：标准IP访问列表和扩展IP访问列表，编号范围为 1~99、1300~1999、100~199、2000~2699;<br><strong>标准IP访问控制列表</strong>：根据数据包的源地址定义规则，进行数据包的过滤；<br><strong>扩展IP访问控制列表</strong>：根据数据包的源IP、目的IP、源接口、目的端口、协议来定义规则，进行数据包的过滤；</p>
-</blockquote>
-<blockquote>
-<p>相关知识④：IP ACL 基于接口进行规则的应用，分为：入栈应用和出栈应用；</p>
-</blockquote>
-<h1 id="配置命令"><a href="#配置命令" class="headerlink" title="配置命令"></a>配置命令</h1><h2 id="配置路由器0"><a href="#配置路由器0" class="headerlink" title="配置路由器0"></a>配置路由器0</h2><pre><code>enable
-configure terminal
-hostname R0
-</code></pre><h3 id="配置端口"><a href="#配置端口" class="headerlink" title="配置端口"></a>配置端口</h3><pre><code>interface fa 0/0
-ip address 172.16.1.1 255.255.255.0
-no shutdown
-exit
-
-interface fa0/1
-ip address 172.16.2.1 255.255.255.0
-no shutdown
-exit
-
-interface s0/0/0
-ip address 172.16.3.1 255.255.255.0
-no shutdown
-clock rate 64000
-exit
-</code></pre><h2 id="配置路由器1"><a href="#配置路由器1" class="headerlink" title="配置路由器1"></a>配置路由器1</h2><pre><code>enable
-configure terminal
-hostname R1
-</code></pre><h3 id="配置端口-1"><a href="#配置端口-1" class="headerlink" title="配置端口"></a>配置端口</h3><pre><code>interface s0/0/0
-ip address 172.16.3.2 255.255.255.0
-no shutdown
-exit
-
-interface f0/0
-ip address 172.16.4.1 255.255.255.0
-no shutdown
-exit
-</code></pre><h2 id="配置路由器0的静态路由"><a href="#配置路由器0的静态路由" class="headerlink" title="配置路由器0的静态路由"></a>配置路由器0的静态路由</h2><h3 id="配置静态路由"><a href="#配置静态路由" class="headerlink" title="配置静态路由"></a>配置静态路由</h3><pre><code>ip route 172.16.4.0 255.255.255.0 172.16.3.2
-</code></pre><h2 id="配置路由器1的静态路由"><a href="#配置路由器1的静态路由" class="headerlink" title="配置路由器1的静态路由"></a>配置路由器1的静态路由</h2><h3 id="配置静态路由-1"><a href="#配置静态路由-1" class="headerlink" title="配置静态路由"></a>配置静态路由</h3><pre><code>ip route 0.0.0.0 0.0.0.0 172.16.3.1
-</code></pre><h3 id="查看路由表"><a href="#查看路由表" class="headerlink" title="查看路由表"></a>查看路由表</h3><pre><code>end
-show ip route
-</code></pre><h2 id="PC0、PC1尝试能否与PC2通信"><a href="#PC0、PC1尝试能否与PC2通信" class="headerlink" title="PC0、PC1尝试能否与PC2通信"></a>PC0、PC1尝试能否与PC2通信</h2><h3 id="PC0"><a href="#PC0" class="headerlink" title="PC0:"></a>PC0:</h3><p> <strong>（此时成功通信）</strong></p>
-<p><img src="http://ww1.sinaimg.cn/large/8c0b2220ly1g1ikvcg19fj20dx0aat8v.jpg" alt></p>
-<h3 id="PC1"><a href="#PC1" class="headerlink" title="PC1:"></a>PC1:</h3><p> <strong>（此时成功通信）</strong></p>
-<p><img src="http://ww1.sinaimg.cn/large/8c0b2220ly1g1ikvcpzjzj20dl0ahaa8.jpg" alt></p>
-<h2 id="在路由器0中配置访问控制列表"><a href="#在路由器0中配置访问控制列表" class="headerlink" title="在路由器0中配置访问控制列表"></a>在路由器0中配置访问控制列表</h2><h3 id="建立ACL命名为-5ijsj"><a href="#建立ACL命名为-5ijsj" class="headerlink" title="建立ACL命名为 5ijsj"></a>建立ACL命名为 5ijsj</h3><pre><code>ip access-list standard 5ijsj    
-permit 172.16.1.0 0.0.0.255        <font color="#abcfe4">//允许网段通过</font>
-deny 172.16.2.0 0.0.0.255        <font color="#abcfe4">//禁止网段通过</font>
-
-interface s0/0/0
-ip access-group 5ijsj out        <font color="#abcfe4">//将ACL应用到相关端口</font>
-end
-</code></pre><blockquote>
-<p>知识点：in表示过滤入口的包；out表示过滤出口的包；</p>
-</blockquote>
-<h1 id="实验结果"><a href="#实验结果" class="headerlink" title="实验结果"></a>实验结果</h1><h2 id="再次PC0、PC1尝试能否与PC2通信"><a href="#再次PC0、PC1尝试能否与PC2通信" class="headerlink" title="再次PC0、PC1尝试能否与PC2通信"></a>再次PC0、PC1尝试能否与PC2通信</h2><h3 id="PC0-1"><a href="#PC0-1" class="headerlink" title="PC0:"></a>PC0:</h3><p> <strong>（由于ACL允许 172.16.1.0 网段通过，所以PC0成功通信）</strong></p>
-<p><img src="http://ww1.sinaimg.cn/large/8c0b2220ly1g1ilh6uoxmj20cs06awei.jpg" alt></p>
-<h3 id="PC1-1"><a href="#PC1-1" class="headerlink" title="PC1:"></a>PC1:</h3><p> <strong>（由于ACL禁止 172.16.1.0 网段通过，所以PC1通信失败）</strong></p>
-<p><img src="http://ww1.sinaimg.cn/large/8c0b2220ly1g1ilh6rz9hj20dh05i0sp.jpg" alt></p>
-
-    </article>
-    <!-- license  -->
+            <main class="main index-page">
     
-        <div class="license-wrapper">
-            <p>原文作者：<a href="http://yoursite.com">YaoRemu</a>
-            </p><p>原文链接：<a href="http://yoursite.com/2019/03/28/标准-IP-访问控制列表配置/">http://yoursite.com/2019/03/28/标准-IP-访问控制列表配置/</a>
-            </p><p>发表日期：<a href="http://yoursite.com/2019/03/28/标准-IP-访问控制列表配置/">March 28th 2019, 3:50:17 pm</a>
-            </p><p>更新日期：<a href="http://yoursite.com/2019/03/28/标准-IP-访问控制列表配置/">April 14th 2019, 3:03:40 pm</a>
-            </p><p>版权声明：本文采用<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可</p>
+    
+    
+    
+    
+    
+    <article class="index-post">
+        <a class="abstract-title" href="/2019/04/10/HTML5与HTML4区别/">
+            
+                <span>HTML5与HTML4区别</span>
+        </a>
+        <div class="abstract-content">
+            推出理由及目标HTML5的储蓄，对于Web来说的意义是非常重大的，因为他的意图是想把目前Web上纯在的各种问题一并解决掉了。
+
+Web浏览器之间的兼容性很低  （规范不统一，没有标准化）
+
+文档结构不够明确  （之前表示文档的标题、正文都是使用< div>来排版，结构比较混乱）
+
+Web应用程序的功能收到了限制
+
+
+世界知名浏览器厂商对HTML5的支持：微软（IE9以下不支持）、Google、苹果、opera、Mozilla
+语法的改变内容类型文件扩展符（.html、.htm）与内容类型（text.html）保持不变；
+DOCTYPE声明在HTML4中，我们要明确的指出是哪一个版本；而在...
         </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2019/04/10</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class="abstract-tags">
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="【极客】前端学习">【极客】前端学习</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
+        <a class="abstract-title" href="/2019/04/10/前端学习-全局属性/">
+            
+                <span>全局属性</span>
+        </a>
+        <div class="abstract-content">
+            contentEditable属性允许用户编辑元素中的内容，取值为true【可编辑】、false【不可编辑】eg:
+
+designMode属性指定整个页面是否可以编辑（只能在JavaScript中修改编辑），取值：on【可编辑】、off【不可编辑】
+hidden属性通知浏览器不渲染该元素，使该元素为不可见状态，取值：true【可见状态】、false【不可见状态】eg:不可见状态
+
+spellcheck属性针对input元素与textarea文本输入框提供的新属性，对用户输入的文本内容进行拼写和文本检查eg:
+
+
+tabindex属性不断敲击tab键，让窗口或页面中的控件获得焦点，对窗口中...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2019/04/10</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class="abstract-tags">
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="【极客】前端学习">【极客】前端学习</a>
+    
+</div>
+            
+        </div>
+    </article>
     
     <!-- paginator  -->
-    <ul class="post-paginator">
-        <li class="next">
-            
-                <div class="nextSlogan">Next Post</div>
-                <a href="/2019/03/29/扩展IP访问控制列表配置/" title="扩展IP访问控制列表配置">
-                    <div class="nextTitle">扩展IP访问控制列表配置</div>
-                </a>
-            
-        </li>
-        <li class="previous">
-            
-                <div class="prevSlogan">Previous Post</div>
-                <a href="/2019/03/28/OSPF、RIP小记/" title="OSPF、RIP小记">
-                    <div class="prevTitle">OSPF、RIP小记</div>
-                </a>
-            
-        </li>
-    </ul>
-
-
-
-    <!-- 评论插件 -->
-    <!-- 来必力City版安装代码 -->
-
-<!-- City版安装代码已完成 -->
     
+    <nav class="page-nav">
+        <a class="extend prev" rel="prev" href="/tags/【极客】前端学习/page/3/">< PREV</a><a class="page-number" href="/tags/【极客】前端学习/">1</a><a class="page-number" href="/tags/【极客】前端学习/page/2/">2</a><a class="page-number" href="/tags/【极客】前端学习/page/3/">3</a><span class="page-number current">4</span>
+    </nav>
     
-    <!-- partial('_partial/comment/changyan') -->
-    <!--PC版-->
-
-
-    
-    
-    <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
-    <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
-    <div id="comment"></div>
-    <script>
-    new Valine({
-        el: '#comment' ,
-        notify:false, 
-        verify:false, 
-        appId: "SgWkCobuyHsQs2PICTiE4ea7-gzGzoHsz",
-        appKey: "v5krQ6EXt9olzSl8Ms7G7iSf",
-        placeholder: "",
-        path:window.location.pathname, 
-        avatar:'mm' 
-    });
-    </script>
-
-
-    <!-- 评论 -->
-
-
-
-    <script src="/js/tctip-1.0.3.min.js"></script>
-    <script>
-       new tctip({
-       top: '20%',
-       
-       button: {
-          id: 9,
-          type: 'zanzhu'
-        },
-        list: [
-         {
-           type: 'alipay',
-           qrImg: 'http://ww1.sinaimg.cn/large/8c0b2220gy1g25njlruhej205j05kdgd.jpg'
-         }, {
-           type: 'wechat',
-           qrImg: 'http://ww1.sinaimg.cn/large/8c0b2220gy1g25njlryftj206d06c3z2.jpg'
-         }
-        ]
-      }).init()
-</script>
-
-
-
 </main>
             <!-- profile -->
             
@@ -644,13 +511,6 @@ end
 </footer>
     </div>
     <!-- toc -->
-    
-    <div class="toc-wrapper" style="top:50vh;">
-        <div class="toc-catalog">
-            <span class="iconfont-archer catalog-icon"></span><span>CATALOG</span>
-        </div>
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#拓扑图"><span class="toc-number">1.</span> <span class="toc-text">拓扑图</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#配置命令"><span class="toc-number">2.</span> <span class="toc-text">配置命令</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#配置路由器0"><span class="toc-number">2.1.</span> <span class="toc-text">配置路由器0</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#配置端口"><span class="toc-number">2.1.1.</span> <span class="toc-text">配置端口</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#配置路由器1"><span class="toc-number">2.2.</span> <span class="toc-text">配置路由器1</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#配置端口-1"><span class="toc-number">2.2.1.</span> <span class="toc-text">配置端口</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#配置路由器0的静态路由"><span class="toc-number">2.3.</span> <span class="toc-text">配置路由器0的静态路由</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#配置静态路由"><span class="toc-number">2.3.1.</span> <span class="toc-text">配置静态路由</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#配置路由器1的静态路由"><span class="toc-number">2.4.</span> <span class="toc-text">配置路由器1的静态路由</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#配置静态路由-1"><span class="toc-number">2.4.1.</span> <span class="toc-text">配置静态路由</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#查看路由表"><span class="toc-number">2.4.2.</span> <span class="toc-text">查看路由表</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#PC0、PC1尝试能否与PC2通信"><span class="toc-number">2.5.</span> <span class="toc-text">PC0、PC1尝试能否与PC2通信</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#PC0"><span class="toc-number">2.5.1.</span> <span class="toc-text">PC0:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#PC1"><span class="toc-number">2.5.2.</span> <span class="toc-text">PC1:</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#在路由器0中配置访问控制列表"><span class="toc-number">2.6.</span> <span class="toc-text">在路由器0中配置访问控制列表</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#建立ACL命名为-5ijsj"><span class="toc-number">2.6.1.</span> <span class="toc-text">建立ACL命名为 5ijsj</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#实验结果"><span class="toc-number">3.</span> <span class="toc-text">实验结果</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#再次PC0、PC1尝试能否与PC2通信"><span class="toc-number">3.1.</span> <span class="toc-text">再次PC0、PC1尝试能否与PC2通信</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#PC0-1"><span class="toc-number">3.1.1.</span> <span class="toc-text">PC0:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#PC1-1"><span class="toc-number">3.1.2.</span> <span class="toc-text">PC1:</span></a></li></ol></li></ol></li></ol>
-    </div>
     
     <div class="back-top iconfont-archer"></div>
     <div class="sidebar sidebar-hide">
@@ -1659,8 +1519,6 @@ var talkAPI = "";//如果有类似图灵机器人的聊天接口请填写接口�
     
     
     <!-- async load share.js -->
-    
-        <script src="/scripts/share.js" async></script>    
      
     <!--爱心-->
     <script type="text/javascript" src="/js/src/clicklove.js"></script>
