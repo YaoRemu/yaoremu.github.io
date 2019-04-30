@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-04-29T11:35:06.480Z</updated>
+  <updated>2019-04-30T05:31:27.268Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Vue-js第三课</title>
+    <link href="http://yoursite.com/2019/04/30/Vue-js%E7%AC%AC%E4%B8%89%E8%AF%BE/"/>
+    <id>http://yoursite.com/2019/04/30/Vue-js第三课/</id>
+    <published>2019-04-30T04:44:06.000Z</published>
+    <updated>2019-04-30T05:31:27.268Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;p&gt;这一课，要基于之前学习的 Vue-resource来实现品牌管理的改造，之前我们都是在本地来创建数据，现在我们可以用 Vue-resource 来请求
+        
+      
+    
+    </summary>
+    
+      <category term="Vue学习" scheme="http://yoursite.com/categories/Vue%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+      <category term="前端知识" scheme="http://yoursite.com/tags/%E5%89%8D%E7%AB%AF%E7%9F%A5%E8%AF%86/"/>
+    
+  </entry>
   
   <entry>
     <title>媒体对象（评论模块）</title>
@@ -520,32 +546,6 @@
     
     
       <category term="【极客】前端学习" scheme="http://yoursite.com/tags/%E3%80%90%E6%9E%81%E5%AE%A2%E3%80%91%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>素描</title>
-    <link href="http://yoursite.com/2019/04/22/%E7%B4%A0%E6%8F%8F/"/>
-    <id>http://yoursite.com/2019/04/22/素描/</id>
-    <published>2019-04-22T05:39:19.000Z</published>
-    <updated>2019-04-22T06:58:35.702Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;h1 id=&quot;如何排线&quot;&gt;&lt;a href=&quot;#如何排线&quot; class=&quot;headerlink&quot; title=&quot;如何排线&quot;&gt;&lt;/a&gt;如何排线&lt;/h1&gt;&lt;h2 id=&quot;握笔姿势&quot;&gt;&lt;a href=&quot;#握笔姿势&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="素描" scheme="http://yoursite.com/categories/%E7%B4%A0%E6%8F%8F/"/>
-    
-    
-      <category term="画画" scheme="http://yoursite.com/tags/%E7%94%BB%E7%94%BB/"/>
     
   </entry>
   

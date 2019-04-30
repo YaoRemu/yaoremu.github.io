@@ -22,7 +22,7 @@
     <meta name="description" content="欢迎来到YaoRemu的博客">
     <meta http-equiv="Cache-control" content="no-cache">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>YaoRemu'Blog</title>
+    <title>Vue-js第三课 · YaoRemu'Blog</title>
     <style type="text/css">
     @font-face {
         font-family: 'Oswald-Regular';
@@ -77,6 +77,8 @@
 
     <link rel="preload" href="/css/style.css?v=20180824" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <link rel="stylesheet" href="/css/mobile.css?v=20180824" media="(max-width: 980px)">
+    
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     
     <!-- /*! loadCSS. [c]2017 Filament Group, Inc. MIT License */
 /* This file is meant as a standalone workflow for
@@ -201,14 +203,23 @@
 </head>
 
     
-        <body class="home-body">
+        <body class="post-body">
     
     
-<header class="header index-header">
+<header class="header">
 
     <div class="read-progress"></div>
     <div class="header-sidebar-menu"></div>
     <!-- post页的toggle banner  -->
+    
+    <div class="banner">
+            <div class="blog-title">
+                <a href="/">Welcome to YaoRemu'Blog</a>
+            </div>
+            <div class="post-title">
+                <a href="#" class="post-name">Vue-js第三课</a>
+            </div>
+    </div>
     
     <a class="home-link" href="/">Welcome to YaoRemu'Blog</a>
 </header>
@@ -227,17 +238,17 @@ height:50vh;
     <!-- 主页  -->
     
     
-    <!-- 文章页  -->
+    <!-- 404页  -->
             
     <div class="site-intro-placeholder"></div>
-    <div class="site-intro-img" style="background-image: url(http://ww1.sinaimg.cn/large/8c0b2220gy1g1aejyd30tj21c00u07a2.jpg)"></div>
+    <div class="site-intro-img" style="background-image: url(http://ww1.sinaimg.cn/large/8c0b2220gy1g1aemgv57ej21hc0tze81.jpg)"></div>
     <div class="site-intro-meta">
         <!-- 标题  -->
         <h1 class="intro-title">
             <!-- 主页  -->
             
-            Welcome to YaoRemu'Blog
-            <!-- 文章页  -->
+            Vue-js第三课
+            <!-- 404 -->
             
         </h1>
         <!-- 副标题 -->
@@ -245,12 +256,49 @@ height:50vh;
             <!-- 主页副标题  -->
             
             
-                如果真爱有颜色，那一定是蓝色.
-            
-            <!-- 文章页  -->
+            <!-- 404 -->
             
         </p>
         <!-- 文章页meta -->
+        
+            <div class="post-intros">
+                <!-- 文章页标签  -->
+                
+                    <div class="post-intro-tags">
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="前端知识">前端知识</a>
+    
+</div>
+                
+                
+                    <div class="post-intro-read">
+                        <span>字数统计: <span class="post-count word-count">391</span>阅读时长: <span class="post-count reading-time">1 min</span></span>
+                    </div>
+                
+                <div class="post-intro-meta">
+                    <span class="post-intro-calander iconfont-archer"></span>
+                    <span class="post-intro-time">2019/04/30</span>
+                    
+                    <span id="busuanzi_container_page_pv" class="busuanzi-pv">
+                        <span class="iconfont-archer"></span>
+                        <span id="busuanzi_value_page_pv"></span>
+                    </span>
+                    
+                    <span class="shareWrapper">
+                        <span class="iconfont-archer shareIcon"></span>
+                        <span class="shareText">Share</span>
+                        <ul class="shareList">
+                            <li class="iconfont-archer share-qr" data-type="qr">
+                                <div class="share-qrcode"></div>
+                            </li>
+                            <li class="iconfont-archer" data-type="weibo"></li>
+                            <li class="iconfont-archer" data-type="qzone"></li>
+                            <li class="iconfont-archer" data-type="twitter"></li>
+                            <li class="iconfont-archer" data-type="facebook"></li>
+                        </ul>
+                    </span>
+                </div>
+            </div>
         
     </div>
 </div>
@@ -351,524 +399,108 @@ height:50vh;
 </script>        
         <img class="loading" src="/assets/loading.svg" style="display: block; margin: 6rem auto 0 auto; width: 6rem; height: 6rem;">
         <div class="container container-unloaded">
-            <main class="main index-page">
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/2019/03/16/简介/">
-            
-                <span class="stick-top iconfont-archer"></span>
-                
-                <span>关于我的博客</span>
-        </a>
-        <div class="abstract-content">
-            <p>~~  欢迎各位道友!~~<br><img src="http://ww1.sinaimg.cn/large/8c0b2220gy1g1af9mon7bj20zk0m8wjx.jpg" alt><br>
-        </p></div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2019/03/16</span>
-            </div>
-            <!-- tags  -->
-            
-        </div>
+            <main class="main post-page">
+    <article class="article-entry">
+        <meta name="generator" content="Hexo 3.8.0"><p>这一课，要基于之前学习的 Vue-resource来实现品牌管理的改造，之前我们都是在本地来创建数据，现在我们可以用 Vue-resource 来请求 <strong>远端的数据库了</strong></p>
+<p>先开启node服务器：</p>
+<p><img src="http://ww1.sinaimg.cn/large/8c0b2220gy1g2kkerrv7cj20bi01fmwz.jpg" alt></p>
+<p>创建一个html</p>
+<blockquote>
+<p><strong>注意</strong>：要导入 v-resource 的包</p>
+</blockquote>
+<figure class="highlight html"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag"><<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span> <span class="attr">href</span>=<span class="string">"./lib/bootstrap.css"</span>></span></span><br><span class="line"></span><br><span class="line"><span class="tag"><<span class="name">div</span> <span class="attr">id</span>=<span class="string">"app"</span>></span></span><br><span class="line"></span><br><span class="line">	<span class="tag"><<span class="name">div</span> <span class="attr">class</span>=<span class="string">"panel panel-primary"</span>></span></span><br><span class="line">		<span class="tag"><<span class="name">div</span> <span class="attr">class</span>=<span class="string">"panel-heading"</span>></span></span><br><span class="line">			<span class="tag"><<span class="name">h3</span> <span class="attr">class</span>=<span class="string">"panel-title"</span>></span>添加品牌<span class="tag"><</span>/<span class="attr">h3</span>></span><br><span class="line">		<span class="tag"><</span>/<span class="attr">div</span>></span><br><span class="line">		<span class="tag"><<span class="name">div</span> <span class="attr">class</span>=<span class="string">"panel-body form-inline"</span>></span></span><br><span class="line"></span><br><span class="line">			<span class="tag"><<span class="name">label</span>></span></span><br><span class="line">				Name：</span><br><span class="line">				<span class="tag"><<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">v-model</span>=<span class="string">"name"</span> <span class="attr">class</span>=<span class="string">"form-control"</span>></span></span><br><span class="line">			<span class="tag"><</span>/<span class="attr">label</span>></span><br><span class="line"></span><br><span class="line">			<span class="tag"><<span class="name">input</span> <span class="attr">type</span>=<span class="string">"button"</span> <span class="attr">value</span>=<span class="string">"添加"</span> @<span class="attr">click</span>=<span class="string">"add"</span> <span class="attr">class</span>=<span class="string">"btn btn-primary"</span>></span></span><br><span class="line"></span><br><span class="line">		<span class="tag"><</span>/<span class="attr">div</span>></span><br><span class="line">	<span class="tag"><</span>/<span class="attr">div</span>></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">	<span class="tag"><<span class="name">table</span> <span class="attr">class</span>=<span class="string">"table table-bordered table-hover table-striped"</span>></span></span><br><span class="line">		<span class="tag"><<span class="name">thead</span>></span></span><br><span class="line">			<span class="tag"><<span class="name">tr</span>></span></span><br><span class="line">				<span class="tag"><<span class="name">th</span>></span>Id<span class="tag"><</span>/<span class="attr">th</span>></span><br><span class="line">				<span class="tag"><<span class="name">th</span>></span>Name<span class="tag"><</span>/<span class="attr">th</span>></span><br><span class="line">				<span class="tag"><<span class="name">th</span>></span>Ctime<span class="tag"><</span>/<span class="attr">th</span>></span><br><span class="line">				<span class="tag"><<span class="name">th</span>></span>Operation<span class="tag"><</span>/<span class="attr">th</span>></span><br><span class="line">			<span class="tag"><</span>/<span class="attr">tr</span>></span><br><span class="line">		<span class="tag"><</span>/<span class="attr">thead</span>></span><br><span class="line">		<span class="tag"><<span class="name">tbody</span>></span></span><br><span class="line">			<span class="tag"><<span class="name">tr</span> <span class="attr">v-for</span>=<span class="string">"item in list"</span> <span class="attr">:key</span>=<span class="string">"item.id"</span>></span></span><br><span class="line">				<span class="tag"><<span class="name">td</span>></span>{{ item.id }}<span class="tag"><</span>/<span class="attr">td</span>></span><br><span class="line">				<span class="tag"><<span class="name">td</span>></span>{{ item.name }}<span class="tag"><</span>/<span class="attr">td</span>></span><br><span class="line">				<span class="tag"><<span class="name">td</span>></span>{{ item.ctime }}<span class="tag"><</span>/<span class="attr">td</span>></span><br><span class="line">				<span class="tag"><<span class="name">td</span>></span></span><br><span class="line">					<span class="tag"><<span class="name">a</span> <span class="attr">href</span>=<span class="string">""</span>></span>删除<span class="tag"><</span>/<span class="attr">a</span>></span><br><span class="line">				<span class="tag"><</span>/<span class="attr">td</span>></span><br><span class="line">			<span class="tag"><</span>/<span class="attr">tr</span>></span><br><span class="line">		<span class="tag"><</span>/<span class="attr">tbody</span>></span><br><span class="line">	<span class="tag"><</span>/<span class="attr">table</span>></span><br><span class="line"></span><br><span class="line"><span class="tag"><</span>/<span class="attr">div</span>></span><br><span class="line"></span><br><span class="line"><span class="tag"><<span class="name">script</span> <span class="attr">src</span>=<span class="string">"./lib/vue.min.js"</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span>></span><span class="javascript"><<span class="regexp">/</</span>script></span></span><br><span class="line"><span class="xml"><span class="tag"><<span class="name">script</span> <span class="attr">src</span>=<span class="string">"./lib/vue-resource.js"</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span>></span><span class="javascript"><<span class="regexp">/</</span>script></span></span></span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight javascript"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> vm = <span class="keyword">new</span> Vue({</span><br><span class="line">	el: <span class="string">'#app'</span>,</span><br><span class="line">	data: {</span><br><span class="line">		name: <span class="string">''</span>,</span><br><span class="line">		list: [</span><br><span class="line">			{ <span class="attr">id</span>: <span class="number">1</span>, <span class="attr">name</span>: <span class="string">'五菱宏光'</span>, <span class="attr">ctime</span>: <span class="keyword">new</span> <span class="built_in">Date</span>() },</span><br><span class="line">			{ <span class="attr">id</span>: <span class="number">2</span>, <span class="attr">name</span>: <span class="string">'众泰'</span>, <span class="attr">ctime</span>: <span class="keyword">new</span> <span class="built_in">Date</span>() }</span><br><span class="line">		]</span><br><span class="line">	},</span><br><span class="line">	methods: {</span><br><span class="line">		add(){</span><br><span class="line"></span><br><span class="line">		}</span><br><span class="line">	}</span><br><span class="line">});</span><br></pre></td></tr></tbody></table></figure>
+<h1 id="品牌数据列表"><a href="#品牌数据列表" class="headerlink" title="品牌数据列表"></a>品牌数据列表</h1><p><img src="http://ww1.sinaimg.cn/large/8c0b2220gy1g2kla1fmktj20ho087wf5.jpg" alt></p>
+<p><img src="http://ww1.sinaimg.cn/large/8c0b2220gy1g2klcd4fxdj20h607gmyt.jpg" alt></p>
+<p>提供的地址： <a href="http://vue.studyit.io/api/getprodlist" target="_blank" rel="noopener">http://vue.studyit.io/api/getprodlist</a><br>请求方式： get<br>作用： 获取品牌数据 json 数据<br>返回数据格式： json</p>
+<h2 id="发起请求"><a href="#发起请求" class="headerlink" title="发起请求"></a>发起请求</h2><figure class="highlight html"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag"><<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span> <span class="attr">href</span>=<span class="string">"./lib/bootstrap.css"</span>></span></span><br><span class="line"></span><br><span class="line"><span class="tag"><<span class="name">div</span> <span class="attr">id</span>=<span class="string">"app"</span>></span></span><br><span class="line"></span><br><span class="line">	<span class="tag"><<span class="name">div</span> <span class="attr">class</span>=<span class="string">"panel panel-primary"</span>></span></span><br><span class="line">		<span class="tag"><<span class="name">div</span> <span class="attr">class</span>=<span class="string">"panel-heading"</span>></span></span><br><span class="line">			<span class="tag"><<span class="name">h3</span> <span class="attr">class</span>=<span class="string">"panel-title"</span>></span>添加品牌<span class="tag"><</span>/<span class="attr">h3</span>></span><br><span class="line">		<span class="tag"><</span>/<span class="attr">div</span>></span><br><span class="line">		<span class="tag"><<span class="name">div</span> <span class="attr">class</span>=<span class="string">"panel-body form-inline"</span>></span></span><br><span class="line"></span><br><span class="line">			<span class="tag"><<span class="name">label</span>></span></span><br><span class="line">				Name：</span><br><span class="line">				<span class="tag"><<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">v-model</span>=<span class="string">"name"</span> <span class="attr">class</span>=<span class="string">"form-control"</span>></span></span><br><span class="line">			<span class="tag"><</span>/<span class="attr">label</span>></span><br><span class="line"></span><br><span class="line">			<span class="tag"><<span class="name">input</span> <span class="attr">type</span>=<span class="string">"button"</span> <span class="attr">value</span>=<span class="string">"添加"</span> @<span class="attr">click</span>=<span class="string">"add"</span> <span class="attr">class</span>=<span class="string">"btn btn-primary"</span>></span></span><br><span class="line"></span><br><span class="line">		<span class="tag"><</span>/<span class="attr">div</span>></span><br><span class="line">	<span class="tag"><</span>/<span class="attr">div</span>></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">	<span class="tag"><<span class="name">table</span> <span class="attr">class</span>=<span class="string">"table table-bordered table-hover table-striped"</span>></span></span><br><span class="line">		<span class="tag"><<span class="name">thead</span>></span></span><br><span class="line">			<span class="tag"><<span class="name">tr</span>></span></span><br><span class="line">				<span class="tag"><<span class="name">th</span>></span>Id<span class="tag"><</span>/<span class="attr">th</span>></span><br><span class="line">				<span class="tag"><<span class="name">th</span>></span>Name<span class="tag"><</span>/<span class="attr">th</span>></span><br><span class="line">				<span class="tag"><<span class="name">th</span>></span>Ctime<span class="tag"><</span>/<span class="attr">th</span>></span><br><span class="line">				<span class="tag"><<span class="name">th</span>></span>Operation<span class="tag"><</span>/<span class="attr">th</span>></span><br><span class="line">			<span class="tag"><</span>/<span class="attr">tr</span>></span><br><span class="line">		<span class="tag"><</span>/<span class="attr">thead</span>></span><br><span class="line">		<span class="tag"><<span class="name">tbody</span>></span></span><br><span class="line">			<span class="tag"><<span class="name">tr</span> <span class="attr">v-for</span>=<span class="string">"item in list"</span> <span class="attr">:key</span>=<span class="string">"item.id"</span>></span></span><br><span class="line">				<span class="tag"><<span class="name">td</span>></span>{{ item.id }}<span class="tag"><</span>/<span class="attr">td</span>></span><br><span class="line">				<span class="tag"><<span class="name">td</span>></span>{{ item.name }}<span class="tag"><</span>/<span class="attr">td</span>></span><br><span class="line">				<span class="tag"><<span class="name">td</span>></span>{{ item.ctime }}<span class="tag"><</span>/<span class="attr">td</span>></span><br><span class="line">				<span class="tag"><<span class="name">td</span>></span></span><br><span class="line">					<span class="tag"><<span class="name">a</span> <span class="attr">href</span>=<span class="string">""</span>></span>删除<span class="tag"><</span>/<span class="attr">a</span>></span><br><span class="line">				<span class="tag"><</span>/<span class="attr">td</span>></span><br><span class="line">			<span class="tag"><</span>/<span class="attr">tr</span>></span><br><span class="line">		<span class="tag"><</span>/<span class="attr">tbody</span>></span><br><span class="line">	<span class="tag"><</span>/<span class="attr">table</span>></span><br><span class="line"></span><br><span class="line"><span class="tag"><</span>/<span class="attr">div</span>></span><br><span class="line"></span><br><span class="line"><span class="tag"><<span class="name">script</span> <span class="attr">src</span>=<span class="string">"./lib/vue.min.js"</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span>></span><span class="javascript"><<span class="regexp">/</</span>script></span></span><br><span class="line"><span class="xml"><span class="tag"><<span class="name">script</span> <span class="attr">src</span>=<span class="string">"./lib/vue-resource.js"</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span>></span><span class="javascript"><<span class="regexp">/</</span>script></span></span></span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight javascript"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> vm = <span class="keyword">new</span> Vue({</span><br><span class="line">	el: <span class="string">'#app'</span>,</span><br><span class="line">	data: {</span><br><span class="line">		name: <span class="string">''</span>,</span><br><span class="line">		list: [<span class="comment">//存放所有品牌列表的数组</span></span><br><span class="line">			{ <span class="attr">id</span>: <span class="number">1</span>, <span class="attr">name</span>: <span class="string">'五菱宏光'</span>, <span class="attr">ctime</span>: <span class="keyword">new</span> <span class="built_in">Date</span>() },</span><br><span class="line">			{ <span class="attr">id</span>: <span class="number">2</span>, <span class="attr">name</span>: <span class="string">'众泰'</span>, <span class="attr">ctime</span>: <span class="keyword">new</span> <span class="built_in">Date</span>() }</span><br><span class="line">		]</span><br><span class="line">	},</span><br><span class="line">	methods: {</span><br><span class="line">		add(){</span><br><span class="line"></span><br><span class="line">		},</span><br><span class="line">		getAllList(){<span class="comment">//获取的所有的品牌列表</span></span><br><span class="line">			<span class="comment">//分析：</span></span><br><span class="line">			<span class="comment">//1.由于已经导入了 Vue-resource这个包，所以，可以直接同 this.$http 来发起数据请求</span></span><br><span class="line">			<span class="comment">//2.获取列表的时候，要发起一个 get请求</span></span><br><span class="line">			<span class="comment">//3.this.$http.get('url').then(function(result){})</span></span><br><span class="line">			<span class="comment">//4.当通过 then 指定回调函数之后，在回调函数真，可以拿到数据服务器返回的 result</span></span><br><span class="line">			<span class="comment">//5.先判断 result.status 是否等于0，如果等于0，就成功了，可以把 result.message 赋值给 this.list；如果不等于0，可以弹框提醒获取失败！</span></span><br><span class="line"></span><br><span class="line">			<span class="keyword">this</span>.$http.get(<span class="string">''</span>).then(<span class="function"><span class="params">result</span> =></span> {</span><br><span class="line">				<span class="keyword">if</span>(result.status === <span class="number">0</span>){</span><br><span class="line">					<span class="keyword">this</span>.list = result.message</span><br><span class="line">				} <span class="keyword">else</span> {</span><br><span class="line">					alert(<span class="string">'获取数据失败'</span>)</span><br><span class="line">				}</span><br><span class="line">			})</span><br><span class="line">		}</span><br><span class="line">	}</span><br><span class="line">});</span><br></pre></td></tr></tbody></table></figure>
     </article>
+    <!-- license  -->
     
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/2019/04/30/Vue-js第三课/">
-            
-                <span>Vue-js第三课</span>
-        </a>
-        <div class="abstract-content">
-            这一课，要基于之前学习的 Vue-resource来实现品牌管理的改造，之前我们都是在本地来创建数据，现在我们可以用 Vue-resource 来请求 远端的数据库了
-先开启node服务器：
-
-创建一个html
-
-注意：要导入 v-resource 的包
-
-12345678910111213141516171819202122232425262728293031323334353637383940414243444546						添加品牌											Name：																							Id				Name				Ctime				Operation				...
+        <div class="license-wrapper">
+            <p>原文作者：<a href="http://yoursite.com">YaoRemu</a>
+            </p><p>原文链接：<a href="http://yoursite.com/2019/04/30/Vue-js第三课/">http://yoursite.com/2019/04/30/Vue-js第三课/</a>
+            </p><p>发表日期：<a href="http://yoursite.com/2019/04/30/Vue-js第三课/">April 30th 2019, 12:44:06 pm</a>
+            </p><p>更新日期：<a href="http://yoursite.com/2019/04/30/Vue-js第三课/">April 30th 2019, 1:31:27 pm</a>
+            </p><p>版权声明：本文采用<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可</p>
         </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2019/04/30</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class="abstract-tags">
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="前端知识">前端知识</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/2019/04/29/媒体对象/">
-            
-                <span>媒体对象（评论模块）</span>
-        </a>
-        <div class="abstract-content">
-            默认样式这是一个抽象的样式，用以后就不同类型的组件，这些组件具有文本内容，在左边或者在右边有对其的一些图片，像一些评论、或者模仿推特来做的一些消息等
-1234567891011121314151617181920212223body{	margin:10px 0;}																	欢迎来到Yaoremu的博客										欢迎来到Yaoremu的博客欢迎来到Yaoremu的博客欢迎来到Yaoremu的博客欢迎来到Yaoremu的博客欢迎来到Yaoremu的博客欢迎来到Yaoremu的博客欢迎来到Yaoremu的博客欢迎来到Yaoremu的博客欢迎来到Yaoremu...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2019/04/29</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class="abstract-tags">
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="【极客】前端学习">【极客】前端学习</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/2019/04/29/导航条/">
-            
-                <span>导航条</span>
-        </a>
-        <div class="abstract-content">
-            简介
-基本的导航
-表单
-按钮
-文本
-
-
-非导航的链接
-组件排列
-固定在顶端或者底部
-反色的导航条
-路径导航
-
-基本的导航1234567891011121314151617						蕾姆											Link				Link				Link						
-
-导航添加表单12345678910111213141516171819202122232425						蕾姆											Link				Link				Link																				搜索										
-
-组件排列相应的控件添加 navbar-left 即可
-
-此处需要使用 JS脚本 进行操作
-...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2019/04/29</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class="abstract-tags">
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="【极客】前端学习">【极客】前端学习</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/2019/04/28/透视/">
-            
-                <span>透视</span>
-        </a>
-        <div class="abstract-content">
-            三点透视
-
-两点透视第一种
-
-第二种
-
-一点透视
-
-五点透视
-
-
-
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2019/04/28</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class="abstract-tags">
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="画画">画画</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/2019/04/28/导航/">
-            
-                <span>导航</span>
-        </a>
-        <div class="abstract-content">
-            导航分为几个方向：
-
-标签页
-胶囊式标签页
-两端对齐标签页
-禁用的链接
-添加下拉菜单
-
-基本的标签页
-role 的添加会导致一些问题的避免
-
-HTML1234567891011			home		Hello		World	
-JavaScript1234$("#mytab a").click(function(e){	e.preventDefault();	$(this).tab("show");}
-
-
-由于没有点击选中的效果，所以需要引入它需要使用的一个插件
-
-胶囊式标签页胶囊我们都看过，其实就是颜色不一样
-HTML1234567891011			home		Hello		World	
-J...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2019/04/28</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class="abstract-tags">
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="【极客】前端学习">【极客】前端学习</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/2019/04/28/Bootstrap输入框组/">
-            
-                <span>Bootstrap输入框组</span>
-        </a>
-        <div class="abstract-content">
-            主要内容
-输入框组
-导航
-导航条
-
-输入框组
-基本的输入框
-输入框的尺寸
-多添加的多选框和单选框
-多添加按钮
-多添加下拉式按钮
-多添加分裂式按钮下拉菜单
-
-基本的输入框1234567891011121314151617			@								.00				$				.00	
-
-输入框的尺寸输入框的尺寸是根据屏幕的自适应来操作的，比如：响应式布局，针对于手机 、 ipad 和 显示器 时的显示是不一样的,根据不同的屏幕选择不同的内容
-1234567891011121314151617			@								.00				$				.00	
-
-多添加的多选框和单选框12345678910		...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2019/04/28</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class="abstract-tags">
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="【极客】前端学习">【极客】前端学习</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/2019/04/28/文件和目录常用命令/">
-            
-                <span>文件和目录常用命令</span>
-        </a>
-        <div class="abstract-content">
-            目标
-查看目录内容
-
-ls
-
-
-切换目录
-
-cd
-
-
-创建和删除操作
-
-touch ： 创建文件
-rm ： 删除文件和目录
-mkdir ： 创建目录
-
-
-拷贝和移动工具
-
-cp
-mv    
-
-
-查看文件内容
-
-cat
-more
-grep
-
-
-其他
-
-echo
-重定向 > 和 >>
-管道 |
-
-
-
-查看目录内容终端实用技巧自动补全
-在敲出 文件/目录/命令 的前几个字幕之后，按下 tab 键
-
-如果输入没有歧义，系统会自动补全
-如果还存在其他 文件/目录/命令 ，再按一下，系统会提示可能存在的命令
-
-
-
-曾经使用过的命令
-按 上/下 光标键可以在曾经使用过的命令之间来回切换
-如果想要退出...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2019/04/28</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class="abstract-tags">
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="从零开始的Python学习">从零开始的Python学习</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/2019/04/28/Linux终端命令格式/">
-            
-                <span>Linux终端命令格式</span>
-        </a>
-        <div class="abstract-content">
-            终端命令格式command [-options] [parameter]
-说明：
-
-command：命令名，相应功能的英文单词或单单词的缩写
-  eg：只需要输入命令就可以看到结果的命令：    ls（查看当前文件夹的内容）、pwd（查看当前所在的工作文件）、clear（清空屏幕）
-
-[-options]：选项，可用来对命令进行控制（执行命令的时候可以做额外的控制），也可以省略
-  eg：删除目录： rm -r aaa
-
-
-
-
-parameter：传给命令的参数，所谓参数，就是执行命令的时候让命令具体去做的事情，我们可以 以参数的形式告诉命令。 参数可以是 零个、一个 或者 多个
-  e...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2019/04/28</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class="abstract-tags">
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="从零开始的Python学习">从零开始的Python学习</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/2019/04/27/按钮组/">
-            
-                <span>按钮组</span>
-        </a>
-        <div class="abstract-content">
-            按钮组通过 按钮组容器，把一组按钮放在同一行里，建议我们与 按钮组插件 联合使用，会出现更好的样式。 现阶段先不使用插件，在后面的阶段会详细讲解插件，接下来了解 按钮组 是如何使用的
-1234567			Left		Middle		default	
-
-我们可以看到三个按钮，三个按钮在一个组当中，因为他们连在一起，这就是按钮组最基本的使用
-延伸效果：按钮工具栏我们可以根据按钮组来延伸出来一个效果，我们在使用 office办公的时候，上方会有很多很多的选项，比如居中操作，或者是居左、居右，让你的文字字体大小调节； 其实，我们可以使用按钮组来进行调节他们，可以称为： 按钮工具栏
-把一组 div...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2019/04/27</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class="abstract-tags">
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="【极客】前端学习">【极客】前端学习</a>
-    
-</div>
-            
-        </div>
-    </article>
     
     <!-- paginator  -->
+    <ul class="post-paginator">
+        <li class="next">
+            
+        </li>
+        <li class="previous">
+            
+                <div class="prevSlogan">Previous Post</div>
+                <a href="/2019/04/29/媒体对象/" title="媒体对象（评论模块）">
+                    <div class="prevTitle">媒体对象（评论模块）</div>
+                </a>
+            
+        </li>
+    </ul>
+
+
+
+    <!-- 评论插件 -->
+    <!-- 来必力City版安装代码 -->
+
+<!-- City版安装代码已完成 -->
     
-    <nav class="page-nav">
-        <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">…</span><a class="page-number" href="/page/7/">7</a><a class="extend next" rel="next" href="/page/2/">NEXT ></a>
-    </nav>
     
+    <!-- partial('_partial/comment/changyan') -->
+    <!--PC版-->
+
+
+    
+    
+    <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+    <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+    <div id="comment"></div>
+    <script>
+    new Valine({
+        el: '#comment' ,
+        notify:false, 
+        verify:false, 
+        appId: "SgWkCobuyHsQs2PICTiE4ea7-gzGzoHsz",
+        appKey: "v5krQ6EXt9olzSl8Ms7G7iSf",
+        placeholder: "",
+        path:window.location.pathname, 
+        avatar:'mm' 
+    });
+    </script>
+
+
+    <!-- 评论 -->
+
+
+
+    <script src="/js/tctip-1.0.3.min.js"></script>
+    <script>
+       new tctip({
+       top: '20%',
+       
+       button: {
+          id: 9,
+          type: 'zanzhu'
+        },
+        list: [
+         {
+           type: 'alipay',
+           qrImg: 'http://ww1.sinaimg.cn/large/8c0b2220gy1g25njlruhej205j05kdgd.jpg'
+         }, {
+           type: 'wechat',
+           qrImg: 'http://ww1.sinaimg.cn/large/8c0b2220gy1g25njlryftj206d06c3z2.jpg'
+         }
+        ]
+      }).init()
+</script>
+
+
+
 </main>
             <!-- profile -->
-            
-            <div class="profile">
-    <img class="profile-avatar" alt="avatar" src="http://ww1.sinaimg.cn/large/8c0b2220gy1g1cs04vue4j20ht0ht0tz.jpg">
-    <div class="profile-name">YaoRemu</div>
-    
-    <div class="profile-signature">
-        Man proposes, god disposes.
-    </div>
-    
-    
-    <div class="profile-social">
-        
-    
-        
-            
-                <span class="iconfont-archer wechat" title="wechat">
-                  
-                  <img class="profile-qr" src="http://ww1.sinaimg.cn/large/8c0b2220gy1g1aea5wfucg208c08cjrx.gif">
-                </span>
-            
-        
-    
-        
-            
-                <span class="iconfont-archer qq" title="qq">
-                  
-                  <img class="profile-qr" src="http://ww1.sinaimg.cn/large/8c0b2220gy1g1aeafzefgg208c08caba.gif">
-                </span>
-            
-        
-    
-        
-            
-                <a href="https://www.weibo.com/u/2349539872?sudaref=s.weibo.com&display=0&retcode=6102&is_all=1" class="iconfont-archer weibo" target="_blank" title="weibo"></a>
-            
-        
-    
-        
-            
-                <a href="https://YaoRemu.github.io" class="iconfont-archer github" target="_blank" title="github"></a>
-            
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-
-    </div>
-    
-    
-    
-</div>
             
         </div>
         <footer class="footer footer-unloaded">
@@ -954,6 +586,13 @@ parameter：传给命令的参数，所谓参数，就是执行命令的时候�
 </footer>
     </div>
     <!-- toc -->
+    
+    <div class="toc-wrapper" style="top:50vh;">
+        <div class="toc-catalog">
+            <span class="iconfont-archer catalog-icon"></span><span>CATALOG</span>
+        </div>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#品牌数据列表"><span class="toc-number">1.</span> <span class="toc-text">品牌数据列表</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#发起请求"><span class="toc-number">1.1.</span> <span class="toc-text">发起请求</span></a></li></ol></li></ol>
+    </div>
     
     <div class="back-top iconfont-archer"></div>
     <div class="sidebar sidebar-hide">
@@ -1938,6 +1577,8 @@ var talkAPI = "";//如果有类似图灵机器人的聊天接口请填写接口�
     
     
     <!-- async load share.js -->
+    
+        <script src="/scripts/share.js" async></script>    
      
     <!--爱心-->
     <script type="text/javascript" src="/js/src/clicklove.js"></script>
