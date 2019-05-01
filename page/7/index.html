@@ -360,6 +360,50 @@ height:50vh;
     
     
     <article class="index-post">
+        <a class="abstract-title" href="/2019/03/24/路由器静态路由配置/">
+            
+                <span>路由器静态路由配置</span>
+        </a>
+        <div class="abstract-content">
+            拓扑图
+
+注：由于路由器[2811]初始时没有Serial接口，所以需要在图形化界面安装上[WIC-2T]组件；
+
+配置命令配置Router1各个端口enable
+configure terminal
+hostname R1
+
+interface fa0/1
+no shutdown        //开启端口
+ip address 192.168.1.1 255.255.255.0        //配置端口IP以及子网掩码
+exit
+
+interface serial 0/0/0        //配置串行接口
+no shutdown
+ip address 192.168.3.1 25...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2019/03/24</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class="abstract-tags">
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Cisco基础">Cisco基础</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
         <a class="abstract-title" href="/2019/03/23/路由器单臂路由配置/">
             
                 <span>路由器单臂路由配置</span>
@@ -1389,9 +1433,16 @@ net start mysql(启动MySql服务)
     
     
     
+    
+    
+    
+    
+    
+    
+    
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 68
+        Total : 69
         </div>
         <!-- search  -->
         
@@ -1418,6 +1469,11 @@ net start mysql(启动MySql服务)
     
     <div class="archive-year"> 2019 </div>
     <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">05/01</span><a class="archive-post-title" href="/2019/05/01/分页与标签/">分页与标签</a>
+        </li>
     
     
         <li class="archive-post-item">
@@ -1767,11 +1823,11 @@ net start mysql(启动MySql服务)
     
         <span class="sidebar-tag-name" data-tags="安装教程"><span class="iconfont-archer"></span>安装教程</span>
     
-        <span class="sidebar-tag-name" data-tags="Cisco笔记"><span class="iconfont-archer"></span>Cisco笔记</span>
+        <span class="sidebar-tag-name" data-tags="Cisco强化学习"><span class="iconfont-archer"></span>Cisco强化学习</span>
     
         <span class="sidebar-tag-name" data-tags="PHP相关知识"><span class="iconfont-archer"></span>PHP相关知识</span>
     
-        <span class="sidebar-tag-name" data-tags="Cisco强化学习"><span class="iconfont-archer"></span>Cisco强化学习</span>
+        <span class="sidebar-tag-name" data-tags="Cisco笔记"><span class="iconfont-archer"></span>Cisco笔记</span>
     
         <span class="sidebar-tag-name" data-tags="github搭建个人博客"><span class="iconfont-archer"></span>github搭建个人博客</span>
     
