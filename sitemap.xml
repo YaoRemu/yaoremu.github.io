@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yoursite.com/2019/04/30/Vue-js%E7%AC%AC%E4%B8%89%E8%AF%BE/</loc>
+    
+    <lastmod>2019-05-01T13:34:32.755Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/2019/05/01/%E5%BE%BD%E7%AB%A0%E4%B8%8E%E5%B7%A8%E5%B9%95/</loc>
     
     <lastmod>2019-05-01T11:59:02.921Z</lastmod>
@@ -33,13 +40,6 @@
     <loc>http://yoursite.com/2019/04/30/%E9%9D%A2%E6%9D%BF/</loc>
     
     <lastmod>2019-04-30T12:05:55.546Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/2019/04/30/Vue-js%E7%AC%AC%E4%B8%89%E8%AF%BE/</loc>
-    
-    <lastmod>2019-04-30T09:44:10.216Z</lastmod>
     
   </url>
   
