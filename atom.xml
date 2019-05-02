@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-05-02T09:32:47.650Z</updated>
+  <updated>2019-05-02T12:20:45.343Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,58 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>警告框</title>
+    <link href="http://yoursite.com/2019/05/02/%E8%AD%A6%E5%91%8A%E6%A1%86/"/>
+    <id>http://yoursite.com/2019/05/02/警告框/</id>
+    <published>2019-05-02T11:31:24.000Z</published>
+    <updated>2019-05-02T12:20:45.343Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;h1 id=&quot;警告框&quot;&gt;&lt;a href=&quot;#警告框&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="Bootstrap" scheme="http://yoursite.com/categories/Bootstrap/"/>
+    
+    
+      <category term="【极客】前端学习" scheme="http://yoursite.com/tags/%E3%80%90%E6%9E%81%E5%AE%A2%E3%80%91%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>页头与缩略图</title>
+    <link href="http://yoursite.com/2019/05/02/%E9%A1%B5%E5%A4%B4%E4%B8%8E%E7%BC%A9%E7%95%A5%E5%9B%BE/"/>
+    <id>http://yoursite.com/2019/05/02/页头与缩略图/</id>
+    <published>2019-05-02T10:02:11.000Z</published>
+    <updated>2019-05-02T11:26:59.847Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;h1 id=&quot;页头&quot;&gt;&lt;a href=&quot;#页头&quot; class=&quot;headerlink&quot; title=&quot;页头&quot;&gt;&lt;/a&gt;页头&lt;/h1&gt;&lt;p&gt;页头一般位于 页面内部 的内容进行
+        
+      
+    
+    </summary>
+    
+      <category term="Bootstrap" scheme="http://yoursite.com/categories/Bootstrap/"/>
+    
+    
+      <category term="【极客】前端学习" scheme="http://yoursite.com/tags/%E3%80%90%E6%9E%81%E5%AE%A2%E3%80%91%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
   
   <entry>
     <title>远程管理常用命令</title>
@@ -152,7 +204,7 @@
     <link href="http://yoursite.com/2019/04/30/Vue-js%E7%AC%AC%E4%B8%89%E8%AF%BE/"/>
     <id>http://yoursite.com/2019/04/30/Vue-js第三课/</id>
     <published>2019-04-30T04:44:06.000Z</published>
-    <updated>2019-05-01T13:34:32.755Z</updated>
+    <updated>2019-05-02T14:02:04.295Z</updated>
     
     <summary type="html">
     
@@ -492,58 +544,6 @@
     
     
       <category term="从零开始的Python学习" scheme="http://yoursite.com/tags/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E7%9A%84Python%E5%AD%A6%E4%B9%A0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>HTML5编辑API之Range对象</title>
-    <link href="http://yoursite.com/2019/04/25/HTML5%E7%BC%96%E8%BE%91API%E4%B9%8BRange%E5%AF%B9%E8%B1%A1/"/>
-    <id>http://yoursite.com/2019/04/25/HTML5编辑API之Range对象/</id>
-    <published>2019-04-25T12:19:29.000Z</published>
-    <updated>2019-04-29T08:05:28.765Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;h1 id=&quot;课程概要&quot;&gt;&lt;a href=&quot;#课程概要&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="前端知识" scheme="http://yoursite.com/categories/%E5%89%8D%E7%AB%AF%E7%9F%A5%E8%AF%86/"/>
-    
-    
-      <category term="【极客】前端学习" scheme="http://yoursite.com/tags/%E3%80%90%E6%9E%81%E5%AE%A2%E3%80%91%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>按钮和图片</title>
-    <link href="http://yoursite.com/2019/04/25/%E6%8C%89%E9%92%AE%E5%92%8C%E5%9B%BE%E7%89%87/"/>
-    <id>http://yoursite.com/2019/04/25/按钮和图片/</id>
-    <published>2019-04-25T08:28:47.000Z</published>
-    <updated>2019-04-29T08:08:56.739Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;h1 id=&quot;按钮&quot;&gt;&lt;a href=&quot;#按钮&quot; class=&quot;headerlink&quot; title=&quot;按钮&quot;&gt;&lt;/a&gt;按钮&lt;/h1&gt;&lt;p&gt;在 Bootstrap 中，它给我们提供了很多样式的按钮。 比如说：
-        
-      
-    
-    </summary>
-    
-      <category term="Bootstrap" scheme="http://yoursite.com/categories/Bootstrap/"/>
-    
-    
-      <category term="【极客】前端学习" scheme="http://yoursite.com/tags/%E3%80%90%E6%9E%81%E5%AE%A2%E3%80%91%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/"/>
     
   </entry>
   

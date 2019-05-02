@@ -23,7 +23,7 @@
     <meta name="description" content="欢迎来到YaoRemu的博客">
     <meta http-equiv="Cache-control" content="no-cache">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>YaoRemu'Blog</title>
+    <title>警告框 · YaoRemu'Blog</title>
     <style type="text/css">
     @font-face {
         font-family: 'Oswald-Regular';
@@ -204,12 +204,23 @@
 </head>
 
     
+        <body class="post-body">
     
-<body><header class="header">
+    
+<header class="header">
 
     <div class="read-progress"></div>
     <div class="header-sidebar-menu"></div>
     <!-- post页的toggle banner  -->
+    
+    <div class="banner">
+            <div class="blog-title">
+                <a href="/">Welcome to YaoRemu'Blog</a>
+            </div>
+            <div class="post-title">
+                <a href="#" class="post-name">警告框</a>
+            </div>
+    </div>
     
     <a class="home-link" href="/">Welcome to YaoRemu'Blog</a>
 </header>
@@ -221,24 +232,74 @@
 
 
 
+
+height:50vh;
 ">
     
     <!-- 主页  -->
+    
+    
+    <!-- 404页  -->
             
     <div class="site-intro-placeholder"></div>
-    <div class="site-intro-img" style="background-image: url(/)"></div>
+    <div class="site-intro-img" style="background-image: url(http://ww1.sinaimg.cn/large/8c0b2220gy1g1aemgv57ej21hc0tze81.jpg)"></div>
     <div class="site-intro-meta">
         <!-- 标题  -->
         <h1 class="intro-title">
             <!-- 主页  -->
+            
+            警告框
+            <!-- 404 -->
             
         </h1>
         <!-- 副标题 -->
         <p class="intro-subtitle">
             <!-- 主页副标题  -->
             
+            
+            <!-- 404 -->
+            
         </p>
         <!-- 文章页meta -->
+        
+            <div class="post-intros">
+                <!-- 文章页标签  -->
+                
+                    <div class="post-intro-tags">
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="【极客】前端学习">【极客】前端学习</a>
+    
+</div>
+                
+                
+                    <div class="post-intro-read">
+                        <span>字数统计: <span class="post-count word-count">415</span>阅读时长: <span class="post-count reading-time">1 min</span></span>
+                    </div>
+                
+                <div class="post-intro-meta">
+                    <span class="post-intro-calander iconfont-archer"></span>
+                    <span class="post-intro-time">2019/05/02</span>
+                    
+                    <span id="busuanzi_container_page_pv" class="busuanzi-pv">
+                        <span class="iconfont-archer"></span>
+                        <span id="busuanzi_value_page_pv"></span>
+                    </span>
+                    
+                    <span class="shareWrapper">
+                        <span class="iconfont-archer shareIcon"></span>
+                        <span class="shareText">Share</span>
+                        <ul class="shareList">
+                            <li class="iconfont-archer share-qr" data-type="qr">
+                                <div class="share-qrcode"></div>
+                            </li>
+                            <li class="iconfont-archer" data-type="weibo"></li>
+                            <li class="iconfont-archer" data-type="qzone"></li>
+                            <li class="iconfont-archer" data-type="twitter"></li>
+                            <li class="iconfont-archer" data-type="facebook"></li>
+                        </ul>
+                    </span>
+                </div>
+            </div>
         
     </div>
 </div>
@@ -339,42 +400,116 @@
 </script>        
         <img class="loading" src="/assets/loading.svg" style="display: block; margin: 6rem auto 0 auto; width: 6rem; height: 6rem;">
         <div class="container container-unloaded">
-            <main class="main index-page">
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/2019/03/28/OSPF、RIP小记/">
-            
-                <span>OSPF、RIP小记</span>
-        </a>
-        <div class="abstract-content">
-            OSPF可将OSPF比喻成导航，可以实时更新；
-RIP将RIP比喻成路标，是固定不变的，除非人为修改；
+            <main class="main post-page">
+    <article class="article-entry">
+        <meta name="generator" content="Hexo 3.8.0"><h1 id="警告框"><a href="#警告框" class="headerlink" title="警告框"></a>警告框</h1><p>警告框的使用是非常普遍的，我们会通过一些灵活的预定义消息，来给用户提供一些消息的反馈，这样有利于用户的体验</p>
+<h1 id="默认样式"><a href="#默认样式" class="headerlink" title="默认样式"></a>默认样式</h1><figure class="highlight html"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag"><<span class="name">div</span> <span class="attr">class</span>=<span class="string">"container"</span>></span></span><br><span class="line">	<span class="tag"><<span class="name">div</span> <span class="attr">class</span>=<span class="string">"alert"</span> <span class="attr">role</span>=<span class="string">"alert"</span>></span></span><br><span class="line">		Hello 大家好！</span><br><span class="line">	<span class="tag"><</span>/<span class="attr">div</span>></span><br><span class="line"><span class="tag"><</span>/<span class="attr">div</span>></span><br></pre></td></tr></tbody></table></figure>
+<p><img src="http://ww1.sinaimg.cn/large/8c0b2220gy1g2n7kyb9maj211j02xmwx.jpg" alt></p>
+<p>在这里我们可以看到没有任何效果，是因为 Bootstrap 给我们定义了几种效果</p>
+<p><strong>效果如下：</strong></p>
+<ul>
+<li>success</li>
+<li>info</li>
+<li>warning</li>
+<li>danger</li>
+</ul>
+<figure class="highlight html"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag"><<span class="name">div</span> <span class="attr">class</span>=<span class="string">"container"</span>></span></span><br><span class="line">	<span class="tag"><<span class="name">div</span> <span class="attr">class</span>=<span class="string">"alert alert-success"</span> <span class="attr">role</span>=<span class="string">"alert"</span>></span></span><br><span class="line">		Hello 大家好！</span><br><span class="line">	<span class="tag"><</span>/<span class="attr">div</span>></span><br><span class="line">	<span class="tag"><<span class="name">div</span> <span class="attr">class</span>=<span class="string">"alert alert-info"</span> <span class="attr">role</span>=<span class="string">"alert"</span>></span></span><br><span class="line">		Hello 大家好！</span><br><span class="line">	<span class="tag"><</span>/<span class="attr">div</span>></span><br><span class="line">	<span class="tag"><<span class="name">div</span> <span class="attr">class</span>=<span class="string">"alert alert-warning"</span> <span class="attr">role</span>=<span class="string">"alert"</span>></span></span><br><span class="line">		Hello 大家好！</span><br><span class="line">	<span class="tag"><</span>/<span class="attr">div</span>></span><br><span class="line">	<span class="tag"><<span class="name">div</span> <span class="attr">class</span>=<span class="string">"alert alert-danger"</span> <span class="attr">role</span>=<span class="string">"alert"</span>></span></span><br><span class="line">		Hello 大家好！</span><br><span class="line">	<span class="tag"><</span>/<span class="attr">div</span>></span><br><span class="line"><span class="tag"><</span>/<span class="attr">div</span>></span><br></pre></td></tr></tbody></table></figure>
+<p><img src="http://ww1.sinaimg.cn/large/8c0b2220gy1g2n7oeps1wj21080943ye.jpg" alt></p>
+<p>这就是警告框不同样式的呈现</p>
+<h1 id="可关闭样式"><a href="#可关闭样式" class="headerlink" title="可关闭样式"></a>可关闭样式</h1><p>因为我们这个框不是一直存在这里的，如果我们看完了可能要关闭掉它</p>
+<figure class="highlight html"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag"><<span class="name">div</span> <span class="attr">class</span>=<span class="string">"container"</span>></span></span><br><span class="line">	<span class="tag"><<span class="name">div</span> <span class="attr">class</span>=<span class="string">"alert alert-warning"</span> <span class="attr">role</span>=<span class="string">"alert"</span>></span></span><br><span class="line">		<span class="tag"><<span class="name">button</span> <span class="attr">type</span>=<span class="string">"button"</span> <span class="attr">class</span>=<span class="string">"close"</span> <span class="attr">data-dismiss</span>=<span class="string">"alert"</span>></span></span><br><span class="line">			<span class="tag"><<span class="name">span</span> <span class="attr">aria-disabled</span>=<span class="string">"true"</span>></span>& times;<span class="tag"><</span>/<span class="attr">span</span>></span><br><span class="line">		<span class="tag"><</span>/<span class="attr">button</span>></span><br><span class="line">		<span class="tag"><<span class="name">strong</span>></span>欢迎来到极客学院！<span class="tag"><</span>/<span class="attr">strong</span>></span><br><span class="line">	<span class="tag"><</span>/<span class="attr">div</span>></span><br><span class="line"><span class="tag"><</span>/<span class="attr">div</span>></span><br></pre></td></tr></tbody></table></figure>
+<p><img src="http://ww1.sinaimg.cn/large/8c0b2220gy1g2n8465q50j210f02emwy.jpg" alt></p>
+<p>可以看到后面出现了一个 <strong>叉</strong>，点击消失。 </p>
+<p><strong>注意：</strong> 添加 【 data-dismiss=”alert” 】 的原因是，我们需要添加并且跟按钮打上关系，也就是说它就是一个可操作可关闭的状态，当按钮关闭时，它也会关闭掉</p>
+<h1 id="超链接"><a href="#超链接" class="headerlink" title="超链接"></a>超链接</h1><p>事实上，我们看到的警告框可能会是这么一个元素，文字可能会是一些超链接，可以点击。 因为它有可能是一个提示，提示说你<strong>要去哪里，去怎样做才能把当前这个警告去除掉</strong>，那肯定会涉及到超链接</p>
+<figure class="highlight html"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag"><<span class="name">div</span> <span class="attr">class</span>=<span class="string">"container"</span>></span></span><br><span class="line">	<span class="tag"><<span class="name">div</span> <span class="attr">class</span>=<span class="string">"alert alert-info"</span> <span class="attr">role</span>=<span class="string">"al"</span>></span></span><br><span class="line">		如有问题请到</span><br><span class="line">		<span class="tag"><<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#"</span> <span class="attr">class</span>=<span class="string">"alert-link"</span>></span></span><br><span class="line">			极客学院</span><br><span class="line">		<span class="tag"><</span>/<span class="attr">a</span>></span><br><span class="line">	<span class="tag"><</span>/<span class="attr">div</span>></span><br><span class="line"><span class="tag"><</span>/<span class="attr">div</span>></span><br></pre></td></tr></tbody></table></figure>
+<p><img src="http://ww1.sinaimg.cn/large/8c0b2220gy1g2n8lov8knj210u024dfm.jpg" alt></p>
+<p>可以看到，极客学院明显是加粗的，当鼠标移动到上面的时候，他会出现一个手势以及一个下划线，当点击之后它会跳转到另外一个页面。这是带超链接的警告框，也是经常使用到的</p>
 
-
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2019/03/28</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class="abstract-tags">
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Cisco笔记">Cisco笔记</a>
-    
-</div>
-            
-        </div>
     </article>
+    <!-- license  -->
+    
+        <div class="license-wrapper">
+            <p>原文作者：<a href="http://yoursite.com">YaoRemu</a>
+            </p><p>原文链接：<a href="http://yoursite.com/2019/05/02/警告框/">http://yoursite.com/2019/05/02/警告框/</a>
+            </p><p>发表日期：<a href="http://yoursite.com/2019/05/02/警告框/">May 2nd 2019, 7:31:24 pm</a>
+            </p><p>更新日期：<a href="http://yoursite.com/2019/05/02/警告框/">May 2nd 2019, 8:20:45 pm</a>
+            </p><p>版权声明：本文采用<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可</p>
+        </div>
     
     <!-- paginator  -->
+    <ul class="post-paginator">
+        <li class="next">
+            
+        </li>
+        <li class="previous">
+            
+                <div class="prevSlogan">Previous Post</div>
+                <a href="/2019/05/02/页头与缩略图/" title="页头与缩略图">
+                    <div class="prevTitle">页头与缩略图</div>
+                </a>
+            
+        </li>
+    </ul>
+
+
+
+    <!-- 评论插件 -->
+    <!-- 来必力City版安装代码 -->
+
+<!-- City版安装代码已完成 -->
     
+    
+    <!-- partial('_partial/comment/changyan') -->
+    <!--PC版-->
+
+
+    
+    
+    <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+    <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+    <div id="comment"></div>
+    <script>
+    new Valine({
+        el: '#comment' ,
+        notify:false, 
+        verify:false, 
+        appId: "SgWkCobuyHsQs2PICTiE4ea7-gzGzoHsz",
+        appKey: "v5krQ6EXt9olzSl8Ms7G7iSf",
+        placeholder: "",
+        path:window.location.pathname, 
+        avatar:'mm' 
+    });
+    </script>
+
+
+    <!-- 评论 -->
+
+
+
+    <script src="/js/tctip-1.0.3.min.js"></script>
+    <script>
+       new tctip({
+       top: '20%',
+       
+       button: {
+          id: 9,
+          type: 'zanzhu'
+        },
+        list: [
+         {
+           type: 'alipay',
+           qrImg: 'http://ww1.sinaimg.cn/large/8c0b2220gy1g25njlruhej205j05kdgd.jpg'
+         }, {
+           type: 'wechat',
+           qrImg: 'http://ww1.sinaimg.cn/large/8c0b2220gy1g25njlryftj206d06c3z2.jpg'
+         }
+        ]
+      }).init()
+</script>
+
+
+
 </main>
             <!-- profile -->
             
@@ -462,6 +597,13 @@ RIP将RIP比喻成路标，是固定不变的，除非人为修改；
 </footer>
     </div>
     <!-- toc -->
+    
+    <div class="toc-wrapper" style="top:50vh;">
+        <div class="toc-catalog">
+            <span class="iconfont-archer catalog-icon"></span><span>CATALOG</span>
+        </div>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#警告框"><span class="toc-number">1.</span> <span class="toc-text">警告框</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#默认样式"><span class="toc-number">2.</span> <span class="toc-text">默认样式</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#可关闭样式"><span class="toc-number">3.</span> <span class="toc-text">可关闭样式</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#超链接"><span class="toc-number">4.</span> <span class="toc-text">超链接</span></a></li></ol>
+    </div>
     
     <div class="back-top iconfont-archer"></div>
     <div class="sidebar sidebar-hide">
@@ -1530,6 +1672,8 @@ var talkAPI = "";//如果有类似图灵机器人的聊天接口请填写接口�
     
     
     <!-- async load share.js -->
+    
+        <script src="/scripts/share.js" async></script>    
      
     <!--爱心-->
     <script type="text/javascript" src="/js/src/clicklove.js"></script>

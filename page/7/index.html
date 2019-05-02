@@ -360,6 +360,74 @@ height:50vh;
     
     
     <article class="index-post">
+        <a class="abstract-title" href="/2019/03/28/OSPF、RIP小记/">
+            
+                <span>OSPF、RIP小记</span>
+        </a>
+        <div class="abstract-content">
+            OSPF可将OSPF比喻成导航，可以实时更新；
+RIP将RIP比喻成路标，是固定不变的，除非人为修改；
+
+
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2019/03/28</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class="abstract-tags">
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Cisco笔记">Cisco笔记</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
+        <a class="abstract-title" href="/2019/03/27/路由器综合路由配置/">
+            
+                <span>路由器综合路由配置</span>
+        </a>
+        <div class="abstract-content">
+            拓扑图
+
+相关知识①：运行多个路由协议进程，系统软件提供了路由信息从一个路由进程重新分布到另一个路由进程的功能；路由的相互重分布可以再所有的IP路由协议之间进行。相关命令：redistribute protocol …
+
+
+相关知识②：路由重分发，可在同一网内使用多种路由协议，为了实现多种路由协议的协同工作，路由器可以使用路由重分发(route redistribution) 将学习到的一种路由协议的路由通过另一种路由协议广播出去，这样网络的所有部分就可以互通了。为了实现重分发，路由器必须同时运行多种路由协议，这样每种路由协议才可以取路由表中的所有或部分其他协议的路由来进行广播；
+
+配置...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2019/03/27</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class="abstract-tags">
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Cisco基础">Cisco基础</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
         <a class="abstract-title" href="/2019/03/26/路由器OSPF动态路由配置/">
             
                 <span>路由器OSPF动态路由配置</span>
@@ -679,110 +747,6 @@ vlan 10                          ...
             <!-- date  -->
             <div class="abstract-date">
                 <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2019/03/19</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class="abstract-tags">
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Cisco基础">Cisco基础</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/2019/03/18/MarkDown基础教学/">
-            
-                <span>MarkDown基础教学</span>
-        </a>
-        <div class="abstract-content">
-            基础语法标题# h1
-## h2
-### h3
-#### h4
-##### h5
-###### h6
-
-段落及区块引用> 这段文字被高亮显示...
-eg:
-
-这段文字被高亮显示…
-
-
-插入链接或图片[点击跳转百度](http://www.baidu.com)
-eg:点击跳转百度
-![图片](https://i.loli.net/2019/03/19/5c903bc01be37.gif)
-   eg:
-
-
-列表Markdown支持有序列表和无序列表两种形式：
-
-无序列表使用 * 或 + 或 - 标识
-* 黄瓜
-* 玉米
-* 茄子
-
-+ 黄瓜
-+ 玉米
-+ 茄子
-
-- 黄瓜
-- 玉米
-- 茄...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2019/03/18</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class="abstract-tags">
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="MarkDown基本语法">MarkDown基本语法</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/2019/03/18/ciscoTelnet/">
-            
-                <span>No3. Telnet</span>
-        </a>
-        <div class="abstract-content">
-            拓扑图:
-
-配置命令:
-首先开启Vlan:   enable  
-configure terminal  
-interface vlan 1
-no shutdown   
-eg: 
-配置交换机：设置Vlan1 IP及其子网掩码:  interface vlan 1  
-ip address 10.1.1.154 255.255.255.0
-exit
-设置进入系统视图的密码：enable password ****
-设置五条虚拟链接：line vty 0 4
-设置特权等级[级别越高权限越大]：privilege level 1 0 
-设置远程链接(Telnet)的密码：password c...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2019/03/18</span>
             </div>
             <!-- tags  -->
             
@@ -1479,9 +1443,23 @@ exit
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 71
+        Total : 73
         </div>
         <!-- search  -->
         
@@ -1508,6 +1486,16 @@ exit
     
     <div class="archive-year"> 2019 </div>
     <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">05/02</span><a class="archive-post-title" href="/2019/05/02/警告框/">警告框</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">05/02</span><a class="archive-post-title" href="/2019/05/02/页头与缩略图/">页头与缩略图</a>
+        </li>
     
     
         <li class="archive-post-item">
@@ -1870,15 +1858,15 @@ exit
     
         <span class="sidebar-tag-name" data-tags="MarkDown基本语法"><span class="iconfont-archer"></span>MarkDown基本语法</span>
     
+        <span class="sidebar-tag-name" data-tags="安装教程"><span class="iconfont-archer"></span>安装教程</span>
+    
         <span class="sidebar-tag-name" data-tags="Cisco笔记"><span class="iconfont-archer"></span>Cisco笔记</span>
+    
+        <span class="sidebar-tag-name" data-tags="PHP相关知识"><span class="iconfont-archer"></span>PHP相关知识</span>
     
         <span class="sidebar-tag-name" data-tags="Cisco强化学习"><span class="iconfont-archer"></span>Cisco强化学习</span>
     
-        <span class="sidebar-tag-name" data-tags="安装教程"><span class="iconfont-archer"></span>安装教程</span>
-    
         <span class="sidebar-tag-name" data-tags="github搭建个人博客"><span class="iconfont-archer"></span>github搭建个人博客</span>
-    
-        <span class="sidebar-tag-name" data-tags="PHP相关知识"><span class="iconfont-archer"></span>PHP相关知识</span>
     
         <span class="sidebar-tag-name" data-tags="Cisco基础"><span class="iconfont-archer"></span>Cisco基础</span>
     
