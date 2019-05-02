@@ -1,0 +1,1980 @@
+<!DOCTYPE html><html lang="zh-CN"><head><link rel="stylesheet" href="/live2d/css/live2d.css">
+    <!-- title -->
+
+
+
+
+<!-- keywords -->
+
+
+
+
+<meta name="generator" content="Hexo 3.8.0">
+    <meta charset="utf-8">
+    <meta name="referrer" content="no-referrer">
+    <meta name="baidu-site-verification" content="X1i9zY8G8D">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="author" content="YaoRemu">
+    <meta name="renderer" content="webkit">
+    <meta name="copyright" content="YaoRemu">
+    
+    <meta name="keywords" content="YaoRemu,YaoZhao,blog">
+    
+    <meta name="description" content="欢迎来到YaoRemu的博客">
+    <meta http-equiv="Cache-control" content="no-cache">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>远程管理常用命令 · YaoRemu'Blog</title>
+    <style type="text/css">
+    @font-face {
+        font-family: 'Oswald-Regular';
+        src: url("/font/Oswald-Regular.ttf");
+    }
+
+    body {
+        margin: 0;
+    }
+
+    header,
+    footer,
+    .back-top,
+    .sidebar,
+    .container,
+    .site-intro-meta,
+    .toc-wrapper {
+        display: none;
+    }
+
+    .site-intro {
+        position: relative;
+        z-index: 3;
+        width: 100%;
+        /* height: 50vh; */
+        overflow: hidden;
+    }
+
+    .site-intro-placeholder {
+        position: absolute;
+        z-index: -2;
+        top: 0;
+        left: 0;
+        width: calc(100% + 300px);
+        height: 100%;
+        background: repeating-linear-gradient(-45deg, #444 0, #444 80px, #333 80px, #333 160px);
+        background-position: center center;
+        transform: translate3d(-226px, 0, 0);
+        animation: gradient-move 2.5s ease-out 0s infinite;
+    }
+
+    @keyframes gradient-move {
+        0% {
+            transform: translate3d(-226px, 0, 0);
+        }
+        100% {
+            transform: translate3d(0, 0, 0);
+        }
+    }
+
+</style>
+
+    <link rel="preload" href="/css/style.css?v=20180824" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="stylesheet" href="/css/mobile.css?v=20180824" media="(max-width: 980px)">
+    
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    
+    <!-- /*! loadCSS. [c]2017 Filament Group, Inc. MIT License */
+/* This file is meant as a standalone workflow for
+- testing support for link[rel=preload]
+- enabling async CSS loading in browsers that do not support rel=preload
+- applying rel preload css once loaded, whether supported or not.
+*/ -->
+<script>
+(function( w ){
+	"use strict";
+	// rel=preload support test
+	if( !w.loadCSS ){
+		w.loadCSS = function(){};
+	}
+	// define on the loadCSS obj
+	var rp = loadCSS.relpreload = {};
+	// rel=preload feature support test
+	// runs once and returns a function for compat purposes
+	rp.support = (function(){
+		var ret;
+		try {
+			ret = w.document.createElement( "link" ).relList.supports( "preload" );
+		} catch (e) {
+			ret = false;
+		}
+		return function(){
+			return ret;
+		};
+	})();
+
+	// if preload isn't supported, get an asynchronous load by using a non-matching media attribute
+	// then change that media back to its intended value on load
+	rp.bindMediaToggle = function( link ){
+		// remember existing media attr for ultimate state, or default to 'all'
+		var finalMedia = link.media || "all";
+
+		function enableStylesheet(){
+			link.media = finalMedia;
+		}
+
+		// bind load handlers to enable media
+		if( link.addEventListener ){
+			link.addEventListener( "load", enableStylesheet );
+		} else if( link.attachEvent ){
+			link.attachEvent( "onload", enableStylesheet );
+		}
+
+		// Set rel and non-applicable media type to start an async request
+		// note: timeout allows this to happen async to let rendering continue in IE
+		setTimeout(function(){
+			link.rel = "stylesheet";
+			link.media = "only x";
+		});
+		// also enable media after 3 seconds,
+		// which will catch very old browsers (android 2.x, old firefox) that don't support onload on link
+		setTimeout( enableStylesheet, 3000 );
+	};
+
+	// loop through link elements in DOM
+	rp.poly = function(){
+		// double check this to prevent external calls from running
+		if( rp.support() ){
+			return;
+		}
+		var links = w.document.getElementsByTagName( "link" );
+		for( var i = 0; i < links.length; i++ ){
+			var link = links[ i ];
+			// qualify links to those with rel=preload and as=style attrs
+			if( link.rel === "preload" && link.getAttribute( "as" ) === "style" && !link.getAttribute( "data-loadcss" ) ){
+				// prevent rerunning on link
+				link.setAttribute( "data-loadcss", true );
+				// bind listeners to toggle media back
+				rp.bindMediaToggle( link );
+			}
+		}
+	};
+
+	// if unsupported, run the polyfill
+	if( !rp.support() ){
+		// run once at least
+		rp.poly();
+
+		// rerun poly on an interval until onload
+		var run = w.setInterval( rp.poly, 500 );
+		if( w.addEventListener ){
+			w.addEventListener( "load", function(){
+				rp.poly();
+				w.clearInterval( run );
+			} );
+		} else if( w.attachEvent ){
+			w.attachEvent( "onload", function(){
+				rp.poly();
+				w.clearInterval( run );
+			} );
+		}
+	}
+
+
+	// commonjs
+	if( typeof exports !== "undefined" ){
+		exports.loadCSS = loadCSS;
+	}
+	else {
+		w.loadCSS = loadCSS;
+	}
+}( typeof global !== "undefined" ? global : this ) );
+</script>
+
+    <link rel="icon" href="http://ww1.sinaimg.cn/large/8c0b2220gy1g1aeuvx4roj20680683yf.jpg">
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.min.js" as="script">
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js" as="script">
+    <link rel="preload" href="/scripts/main.js" as="script">
+    <link rel="preload" as="font" href="/font/Oswald-Regular.ttf" crossorigin>
+    <link rel="preload" as="font" href="https://at.alicdn.com/t/font_327081_1dta1rlogw17zaor.woff" crossorigin>
+    
+    <!-- fancybox -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js" defer></script>
+    <!-- 百度统计  -->
+    
+    <!-- 谷歌统计  -->
+    
+</head>
+
+    
+        <body class="post-body">
+    
+    
+<header class="header">
+
+    <div class="read-progress"></div>
+    <div class="header-sidebar-menu"></div>
+    <!-- post页的toggle banner  -->
+    
+    <div class="banner">
+            <div class="blog-title">
+                <a href="/">Welcome to YaoRemu'Blog</a>
+            </div>
+            <div class="post-title">
+                <a href="#" class="post-name">远程管理常用命令</a>
+            </div>
+    </div>
+    
+    <a class="home-link" href="/">Welcome to YaoRemu'Blog</a>
+</header>
+    <div class="wrapper">
+        <div class="site-intro" style="
+
+
+
+
+
+
+
+height:50vh;
+">
+    
+    <!-- 主页  -->
+    
+    
+    <!-- 404页  -->
+            
+    <div class="site-intro-placeholder"></div>
+    <div class="site-intro-img" style="background-image: url(http://ww1.sinaimg.cn/large/8c0b2220gy1g1aemgv57ej21hc0tze81.jpg)"></div>
+    <div class="site-intro-meta">
+        <!-- 标题  -->
+        <h1 class="intro-title">
+            <!-- 主页  -->
+            
+            远程管理常用命令
+            <!-- 404 -->
+            
+        </h1>
+        <!-- 副标题 -->
+        <p class="intro-subtitle">
+            <!-- 主页副标题  -->
+            
+            
+            <!-- 404 -->
+            
+        </p>
+        <!-- 文章页meta -->
+        
+            <div class="post-intros">
+                <!-- 文章页标签  -->
+                
+                    <div class="post-intro-tags">
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="从零开始的Python学习">从零开始的Python学习</a>
+    
+</div>
+                
+                
+                    <div class="post-intro-read">
+                        <span>字数统计: <span class="post-count word-count">3.3k</span>阅读时长: <span class="post-count reading-time">11 min</span></span>
+                    </div>
+                
+                <div class="post-intro-meta">
+                    <span class="post-intro-calander iconfont-archer"></span>
+                    <span class="post-intro-time">2019/05/02</span>
+                    
+                    <span id="busuanzi_container_page_pv" class="busuanzi-pv">
+                        <span class="iconfont-archer"></span>
+                        <span id="busuanzi_value_page_pv"></span>
+                    </span>
+                    
+                    <span class="shareWrapper">
+                        <span class="iconfont-archer shareIcon"></span>
+                        <span class="shareText">Share</span>
+                        <ul class="shareList">
+                            <li class="iconfont-archer share-qr" data-type="qr">
+                                <div class="share-qrcode"></div>
+                            </li>
+                            <li class="iconfont-archer" data-type="weibo"></li>
+                            <li class="iconfont-archer" data-type="qzone"></li>
+                            <li class="iconfont-archer" data-type="twitter"></li>
+                            <li class="iconfont-archer" data-type="facebook"></li>
+                        </ul>
+                    </span>
+                </div>
+            </div>
+        
+    </div>
+</div>
+        <script>
+ 
+  // get user agent
+  var browser = {
+    versions: function () {
+      var u = window.navigator.userAgent;
+      return {
+        userAgent: u,
+        trident: u.indexOf('Trident') > -1, //IE内核
+        presto: u.indexOf('Presto') > -1, //opera内核
+        webKit: u.indexOf('AppleWebKit') > -1, //苹果、谷歌内核
+        gecko: u.indexOf('Gecko') > -1 && u.indexOf('KHTML') == -1, //火狐内核
+        mobile: !!u.match(/AppleWebKit.*Mobile.*/), //是否为移动终端
+        ios: !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/), //ios终端
+        android: u.indexOf('Android') > -1 || u.indexOf('Linux') > -1, //android终端或者uc浏览器
+        iPhone: u.indexOf('iPhone') > -1 || u.indexOf('Mac') > -1, //是否为iPhone或者安卓QQ浏览器
+        iPad: u.indexOf('iPad') > -1, //是否为iPad
+        webApp: u.indexOf('Safari') == -1, //是否为web应用程序，没有头部与底部
+        weixin: u.indexOf('MicroMessenger') == -1, //是否为微信浏览器
+        uc: u.indexOf('UCBrowser') > -1 //是否为android下的UC浏览器
+      };
+    }()
+  }
+  console.log("userAgent:" + browser.versions.userAgent);
+
+  // callback
+  function fontLoaded() {
+    console.log('font loaded');
+    if (document.getElementsByClassName('site-intro-meta')) {
+      document.getElementsByClassName('intro-title')[0].classList.add('intro-fade-in');
+      document.getElementsByClassName('intro-subtitle')[0].classList.add('intro-fade-in');
+      var postIntros = document.getElementsByClassName('post-intros')[0]
+      if (postIntros) {
+        postIntros.classList.add('post-fade-in');
+      }
+    }
+  }
+
+  // UC不支持跨域，所以直接显示
+  function asyncCb(){
+    if (browser.versions.uc) {
+      console.log("UCBrowser");
+      fontLoaded();
+    } else {
+      WebFont.load({
+        custom: {
+          families: ['Oswald-Regular']
+        },
+        loading: function () {  //所有字体开始加载
+          // console.log('loading');
+        },
+        active: function () {  //所有字体已渲染
+          fontLoaded();
+        },
+        inactive: function () { //字体预加载失败，无效字体或浏览器不支持加载
+          console.log('inactive: timeout');
+          fontLoaded();
+        },
+        timeout: 5000 // Set the timeout to two seconds
+      });
+    }
+  }
+
+  function asyncErr(){
+    console.warn('script load from CDN failed, will load local script')
+  }
+
+  // load webfont-loader async, and add callback function
+  function async(u, cb, err) {
+    var d = document, t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (cb) { o.addEventListener('load', function (e) { cb(null, e); }, false); }
+    if (err) { o.addEventListener('error', function (e) { err(null, e); }, false); }
+    s.parentNode.insertBefore(o, s);
+  }
+
+  var asyncLoadWithFallBack = function(arr, success, reject) {
+      var currReject = function(){
+        reject()
+        arr.shift()
+        if(arr.length)
+          async(arr[0], success, currReject)
+        }
+
+      async(arr[0], success, currReject)
+  }
+
+  asyncLoadWithFallBack([
+    "https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.min.js", 
+    "https://cdn.bootcss.com/webfont/1.6.28/webfontloader.js",
+    "/lib/webfontloader.min.js"
+  ], asyncCb, asyncErr)
+</script>        
+        <img class="loading" src="/assets/loading.svg" style="display: block; margin: 6rem auto 0 auto; width: 6rem; height: 6rem;">
+        <div class="container container-unloaded">
+            <main class="main post-page">
+    <article class="article-entry">
+        <meta name="generator" content="Hexo 3.8.0"><h1 id="目标"><a href="#目标" class="headerlink" title="目标"></a>目标</h1><ul>
+<li><p>关键/重启</p>
+<ul>
+<li>shutdown</li>
+</ul>
+</li>
+<li><p>查看或配置网卡信息</p>
+<ul>
+<li>ifconfig</li>
+<li>ping</li>
+</ul>
+</li>
+<li><p>远程登录和复制文件</p>
+<ul>
+<li>ssh</li>
+<li>scp</li>
+</ul>
+</li>
+</ul>
+<h1 id="关机-重启"><a href="#关机-重启" class="headerlink" title="关机/重启"></a>关机/重启</h1><table>
+<thead>
+<tr>
+<th style="text-align:left">序号</th>
+<th style="text-align:left">命令</th>
+<th style="text-align:left">对应英文</th>
+<th style="text-align:left">作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">1</td>
+<td style="text-align:left">shutdown 选项 时间</td>
+<td style="text-align:left">shutdown</td>
+<td style="text-align:left">关机/重新启动     </td>
+</tr>
+</tbody>
+</table>
+<h2 id="shutdown"><a href="#shutdown" class="headerlink" title="shutdown"></a>shutdown</h2><ul>
+<li>shutdown 命令可以 <strong>安全关闭</strong> 或者 <strong>重新启动</strong>系统</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">选项</th>
+<th style="text-align:left">含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">-r</td>
+<td style="text-align:left">重新启动</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>注意：</p>
+<ul>
+<li><strong>不指定选项和参数</strong> ，<strong>默认</strong>表示 1分钟 之后关闭电脑</li>
+<li>远程维护服务器时，最好不要关闭系统，而应该 <strong>重新启动系统</strong>（当我们通过 SSH 登录到服务器，就可以进行日常的维护管理，但是如果我们通过终端命令，关掉了计算机，就得专门叫人去机房开启电脑，相当麻烦 ）</li>
+</ul>
+</blockquote>
+<p><strong>常用命令示例</strong></p>
+<ul>
+<li>重新启动操作系统，其中 now 表示现在： <strong>shutdown -r now</strong></li>
+<li>立刻关机，其中 now 表示现在 : <strong>shutdown now</strong></li>
+<li>系统在今天的 20:25 会关机 ： <strong>shutdown 20:25</strong></li>
+<li>系统再过10分钟后自动关机 ： <strong>shutdown +10</strong></li>
+<li>取消之前指定的关机计划 ： <strong>shutdown -c</strong></li>
+</ul>
+<h3 id="关机"><a href="#关机" class="headerlink" title="关机"></a>关机</h3><p>shutdown 不指定任何选项和参数时，默认为 1分钟后自动关机</p>
+<p><img src="http://ww1.sinaimg.cn/large/8c0b2220gy1g2muljtruyj20k60160tp.jpg" alt></p>
+<p>取消关机命令</p>
+<p><img src="http://ww1.sinaimg.cn/large/8c0b2220gy1g2mumtexp3j207u00pglq.jpg" alt></p>
+<h3 id="重新启动"><a href="#重新启动" class="headerlink" title="重新启动"></a>重新启动</h3><p>如果想立刻启动，可以输入 now 表示现在</p>
+<p><img src="http://ww1.sinaimg.cn/large/8c0b2220gy1g2muondk2dj208n014q38.jpg" alt></p>
+<h1 id="查看或配置网卡信息"><a href="#查看或配置网卡信息" class="headerlink" title="查看或配置网卡信息"></a>查看或配置网卡信息</h1><table>
+<thead>
+<tr>
+<th style="text-align:left">序号</th>
+<th style="text-align:left">命令</th>
+<th style="text-align:left">对应英文</th>
+<th style="text-align:left">作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">1</td>
+<td style="text-align:left">ifconfig</td>
+<td style="text-align:left">configure a network interface</td>
+<td style="text-align:left">查看/配置计算机当前的网卡配置信息</td>
+</tr>
+<tr>
+<td style="text-align:left">2</td>
+<td style="text-align:left">ping ip地址</td>
+<td style="text-align:left">ping</td>
+<td style="text-align:left">检测到目标IP地址的链接是否正常</td>
+</tr>
+</tbody>
+</table>
+<h2 id="网卡和IP地址"><a href="#网卡和IP地址" class="headerlink" title="网卡和IP地址"></a>网卡和IP地址</h2><h3 id="网卡"><a href="#网卡" class="headerlink" title="网卡"></a>网卡</h3><ul>
+<li>网卡是一个专门负责网络通讯的硬件设备</li>
+<li>IP地址是设置在网卡上的地址信息</li>
+</ul>
+<blockquote>
+<p>我们可以把 <strong>电脑</strong> 比作 <strong>电话</strong>，<strong>网卡</strong> 相当于 <strong>SIM卡</strong>，<strong>IP地址</strong> 相当于 <strong>电话号码</strong></p>
+</blockquote>
+<h3 id="IP地址"><a href="#IP地址" class="headerlink" title="IP地址"></a>IP地址</h3><ul>
+<li><strong>每台互联网的电脑上都有 IP地址，是保证电脑之间正常通信的重要设置</strong></li>
+</ul>
+<blockquote>
+<p>注意： 每台电脑的 IP地址 <strong>不能相同</strong>，否至会出现 IP地址 冲突，并且没有办法正常通讯</p>
+</blockquote>
+<h3 id="ifconfig"><a href="#ifconfig" class="headerlink" title="ifconfig"></a>ifconfig</h3><ul>
+<li>ifconfig 查看/配置计算机当前的网卡配置信息</li>
+</ul>
+<p><strong>基本用法：</strong></p>
+<ul>
+<li>查看网卡配置信息： ifconfig</li>
+<li>查看网卡对应的 IP地址 ： ifconfig | grep inet</li>
+</ul>
+<p><img src="http://ww1.sinaimg.cn/large/8c0b2220gy1g2mw36xgv9j20iv09147d.jpg" alt></p>
+<p>在使用的时候，并不需要太关心网卡的名称叫什么，因为网卡的名称只是一个标注而已，在我们查看网卡信息的时候，我们最关心的，实际上是网卡上设置的 IP地址</p>
+<blockquote>
+<p>提示： 一台计算机中有可能会有一个 <strong>物理网卡</strong> 和 <strong>多个虚拟网卡</strong>，在 Linux 中物理网卡的名字通常以 ensXX 表示</p>
+</blockquote>
+<blockquote>
+<p>注意： 127.0.0.1 这个地址又被叫做 <strong>本地环回地址</strong>，是专门用来测试网卡是否正常工作的</p>
+</blockquote>
+<h4 id="过滤信息"><a href="#过滤信息" class="headerlink" title="过滤信息"></a>过滤信息</h4><p>由于输出的信息有点多，那么我们怎样快速获得想要的信息呢？</p>
+<p>那么我们可以使用 管道 来<strong>过滤信息</strong>，来找出有用的信息</p>
+<p><img src="http://ww1.sinaimg.cn/large/8c0b2220gy1g2mw5hsqp5j20ix02fdi8.jpg" alt></p>
+<blockquote>
+<p>inet6地址: inet6 对应的地址，是 ipv6的地址。 而没有 6 的，对应的是 ipv4 的地址</p>
+</blockquote>
+<h3 id="ping"><a href="#ping" class="headerlink" title="ping"></a>ping</h3><ul>
+<li>检测到目标主机是否连接正常： ping IP地址</li>
+<li>检测本地网卡工作正常： ping 127.0.0.1</li>
+</ul>
+<p>ping 一般用于检测当前计算机到目标计算机之间的网络 <strong>是否通畅、 数字越大、速度越慢</strong></p>
+<blockquote>
+<ul>
+<li>ping 的工作原理与潜水艇的声呐相似，ping 这个命令就是取自 <strong>声呐的声音</strong></li>
+<li>网络管理员之间也常将 ping 用作动词 – ping一下计算机X，看它是否开着</li>
+</ul>
+</blockquote>
+<p><strong>原理：</strong> 网络上的机器都有 <strong>唯一确定的IP地址</strong>，我们给 <strong>目标IP地址</strong> 发送一个数据包，对方就要返回一个数据包，根据返回的数据包以及时间，我们可以确定目标主机的存在</p>
+<blockquote>
+<p>提示： 在 Linux 中，想要终止一个终端程序的执行，绝大多数可以使用 CTRL + C</p>
+</blockquote>
+<h4 id="ping-IP地址"><a href="#ping-IP地址" class="headerlink" title="ping IP地址"></a>ping IP地址</h4><p><img src="http://ww1.sinaimg.cn/large/8c0b2220gy1g2mxh3sir5j20fp084k26.jpg" alt></p>
+<p>可以看到回车之后，终端会一行一行地显示信息，而且这个命令 <strong>不会停下来</strong>，接下来我们就可以按下 <strong>CTRL + C</strong> 这个热键来停止命令</p>
+<p><img src="http://ww1.sinaimg.cn/large/8c0b2220gy1g2mxjhkodtj20h4050wkb.jpg" alt></p>
+<p>在按下 <strong>CTRL + C</strong> 的瞬间， ping 的命令执行就停了下来，同时在下方就会显示一个简单的统计信息，告诉我们发送了多少个数据包，每个数据包的 最小时间、 平均时间以及 最大时间 等等</p>
+<p>当我们输入 <strong>错误的地址或者格式</strong> 时：</p>
+<p><img src="http://ww1.sinaimg.cn/large/8c0b2220gy1g2mxt01ldkj20jp08mwp6.jpg" alt></p>
+<p>我们可以看到这一次在执行的时候，ping命令 会告诉我们： 在尝试连接到 130 这个电脑的时候，会告诉我们 <strong>目标主机无法到达</strong>，这个提示就告诉我们 130 这个电脑和我们 Ubuntu 这个电脑之间并没有正确的网络链接； 这就是在使用 ping命令 时，如果无法<strong>正常的链接到目标主机，我们会看到的一个 非常常见的提示信息</strong></p>
+<blockquote>
+<p><strong>工作原理：</strong> 现在我们在 Ubuntu 的电脑上发送一个 ping 的命令给 Windows XP,我们执行 ping 之后，会发送 <strong> 56 个字节</strong> 给目标主机，目标的主机接收到数据包之后，会给我们一个反向的回执，回执的数据包的大小是 <strong>64个字节</strong> ，也就是我们从 Ubuntu 发送了 56个字节 个 XP，XP 给我们回了一个 64字节 大小的数据包，当这个数据包到达 Ubuntu 电脑之后，Ubuntu 会检测这一次数据来回使用的时间，<strong>时间越小，就说明网速越快； 这个世界越大，就说明网速越慢</strong><img src="http://ww1.sinaimg.cn/large/8c0b2220gy1g2mxr82d5nj20gr05gdnb.jpg" alt></p>
+</blockquote>
+<h4 id="检测本地网卡"><a href="#检测本地网卡" class="headerlink" title="检测本地网卡"></a>检测本地网卡</h4><p><img src="http://ww1.sinaimg.cn/large/8c0b2220gy1g2mxzebmohj20gb094wox.jpg" alt></p>
+<p>如果使用 ping 来 ping 127.0.0.1，可以看到正常的 <strong>回馈时间</strong>，就说明本地网卡的工作是正常的</p>
+<h1 id="远程登录和复制文件"><a href="#远程登录和复制文件" class="headerlink" title="远程登录和复制文件"></a>远程登录和复制文件</h1><table>
+<thead>
+<tr>
+<th style="text-align:left">序号</th>
+<th style="text-align:left">命令</th>
+<th style="text-align:left">对应英文</th>
+<th style="text-align:left">作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">1</td>
+<td style="text-align:left">ssh 用户名@ip</td>
+<td style="text-align:left">secure shell</td>
+<td style="text-align:left">关机/重新启动</td>
+</tr>
+<tr>
+<td style="text-align:left">2</td>
+<td style="text-align:left">scp 用户名@ip:文件名或路径 用户名@ip:文件名或路径</td>
+<td style="text-align:left">secure copy</td>
+<td style="text-align:left">远程复制文件</td>
+</tr>
+</tbody>
+</table>
+<h2 id="ssh基础（重点）"><a href="#ssh基础（重点）" class="headerlink" title="ssh基础（重点）"></a>ssh基础（重点）</h2><p>在 Linux 中 SSH 是 <strong>非常常用</strong> 的工具，通过 SSH客户端 我可以链接到运行了 SSH服务器 的远程机器上</p>
+<p><img src="http://ww1.sinaimg.cn/large/8c0b2220gy1g2myaakw19j20ec04qq3j.jpg" alt></p>
+<ul>
+<li><strong>SSH客户端</strong> 是一种使用 Secure Shell （SSH）协议链接到远程计算机的软件程序</li>
+<li><p>SSH 是目前较可靠，<strong>专为远程登录回话和其他网络服务</strong> 提供安全性的协议</p>
+<ul>
+<li>利用 SSH协议 可以有效<strong>防止远程管理过程中的信息泄露</strong></li>
+<li>通过 SSH协议 可以对所有传输的数据进行加密，也能够防止 DNS欺骗 和 IP欺骗</li>
+</ul>
+</li>
+<li><p>SSH 的另一项优点是传输的数据可以是经过 <strong>压缩</strong> 的，所以可以加快传输的速度</p>
+</li>
+</ul>
+<blockquote>
+<p> 我们在 Ubuntu 也好，Mac 也好，SSH的服务器 和 SSH的客户端 都是默认安装的，只有在 Windows电脑下，我们才需要单独的安装一个 SSH的客户端，所以在 Windows 下，我们需要安装一个软件，才能实现日常的维护和管理工作</p>
+</blockquote>
+<h3 id="域名和端口号（科普）"><a href="#域名和端口号（科普）" class="headerlink" title="域名和端口号（科普）"></a>域名和端口号（科普）</h3><h4 id="域名"><a href="#域名" class="headerlink" title="域名"></a>域名</h4><ul>
+<li>由一串  <strong>用点分隔</strong> 的名字组成，例如： <a href="http://www.itcast.cn" target="_blank" rel="noopener">www.itcast.cn</a></li>
+<li>是 <strong>IP地址</strong> 得别名，方便用户记忆</li>
+</ul>
+<blockquote>
+<p>ping命令 也可以接收域名</p>
+</blockquote>
+<h4 id="端口号"><a href="#端口号" class="headerlink" title="端口号"></a>端口号</h4><ul>
+<li><strong>IP地址</strong>：通过 <strong>IP地址</strong> 找到网络上的计算机</li>
+<li><p><strong>端口号</strong>：通过 <strong>端口号</strong> 可以找到计算机上运行的应用程序</p>
+<ul>
+<li><strong>SSH服务器</strong> 的： 默认端口号是 22，如果是默认端口号，在链接的时候，可以省略</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p><strong>什么是端口号、端口号的作用？</strong></p>
+<p>浏览器输入了 IP地址，就可以找到百度的服务器，找到服务器后，服务器就会把百度的首页 传送给客户端，这样我们在客户端就可以看到百度的页面了。 </p>
+<p>但是我们找到了服务器是不是就是一个电脑，那么这个电脑又凭什么会把百度的首页返回给我 们，而不会把新浪的首页返回给我们？   这个原因是在百度的服务器上，安装有一个服务器的软件，这个服务器的软件，通常我们管它叫做 <strong> Web服务器</strong>，这个 Web服务器 就是专门提供给用户浏览器访问内容的； </p>
+<p><strong>注意：</strong> 这个就是浏览器的软件，当我们输入地址找到这个机器之后，实际上光有地址是不够的，我们首先要输入一个 <strong>IP地址</strong>，这个 <strong>地址可以确保我们找到这台计算机</strong>，然后在地址后面接一个冒号，冒号后面接一个数字，即 <strong>端口号</strong>，这个数字就表示着 <strong>通过这个数字需要找到服务器上的 Web服务器的软件</strong> ，由这个软件，来给用户提供要访问看到的内容，这才是真正服务器访问的结果</p>
+</blockquote>
+<ul>
+<li>常见的<strong>默认</strong>端口号列表：</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">序号</th>
+<th style="text-align:left">服务</th>
+<th style="text-align:left">端口号</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">1</td>
+<td style="text-align:left">SSH服务器</td>
+<td style="text-align:left">22</td>
+</tr>
+<tr>
+<td style="text-align:left">2</td>
+<td style="text-align:left">Web服务器</td>
+<td style="text-align:left">80</td>
+</tr>
+<tr>
+<td style="text-align:left">3</td>
+<td style="text-align:left">HTTPS</td>
+<td style="text-align:left">443</td>
+</tr>
+<tr>
+<td style="text-align:left">4</td>
+<td style="text-align:left">FTP服务器</td>
+<td style="text-align:left">21    </td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>如果我们访问服务器的时候没有指定端口，那么浏览器就自动使用默认端口</p>
+</blockquote>
+<h2 id="SSH客户端的简单应用"><a href="#SSH客户端的简单应用" class="headerlink" title="SSH客户端的简单应用"></a>SSH客户端的简单应用</h2><p><strong>ssh [-p port] user@remote</strong></p>
+<ul>
+<li>user 是在远程机器上的<strong>用户名</strong>，如果不指定的话默认为当前用户</li>
+<li>remote 是远程机器的<strong>地址</strong>，可以是 <strong>IP/域名</strong>，或者是 <strong>后面会提到的别名</strong></li>
+<li>port 是 <strong>SSH Server监听的端口</strong>，如果不指定，就默认值 22</li>
+</ul>
+<blockquote>
+<p>提示：</p>
+<ul>
+<li>使用 <strong>exit</strong> 退出当前用户的登录</li>
+</ul>
+<p>注意：</p>
+<ul>
+<li>ssh 这个终端命令只能在 Linux 或者 UNIX 系统下使用<br>如果在 Windows 系统中，可以按照 Putty 或者 XShell 客户端软件即可</li>
+</ul>
+<p>提示：</p>
+<ul>
+<li>在工作中，SSH服务器的端口号很有可能<strong>不是 22，</strong>，如果遇到这种情况就需要使用 -p 选项，指定正确的端口号，否则无法正常连接到服务器</li>
+</ul>
+</blockquote>
+<h3 id="Mac连接Ubuntu"><a href="#Mac连接Ubuntu" class="headerlink" title="Mac连接Ubuntu"></a>Mac连接Ubuntu</h3><p>Mac操作系统 是基于 Unix ，所以在 Ubuntu 中的操作命令 在Mac中几乎都是可以使用的</p>
+<p>首先输入 ssh 命令</p>
+<p><img src="http://ww1.sinaimg.cn/large/8c0b2220gy1g2n15q4bu3j20da00rq31.jpg" alt></p>
+<p>如果忘记了 Ubuntu 的 IP地址，可以在 Ubuntu 输入 ifconfig 查看</p>
+<p><img src="http://ww1.sinaimg.cn/large/8c0b2220gy1g2n17jggtoj20ip02h76f.jpg" alt></p>
+<p><strong>注意：</strong> 当我们第一次在电脑中 连接 另外一台电脑的时候，终端会给我们提示一个授权的信息，输入 <strong>yes</strong> 即可：</p>
+<p><img src="http://ww1.sinaimg.cn/large/8c0b2220gy1g2n199jshtj20gx0260u5.jpg" alt></p>
+<p>接下来要求输入 Ubuntu 下 用户的密码（输入的时候密码是隐藏的）：</p>
+<p><img src="http://ww1.sinaimg.cn/large/8c0b2220gy1g2n1ayuqwkj20ak00qglm.jpg" alt></p>
+<p>输入完成后可以看到，提示框变成了 Ubuntu 下用户的用户名：</p>
+<p><img src="http://ww1.sinaimg.cn/large/8c0b2220gy1g2n1csnrqhj20gw07kae0.jpg" alt></p>
+<p>接下来我们就可以远程操控 Ubuntu ，进行各种操作了：</p>
+<p><img src="http://ww1.sinaimg.cn/large/8c0b2220gy1g2n1fi8ynzj20fl04640h.jpg" alt></p>
+<p>可以看到，虽然我们是在 Mac终端，但是整个对 Ubuntu 的操作，跟之前在 Ubuntu 中的操作没有任何区别</p>
+<p><strong>结论：</strong> 通过这个演示我们可以发现，有了 <strong>ssh</strong>， 我们就可以远程登录任何一台支持 ssh的服务器，然后通过终端命令，对服务器进行管理</p>
+<blockquote>
+<p><strong>注意：</strong>如果我们把远程地址设置成我们 同桌 的IP地址，然后如果我们同桌又没有修改 python 的密码，那我们就可能可以做一些 <strong>恶作剧</strong><br><strong>eg：</strong> 我们可以重启他的计算机 shutdown -r now，但是:</p>
+<p><img src="http://ww1.sinaimg.cn/large/8c0b2220gy1g2n1l1onw0j20ga03976b.jpg" alt></p>
+<p>这时 终端告诉我们 权限不够，那怎么办呢？ 我们可以在 shutdown 前面加一个 <strong>sudo</strong> 表示用超级用户的权限来执行关机的命令，接下来就会要求我们输入密码：</p>
+<p><img src="http://ww1.sinaimg.cn/large/8c0b2220gy1g2n1nso3wej20bn02b3zb.jpg" alt></p>
+<p>可以看到，我们成功的将 Ubuntu 进行了重启</p>
+</blockquote>
+<h3 id="Windows连接Ubuntu"><a href="#Windows连接Ubuntu" class="headerlink" title="Windows连接Ubuntu"></a>Windows连接Ubuntu</h3><p>下面是 Windows 两款非常常用的 ssh 客户端 的安装课程，一个是 Putty ，另外一个是 XShell</p>
+<ul>
+<li>Putty: <a href="http://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html" target="_blank" rel="noopener">http://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html</a></li>
+<li>XShell: <a href="http://xshellcn.com" target="_blank" rel="noopener">http://xshellcn.com</a></li>
+</ul>
+<blockquote>
+<p>这两款软件都是可以免费使用的，因此最好从 <strong>官网</strong> 上直接下载。 不要从其他下载渠道下载，因为从其他下载 渠道 下载获得的软件，有<strong>可能会下载到被其他黑客已经修改过的程序</strong>，那样安装之后可能会带来不必要的麻烦</p>
+</blockquote>
+<h4 id="Putty"><a href="#Putty" class="headerlink" title="Putty"></a>Putty</h4><h5 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h5><p>安装时候注意，要选择 <strong>安装桌面上的快捷方式</strong> ：</p>
+<p><img src="http://ww1.sinaimg.cn/large/8c0b2220gy1g2n25k8wm4j209q07kta5.jpg" alt></p>
+<p>安装完成，打开窗口我们会看到，在弹出窗口中，会要求我们输入一些信息：</p>
+<ul>
+<li>这里要求我们输入 <strong>主机名称</strong> 或者 <strong>IP地址</strong> ，端口号默认是 <strong>22</strong>，我们可以不做修改：</li>
+</ul>
+<p><img src="http://ww1.sinaimg.cn/large/8c0b2220gy1g2n27duopjj209508h0ut.jpg" alt></p>
+<ul>
+<li>接下来选择 <strong>连接类型</strong>，选择 <strong>SSH</strong>：</li>
+</ul>
+<p><img src="http://ww1.sinaimg.cn/large/8c0b2220gy1g2n29qy2bqj208x08l76g.jpg" alt></p>
+<h5 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h5><ul>
+<li>下面填写入 Ubuntu 的 <strong>IP地址</strong>，点击 <strong>open</strong>：</li>
+</ul>
+<p><img src="http://ww1.sinaimg.cn/large/8c0b2220gy1g2n2doflkrj20gq0f5dgb.jpg" alt></p>
+<blockquote>
+<p><strong>注意：</strong> 如果连接失败，请查看 <strong>IP地址</strong>是否正确， 或者 Ubuntu 中是否<strong>安装了 SSH服务</strong></p>
+</blockquote>
+<ul>
+<li>接下来输入登陆的用户名和密码：</li>
+</ul>
+<p><img src="http://ww1.sinaimg.cn/large/8c0b2220gy1g2n3n7d2daj20fj016gle.jpg" alt></p>
+<ul>
+<li>登录成功我们可以看到提示信息变成了 Ubuntu 下的用户名：</li>
+</ul>
+<p><img src="http://ww1.sinaimg.cn/large/8c0b2220gy1g2n3nug7ubj209h00l0ob.jpg" alt></p>
+<ul>
+<li>接下来就可以对 Ubuntu操作系统 进行远程操作了：</li>
+</ul>
+<p><img src="http://ww1.sinaimg.cn/large/8c0b2220gy1g2n3p89pn0j20hu03la9y.jpg" alt></p>
+<p><strong>注意：</strong> 如果我们像断开远程终端的链接，我们可以敲入 <strong>exit</strong>  </p>
+
+    </article>
+    <!-- license  -->
+    
+        <div class="license-wrapper">
+            <p>原文作者：<a href="http://yoursite.com">YaoRemu</a>
+            </p><p>原文链接：<a href="http://yoursite.com/2019/05/02/远程管理常用命令/">http://yoursite.com/2019/05/02/远程管理常用命令/</a>
+            </p><p>发表日期：<a href="http://yoursite.com/2019/05/02/远程管理常用命令/">May 2nd 2019, 11:06:16 am</a>
+            </p><p>更新日期：<a href="http://yoursite.com/2019/05/02/远程管理常用命令/">May 2nd 2019, 5:32:47 pm</a>
+            </p><p>版权声明：本文采用<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可</p>
+        </div>
+    
+    <!-- paginator  -->
+    <ul class="post-paginator">
+        <li class="next">
+            
+        </li>
+        <li class="previous">
+            
+                <div class="prevSlogan">Previous Post</div>
+                <a href="/2019/05/01/徽章与巨幕/" title="徽章与巨幕">
+                    <div class="prevTitle">徽章与巨幕</div>
+                </a>
+            
+        </li>
+    </ul>
+
+
+
+    <!-- 评论插件 -->
+    <!-- 来必力City版安装代码 -->
+
+<!-- City版安装代码已完成 -->
+    
+    
+    <!-- partial('_partial/comment/changyan') -->
+    <!--PC版-->
+
+
+    
+    
+    <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+    <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+    <div id="comment"></div>
+    <script>
+    new Valine({
+        el: '#comment' ,
+        notify:false, 
+        verify:false, 
+        appId: "SgWkCobuyHsQs2PICTiE4ea7-gzGzoHsz",
+        appKey: "v5krQ6EXt9olzSl8Ms7G7iSf",
+        placeholder: "",
+        path:window.location.pathname, 
+        avatar:'mm' 
+    });
+    </script>
+
+
+    <!-- 评论 -->
+
+
+
+    <script src="/js/tctip-1.0.3.min.js"></script>
+    <script>
+       new tctip({
+       top: '20%',
+       
+       button: {
+          id: 9,
+          type: 'zanzhu'
+        },
+        list: [
+         {
+           type: 'alipay',
+           qrImg: 'http://ww1.sinaimg.cn/large/8c0b2220gy1g25njlruhej205j05kdgd.jpg'
+         }, {
+           type: 'wechat',
+           qrImg: 'http://ww1.sinaimg.cn/large/8c0b2220gy1g25njlryftj206d06c3z2.jpg'
+         }
+        ]
+      }).init()
+</script>
+
+
+
+</main>
+            <!-- profile -->
+            
+        </div>
+        <footer class="footer footer-unloaded">
+    <!-- social  -->
+    
+    <div class="social">
+        
+    
+        
+            
+                <span class="iconfont-archer wechat" title="wechat">
+                  
+                  <img class="profile-qr" src="http://ww1.sinaimg.cn/large/8c0b2220gy1g1aea5wfucg208c08cjrx.gif">
+                </span>
+            
+        
+    
+        
+            
+                <span class="iconfont-archer qq" title="qq">
+                  
+                  <img class="profile-qr" src="http://ww1.sinaimg.cn/large/8c0b2220gy1g1aeafzefgg208c08caba.gif">
+                </span>
+            
+        
+    
+        
+            
+                <a href="https://www.weibo.com/u/2349539872?sudaref=s.weibo.com&display=0&retcode=6102&is_all=1" class="iconfont-archer weibo" target="_blank" title="weibo"></a>
+            
+        
+    
+        
+            
+                <a href="https://YaoRemu.github.io" class="iconfont-archer github" target="_blank" title="github"></a>
+            
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+    </div>
+    
+    <!-- powered by Hexo  -->
+
+    <!-- 不蒜子  -->
+    
+    <div class="busuanzi-container">
+    
+     
+    <span id="busuanzi_container_site_pv">PV: <span id="busuanzi_value_site_pv"></span> :)</span>
+    
+    </div>
+    
+</footer>
+    </div>
+    <!-- toc -->
+    
+    <div class="toc-wrapper" style="top:50vh;">
+        <div class="toc-catalog">
+            <span class="iconfont-archer catalog-icon"></span><span>CATALOG</span>
+        </div>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#目标"><span class="toc-number">1.</span> <span class="toc-text">目标</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#关机-重启"><span class="toc-number">2.</span> <span class="toc-text">关机/重启</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#shutdown"><span class="toc-number">2.1.</span> <span class="toc-text">shutdown</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#关机"><span class="toc-number">2.1.1.</span> <span class="toc-text">关机</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#重新启动"><span class="toc-number">2.1.2.</span> <span class="toc-text">重新启动</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#查看或配置网卡信息"><span class="toc-number">3.</span> <span class="toc-text">查看或配置网卡信息</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#网卡和IP地址"><span class="toc-number">3.1.</span> <span class="toc-text">网卡和IP地址</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#网卡"><span class="toc-number">3.1.1.</span> <span class="toc-text">网卡</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#IP地址"><span class="toc-number">3.1.2.</span> <span class="toc-text">IP地址</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ifconfig"><span class="toc-number">3.1.3.</span> <span class="toc-text">ifconfig</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#过滤信息"><span class="toc-number">3.1.3.1.</span> <span class="toc-text">过滤信息</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ping"><span class="toc-number">3.1.4.</span> <span class="toc-text">ping</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#ping-IP地址"><span class="toc-number">3.1.4.1.</span> <span class="toc-text">ping IP地址</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#检测本地网卡"><span class="toc-number">3.1.4.2.</span> <span class="toc-text">检测本地网卡</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#远程登录和复制文件"><span class="toc-number">4.</span> <span class="toc-text">远程登录和复制文件</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#ssh基础（重点）"><span class="toc-number">4.1.</span> <span class="toc-text">ssh基础（重点）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#域名和端口号（科普）"><span class="toc-number">4.1.1.</span> <span class="toc-text">域名和端口号（科普）</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#域名"><span class="toc-number">4.1.1.1.</span> <span class="toc-text">域名</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#端口号"><span class="toc-number">4.1.1.2.</span> <span class="toc-text">端口号</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#SSH客户端的简单应用"><span class="toc-number">4.2.</span> <span class="toc-text">SSH客户端的简单应用</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Mac连接Ubuntu"><span class="toc-number">4.2.1.</span> <span class="toc-text">Mac连接Ubuntu</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Windows连接Ubuntu"><span class="toc-number">4.2.2.</span> <span class="toc-text">Windows连接Ubuntu</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Putty"><span class="toc-number">4.2.2.1.</span> <span class="toc-text">Putty</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#安装"><span class="toc-number">4.2.2.1.1.</span> <span class="toc-text">安装</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#使用"><span class="toc-number">4.2.2.1.2.</span> <span class="toc-text">使用</span></a></li></ol></li></ol></li></ol></li></ol></li></ol>
+    </div>
+    
+    <div class="back-top iconfont-archer"></div>
+    <div class="sidebar sidebar-hide">
+    <ul class="sidebar-tabs sidebar-tabs-active-0">
+        <li class="sidebar-tab-archives"><span class="iconfont-archer"></span><span class="tab-name">Archive</span></li>
+        <li class="sidebar-tab-tags"><span class="iconfont-archer"></span><span class="tab-name">Tag</span></li>
+        <li class="sidebar-tab-categories"><span class="iconfont-archer"></span><span class="tab-name">Cate</span></li>
+    </ul>
+    <div class="sidebar-content sidebar-content-show-archive">
+          <div class="sidebar-panel-archives">
+    <!-- 在ejs中将archive按照时间排序 -->
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <div class="total-and-search">
+        <div class="total-archive">
+        Total : 71
+        </div>
+        <!-- search  -->
+        
+    </div>
+    
+    <div class="post-archive">
+    
+    
+    
+    
+    <div class="archive-year"> Invalid date </div>
+    <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href="/2019/03/16/简介/">关于我的博客</a>
+        </li>
+    
+    
+    
+    
+    
+        </ul>
+    
+    <div class="archive-year"> 2019 </div>
+    <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">05/02</span><a class="archive-post-title" href="/2019/05/02/远程管理常用命令/">远程管理常用命令</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">05/01</span><a class="archive-post-title" href="/2019/05/01/徽章与巨幕/">徽章与巨幕</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">05/01</span><a class="archive-post-title" href="/2019/05/01/分页与标签/">分页与标签</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">04/30</span><a class="archive-post-title" href="/2019/04/30/Well/">Well</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">04/30</span><a class="archive-post-title" href="/2019/04/30/面板/">面板</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">04/30</span><a class="archive-post-title" href="/2019/04/30/Vue-js第三课/">Vue-js第三课</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">04/29</span><a class="archive-post-title" href="/2019/04/29/媒体对象/">媒体对象（评论模块）</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">04/29</span><a class="archive-post-title" href="/2019/04/29/导航条/">导航条</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">04/28</span><a class="archive-post-title" href="/2019/04/28/透视/">透视</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">04/28</span><a class="archive-post-title" href="/2019/04/28/导航/">导航</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">04/28</span><a class="archive-post-title" href="/2019/04/28/Bootstrap输入框组/">Bootstrap输入框组</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">04/28</span><a class="archive-post-title" href="/2019/04/28/文件和目录常用命令/">文件和目录常用命令</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">04/28</span><a class="archive-post-title" href="/2019/04/28/Linux终端命令格式/">Linux终端命令格式</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">04/27</span><a class="archive-post-title" href="/2019/04/27/按钮组/">按钮组</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">04/27</span><a class="archive-post-title" href="/2019/04/27/常用Linux命令的基本使用/">常用Linux命令的基本使用</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">04/27</span><a class="archive-post-title" href="/2019/04/27/Ubuntu图形界面入门/">Ubuntu图形界面入门</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">04/26</span><a class="archive-post-title" href="/2019/04/26/下拉菜单/">下拉菜单</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">04/26</span><a class="archive-post-title" href="/2019/04/26/文件和目录（理解）/">文件和目录（理解）</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">04/25</span><a class="archive-post-title" href="/2019/04/25/HTML5编辑API之Range对象/">HTML5编辑API之Range对象</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">04/25</span><a class="archive-post-title" href="/2019/04/25/按钮和图片/">按钮和图片</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">04/24</span><a class="archive-post-title" href="/2019/04/24/Bootstrap-CSS表单、按钮和图片/">Bootstrap CSS表单、按钮和图片</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">04/24</span><a class="archive-post-title" href="/2019/04/24/操作系统（科普章节）/">操作系统（科普章节）</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">04/23</span><a class="archive-post-title" href="/2019/04/23/Bootstrap-CSS栅格、代码和表格/">Bootstrap CSS栅格、代码和表格</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">04/22</span><a class="archive-post-title" href="/2019/04/22/全局CSS样式-排版/">全局CSS样式-排版</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">04/22</span><a class="archive-post-title" href="/2019/04/22/入门例子创建/">入门例子创建</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">04/22</span><a class="archive-post-title" href="/2019/04/22/素描/">素描</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">04/22</span><a class="archive-post-title" href="/2019/04/22/HTML5增强的页面元素/">HTML5增强的页面元素</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">04/21</span><a class="archive-post-title" href="/2019/04/21/Bootstrap简介/">Bootstrap简介</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">04/21</span><a class="archive-post-title" href="/2019/04/21/Vue-js第二课/">Vue.js第二课</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">04/20</span><a class="archive-post-title" href="/2019/04/20/表单新增的元素与属性（五）/">表单新增的元素与属性（五）</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">04/19</span><a class="archive-post-title" href="/2019/04/19/Vue-js第一课/">Vue.js第一课</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">04/19</span><a class="archive-post-title" href="/2019/04/19/表单新增的元素与属性（四）/">表单新增的元素与属性（四）</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">04/18</span><a class="archive-post-title" href="/2019/04/18/表单新增的元素与属性（三）/">表单新增的元素与属性（三）</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">04/18</span><a class="archive-post-title" href="/2019/04/18/PHP生成验证码/">PHP生成验证码</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">04/17</span><a class="archive-post-title" href="/2019/04/17/表单新增的元素与属性（二）/">表单新增的元素与属性（二）</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">04/16</span><a class="archive-post-title" href="/2019/04/16/环回接口（Loopback）/">环回接口（Loopback）</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">04/16</span><a class="archive-post-title" href="/2019/04/16/RIPv1基本配置/">RIPv1基本配置</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">04/16</span><a class="archive-post-title" href="/2019/04/16/RIP概述/">RIP概述</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">04/15</span><a class="archive-post-title" href="/2019/04/15/表单新增的元素与属性/">表单新增的元素与属性</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">04/15</span><a class="archive-post-title" href="/2019/04/15/Valine-访问被api域名白名单拒绝/">Valine-访问被api域名白名单拒绝</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">04/15</span><a class="archive-post-title" href="/2019/04/15/为博客添加域名/">为博客添加域名</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">04/14</span><a class="archive-post-title" href="/2019/04/14/新增的非主体结构元素（一）/">新增的非主体结构元素（一）</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">04/14</span><a class="archive-post-title" href="/2019/04/14/新增的主题结构元素（七）/">新增的主题结构元素（七）</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">04/14</span><a class="archive-post-title" href="/2019/04/14/新增的主题结构元素（六）/">新增的主题结构元素（六）</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">04/13</span><a class="archive-post-title" href="/2019/04/13/新增的主题结构元素（五）/">新增的主题结构元素（五）</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">04/13</span><a class="archive-post-title" href="/2019/04/13/新增的主题结构元素（四）/">新增的主题结构元素（四）</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">04/12</span><a class="archive-post-title" href="/2019/04/12/新增的主题结构元素（三）/">新增的主题结构元素（三）</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">04/12</span><a class="archive-post-title" href="/2019/04/12/新增的主题结构元素（二）/">新增的主题结构元素（二）</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">04/11</span><a class="archive-post-title" href="/2019/04/11/新增的主题结构元素（一）/">新增的主题结构元素（一）</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">04/11</span><a class="archive-post-title" href="/2019/04/11/新增的元素和废除的元素/">新增的元素和废除的元素</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">04/10</span><a class="archive-post-title" href="/2019/04/10/HTML5与HTML4区别/">HTML5与HTML4区别</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">04/10</span><a class="archive-post-title" href="/2019/04/10/前端学习-全局属性/">全局属性</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">04/10</span><a class="archive-post-title" href="/2019/04/10/MarkDown进阶操作/">MarkDown进阶操作</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">03/31</span><a class="archive-post-title" href="/2019/03/31/网络端口地址转换NAPT配置/">网络端口地址转换NAPT配置</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">03/30</span><a class="archive-post-title" href="/2019/03/30/网络地址转换NAT配置/">网络地址转换NAT配置</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">03/29</span><a class="archive-post-title" href="/2019/03/29/扩展IP访问控制列表配置/">扩展IP访问控制列表配置</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">03/28</span><a class="archive-post-title" href="/2019/03/28/标准-IP-访问控制列表配置/">标准 IP 访问控制列表配置</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">03/28</span><a class="archive-post-title" href="/2019/03/28/OSPF、RIP小记/">OSPF、RIP小记</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">03/27</span><a class="archive-post-title" href="/2019/03/27/路由器综合路由配置/">路由器综合路由配置</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">03/26</span><a class="archive-post-title" href="/2019/03/26/路由器OSPF动态路由配置/">路由器OSPF动态路由配置</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">03/25</span><a class="archive-post-title" href="/2019/03/25/路由器RIP动态路由配置/">路由器RIP动态路由配置</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">03/24</span><a class="archive-post-title" href="/2019/03/24/路由器静态路由配置/">路由器静态路由配置</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">03/23</span><a class="archive-post-title" href="/2019/03/23/路由器单臂路由配置/">路由器单臂路由配置</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">03/22</span><a class="archive-post-title" href="/2019/03/22/快速生成树配置/">快速生成树配置</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">03/21</span><a class="archive-post-title" href="/2019/03/21/利用三层交换机实现Vlan间路由/">利用三层交换机实现Vlan间路由</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">03/20</span><a class="archive-post-title" href="/2019/03/20/cisco多交换机之间的端口聚合链路/">cisco多交换机之间的端口聚合链路</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">03/19</span><a class="archive-post-title" href="/2019/03/19/cisco多交换机上配置基于端口的Vlan隔离办公网络/">cisco多交换机上配置基于端口的Vlan隔离办公网络</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">03/18</span><a class="archive-post-title" href="/2019/03/18/MarkDown基础教学/">MarkDown基础教学</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">03/18</span><a class="archive-post-title" href="/2019/03/18/ciscoTelnet/">No3. Telnet</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">03/17</span><a class="archive-post-title" href="/2019/03/17/MySql服务安装/">MySql服务安装</a>
+        </li>
+    
+    </ul></div>
+  </div>
+        <div class="sidebar-panel-tags">
+    <div class="sidebar-tags-name">
+    
+        <span class="sidebar-tag-name" data-tags="【极客】前端学习"><span class="iconfont-archer"></span>【极客】前端学习</span>
+    
+        <span class="sidebar-tag-name" data-tags="从零开始的Python学习"><span class="iconfont-archer"></span>从零开始的Python学习</span>
+    
+        <span class="sidebar-tag-name" data-tags="MarkDown基本语法"><span class="iconfont-archer"></span>MarkDown基本语法</span>
+    
+        <span class="sidebar-tag-name" data-tags="Cisco笔记"><span class="iconfont-archer"></span>Cisco笔记</span>
+    
+        <span class="sidebar-tag-name" data-tags="Cisco强化学习"><span class="iconfont-archer"></span>Cisco强化学习</span>
+    
+        <span class="sidebar-tag-name" data-tags="安装教程"><span class="iconfont-archer"></span>安装教程</span>
+    
+        <span class="sidebar-tag-name" data-tags="github搭建个人博客"><span class="iconfont-archer"></span>github搭建个人博客</span>
+    
+        <span class="sidebar-tag-name" data-tags="PHP相关知识"><span class="iconfont-archer"></span>PHP相关知识</span>
+    
+        <span class="sidebar-tag-name" data-tags="Cisco基础"><span class="iconfont-archer"></span>Cisco基础</span>
+    
+        <span class="sidebar-tag-name" data-tags="Cisco知识点"><span class="iconfont-archer"></span>Cisco知识点</span>
+    
+        <span class="sidebar-tag-name" data-tags="画画"><span class="iconfont-archer"></span>画画</span>
+    
+        <span class="sidebar-tag-name" data-tags="前端知识"><span class="iconfont-archer"></span>前端知识</span>
+    
+    </div>
+    <div class="iconfont-archer sidebar-tags-empty"></div>
+    <div class="tag-load-fail" style="display: none; color: #ccc; font-size: 0.6rem;">
+    缺失模块。<br>
+    1、请确保node版本大于6.2<br>
+    2、在博客根目录（注意不是archer根目录）执行以下命令：<br>
+    <span style="color: #f75357; font-size: 1rem; line-height: 2rem;">npm i hexo-generator-json-content --save</span><br>
+    3、在根目录_config.yml里添加配置：
+    <pre style="color: #787878; font-size: 0.6rem;">jsonContent:
+  meta: false
+  pages: false
+  posts:
+    title: true
+    date: true
+    path: true
+    text: false
+    raw: false
+    content: false
+    slug: false
+    updated: false
+    comments: false
+    link: false
+    permalink: false
+    excerpt: false
+    categories: true
+    tags: true</pre>
+    </div> 
+    <div class="sidebar-tags-list"></div>
+</div>
+        <div class="sidebar-panel-categories">
+    <div class="sidebar-categories-name">
+    
+        <span class="sidebar-category-name" data-categories="Bootstrap"><span class="iconfont-archer"></span>Bootstrap</span>
+    
+        <span class="sidebar-category-name" data-categories="前端知识"><span class="iconfont-archer"></span>前端知识</span>
+    
+        <span class="sidebar-category-name" data-categories="Python"><span class="iconfont-archer"></span>Python</span>
+    
+        <span class="sidebar-category-name" data-categories="教学"><span class="iconfont-archer"></span>教学</span>
+    
+        <span class="sidebar-category-name" data-categories="Cisco"><span class="iconfont-archer"></span>Cisco</span>
+    
+        <span class="sidebar-category-name" data-categories="PHP"><span class="iconfont-archer"></span>PHP</span>
+    
+        <span class="sidebar-category-name" data-categories="素描"><span class="iconfont-archer"></span>素描</span>
+    
+        <span class="sidebar-category-name" data-categories="Vue学习"><span class="iconfont-archer"></span>Vue学习</span>
+    
+    </div>
+    <div class="iconfont-archer sidebar-categories-empty"></div>
+    <div class="sidebar-categories-list"></div>
+</div>
+    </div>
+</div> 
+    <script>
+    var siteMeta = {
+        root: "/",
+        author: "YaoRemu"
+    }
+</script>
+
+
+
+<div id="landlord" style="left:5px;bottom:0px;">
+    <div class="message" style="opacity:0"></div>
+    <canvas id="live2d" width="500" height="560" class="live2d"></canvas>
+    <div class="live_talk_input_body">
+    	<div class="live_talk_input_name_body">
+        	<input name="name" type="text" class="live_talk_name white_input" id="AIuserName" autocomplete="off" placeholder="你的名字">
+        </div>
+        <div class="live_talk_input_text_body">
+        	<input name="talk" type="text" class="live_talk_talk white_input" id="AIuserText" autocomplete="off" placeholder="要和我聊什么呀？">
+            <button type="button" class="live_talk_send_btn" id="talk_send">发送</button>
+        </div>
+    </div>
+    <input name="live_talk" id="live_talk" value="1" type="hidden">
+    <div class="live_ico_box">
+    	<div class="live_ico_item type_info" id="showInfoBtn"></div>
+    	<div class="live_ico_item type_talk" id="showTalkBtn"></div>
+        <div class="live_ico_item type_music" id="musicButton"></div>
+
+        <div class="live_ico_item type_quit" id="hideButton"></div>
+        <input name="live_statu_val" id="live_statu_val" value="0" type="hidden">
+        <audio src style="display:none;" id="live2d_bgm" data-bgm="0" preload="none"></audio>
+        <input name="live2dBGM" value="http://up.xiaopg6.com/view.php/40e20ef1dd9d198a1aa07b09c31d9e0e.mp3" type="hidden">
+        <input name="live2dBGM" value="http://up.xiaopg6.com/view.php/c79cfeec5cb3376d835abd0d708b68d7.mp3" type="hidden">
+        <input id="duType" value="douqilai,l2d_caihong" type="hidden">
+    </div>
+</div>
+<div id="open_live2d">召唤蕾姆</div>
+<script type="text/javascript" src="https://apps.bdimg.com/libs/jquery/1.7.1/jquery.min.js"></script>
+<script>
+var message_Path = '/live2d/';//资源目录，如果目录不对请更改
+var talkAPI = "";//如果有类似图灵机器人的聊天接口请填写接口路径
+</script>
+<script type="text/javascript" src="/live2d/js/live2d.js"></script>
+<script type="text/javascript" src="/live2d/js/message.js"></script>
+    <!-- CDN failover -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+    <script type="text/javascript">
+        if (typeof window.$ === 'undefined')
+        {
+            console.warn('jquery load from jsdelivr failed, will load local script')
+            document.write('<script src="/lib/jquery.min.js">\x3C/script>')
+        }
+    </script>
+    <script src="/scripts/main.js"></script>
+
+    <!-- algolia -->
+    
+
+
+
+
+
+    <!-- busuanzi  -->
+    
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    
+    <!-- CNZZ  -->
+    
+    
+    <!-- async load share.js -->
+    
+        <script src="/scripts/share.js" async></script>    
+     
+    <!--爱心-->
+    <script type="text/javascript" src="/js/src/clicklove.js"></script>
+
+
+
+    
+
+
+
+<script type="text/javascript" charset="utf-8" src="/js/lazyload-plugin/lazyload.intersectionObserver.min.js"></script></body></html>

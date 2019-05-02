@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-05-01T11:59:02.921Z</updated>
+  <updated>2019-05-02T09:32:47.650Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>远程管理常用命令</title>
+    <link href="http://yoursite.com/2019/05/02/%E8%BF%9C%E7%A8%8B%E7%AE%A1%E7%90%86%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/"/>
+    <id>http://yoursite.com/2019/05/02/远程管理常用命令/</id>
+    <published>2019-05-02T03:06:16.000Z</published>
+    <updated>2019-05-02T09:32:47.650Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;h1 id=&quot;目标&quot;&gt;&lt;a href=&quot;#目标&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="Python" scheme="http://yoursite.com/categories/Python/"/>
+    
+    
+      <category term="从零开始的Python学习" scheme="http://yoursite.com/tags/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E7%9A%84Python%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
   
   <entry>
     <title>徽章与巨幕</title>
@@ -290,7 +316,7 @@
     <link href="http://yoursite.com/2019/04/28/%E6%96%87%E4%BB%B6%E5%92%8C%E7%9B%AE%E5%BD%95%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/"/>
     <id>http://yoursite.com/2019/04/28/文件和目录常用命令/</id>
     <published>2019-04-28T06:40:28.000Z</published>
-    <updated>2019-05-01T08:01:29.348Z</updated>
+    <updated>2019-05-02T03:02:59.930Z</updated>
     
     <summary type="html">
     
@@ -509,32 +535,6 @@
         
         
           &lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;h1 id=&quot;按钮&quot;&gt;&lt;a href=&quot;#按钮&quot; class=&quot;headerlink&quot; title=&quot;按钮&quot;&gt;&lt;/a&gt;按钮&lt;/h1&gt;&lt;p&gt;在 Bootstrap 中，它给我们提供了很多样式的按钮。 比如说：
-        
-      
-    
-    </summary>
-    
-      <category term="Bootstrap" scheme="http://yoursite.com/categories/Bootstrap/"/>
-    
-    
-      <category term="【极客】前端学习" scheme="http://yoursite.com/tags/%E3%80%90%E6%9E%81%E5%AE%A2%E3%80%91%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Bootstrap CSS表单、按钮和图片</title>
-    <link href="http://yoursite.com/2019/04/24/Bootstrap-CSS%E8%A1%A8%E5%8D%95%E3%80%81%E6%8C%89%E9%92%AE%E5%92%8C%E5%9B%BE%E7%89%87/"/>
-    <id>http://yoursite.com/2019/04/24/Bootstrap-CSS表单、按钮和图片/</id>
-    <published>2019-04-24T08:19:31.000Z</published>
-    <updated>2019-04-29T08:00:52.550Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;h1 id=&quot;表单&quot;&gt;&lt;a href=&quot;#表单&quot; class=&quot;headerlink&quot;
         
       
     
