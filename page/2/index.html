@@ -360,6 +360,114 @@ height:50vh;
     
     
     <article class="index-post">
+        <a class="abstract-title" href="/2019/04/30/面板/">
+            
+                <span>面板</span>
+        </a>
+        <div class="abstract-content">
+            面板类别
+基本的实现
+带标题的面板
+情景效果
+带表格的面板
+含有列表面板
+
+虽然面板不是每一次都会使用到，但是有的时候需要在将一些盒子包含在盒子当中，对于这种情况我们可以尝试使用面板
+基本的实现12345			hello World!	
+
+我们看到，表现出来的效果并不是很好看，是因为我们在当前的 div 中并没有承载当前要显示的盒子的内容，所以接下来在 面板 中再创建一个div：
+1234567						hello World!			
+
+带标题的面板12345678910111213						学习网站							希望你能来我的博客，我永远欢迎你			希望你能来我的博客，我永远欢迎你...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2019/04/30</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class="abstract-tags">
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="【极客】前端学习">【极客】前端学习</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
+        <a class="abstract-title" href="/2019/04/30/Vue-js第三课/">
+            
+                <span>Vue-js第三课</span>
+        </a>
+        <div class="abstract-content">
+            这一课，要基于之前学习的 Vue-resource来实现品牌管理的改造，之前我们都是在本地来创建数据，现在我们可以用 Vue-resource 来请求 远端的数据库了
+先开启node服务器：
+
+创建一个html
+
+注意：要导入 v-resource 的包
+
+12345678910111213141516171819202122232425262728293031323334353637383940414243444546						添加品牌											Name：																							Id				Name				Ctime				Operation				...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2019/04/30</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class="abstract-tags">
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="前端知识">前端知识</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
+        <a class="abstract-title" href="/2019/04/29/媒体对象/">
+            
+                <span>媒体对象（评论模块）</span>
+        </a>
+        <div class="abstract-content">
+            默认样式这是一个抽象的样式，用以后就不同类型的组件，这些组件具有文本内容，在左边或者在右边有对其的一些图片，像一些评论、或者模仿推特来做的一些消息等
+1234567891011121314151617181920212223body{	margin:10px 0;}																	欢迎来到Yaoremu的博客										欢迎来到Yaoremu的博客欢迎来到Yaoremu的博客欢迎来到Yaoremu的博客欢迎来到Yaoremu的博客欢迎来到Yaoremu的博客欢迎来到Yaoremu的博客欢迎来到Yaoremu的博客欢迎来到Yaoremu的博客欢迎来到Yaoremu...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2019/04/29</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class="abstract-tags">
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="【极客】前端学习">【极客】前端学习</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
         <a class="abstract-title" href="/2019/04/29/导航条/">
             
                 <span>导航条</span>
@@ -680,124 +788,6 @@ parameter：传给命令的参数，所谓参数，就是执行命令的时候�
             <!-- date  -->
             <div class="abstract-date">
                 <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2019/04/27</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class="abstract-tags">
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="【极客】前端学习">【极客】前端学习</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/2019/04/27/常用Linux命令的基本使用/">
-            
-                <span>常用Linux命令的基本使用</span>
-        </a>
-        <div class="abstract-content">
-            学习 Linux 终端命令的原因
-Linux 刚面世时并没有图形界面，所有的操作全靠命令完成， 如 磁盘操作、 文件存取、 目录操作、 进程管理、 文件权限 设定等
-在职场中，大量的 服务器维护工作 都是在 远程 通过 SSH客户端 来完成的， 并没有图形界面， 所有的维护工作都需要通过命令来完成
-在职场中， 作为后端程序员， 必须要或多或少掌握一些 Linux 常用的终端命令
-Linux发行版本 中命令大概有 200 多个，但是常用的命令只有10多个而已
-
-学习终端命令的技巧
-不需要死记硬背，对于常用命令，用的多了，自然就记住了
-不要尝试一次学会所有的命令， 有些命令是非常不常用的， ...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2019/04/27</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class="abstract-tags">
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="从零开始的Python学习">从零开始的Python学习</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/2019/04/27/Ubuntu图形界面入门/">
-            
-                <span>Ubuntu图形界面入门</span>
-        </a>
-        <div class="abstract-content">
-            Ubuntu的任务栏
-搜素按钮任务栏最上方的按钮可以搜素软件
-
-窗口操作按钮
-Ubuntu 中，窗口操作按钮在窗口的左上角
-菜单条
-注意： Ubuntu操作系统 的菜单栏在窗口的最顶端，与 Windows操作系统有区别。 另外，Ubuntu操作系统 的图形界面中同一时间激活的窗口只能有一个
-
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2019/04/27</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class="abstract-tags">
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="从零开始的Python学习">从零开始的Python学习</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/2019/04/26/下拉菜单/">
-            
-                <span>下拉菜单</span>
-        </a>
-        <div class="abstract-content">
-            
-下面需要使用到 Bootstrap 的 JS文件 以及 JQuery文件
-
-接下来讲述4个内容点：
-
-字体图标
-下拉菜单
-按钮组件
-按钮式下拉菜单
-
-字体图标可以根据官网给我们的指示来看，首先，先来了解一下组件： 无数个复用的组件，包括 字体图标、 下拉菜单、 导航、 警告框、 弹出框 …
-Bootstrap官网 一共给我们提供了一共 200个 字体图标，当然这些字体图标也不是它自己的，这些图标是来源于 Glyphicon Halfings 的组织
-
-如何使用 ?使用的时候，出于性能的考虑，所有的图标都需要一个 基类 和 对应图标的 子类，而且之间是有一个空格存在的
-eg:
-1
-而且使...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2019/04/26</span>
             </div>
             <!-- tags  -->
             
@@ -1508,9 +1498,30 @@ eg:
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 73
+        Total : 76
         </div>
         <!-- search  -->
         
@@ -1537,6 +1548,21 @@ eg:
     
     <div class="archive-year"> 2019 </div>
     <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">05/03</span><a class="archive-post-title" href="/2019/05/03/列表组/">列表组</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">05/03</span><a class="archive-post-title" href="/2019/05/03/进度条/">进度条</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">05/03</span><a class="archive-post-title" href="/2019/05/03/用户权限相关命令/">用户权限相关命令</a>
+        </li>
     
     
         <li class="archive-post-item">
@@ -1905,19 +1931,19 @@ eg:
     
         <span class="sidebar-tag-name" data-tags="【极客】前端学习"><span class="iconfont-archer"></span>【极客】前端学习</span>
     
+        <span class="sidebar-tag-name" data-tags="MarkDown基本语法"><span class="iconfont-archer"></span>MarkDown基本语法</span>
+    
         <span class="sidebar-tag-name" data-tags="从零开始的Python学习"><span class="iconfont-archer"></span>从零开始的Python学习</span>
     
-        <span class="sidebar-tag-name" data-tags="MarkDown基本语法"><span class="iconfont-archer"></span>MarkDown基本语法</span>
+        <span class="sidebar-tag-name" data-tags="安装教程"><span class="iconfont-archer"></span>安装教程</span>
     
         <span class="sidebar-tag-name" data-tags="Cisco笔记"><span class="iconfont-archer"></span>Cisco笔记</span>
     
         <span class="sidebar-tag-name" data-tags="Cisco强化学习"><span class="iconfont-archer"></span>Cisco强化学习</span>
     
-        <span class="sidebar-tag-name" data-tags="PHP相关知识"><span class="iconfont-archer"></span>PHP相关知识</span>
-    
         <span class="sidebar-tag-name" data-tags="github搭建个人博客"><span class="iconfont-archer"></span>github搭建个人博客</span>
     
-        <span class="sidebar-tag-name" data-tags="安装教程"><span class="iconfont-archer"></span>安装教程</span>
+        <span class="sidebar-tag-name" data-tags="PHP相关知识"><span class="iconfont-archer"></span>PHP相关知识</span>
     
         <span class="sidebar-tag-name" data-tags="Cisco基础"><span class="iconfont-archer"></span>Cisco基础</span>
     
@@ -1959,13 +1985,13 @@ eg:
         <div class="sidebar-panel-categories">
     <div class="sidebar-categories-name">
     
-        <span class="sidebar-category-name" data-categories="Bootstrap"><span class="iconfont-archer"></span>Bootstrap</span>
-    
         <span class="sidebar-category-name" data-categories="前端知识"><span class="iconfont-archer"></span>前端知识</span>
     
-        <span class="sidebar-category-name" data-categories="Python"><span class="iconfont-archer"></span>Python</span>
+        <span class="sidebar-category-name" data-categories="Bootstrap"><span class="iconfont-archer"></span>Bootstrap</span>
     
         <span class="sidebar-category-name" data-categories="教学"><span class="iconfont-archer"></span>教学</span>
+    
+        <span class="sidebar-category-name" data-categories="Python"><span class="iconfont-archer"></span>Python</span>
     
         <span class="sidebar-category-name" data-categories="Cisco"><span class="iconfont-archer"></span>Cisco</span>
     

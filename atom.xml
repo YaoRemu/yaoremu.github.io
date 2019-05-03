@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-05-02T12:20:45.343Z</updated>
+  <updated>2019-05-03T13:07:47.676Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,92 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>列表组</title>
+    <link href="http://yoursite.com/2019/05/03/%E5%88%97%E8%A1%A8%E7%BB%84/"/>
+    <id>http://yoursite.com/2019/05/03/列表组/</id>
+    <published>2019-05-03T12:22:43.000Z</published>
+    <updated>2019-05-03T13:07:47.676Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;p&gt;列表组在网站中应用还是很广泛的，通常用它来承载消息队列，在 Bootstrap 中
+        
+      
+    
+    </summary>
+    
+      <category term="Bootstrap" scheme="http://yoursite.com/categories/Bootstrap/"/>
+    
+    
+      <category term="【极客】前端学习" scheme="http://yoursite.com/tags/%E3%80%90%E6%9E%81%E5%AE%A2%E3%80%91%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>进度条</title>
+    <link href="http://yoursite.com/2019/05/03/%E8%BF%9B%E5%BA%A6%E6%9D%A1/"/>
+    <id>http://yoursite.com/2019/05/03/进度条/</id>
+    <published>2019-05-03T10:46:53.000Z</published>
+    <updated>2019-05-03T13:10:41.918Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;p&gt;进度条分为很多种：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;基本的进度条&lt;/li&gt;
+&lt;li&gt;带有提示的、标签的进度条&lt;/li&gt;
+&lt;li&gt;情景变化&lt;/li&gt;
+&lt;li&gt;条纹&lt;/li&gt;
+&lt;li&gt;动画效果&lt;/li&gt;
+&lt;li&gt;堆叠效果&lt;/li&gt;
+&lt;
+        
+      
+    
+    </summary>
+    
+      <category term="Bootstrap" scheme="http://yoursite.com/categories/Bootstrap/"/>
+    
+    
+      <category term="【极客】前端学习" scheme="http://yoursite.com/tags/%E3%80%90%E6%9E%81%E5%AE%A2%E3%80%91%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>用户权限相关命令</title>
+    <link href="http://yoursite.com/2019/05/03/%E7%94%A8%E6%88%B7%E6%9D%83%E9%99%90%E7%9B%B8%E5%85%B3%E5%91%BD%E4%BB%A4/"/>
+    <id>http://yoursite.com/2019/05/03/用户权限相关命令/</id>
+    <published>2019-05-03T09:35:49.000Z</published>
+    <updated>2019-05-03T09:47:37.165Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;p&gt;在接下来小节中，要学习的这些终端命令，在日常工作中 &lt;strong&gt;使用频率 并不是很高&lt;/strong&gt;，因为 有关 用户以及权限的设置，应该有 &lt;strong&gt;系统管理员&lt;/strong&gt;
+        
+      
+    
+    </summary>
+    
+      <category term="Python" scheme="http://yoursite.com/categories/Python/"/>
+    
+    
+      <category term="从零开始的Python学习" scheme="http://yoursite.com/tags/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E7%9A%84Python%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
   
   <entry>
     <title>警告框</title>
@@ -204,7 +290,7 @@
     <link href="http://yoursite.com/2019/04/30/Vue-js%E7%AC%AC%E4%B8%89%E8%AF%BE/"/>
     <id>http://yoursite.com/2019/04/30/Vue-js第三课/</id>
     <published>2019-04-30T04:44:06.000Z</published>
-    <updated>2019-05-02T14:02:04.295Z</updated>
+    <updated>2019-05-03T14:32:30.139Z</updated>
     
     <summary type="html">
     
@@ -455,86 +541,6 @@
         
         
           &lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;h1 id=&quot;学习-Linux-终端命令的原因&quot;&gt;&lt;a href=&quot;#学习-Linux-终端命令的原因&quot; class=&quot;headerlink&quot; title=&quot;学习 Linux 终端命令的原因&quot;&gt;&lt;/a&gt;学习 Linux
-        
-      
-    
-    </summary>
-    
-      <category term="Python" scheme="http://yoursite.com/categories/Python/"/>
-    
-    
-      <category term="从零开始的Python学习" scheme="http://yoursite.com/tags/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E7%9A%84Python%E5%AD%A6%E4%B9%A0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Ubuntu图形界面入门</title>
-    <link href="http://yoursite.com/2019/04/27/Ubuntu%E5%9B%BE%E5%BD%A2%E7%95%8C%E9%9D%A2%E5%85%A5%E9%97%A8/"/>
-    <id>http://yoursite.com/2019/04/27/Ubuntu图形界面入门/</id>
-    <published>2019-04-27T04:19:56.000Z</published>
-    <updated>2019-04-27T04:38:25.265Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;h1 id=&quot;Ubuntu的任务栏&quot;&gt;&lt;a href=&quot;#Ubuntu的任务栏&quot; class=&quot;headerlink&quot; title=&quot;Ubuntu的任务栏&quot;&gt;&lt;/a&gt;Ubuntu的任务栏&lt;/h1&gt;&lt;p&gt;&lt;img
-        
-      
-    
-    </summary>
-    
-      <category term="Python" scheme="http://yoursite.com/categories/Python/"/>
-    
-    
-      <category term="从零开始的Python学习" scheme="http://yoursite.com/tags/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E7%9A%84Python%E5%AD%A6%E4%B9%A0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>下拉菜单</title>
-    <link href="http://yoursite.com/2019/04/26/%E4%B8%8B%E6%8B%89%E8%8F%9C%E5%8D%95/"/>
-    <id>http://yoursite.com/2019/04/26/下拉菜单/</id>
-    <published>2019-04-26T12:53:45.000Z</published>
-    <updated>2019-04-29T08:02:15.656Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;blockquote&gt;
-&lt;p&gt;下面需要使用到 Bootstrap 的 JS文件 以及
-        
-      
-    
-    </summary>
-    
-      <category term="Bootstrap" scheme="http://yoursite.com/categories/Bootstrap/"/>
-    
-    
-      <category term="【极客】前端学习" scheme="http://yoursite.com/tags/%E3%80%90%E6%9E%81%E5%AE%A2%E3%80%91%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>文件和目录（理解）</title>
-    <link href="http://yoursite.com/2019/04/26/%E6%96%87%E4%BB%B6%E5%92%8C%E7%9B%AE%E5%BD%95%EF%BC%88%E7%90%86%E8%A7%A3%EF%BC%89/"/>
-    <id>http://yoursite.com/2019/04/26/文件和目录（理解）/</id>
-    <published>2019-04-26T05:00:57.000Z</published>
-    <updated>2019-04-26T07:26:34.801Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;p&gt;&lt;strong&gt;目标&lt;/strong&gt;： 理解 Linux 文件目录的结构&lt;/p&gt;
-&lt;h1 id=&quot;单用户操作系统和多用户操作系统（科普）&quot;&gt;&lt;a href=&quot;#单用户操作系统和多用户操作系统（科普）&quot;
         
       
     

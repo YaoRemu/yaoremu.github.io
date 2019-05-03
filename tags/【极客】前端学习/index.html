@@ -347,6 +347,98 @@
     
     
     <article class="index-post">
+        <a class="abstract-title" href="/2019/05/03/列表组/">
+            
+                <span>列表组</span>
+        </a>
+        <div class="abstract-content">
+            列表组在网站中应用还是很广泛的，通常用它来承载消息队列，在 Bootstrap 中 也给我们提供了列表组的使用，包含
+
+基本的列表组
+徽章式列表
+可点击的（链接）
+被禁用的条目
+情景类
+定制内容
+
+基本的列表组在列表组中可以放一些内容，当然，放的内容是不固定的，有时候可以放一些 可点击的属性，也可以放一些不可点击的属性。 当然它们承载的内容都是互通的
+12345678			姚大帅哥		姚超级帅哥		姚无敌帅哥		姚究极帅哥	
+
+在这里我们不难看出这是一个列表，当然大小以及放置的位置都是我们自己去调整的，可以根据 栅格系统进行调整
+徽章式列表12345678			10姚大帅哥		姚超级帅哥...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2019/05/03</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class="abstract-tags">
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="【极客】前端学习">【极客】前端学习</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
+        <a class="abstract-title" href="/2019/05/03/进度条/">
+            
+                <span>进度条</span>
+        </a>
+        <div class="abstract-content">
+            进度条分为很多种：
+
+基本的进度条
+带有提示的、标签的进度条
+情景变化
+条纹
+动画效果
+堆叠效果
+
+基本的进度条1234567891011121314	body{		margin:10 0;	}						50%			
+
+可以看到这样一个进度条，它处于 50% 的状态
+带有提示的、标签的进度条12345			60%	
+
+这样会更好的标识当前的进度
+情景变化12345			
+
+可以根据它提供的不同效果，可以在不同的情景下使用
+条纹有的时候我们会看有条纹的会舒服一点，证明他在一点点往前走,Bootstrap 也提供了这种效果
+12345			40%	
+
+动画效果上面演示的都是静态的，我们有时...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2019/05/03</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class="abstract-tags">
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="【极客】前端学习">【极客】前端学习</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
         <a class="abstract-title" href="/2019/05/02/警告框/">
             
                 <span>警告框</span>
@@ -649,101 +741,6 @@ Well
             <!-- date  -->
             <div class="abstract-date">
                 <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2019/04/29</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class="abstract-tags">
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="【极客】前端学习">【极客】前端学习</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/2019/04/28/导航/">
-            
-                <span>导航</span>
-        </a>
-        <div class="abstract-content">
-            导航分为几个方向：
-
-标签页
-胶囊式标签页
-两端对齐标签页
-禁用的链接
-添加下拉菜单
-
-基本的标签页
-role 的添加会导致一些问题的避免
-
-HTML1234567891011			home		Hello		World	
-JavaScript1234$("#mytab a").click(function(e){	e.preventDefault();	$(this).tab("show");}
-
-
-由于没有点击选中的效果，所以需要引入它需要使用的一个插件
-
-胶囊式标签页胶囊我们都看过，其实就是颜色不一样
-HTML1234567891011			home		Hello		World	
-J...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2019/04/28</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class="abstract-tags">
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="【极客】前端学习">【极客】前端学习</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/2019/04/28/Bootstrap输入框组/">
-            
-                <span>Bootstrap输入框组</span>
-        </a>
-        <div class="abstract-content">
-            主要内容
-输入框组
-导航
-导航条
-
-输入框组
-基本的输入框
-输入框的尺寸
-多添加的多选框和单选框
-多添加按钮
-多添加下拉式按钮
-多添加分裂式按钮下拉菜单
-
-基本的输入框1234567891011121314151617			@								.00				$				.00	
-
-输入框的尺寸输入框的尺寸是根据屏幕的自适应来操作的，比如：响应式布局，针对于手机 、 ipad 和 显示器 时的显示是不一样的,根据不同的屏幕选择不同的内容
-1234567891011121314151617			@								.00				$				.00	
-
-多添加的多选框和单选框12345678910		...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2019/04/28</span>
             </div>
             <!-- tags  -->
             
@@ -1375,9 +1372,30 @@ J...
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 73
+        Total : 76
         </div>
         <!-- search  -->
         
@@ -1404,6 +1422,21 @@ J...
     
     <div class="archive-year"> 2019 </div>
     <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">05/03</span><a class="archive-post-title" href="/2019/05/03/列表组/">列表组</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">05/03</span><a class="archive-post-title" href="/2019/05/03/进度条/">进度条</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">05/03</span><a class="archive-post-title" href="/2019/05/03/用户权限相关命令/">用户权限相关命令</a>
+        </li>
     
     
         <li class="archive-post-item">
@@ -1772,19 +1805,19 @@ J...
     
         <span class="sidebar-tag-name" data-tags="【极客】前端学习"><span class="iconfont-archer"></span>【极客】前端学习</span>
     
+        <span class="sidebar-tag-name" data-tags="MarkDown基本语法"><span class="iconfont-archer"></span>MarkDown基本语法</span>
+    
         <span class="sidebar-tag-name" data-tags="从零开始的Python学习"><span class="iconfont-archer"></span>从零开始的Python学习</span>
     
-        <span class="sidebar-tag-name" data-tags="MarkDown基本语法"><span class="iconfont-archer"></span>MarkDown基本语法</span>
+        <span class="sidebar-tag-name" data-tags="安装教程"><span class="iconfont-archer"></span>安装教程</span>
     
         <span class="sidebar-tag-name" data-tags="Cisco笔记"><span class="iconfont-archer"></span>Cisco笔记</span>
     
         <span class="sidebar-tag-name" data-tags="Cisco强化学习"><span class="iconfont-archer"></span>Cisco强化学习</span>
     
-        <span class="sidebar-tag-name" data-tags="PHP相关知识"><span class="iconfont-archer"></span>PHP相关知识</span>
-    
         <span class="sidebar-tag-name" data-tags="github搭建个人博客"><span class="iconfont-archer"></span>github搭建个人博客</span>
     
-        <span class="sidebar-tag-name" data-tags="安装教程"><span class="iconfont-archer"></span>安装教程</span>
+        <span class="sidebar-tag-name" data-tags="PHP相关知识"><span class="iconfont-archer"></span>PHP相关知识</span>
     
         <span class="sidebar-tag-name" data-tags="Cisco基础"><span class="iconfont-archer"></span>Cisco基础</span>
     
@@ -1826,13 +1859,13 @@ J...
         <div class="sidebar-panel-categories">
     <div class="sidebar-categories-name">
     
-        <span class="sidebar-category-name" data-categories="Bootstrap"><span class="iconfont-archer"></span>Bootstrap</span>
-    
         <span class="sidebar-category-name" data-categories="前端知识"><span class="iconfont-archer"></span>前端知识</span>
     
-        <span class="sidebar-category-name" data-categories="Python"><span class="iconfont-archer"></span>Python</span>
+        <span class="sidebar-category-name" data-categories="Bootstrap"><span class="iconfont-archer"></span>Bootstrap</span>
     
         <span class="sidebar-category-name" data-categories="教学"><span class="iconfont-archer"></span>教学</span>
+    
+        <span class="sidebar-category-name" data-categories="Python"><span class="iconfont-archer"></span>Python</span>
     
         <span class="sidebar-category-name" data-categories="Cisco"><span class="iconfont-archer"></span>Cisco</span>
     

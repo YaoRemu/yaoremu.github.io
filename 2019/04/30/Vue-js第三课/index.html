@@ -273,7 +273,7 @@ height:50vh;
                 
                 
                     <div class="post-intro-read">
-                        <span>字数统计: <span class="post-count word-count">2.5k</span>阅读时长: <span class="post-count reading-time">9 min</span></span>
+                        <span>字数统计: <span class="post-count word-count">3.1k</span>阅读时长: <span class="post-count reading-time">12 min</span></span>
                     </div>
                 
                 <div class="post-intro-meta">
@@ -452,7 +452,63 @@ height:50vh;
 </ul>
 <p>接着在请求 ajax 的时候我们就可以 <strong>省略该步骤</strong>，eg：</p>
 <p><img src="http://ww1.sinaimg.cn/large/8c0b2220gy1g2nbid0fn7j20hn010wep.jpg" alt></p>
-
+<h1 id="Vue中的动画"><a href="#Vue中的动画" class="headerlink" title="Vue中的动画"></a>Vue中的动画</h1><p>为什么要有动画：动画能够提高用户的体验，帮助用户更好的理解页面中的功能</p>
+<p>动画它本质的目的不是效果多么好看就一定好，<strong>一个好的动画，是要帮助用户更好的理解页面中的功能</strong></p>
+<blockquote>
+<p>注意： 这里面的动画和 CSS3 中的不一样，CSS3学的动画<strong>非常炫酷</strong>，不如： 翻转、 3D视图… 但是，在 Vue中 不会有，Vue 中的动画有 淡入淡出、 位置、 透明度的渐变</p>
+</blockquote>
+<h1 id="过渡动画"><a href="#过渡动画" class="headerlink" title="过渡动画"></a>过渡动画</h1><h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p><img src="http://ww1.sinaimg.cn/large/8c0b2220gy1g2og2dxez6j20ea064jrq.jpg" alt></p>
+<p>这是一个完整的动画，有进入、 有离开，这才是一个完整的动画，他把一个完整的动画分成了 <strong>两部分</strong>：</p>
+<ul>
+<li><p>左面：表示进入， 一个进入的动画分为 <strong>两个时间地点</strong>、 <strong>一个时间段</strong></p>
+<ul>
+<li><strong>v-enter</strong> 表示进入之前元素的初始状态</li>
+<li><strong>v-enter-to</strong> 动画进入完成之后的结束状态</li>
+<li><strong>v-enter-active</strong> 动画的时间段</li>
+</ul>
+</li>
+<li><p>右面：表示离开</p>
+<ul>
+<li><strong>v-leave</strong> 表示即将离开之前，即起始状态</li>
+<li><strong>v-leave-to</strong> 表示离开完成之前，即结束状态</li>
+<li><strong>v-leave-active</strong> 动画的时间段</li>
+</ul>
+</li>
+</ul>
+<p>虽然它给我们分成了两个半场动画，但是可以发现，中间两个样式是一样的，即 <strong>v-enter-to</strong>、 <strong>v-leave</strong>， 还有 <strong>v-enter</strong> 、 <strong>v-leave-to</strong> ，即可将 类似的动画 <strong>分别写进一组</strong></p>
+<h2 id="无动画样式"><a href="#无动画样式" class="headerlink" title="无动画样式"></a>无动画样式</h2><ul>
+<li>点击按钮，让按钮显示或隐藏</li>
+</ul>
+<figure class="highlight html"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag"><<span class="name">div</span> <span class="attr">id</span>=<span class="string">"app"</span>></span></span><br><span class="line">	</span><br><span class="line">	<span class="tag"><<span class="name">input</span> <span class="attr">type</span>=<span class="string">"button"</span> <span class="attr">value</span>=<span class="string">"toggle"</span> @<span class="attr">click</span>=<span class="string">"flag=!flag"</span>></span></span><br><span class="line">	//点击按钮，让 h3 显示，再点击，让 h3 隐藏</span><br><span class="line">	<span class="tag"><<span class="name">h3</span> <span class="attr">v-if</span>=<span class="string">"flag"</span>></span>这是一个H3<span class="tag"><</span>/<span class="attr">h3</span>></span><br><span class="line"><span class="tag"><</span>/<span class="attr">div</span>></span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight javascript"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> vm = <span class="keyword">new</span> Vue({</span><br><span class="line">	el: <span class="string">'#app'</span>,</span><br><span class="line">	data: {</span><br><span class="line">		flag: <span class="literal">false</span></span><br><span class="line">	},</span><br><span class="line">	methods: {}</span><br><span class="line">});</span><br></pre></td></tr></tbody></table></figure>
+<h2 id="过渡动画样式"><a href="#过渡动画样式" class="headerlink" title="过渡动画样式"></a>过渡动画样式</h2><p>但是现在的效果很突兀，那能否让它渐渐的展示出来，再渐渐的消失</p>
+<p><strong>需求：</strong></p>
+<ul>
+<li><p>使用 transition 元素，把 需要被 动画控制的元素 包裹起来 </p>
+<ul>
+<li>transition 元素是 Vue <strong>官方提供</strong>的</li>
+</ul>
+</li>
+<li><p>自定义两组样式来 <strong>控制 transition 内部元素</strong> 实现动画</p>
+<ul>
+<li><p><strong>v-enter</strong> 【 这是一个时间点 】 是进入之前，元素的起始状态，此时还没有开始进入</p>
+</li>
+<li><p><strong>v-leave-to</strong> 【 这是一个时间点 】 是动画离开之后，离开的终止状态，此时，元素 动画已经结束</p>
+</li>
+<li><p><strong>v-enter-active</strong> 【 入场动画的时间段 】</p>
+</li>
+<li><p><strong>v-leave-active</strong> 【 离场动画的时间段 】</p>
+</li>
+</ul>
+</li>
+<li><p>最后为 <strong>v-enter</strong> 与 <strong>v-leave-to</strong> 添加一个 位移，实现位移效果</p>
+</li>
+</ul>
+<blockquote>
+<p>【 transition: all 0.4s ease 】： 参数分别是 设置 <strong>哪些属性、 花费的时间、 过渡的状态 </strong></p>
+</blockquote>
+<figure class="highlight html"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag"><<span class="name">style</span>></span><span class="undefined"></span></span><br><span class="line"><span class="undefined">	.v-enter,.v-leave-to{</span></span><br><span class="line"><span class="undefined">		opacity: 0;</span></span><br><span class="line"><span class="undefined">		transform: translateX(80px);</span></span><br><span class="line"><span class="undefined">	}</span></span><br><span class="line"><span class="undefined"></span></span><br><span class="line"><span class="undefined">	.v-enter-active,.v-leave-active{</span></span><br><span class="line"><span class="undefined">		transition: all 0.4s ease;</span></span><br><span class="line"><span class="undefined">	}</span></span><br><span class="line"><span class="xml"><span class="tag"><</span>/<span class="attr">style</span>></span></span><br><span class="line"><span class="undefined"></span></span><br><span class="line"><span class="undefined"></span></span><br><span class="line"><span class="xml"><span class="tag"><<span class="name">div</span> <span class="attr">id</span>=<span class="string">"app"</span>></span></span></span><br><span class="line"><span class="undefined">	</span></span><br><span class="line"><span class="xml">	<span class="tag"><<span class="name">input</span> <span class="attr">type</span>=<span class="string">"button"</span> <span class="attr">value</span>=<span class="string">"toggle"</span> @<span class="attr">click</span>=<span class="string">"flag=!flag"</span>></span></span></span><br><span class="line"><span class="undefined">	//点击按钮，让 h3 显示，再点击，让 h3 隐藏</span></span><br><span class="line"><span class="xml">	<span class="tag"><<span class="name">transition</span>></span></span></span><br><span class="line"><span class="xml">		<span class="tag"><<span class="name">h3</span> <span class="attr">v-if</span>=<span class="string">"flag"</span>></span>这是一个H3<span class="tag"><</span>/<span class="attr">h3</span>></span></span><br><span class="line"><span class="xml">	<span class="tag"><</span>/<span class="attr">transition</span>></span></span><br><span class="line"><span class="undefined"></span></span><br><span class="line"><span class="xml"><span class="tag"><</span>/<span class="attr">div</span>></span></span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight javascript"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> vm = <span class="keyword">new</span> Vue({</span><br><span class="line">	el: <span class="string">'#app'</span>,</span><br><span class="line">	data: {</span><br><span class="line">		flag: <span class="literal">false</span></span><br><span class="line">	},</span><br><span class="line">	methods: {}</span><br><span class="line">});</span><br></pre></td></tr></tbody></table></figure>
     </article>
     <!-- license  -->
     
@@ -460,7 +516,7 @@ height:50vh;
             <p>原文作者：<a href="http://yoursite.com">YaoRemu</a>
             </p><p>原文链接：<a href="http://yoursite.com/2019/04/30/Vue-js第三课/">http://yoursite.com/2019/04/30/Vue-js第三课/</a>
             </p><p>发表日期：<a href="http://yoursite.com/2019/04/30/Vue-js第三课/">April 30th 2019, 12:44:06 pm</a>
-            </p><p>更新日期：<a href="http://yoursite.com/2019/04/30/Vue-js第三课/">May 2nd 2019, 10:02:04 pm</a>
+            </p><p>更新日期：<a href="http://yoursite.com/2019/04/30/Vue-js第三课/">May 3rd 2019, 10:32:30 pm</a>
             </p><p>版权声明：本文采用<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可</p>
         </div>
     
@@ -634,7 +690,7 @@ height:50vh;
         <div class="toc-catalog">
             <span class="iconfont-archer catalog-icon"></span><span>CATALOG</span>
         </div>
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#品牌数据列表"><span class="toc-number">1.</span> <span class="toc-text">品牌数据列表</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#发起请求"><span class="toc-number">1.1.</span> <span class="toc-text">发起请求</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#添加功能"><span class="toc-number">1.2.</span> <span class="toc-text">添加功能</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#删除数据"><span class="toc-number">1.3.</span> <span class="toc-text">删除数据</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#全局配置数据接口的根域名"><span class="toc-number">1.4.</span> <span class="toc-text">全局配置数据接口的根域名</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#方法一：使用-Vue-resource-提取根域名"><span class="toc-number">1.4.1.</span> <span class="toc-text">方法一：使用 Vue-resource 提取根域名</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#方法二：导入配置文件"><span class="toc-number">1.4.2.</span> <span class="toc-text">方法二：导入配置文件</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#全局配置emulateJSON选项"><span class="toc-number">1.5.</span> <span class="toc-text">全局配置emulateJSON选项</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#品牌数据列表"><span class="toc-number">1.</span> <span class="toc-text">品牌数据列表</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#发起请求"><span class="toc-number">1.1.</span> <span class="toc-text">发起请求</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#添加功能"><span class="toc-number">1.2.</span> <span class="toc-text">添加功能</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#删除数据"><span class="toc-number">1.3.</span> <span class="toc-text">删除数据</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#全局配置数据接口的根域名"><span class="toc-number">1.4.</span> <span class="toc-text">全局配置数据接口的根域名</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#方法一：使用-Vue-resource-提取根域名"><span class="toc-number">1.4.1.</span> <span class="toc-text">方法一：使用 Vue-resource 提取根域名</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#方法二：导入配置文件"><span class="toc-number">1.4.2.</span> <span class="toc-text">方法二：导入配置文件</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#全局配置emulateJSON选项"><span class="toc-number">1.5.</span> <span class="toc-text">全局配置emulateJSON选项</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Vue中的动画"><span class="toc-number">2.</span> <span class="toc-text">Vue中的动画</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#过渡动画"><span class="toc-number">3.</span> <span class="toc-text">过渡动画</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#简介"><span class="toc-number">3.1.</span> <span class="toc-text">简介</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#无动画样式"><span class="toc-number">3.2.</span> <span class="toc-text">无动画样式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#过渡动画样式"><span class="toc-number">3.3.</span> <span class="toc-text">过渡动画样式</span></a></li></ol></li></ol>
     </div>
     
     <div class="back-top iconfont-archer"></div>
@@ -1162,9 +1218,30 @@ height:50vh;
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 73
+        Total : 76
         </div>
         <!-- search  -->
         
@@ -1191,6 +1268,21 @@ height:50vh;
     
     <div class="archive-year"> 2019 </div>
     <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">05/03</span><a class="archive-post-title" href="/2019/05/03/列表组/">列表组</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">05/03</span><a class="archive-post-title" href="/2019/05/03/进度条/">进度条</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">05/03</span><a class="archive-post-title" href="/2019/05/03/用户权限相关命令/">用户权限相关命令</a>
+        </li>
     
     
         <li class="archive-post-item">
@@ -1559,19 +1651,19 @@ height:50vh;
     
         <span class="sidebar-tag-name" data-tags="【极客】前端学习"><span class="iconfont-archer"></span>【极客】前端学习</span>
     
+        <span class="sidebar-tag-name" data-tags="MarkDown基本语法"><span class="iconfont-archer"></span>MarkDown基本语法</span>
+    
         <span class="sidebar-tag-name" data-tags="从零开始的Python学习"><span class="iconfont-archer"></span>从零开始的Python学习</span>
     
-        <span class="sidebar-tag-name" data-tags="MarkDown基本语法"><span class="iconfont-archer"></span>MarkDown基本语法</span>
+        <span class="sidebar-tag-name" data-tags="安装教程"><span class="iconfont-archer"></span>安装教程</span>
     
         <span class="sidebar-tag-name" data-tags="Cisco笔记"><span class="iconfont-archer"></span>Cisco笔记</span>
     
         <span class="sidebar-tag-name" data-tags="Cisco强化学习"><span class="iconfont-archer"></span>Cisco强化学习</span>
     
-        <span class="sidebar-tag-name" data-tags="PHP相关知识"><span class="iconfont-archer"></span>PHP相关知识</span>
-    
         <span class="sidebar-tag-name" data-tags="github搭建个人博客"><span class="iconfont-archer"></span>github搭建个人博客</span>
     
-        <span class="sidebar-tag-name" data-tags="安装教程"><span class="iconfont-archer"></span>安装教程</span>
+        <span class="sidebar-tag-name" data-tags="PHP相关知识"><span class="iconfont-archer"></span>PHP相关知识</span>
     
         <span class="sidebar-tag-name" data-tags="Cisco基础"><span class="iconfont-archer"></span>Cisco基础</span>
     
@@ -1613,13 +1705,13 @@ height:50vh;
         <div class="sidebar-panel-categories">
     <div class="sidebar-categories-name">
     
-        <span class="sidebar-category-name" data-categories="Bootstrap"><span class="iconfont-archer"></span>Bootstrap</span>
-    
         <span class="sidebar-category-name" data-categories="前端知识"><span class="iconfont-archer"></span>前端知识</span>
     
-        <span class="sidebar-category-name" data-categories="Python"><span class="iconfont-archer"></span>Python</span>
+        <span class="sidebar-category-name" data-categories="Bootstrap"><span class="iconfont-archer"></span>Bootstrap</span>
     
         <span class="sidebar-category-name" data-categories="教学"><span class="iconfont-archer"></span>教学</span>
+    
+        <span class="sidebar-category-name" data-categories="Python"><span class="iconfont-archer"></span>Python</span>
     
         <span class="sidebar-category-name" data-categories="Cisco"><span class="iconfont-archer"></span>Cisco</span>
     
