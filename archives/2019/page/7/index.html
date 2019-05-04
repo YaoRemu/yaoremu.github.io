@@ -347,6 +347,40 @@
     
     
     <article class="index-post">
+        <a class="abstract-title" href="/2019/03/30/网络地址转换NAT配置/">
+            
+                <span>网络地址转换NAT配置</span>
+        </a>
+        <div class="abstract-content">
+            拓扑图
+
+相关知识①：网络地址转换NAT（Network Address Translation）,被广泛应用于各种类型Internet接入方式和各种类型的网络中。原因很简单，NAT不仅完美地解决了IP地址不足的问题，而且还能够有效地避免来自网络外部的攻击，隐藏并保护网络内部的计算机。
+
+
+相关知识②：默认情况下，内部IP地址是无法被路由到外网的，内部主机10.1.1.1要与外部Internet通信，IP包到达NAT路由器时，IP包头的源地址10.1.1.1被替换成一个合法的外网IP，并在NAT转发表中保存这条记录。 当外部主机发送一个应答到内网时，NAT路由器收到后，查看当前NAT转换...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2019/03/30</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class="abstract-tags">
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Cisco基础">Cisco基础</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
         <a class="abstract-title" href="/2019/03/29/扩展IP访问控制列表配置/">
             
                 <span>扩展IP访问控制列表配置</span>
@@ -688,52 +722,6 @@ spanning-tree mode...
             <!-- date  -->
             <div class="abstract-date">
                 <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2019/03/22</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class="abstract-tags">
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Cisco基础">Cisco基础</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/2019/03/21/利用三层交换机实现Vlan间路由/">
-            
-                <span>利用三层交换机实现Vlan间路由</span>
-        </a>
-        <div class="abstract-content">
-            拓扑图
-配置命令配置二层交换机enable            //特权模式
-configure terminal        //全局配置模式
-
-vlan 2        //开启vlan
-exit
-vlan 3
-exit
-
-interface fa0/2        
-switchport access vlan 2        //配置端口在access模式，允许vlan2通过
-exit
-interface fa0/3
-switchport access vlan 3
-exit
-
-interface fa0/1
-switchport mode trunk        /...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2019/03/21</span>
             </div>
             <!-- tags  -->
             
@@ -1386,9 +1374,16 @@ switchport mode trunk        /...
     
     
     
+    
+    
+    
+    
+    
+    
+    
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 76
+        Total : 77
         </div>
         <!-- search  -->
         
@@ -1415,6 +1410,11 @@ switchport mode trunk        /...
     
     <div class="archive-year"> 2019 </div>
     <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">05/04</span><a class="archive-post-title" href="/2019/05/04/基本模态框/">基本模态框</a>
+        </li>
     
     
         <li class="archive-post-item">
@@ -1798,13 +1798,13 @@ switchport mode trunk        /...
     
         <span class="sidebar-tag-name" data-tags="【极客】前端学习"><span class="iconfont-archer"></span>【极客】前端学习</span>
     
-        <span class="sidebar-tag-name" data-tags="从零开始的Python学习"><span class="iconfont-archer"></span>从零开始的Python学习</span>
-    
         <span class="sidebar-tag-name" data-tags="MarkDown基本语法"><span class="iconfont-archer"></span>MarkDown基本语法</span>
     
-        <span class="sidebar-tag-name" data-tags="安装教程"><span class="iconfont-archer"></span>安装教程</span>
+        <span class="sidebar-tag-name" data-tags="从零开始的Python学习"><span class="iconfont-archer"></span>从零开始的Python学习</span>
     
         <span class="sidebar-tag-name" data-tags="Cisco笔记"><span class="iconfont-archer"></span>Cisco笔记</span>
+    
+        <span class="sidebar-tag-name" data-tags="安装教程"><span class="iconfont-archer"></span>安装教程</span>
     
         <span class="sidebar-tag-name" data-tags="PHP相关知识"><span class="iconfont-archer"></span>PHP相关知识</span>
     
@@ -1854,11 +1854,11 @@ switchport mode trunk        /...
     
         <span class="sidebar-category-name" data-categories="Bootstrap"><span class="iconfont-archer"></span>Bootstrap</span>
     
+        <span class="sidebar-category-name" data-categories="教学"><span class="iconfont-archer"></span>教学</span>
+    
         <span class="sidebar-category-name" data-categories="前端知识"><span class="iconfont-archer"></span>前端知识</span>
     
         <span class="sidebar-category-name" data-categories="Python"><span class="iconfont-archer"></span>Python</span>
-    
-        <span class="sidebar-category-name" data-categories="教学"><span class="iconfont-archer"></span>教学</span>
     
         <span class="sidebar-category-name" data-categories="Cisco"><span class="iconfont-archer"></span>Cisco</span>
     

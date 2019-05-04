@@ -347,6 +347,52 @@
     
     
     <article class="index-post">
+        <a class="abstract-title" href="/2019/03/21/利用三层交换机实现Vlan间路由/">
+            
+                <span>利用三层交换机实现Vlan间路由</span>
+        </a>
+        <div class="abstract-content">
+            拓扑图
+配置命令配置二层交换机enable            //特权模式
+configure terminal        //全局配置模式
+
+vlan 2        //开启vlan
+exit
+vlan 3
+exit
+
+interface fa0/2        
+switchport access vlan 2        //配置端口在access模式，允许vlan2通过
+exit
+interface fa0/3
+switchport access vlan 3
+exit
+
+interface fa0/1
+switchport mode trunk        /...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2019/03/21</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class="abstract-tags">
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Cisco基础">Cisco基础</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
         <a class="abstract-title" href="/2019/03/20/cisco多交换机之间的端口聚合链路/">
             
                 <span>cisco多交换机之间的端口聚合链路</span>
@@ -1239,9 +1285,16 @@ net start mysql(启动MySql服务)
     
     
     
+    
+    
+    
+    
+    
+    
+    
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 76
+        Total : 77
         </div>
         <!-- search  -->
         
@@ -1268,6 +1321,11 @@ net start mysql(启动MySql服务)
     
     <div class="archive-year"> 2019 </div>
     <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">05/04</span><a class="archive-post-title" href="/2019/05/04/基本模态框/">基本模态框</a>
+        </li>
     
     
         <li class="archive-post-item">
@@ -1651,13 +1709,13 @@ net start mysql(启动MySql服务)
     
         <span class="sidebar-tag-name" data-tags="【极客】前端学习"><span class="iconfont-archer"></span>【极客】前端学习</span>
     
-        <span class="sidebar-tag-name" data-tags="从零开始的Python学习"><span class="iconfont-archer"></span>从零开始的Python学习</span>
-    
         <span class="sidebar-tag-name" data-tags="MarkDown基本语法"><span class="iconfont-archer"></span>MarkDown基本语法</span>
     
-        <span class="sidebar-tag-name" data-tags="安装教程"><span class="iconfont-archer"></span>安装教程</span>
+        <span class="sidebar-tag-name" data-tags="从零开始的Python学习"><span class="iconfont-archer"></span>从零开始的Python学习</span>
     
         <span class="sidebar-tag-name" data-tags="Cisco笔记"><span class="iconfont-archer"></span>Cisco笔记</span>
+    
+        <span class="sidebar-tag-name" data-tags="安装教程"><span class="iconfont-archer"></span>安装教程</span>
     
         <span class="sidebar-tag-name" data-tags="PHP相关知识"><span class="iconfont-archer"></span>PHP相关知识</span>
     
@@ -1707,11 +1765,11 @@ net start mysql(启动MySql服务)
     
         <span class="sidebar-category-name" data-categories="Bootstrap"><span class="iconfont-archer"></span>Bootstrap</span>
     
+        <span class="sidebar-category-name" data-categories="教学"><span class="iconfont-archer"></span>教学</span>
+    
         <span class="sidebar-category-name" data-categories="前端知识"><span class="iconfont-archer"></span>前端知识</span>
     
         <span class="sidebar-category-name" data-categories="Python"><span class="iconfont-archer"></span>Python</span>
-    
-        <span class="sidebar-category-name" data-categories="教学"><span class="iconfont-archer"></span>教学</span>
     
         <span class="sidebar-category-name" data-categories="Cisco"><span class="iconfont-archer"></span>Cisco</span>
     
