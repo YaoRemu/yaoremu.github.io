@@ -23,7 +23,7 @@
     <meta name="description" content="欢迎来到YaoRemu的博客">
     <meta http-equiv="Cache-control" content="no-cache">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>RIPv1基本配置 · YaoRemu'Blog</title>
+    <title>模态框使用 · YaoRemu'Blog</title>
     <style type="text/css">
     @font-face {
         font-family: 'Oswald-Regular';
@@ -218,7 +218,7 @@
                 <a href="/">Welcome to YaoRemu'Blog</a>
             </div>
             <div class="post-title">
-                <a href="#" class="post-name">RIPv1基本配置</a>
+                <a href="#" class="post-name">模态框使用</a>
             </div>
     </div>
     
@@ -248,7 +248,7 @@ height:50vh;
         <h1 class="intro-title">
             <!-- 主页  -->
             
-            RIPv1基本配置
+            模态框使用
             <!-- 404 -->
             
         </h1>
@@ -267,18 +267,18 @@ height:50vh;
                 
                     <div class="post-intro-tags">
     
-        <a class="post-tag" href="javascript:void(0);" data-tags="Cisco强化学习">Cisco强化学习</a>
+        <a class="post-tag" href="javascript:void(0);" data-tags="【极客】前端学习">【极客】前端学习</a>
     
 </div>
                 
                 
                     <div class="post-intro-read">
-                        <span>字数统计: <span class="post-count word-count">499</span>阅读时长: <span class="post-count reading-time">2 min</span></span>
+                        <span>字数统计: <span class="post-count word-count">147</span>阅读时长: <span class="post-count reading-time">1 min</span></span>
                     </div>
                 
                 <div class="post-intro-meta">
                     <span class="post-intro-calander iconfont-archer"></span>
-                    <span class="post-intro-time">2019/04/16</span>
+                    <span class="post-intro-time">2019/05/05</span>
                     
                     <span id="busuanzi_container_page_pv" class="busuanzi-pv">
                         <span class="iconfont-archer"></span>
@@ -402,77 +402,20 @@ height:50vh;
         <div class="container container-unloaded">
             <main class="main post-page">
     <article class="article-entry">
-        <meta name="generator" content="Hexo 3.8.0"><h1 id="RIPv1基本配置"><a href="#RIPv1基本配置" class="headerlink" title="RIPv1基本配置"></a>RIPv1基本配置</h1><p>#拓扑图：<br><img src="http://ww1.sinaimg.cn/large/8c0b2220gy1g24crtwrooj20jd06jaa4.jpg" alt></p>
-<blockquote>
-<p>Lo0：表示环回口0，可以把一个环回口想象成路由器上的一个接口接了一台主机，这个主机的地址是1.1.1.1</p>
-</blockquote>
-<h1 id="配置命令"><a href="#配置命令" class="headerlink" title="配置命令"></a>配置命令</h1><h2 id="配置路由器R1"><a href="#配置路由器R1" class="headerlink" title="配置路由器R1"></a>配置路由器R1</h2><pre><code>router rip        //启动RIP进程
-version 1        //配置RIP版本1
-network 1.0.0.0        //通告网络
-network 192.168.12.0
-</code></pre><h2 id="配置路由器R2"><a href="#配置路由器R2" class="headerlink" title="配置路由器R2"></a>配置路由器R2</h2><pre><code>router rip
-version 1
-network 192.168.12.0
-network 192.168.23.0
-</code></pre><h2 id="配置路由器R3"><a href="#配置路由器R3" class="headerlink" title="配置路由器R3"></a>配置路由器R3</h2><pre><code>router rip
-version 1
-network 192.168.23.0
-network 192.168.34.0
-</code></pre><h2 id="配置路由器R4"><a href="#配置路由器R4" class="headerlink" title="配置路由器R4"></a>配置路由器R4</h2><pre><code>router rip 
-version 1
-network 192.168.34.0
-network 4.0.0.0
-</code></pre><h1 id="实验调试"><a href="#实验调试" class="headerlink" title="实验调试"></a>实验调试</h1><h2 id="查看路由表"><a href="#查看路由表" class="headerlink" title="查看路由表"></a>查看路由表</h2><pre><code>show ip route
-</code></pre><p><img src="http://ww1.sinaimg.cn/large/8c0b2220gy1g24cwe8jr6j20fe09j0sz.jpg" alt></p>
-<p>以上输出表面路由器R1学到了三条RIP路由，其中条目“R 4.0.0.0/8[120/3] via 192.168.12.2,00:00:13,Serial0/0/0”的含义如下：</p>
-<ul>
-<li><p><font color="green">R</font>：路由条目是通过RIP路由协议学来的；</p>
-</li>
-<li><p><font color="green">4.0.0.0/8</font>：目的网络</p>
-</li>
-</ul>
-<ul>
-<li><font color="green">120</font>：RIP路由协议的默认管理距离；</li>
-</ul>
-<ul>
-<li><font color="green">3</font>：度量值，从路由器R1到达网络4.0.0.0/8的度量值为3跳；</li>
-</ul>
-<ul>
-<li><font color="green">192.168.12.2</font>：下一跳地址；</li>
-</ul>
-<ul>
-<li><font color="green">00:00:13</font>：距离下一次更新还有17（30-13）秒；</li>
-</ul>
-<ul>
-<li><font color="green">Serial0/0/0</font>：接收该条路由条目的本路由器的接口</li>
-</ul>
-<h2 id="查看路由协议配置和统计信息"><a href="#查看路由协议配置和统计信息" class="headerlink" title="查看路由协议配置和统计信息"></a>查看路由协议配置和统计信息</h2><pre><code>show ip protocols
-</code></pre><p><img src="http://ww1.sinaimg.cn/large/8c0b2220gy1g24d771m6oj20dq09g0sx.jpg" alt></p>
-<ul>
-<li><p>Routing Protocols is “rip”:路由器上运行的路由协议是RIP</p>
-</li>
-<li><p>Send updates every 30 seconds,next due in 23 seconds:更新周期是30秒，距离下次更新还有23秒</p>
-</li>
-<li><p>Outgoing update filter list for all interfaces is not set:在入方向上没有设置过滤列表</p>
-</li>
-<li><p>Incoming update filter list for all interfaces is not set:在出方向上没有设置过滤列表</p>
-</li>
-<li><p>Invalid after 180 seconds,hold down 180,flushed after 240:路由条目如果在180秒还没有收到更新，则被标记为无效</p>
-</li>
-<li><p>Redistributing:rip:只允许rip协议，没有其他的协议重分布进来</p>
-</li>
-<li><p>Default version control:send version 1, receive version 1:默认发送版本1的路由更新，结束版本1的路由更新</p>
-</li>
-</ul>
-
+        <meta name="generator" content="Hexo 3.8.0"><h1 id="模态框的触发"><a href="#模态框的触发" class="headerlink" title="模态框的触发"></a>模态框的触发</h1><p>我们上一篇已经完成了基本的模态框，但事实上它肯定是通过 一些触发的，比如说按钮和控件。 不可能直接调用，这里我们添加一个按钮，通过按钮来直接触发它</p>
+<figure class="highlight html"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="tag"><<span class="name">button</span> <span class="attr">type</span>=<span class="string">"button"</span> <span class="attr">class</span>=<span class="string">"btn btn-primary btn-lg"</span> <span class="attr">data-toggle</span>=<span class="string">"modal"</span> <span class="attr">data-target</span>=<span class="string">"#myModal"</span>></span></span><br><span class="line">	启动Modal</span><br><span class="line"><span class="tag"><</span>/<span class="attr">button</span>></span><br><span class="line"></span><br><span class="line"><span class="tag"><<span class="name">div</span> <span class="attr">class</span>=<span class="string">"modal"</span> <span class="attr">id</span>=<span class="string">"myModal"</span> <span class="attr">tabindex</span>=<span class="string">"-1"</span> <span class="attr">role</span>=<span class="string">"dialog"</span> <span class="attr">aria-labelleby</span>=<span class="string">"mymodalLable"</span> <span class="attr">aria-hidden</span>=<span class="string">"true"</span>></span></span><br><span class="line">	<span class="tag"><<span class="name">div</span> <span class="attr">class</span>=<span class="string">"modal-dialog"</span>></span></span><br><span class="line">		<span class="tag"><<span class="name">div</span> <span class="attr">class</span>=<span class="string">"modal-content"</span>></span></span><br><span class="line">			<span class="tag"><<span class="name">div</span> <span class="attr">class</span>=<span class="string">"modal-header"</span>></span></span><br><span class="line">				<span class="tag"><<span class="name">button</span> <span class="attr">type</span>=<span class="string">"button"</span> <span class="attr">class</span>=<span class="string">"close"</span> <span class="attr">data-dismiss</span>=<span class="string">"modal"</span> <span class="attr">aria-label</span>=<span class="string">"close"</span>></span></span><br><span class="line">					<span class="tag"><<span class="name">span</span> <span class="attr">aria-hidden</span>=<span class="string">"true"</span>></span>& times;<span class="tag"><</span>/<span class="attr">span</span>></span><br><span class="line">				<span class="tag"><</span>/<span class="attr">button</span>></span><br><span class="line">				<span class="tag"><<span class="name">h4</span> <span class="attr">class</span>=<span class="string">"modal-title"</span> <span class="attr">id</span>=<span class="string">"myModallabel"</span>></span>Modal title<span class="tag"><</span>/<span class="attr">h4</span>></span><br><span class="line">			<span class="tag"><</span>/<span class="attr">div</span>></span><br><span class="line">			<span class="tag"><<span class="name">div</span> <span class="attr">class</span>=<span class="string">"modal-body"</span>></span></span><br><span class="line">				Content</span><br><span class="line">			<span class="tag"><</span>/<span class="attr">div</span>></span><br><span class="line">			<span class="tag"><<span class="name">div</span> <span class="attr">class</span>=<span class="string">"modal-footer"</span>></span></span><br><span class="line">				<span class="tag"><<span class="name">button</span> <span class="attr">type</span>=<span class="string">"button"</span> <span class="attr">class</span>=<span class="string">"btn btn-default"</span> <span class="attr">data-dismiss</span>=<span class="string">"modal"</span>></span>close<span class="tag"><</span>/<span class="attr">button</span>></span><br><span class="line">				<span class="tag"><<span class="name">button</span> <span class="attr">type</span>=<span class="string">"button"</span> <span class="attr">class</span>=<span class="string">"btn btn-primary"</span>></span>Save<span class="tag"><</span>/<span class="attr">button</span>></span><br><span class="line">			<span class="tag"><</span>/<span class="attr">div</span>></span><br><span class="line">		<span class="tag"><</span>/<span class="attr">div</span>></span><br><span class="line">	<span class="tag"><</span>/<span class="attr">div</span>></span><br><span class="line"><span class="tag"><</span>/<span class="attr">div</span>></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="tag"><<span class="name">script</span> <span class="attr">src</span>=<span class="string">"./lib/jquery.min.js"</span>></span><span class="javascript"><<span class="regexp">/</</span>script></span></span><br><span class="line"><span class="xml"><span class="tag"><<span class="name">script</span> <span class="attr">src</span>=<span class="string">"./lib/bootstrap.min.js"</span>></span><span class="javascript"><<span class="regexp">/</</span>script></span></span></span><br><span class="line"><span class="undefined"></span></span><br><span class="line"><span class="undefined"></span></span><br><span class="line"><span class="undefined"></span></span><br><span class="line"><span class="undefined"></span></span><br><span class="line"><span class="xml"><span class="tag"><<span class="name">script</span>></span><span class="undefined"></span></span></span><br><span class="line"><span class="javascript">	<span class="comment">//不调用没有效果</span></span></span><br><span class="line"><span class="javascript">	$(<span class="string">"#myModal"</span>).modal(<span class="string">"show"</span>);</span></span><br><span class="line"><span class="javascript"><<span class="regexp">/</</span>script></span></span><br></pre></td></tr></tbody></table></figure>
+<p><img src="http://ww1.sinaimg.cn/large/8c0b2220gy1g2qpqum0rnj20r708i3yz.jpg" alt></p>
+<p>可以看到一个按钮，点击就启动了当前的模态框</p>
+<h1 id="模态框的尺寸"><a href="#模态框的尺寸" class="headerlink" title="模态框的尺寸"></a>模态框的尺寸</h1><p>我们这个模态框就不把所有的内容，所有的部分全部写完</p>
+<figure class="highlight html"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag"><<span class="name">button</span> <span class="attr">type</span>=<span class="string">"button"</span> <span class="attr">class</span>=<span class="string">"btn btn-primary"</span> <span class="attr">data-toggle</span>=<span class="string">"modal"</span> <span class="attr">data-target</span>=<span class="string">".bs-example-modal-lg"</span>></span></span><br><span class="line">	启动打Modal</span><br><span class="line"><span class="tag"><</span>/<span class="attr">button</span>></span><br><span class="line"><span class="tag"><<span class="name">div</span> <span class="attr">class</span>=<span class="string">"modal fade .bs-example-modal-lg"</span> <span class="attr">tabindex</span>=<span class="string">"-1"</span> <span class="attr">role</span>=<span class="string">"dialog"</span> <span class="attr">aria-labelledby</span>=<span class="string">"myLargeModalLabel"</span> <span class="attr">aria-hidden</span>=<span class="string">"true"</span>></span></span><br><span class="line">	<span class="tag"><<span class="name">div</span>></span><span class="tag"><</span>/<span class="attr">div</span>></span><br><span class="line"><span class="tag"><</span>/<span class="attr">div</span>></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="tag"><<span class="name">script=".</span>/<span class="attr">lib</span>/<span class="attr">jquery.min.js</span>"></span><span class="tag"><</span>/<span class="attr">script</span>></span><br><span class="line"><span class="tag"><<span class="name">script=".</span>/<span class="attr">lib</span>/<span class="attr">bootstrap.min.js</span>"></span><span class="tag"><</span>/<span class="attr">script</span>></span><br></pre></td></tr></tbody></table></figure>
     </article>
     <!-- license  -->
     
         <div class="license-wrapper">
             <p>原文作者：<a href="http://yoursite.com">YaoRemu</a>
-            </p><p>原文链接：<a href="http://yoursite.com/2019/04/16/RIPv1基本配置/">http://yoursite.com/2019/04/16/RIPv1基本配置/</a>
-            </p><p>发表日期：<a href="http://yoursite.com/2019/04/16/RIPv1基本配置/">April 16th 2019, 11:16:40 am</a>
-            </p><p>更新日期：<a href="http://yoursite.com/2019/04/16/RIPv1基本配置/">April 16th 2019, 12:53:51 pm</a>
+            </p><p>原文链接：<a href="http://yoursite.com/2019/05/05/模态框使用/">http://yoursite.com/2019/05/05/模态框使用/</a>
+            </p><p>发表日期：<a href="http://yoursite.com/2019/05/05/模态框使用/">May 5th 2019, 8:08:48 pm</a>
+            </p><p>更新日期：<a href="http://yoursite.com/2019/05/05/模态框使用/">May 5th 2019, 8:51:14 pm</a>
             </p><p>版权声明：本文采用<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可</p>
         </div>
     
@@ -480,17 +423,12 @@ network 4.0.0.0
     <ul class="post-paginator">
         <li class="next">
             
-                <div class="nextSlogan">Next Post</div>
-                <a href="/2019/04/16/环回接口（Loopback）/" title="环回接口（Loopback）">
-                    <div class="nextTitle">环回接口（Loopback）</div>
-                </a>
-            
         </li>
         <li class="previous">
             
                 <div class="prevSlogan">Previous Post</div>
-                <a href="/2019/04/16/RIP概述/" title="RIP概述">
-                    <div class="prevTitle">RIP概述</div>
+                <a href="/2019/05/04/基本模态框/" title="基本模态框">
+                    <div class="prevTitle">基本模态框</div>
                 </a>
             
         </li>
@@ -646,7 +584,7 @@ network 4.0.0.0
         <div class="toc-catalog">
             <span class="iconfont-archer catalog-icon"></span><span>CATALOG</span>
         </div>
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#RIPv1基本配置"><span class="toc-number">1.</span> <span class="toc-text">RIPv1基本配置</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#配置命令"><span class="toc-number">2.</span> <span class="toc-text">配置命令</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#配置路由器R1"><span class="toc-number">2.1.</span> <span class="toc-text">配置路由器R1</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#配置路由器R2"><span class="toc-number">2.2.</span> <span class="toc-text">配置路由器R2</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#配置路由器R3"><span class="toc-number">2.3.</span> <span class="toc-text">配置路由器R3</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#配置路由器R4"><span class="toc-number">2.4.</span> <span class="toc-text">配置路由器R4</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#实验调试"><span class="toc-number">3.</span> <span class="toc-text">实验调试</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#查看路由表"><span class="toc-number">3.1.</span> <span class="toc-text">查看路由表</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#查看路由协议配置和统计信息"><span class="toc-number">3.2.</span> <span class="toc-text">查看路由协议配置和统计信息</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#模态框的触发"><span class="toc-number">1.</span> <span class="toc-text">模态框的触发</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#模态框的尺寸"><span class="toc-number">2.</span> <span class="toc-text">模态框的尺寸</span></a></li></ol>
     </div>
     
     <div class="back-top iconfont-archer"></div>
