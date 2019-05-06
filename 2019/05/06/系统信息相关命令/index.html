@@ -23,7 +23,7 @@
     <meta name="description" content="欢迎来到YaoRemu的博客">
     <meta http-equiv="Cache-control" content="no-cache">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>新增的非主体结构元素（一） · YaoRemu'Blog</title>
+    <title>系统信息相关命令 · YaoRemu'Blog</title>
     <style type="text/css">
     @font-face {
         font-family: 'Oswald-Regular';
@@ -218,7 +218,7 @@
                 <a href="/">Welcome to YaoRemu'Blog</a>
             </div>
             <div class="post-title">
-                <a href="#" class="post-name">新增的非主体结构元素（一）</a>
+                <a href="#" class="post-name">系统信息相关命令</a>
             </div>
     </div>
     
@@ -248,7 +248,7 @@ height:50vh;
         <h1 class="intro-title">
             <!-- 主页  -->
             
-            新增的非主体结构元素（一）
+            系统信息相关命令
             <!-- 404 -->
             
         </h1>
@@ -267,18 +267,18 @@ height:50vh;
                 
                     <div class="post-intro-tags">
     
-        <a class="post-tag" href="javascript:void(0);" data-tags="【极客】前端学习">【极客】前端学习</a>
+        <a class="post-tag" href="javascript:void(0);" data-tags="从零开始的Python学习">从零开始的Python学习</a>
     
 </div>
                 
                 
                     <div class="post-intro-read">
-                        <span>字数统计: <span class="post-count word-count">287</span>阅读时长: <span class="post-count reading-time">1 min</span></span>
+                        <span>字数统计: <span class="post-count word-count">1.9k</span>阅读时长: <span class="post-count reading-time">6 min</span></span>
                     </div>
                 
                 <div class="post-intro-meta">
                     <span class="post-intro-calander iconfont-archer"></span>
-                    <span class="post-intro-time">2019/04/14</span>
+                    <span class="post-intro-time">2019/05/06</span>
                     
                     <span id="busuanzi_container_page_pv" class="busuanzi-pv">
                         <span class="iconfont-archer"></span>
@@ -402,39 +402,224 @@ height:50vh;
         <div class="container container-unloaded">
             <main class="main post-page">
     <article class="article-entry">
-        <meta name="generator" content="Hexo 3.8.0"><p>在HTML5中，还增加了一些用来表示逻辑结构或者是附加信息的非主体结构元素</p>
+        <meta name="generator" content="Hexo 3.8.0"><ul>
+<li>本节内容主要是为了方便通过 <strong>远程终端维护服务器时</strong>，查看服务器上当前 <strong>系统日期和时间 / 磁盘控件占用情况 / 程序执行情况</strong></li>
+<li>本小节学习的终端命令基本都是 <strong>查询命令</strong>，通过这些命令对 <strong>系统资源的使用情况</strong> 有个了解</li>
+</ul>
+<h1 id="目标"><a href="#目标" class="headerlink" title="目标"></a>目标</h1><ul>
+<li><p><strong>时间和日期</strong></p>
 <ul>
-<li><p>header元素</p>
+<li><p>data</p>
 </li>
-<li><p>footer元素</p>
-</li>
-<li><p>hgroup元素</p>
-</li>
-<li><p>address元素</p>
+<li><p>cal</p>
 </li>
 </ul>
-<h1 id="header元素"><a href="#header元素" class="headerlink" title="header元素"></a>header元素</h1><p>header元素是一种具有引导和导航作用的结构元素，通常用来放置整个页面或页面内的一个内容区块的标题，但是也可以包含其他内容，例如数据表格、搜索歌单或相关的logo图片</p>
+</li>
+<li><p><strong>磁盘和目录空间</strong></p>
+<ul>
+<li><p>df</p>
+</li>
+<li><p>du</p>
+</li>
+</ul>
+</li>
+<li><p><strong>进程信息</strong></p>
+<ul>
+<li><p>ps</p>
+</li>
+<li><p>top</p>
+</li>
+<li><p>kill</p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="时间和日期"><a href="#时间和日期" class="headerlink" title="时间和日期"></a>时间和日期</h1><table>
+<thead>
+<tr>
+<th style="text-align:left">命令</th>
+<th style="text-align:left">作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">date</td>
+<td style="text-align:left">查看 <strong>系统时间</strong></td>
+</tr>
+<tr>
+<td style="text-align:left">cal</td>
+<td style="text-align:left">calendar 查看 <strong>当前这个月的日历</strong>，-y 选项可以 <strong>查看一年的日历</strong></td>
+</tr>
+</tbody>
+</table>
+<h2 id="date"><a href="#date" class="headerlink" title="date"></a>date</h2><p>使用 date 命令查看当前的系统时间</p>
+<p><img src="http://ww1.sinaimg.cn/large/8c0b2220gy1g2rl91fw78j20c501d74v.jpg" alt></p>
+<h2 id="cal"><a href="#cal" class="headerlink" title="cal"></a>cal</h2><p>查看当前月的日历</p>
+<p><img src="http://ww1.sinaimg.cn/large/8c0b2220gy1g2rl9up765j206b050myg.jpg" alt></p>
+<h3 id="cal-y"><a href="#cal-y" class="headerlink" title="cal -y"></a>cal -y</h3><p>【 -y 】 可以查看一年的日历</p>
+<p><img src="http://ww1.sinaimg.cn/mw690/8c0b2220gy1g2rlbw6gh3j20h40dygmv.jpg" alt></p>
+<h1 id="磁盘信息"><a href="#磁盘信息" class="headerlink" title="磁盘信息"></a>磁盘信息</h1><table>
+<thead>
+<tr>
+<th style="text-align:left">命令</th>
+<th style="text-align:left">作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">df -h</td>
+<td style="text-align:left">disk free 显示 <strong>磁盘剩余空间</strong></td>
+</tr>
+<tr>
+<td style="text-align:left">du -h [目录名]</td>
+<td style="text-align:left">disk usage 显示 <strong>目录下的文件大小</strong></td>
+</tr>
+</tbody>
+</table>
 <blockquote>
-<p>以前我们是通过一个div包裹然后给它设定一个class或者id指定是header用来包含整个页面或页面内的区域块的一个标题</p>
+<p>du 如果不接任何目录名，就可以来查看 <strong>当前目录</strong> 的空间占用情况</p>
+</blockquote>
+<ul>
+<li><strong>选项说明</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">参数</th>
+<th style="text-align:left">含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">-h</td>
+<td style="text-align:left">以 <strong>人性化的方式</strong> 显示文件大小</td>
+</tr>
+</tbody>
+</table>
+<h2 id="df"><a href="#df" class="headerlink" title="df"></a>df</h2><p>查看磁盘空间</p>
+<p><img src="http://ww1.sinaimg.cn/large/8c0b2220gy1g2rlhg3z9vj20ix04ygpn.jpg" alt></p>
+<p>此时的磁盘空间是一堆数字，并不人性化，所以在 命令 后添加 -h 选项。 可以看到，此时看到磁盘的空间占用情况就一目了然了</p>
+<p><img src="http://ww1.sinaimg.cn/large/8c0b2220gy1g2rliwrygrj20gx055wi5.jpg" alt></p>
+<blockquote>
+<p>我们在查看磁盘空间的时候，重点放在 <strong>根目录</strong> 下，因为在 <strong>Linux 中并没有盘符的概念</strong>，Linux 中<strong>所有的文件都是从根目录开始的</strong></p>
+</blockquote>
+<p><strong>注意：</strong> 在使用 df命令 查看磁盘剩余空间的时候，我们的重点应该放在 <strong>挂载点 根目录</strong> 这个位置，通过根目录我们就可以迅速的知道我们的磁盘还有多少可用空间了</p>
+<h2 id="du"><a href="#du" class="headerlink" title="du"></a>du</h2><p>查看目录下文件大小，显示 <strong>所有子目录的占用情况</strong>，并且在最后 <strong>显示当前文件夹整体的一个空间占用情况</strong></p>
+<p><img src="http://ww1.sinaimg.cn/large/8c0b2220gy1g2rlpejy5sj208z0610ug.jpg" alt></p>
+<p><strong>注意：</strong> 末尾的 52k 表示当前 桌面 文件夹下 所有文件以及子目录 <strong>共同占有 52k 文件大小</strong></p>
+<h1 id="进程信息"><a href="#进程信息" class="headerlink" title="进程信息"></a>进程信息</h1><p>所谓 <strong>进程</strong>，通俗的说就是 <strong>当前正在执行的一个程序</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">命令</th>
+<th style="text-align:left">作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">ps aux</td>
+<td style="text-align:left">process status 查看 <strong>进程的详细状况</strong></td>
+</tr>
+<tr>
+<td style="text-align:left">top</td>
+<td style="text-align:left"><strong>动态显示运行中的进程并且排序</strong></td>
+</tr>
+<tr>
+<td style="text-align:left">kill [-9] 进程代号</td>
+<td style="text-align:left">终止指定代号的进程，【 -9 】 表示强行终止</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>ps <strong>默认</strong> 只会显示 <strong>当前用户</strong> 通过终端启动的应用程序</p>
+</blockquote>
+<h2 id="ps"><a href="#ps" class="headerlink" title="ps"></a>ps</h2><p>使用 ps 命令不带任何选项 查看进程信息</p>
+<p><img src="http://ww1.sinaimg.cn/large/8c0b2220gy1g2rmtam2yuj20at03fmyt.jpg" alt></p>
+<p>使用 ps 查看信息，可以看到终端中显示了两个命令的执行，可以看到 CMD 列，<strong>CMD 表示命令</strong>： 第一个为 bash 表示专门用来输入终端命令的，而 python这个用户 <strong>默认使用的 shell 就是 bash</strong>； 第二个为 ps ，我们刚刚执行的命令就是 ps， 统计当前正在执行的程序，而在执行统计的过程中，就会<strong>把自己顺带的也统计进来</strong></p>
+<h3 id="ps-选项"><a href="#ps-选项" class="headerlink" title="ps 选项"></a>ps 选项</h3><blockquote>
+<p><strong>注意:</strong> ps 命令使用选项时，是<strong>不需要带 减号的</strong> 。 eg： ps a</p>
+</blockquote>
+<p><strong>ps 选项</strong> 说明功能</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">选项</th>
+<th style="text-align:left">含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">a</td>
+<td style="text-align:left">显示终端上的所有进程，<strong>包括其他用户的进程</strong></td>
+</tr>
+<tr>
+<td style="text-align:left">u</td>
+<td style="text-align:left">显示进程的 <strong>详细状态</strong></td>
+</tr>
+<tr>
+<td style="text-align:left">x</td>
+<td style="text-align:left">显示没有控制终端的进程</td>
+</tr>
+</tbody>
+</table>
+<h4 id="ps-a"><a href="#ps-a" class="headerlink" title="ps a"></a>ps a</h4><p>显示终端上的所有进程，<strong>包括其他用户的进程</strong>。 可以看到这次显示的内容比单纯敲 ps 要多了两行内容</p>
+<p><img src="http://ww1.sinaimg.cn/large/8c0b2220gy1g2rn2ho0j8j20n503edik.jpg" alt></p>
+<h4 id="ps-u"><a href="#ps-u" class="headerlink" title="ps u"></a>ps u</h4><p><strong>ps au：</strong> 通过列表的方式，让我们了解每一个程序是什么时候启动的，它对 CPU 以及 内存 的占用率是 多少</p>
+<p>那么这两行内容是由哪一个内容来启动的呢？我们可以使用 ps u 来查看详细信息来确定</p>
+<p><img src="http://ww1.sinaimg.cn/large/8c0b2220gy1g2rndl9lcdj20n103mgq1.jpg" alt></p>
+<p>这次显示的信息就要比之前显示的信息 详细清晰很多了，现在看看我们比较关系的数据：</p>
+<ul>
+<li>首先看最后一列 ， <strong>COMMAND</strong>，这个表示命令。 也就是用户在终端中 <strong>执行了哪个命令</strong></li>
+<li>查看倒数第二列 <strong>START TIME</strong>,这是<strong>用户执行程序的启动时间</strong>，前面三个是 启动电脑时启动的程序，而最后一个是 刚刚输入的 ps 程序</li>
+<li><strong>%CPU %MEM</strong>： 这两列信息显示 <strong>CPU 和 内存的 占用率</strong></li>
+<li><strong>PID</strong>：进程的代号</li>
+<li>第一列：显示<strong>哪一个用户</strong>在终端中启动的程序</li>
+</ul>
+<h4 id="ps-x"><a href="#ps-x" class="headerlink" title="ps x"></a>ps x</h4><p>ps x 显示<strong>没有控制 终端 的进程</strong> ，即不是通过终端来启动的进程。 之前在使用 a 、 u 这两个选项的时候，包括不使用任何选项，都只会显示出通过终端 启动的应用程序，而 x 这个选项 就会把 当前系统中所有正在执行的程序全部显示出来，但是使用 x 这个选项 我们会看到<strong>非常非常多的内容</strong></p>
+<p><img src="http://ww1.sinaimg.cn/mw690/8c0b2220gy1g2rnm5uspfj20jw0dg417.jpg" alt></p>
+<p>我们可以看到很多很多的内容，这就是当前 Linux 系统中 所有正在执行的程序，这一些程序绝大多数是 在系统启动时，由操作系统帮我们启动，并且在后台默默的运行，为用户提供服务</p>
+<h2 id="top"><a href="#top" class="headerlink" title="top"></a>top</h2><p>top命令 <strong>动态显示运行中的进程并且排序</strong>，一目了然的显示出当前系统中<strong> CPU 和 内存 占用比较高的进程</strong> ； top 这个命令在使用时非常简单，直接输入 top 回车就可以，但是要想<strong>退出 top，我们需要在终端窗口中，输入小写字母 q 就可以</strong></p>
+<p><img src="http://ww1.sinaimg.cn/mw690/8c0b2220gy1g2rnt9gyuqj20jy0ebwh4.jpg" alt></p>
+<p>可以看到一个全屏的显示信息，首先查看 下方列表的信息，显示了：</p>
+<ul>
+<li><strong>PID</strong> ： 进程<strong>代号</strong></li>
+<li>启动命令的<strong>用户</strong></li>
+<li><strong>%CPU %MEM</strong> ： cpu 占用率 以及 内存 <strong>占用率</strong></li>
+<li><strong>TIME+</strong> ： 命令的运行<strong>时间</strong></li>
+<li><strong>COMMAND</strong> ： 具体的<strong>命令</strong>名称</li>
+</ul>
+<p>通过 top 这个命令 ，可以一目了然的把当前系统中 CPU 占用率 和 内存占用率 <strong>占用率比较高的程序直接就显示出来</strong>，通过这种方式我们就可以在 短时间内 发现当前这个系统中是否有哪一个进程异常，如果发现异常，我们可以做一些特殊的处理；想要退出 top ，输入小写 q 即可 ；</p>
+<p><img src="http://ww1.sinaimg.cn/large/8c0b2220gy1g2ro2qsp8tj20c5037my9.jpg" alt></p>
+<blockquote>
+<p>top 是一个 <strong>实时监控的程序</strong>，通过 top 就可以发现 那些程序的 cpu 和 内存 占用比较高； 并且它是一个 <strong>实时监控，不会停下来的程序</strong></p>
+</blockquote>
+<h2 id="kill"><a href="#kill" class="headerlink" title="kill"></a>kill</h2><p>一旦我们发现某个程序占用比较高，或者内存占用比较高，以及影响系统的正常运行，我们就可以使用 kill 这个终端命令，把这些异常的程序杀死，这就是 kill命令 的作用</p>
+<p>首先使用 ps 命令 查看所有用户 在终端启动的 进程：</p>
+<p><img src="http://ww1.sinaimg.cn/large/8c0b2220gy1g2royw8jesj20ml039jv6.jpg" alt></p>
+<p>我们可以看到 python 用户启动了 一个进程 bash，bash 有个 进程代号 2587，我们再打开一个终端，再次使用 ps 命令进行查看，可以看到 又出现了一个 bash 进程，并且它们的 进程代号都不相同</p>
+<p><img src="http://ww1.sinaimg.cn/large/8c0b2220gy1g2rp3bnt6rj20md03uwiy.jpg" alt></p>
+<p>接下来 使用 <strong>命令 kill 以及对应的 进程代号</strong> 关闭新打开的终端窗口</p>
+<p><img src="http://ww1.sinaimg.cn/large/8c0b2220gy1g2rp5ejwkvj20by00t74l.jpg" alt></p>
+<p>如果 单纯使用 kill 关闭不了进程，我们可以添加 选项 【 -9 】，表示强行终止该进程</p>
+<p><img src="http://ww1.sinaimg.cn/large/8c0b2220gy1g2rp81p1rlj20c100t3yv.jpg" alt></p>
+<blockquote>
+<p><strong>注意：</strong> 一定要使用 ps 命令 <strong>确认要关闭的进程代号</strong></p>
 </blockquote>
 <blockquote>
-<p>注意：header的出现不一定只有一次，它可以出现多次，不论是在整个页面来表示他的标题，或者说区域块来表示标题都是可以的</p>
+<p><strong>提示：</strong> 使用 kill 命令时，最好只终止当前用户开启的进程，而 <strong>不要终止 root 身份开启的进程</strong>，否至可能导致系统奔溃</p>
+<ul>
+<li>要退出 top 可以直接输入 q</li>
+</ul>
 </blockquote>
-<h2 id="旧版的写法"><a href="#旧版的写法" class="headerlink" title="旧版的写法"></a>旧版的写法</h2><figure class="highlight html"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="tag"><<span class="name">div</span> <span class="attr">class</span>=<span class="string">"header"</span>></span><span class="tag">< /<span class="attr">div</span>></span></span><br><span class="line"><span class="tag"><<span class="name">div</span> <span class="attr">class</span>=<span class="string">"content"</span>></span><span class="tag">< /<span class="attr">div</span>></span></span><br><span class="line"><span class="tag"><<span class="name">div</span> <span class="attr">class</span>=<span class="string">"footer"</span>></span><span class="tag">< /<span class="attr">div</span>></span></span><br></pre></td></tr></tbody></table></figure>
-<p>##现在的写法</p>
-<figure class="highlight html"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="tag"><<span class="name">header</span>></span></span><br><span class="line">	<span class="tag"><<span class="name">h1</span>></span>页面标题<span class="tag">< /<span class="attr">h1</span>></span></span><br><span class="line"><span class="tag">< /<span class="attr">header</span>></span></span><br><span class="line"><span class="tag"><<span class="name">article</span>></span></span><br><span class="line"></span><br><span class="line">	<span class="tag"><<span class="name">header</span>></span></span><br><span class="line">		<span class="tag"><<span class="name">h1</span>></span>Hello<span class="tag">< /<span class="attr">h1</span>></span></span><br><span class="line">	<span class="tag">< /<span class="attr">header</span>></span></span><br><span class="line"></span><br><span class="line"><span class="tag">< /<span class="attr">article</span>></span></span><br></pre></td></tr></tbody></table></figure>
-<blockquote>
-<p>通常一个header元素至少包含一个h元素</p>
-</blockquote>
-<h1 id="完整的例子"><a href="#完整的例子" class="headerlink" title="完整的例子"></a>完整的例子</h1><figure class="highlight html"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="tag"><<span class="name">header</span>></span></span><br><span class="line">	<span class="tag"><<span class="name">h1</span>></span>IT最新技术<span class="tag">< /<span class="attr">h1</span>></span></span><br><span class="line">	<span class="tag"><<span class="name">a</span> <span class="attr">href</span>=<span class="string">"http://yaoremu.github.io"</span>></span>姚的博客<span class="tag">< /<span class="attr">a</span>></span></span><br><span class="line">	<span class="tag"><<span class="name">nav</span>></span></span><br><span class="line">		<span class="tag"><<span class="name">ul</span>></span></span><br><span class="line">			<span class="tag"><<span class="name">li</span>></span><span class="tag"><<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#"</span>></span>学习<span class="tag">< /<span class="attr">a</span>></span><span class="tag">< /<span class="attr">li</span>></span></span><br><span class="line">			<span class="tag"><<span class="name">li</span>></span><span class="tag"><<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#"</span>></span>技术<span class="tag">< /<span class="attr">a</span>></span><span class="tag">< /<span class="attr">li</span>></span></span><br><span class="line">			<span class="tag"><<span class="name">li</span>></span><span class="tag"><<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#"</span>></span>运动<span class="tag">< /<span class="attr">a</span>></span><span class="tag">< /<span class="attr">li</span>></span></span><br><span class="line">		<span class="tag">< /<span class="attr">ul</span>></span>	</span><br><span class="line">	<span class="tag">< /<span class="attr">nav</span>></span></span><br><span class="line"><span class="tag">< /<span class="attr">header</span>></span></span><br></pre></td></tr></tbody></table></figure>
+
     </article>
     <!-- license  -->
     
         <div class="license-wrapper">
             <p>原文作者：<a href="http://yoursite.com">YaoRemu</a>
-            </p><p>原文链接：<a href="http://yoursite.com/2019/04/14/新增的非主体结构元素（一）/">http://yoursite.com/2019/04/14/新增的非主体结构元素（一）/</a>
-            </p><p>发表日期：<a href="http://yoursite.com/2019/04/14/新增的非主体结构元素（一）/">April 14th 2019, 4:17:09 pm</a>
-            </p><p>更新日期：<a href="http://yoursite.com/2019/04/14/新增的非主体结构元素（一）/">April 29th 2019, 4:09:46 pm</a>
+            </p><p>原文链接：<a href="http://yoursite.com/2019/05/06/系统信息相关命令/">http://yoursite.com/2019/05/06/系统信息相关命令/</a>
+            </p><p>发表日期：<a href="http://yoursite.com/2019/05/06/系统信息相关命令/">May 6th 2019, 2:28:52 pm</a>
+            </p><p>更新日期：<a href="http://yoursite.com/2019/05/06/系统信息相关命令/">May 6th 2019, 5:01:39 pm</a>
             </p><p>版权声明：本文采用<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可</p>
         </div>
     
@@ -442,17 +627,12 @@ height:50vh;
     <ul class="post-paginator">
         <li class="next">
             
-                <div class="nextSlogan">Next Post</div>
-                <a href="/2019/04/15/为博客添加域名/" title="为博客添加域名">
-                    <div class="nextTitle">为博客添加域名</div>
-                </a>
-            
         </li>
         <li class="previous">
             
                 <div class="prevSlogan">Previous Post</div>
-                <a href="/2019/04/14/新增的主题结构元素（七）/" title="新增的主题结构元素（七）">
-                    <div class="prevTitle">新增的主题结构元素（七）</div>
+                <a href="/2019/05/05/模态框使用/" title="模态框使用">
+                    <div class="prevTitle">模态框使用</div>
                 </a>
             
         </li>
@@ -608,7 +788,7 @@ height:50vh;
         <div class="toc-catalog">
             <span class="iconfont-archer catalog-icon"></span><span>CATALOG</span>
         </div>
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#header元素"><span class="toc-number">1.</span> <span class="toc-text">header元素</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#旧版的写法"><span class="toc-number">1.1.</span> <span class="toc-text">旧版的写法</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#完整的例子"><span class="toc-number">2.</span> <span class="toc-text">完整的例子</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#目标"><span class="toc-number">1.</span> <span class="toc-text">目标</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#时间和日期"><span class="toc-number">2.</span> <span class="toc-text">时间和日期</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#date"><span class="toc-number">2.1.</span> <span class="toc-text">date</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#cal"><span class="toc-number">2.2.</span> <span class="toc-text">cal</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#cal-y"><span class="toc-number">2.2.1.</span> <span class="toc-text">cal -y</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#磁盘信息"><span class="toc-number">3.</span> <span class="toc-text">磁盘信息</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#df"><span class="toc-number">3.1.</span> <span class="toc-text">df</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#du"><span class="toc-number">3.2.</span> <span class="toc-text">du</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#进程信息"><span class="toc-number">4.</span> <span class="toc-text">进程信息</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#ps"><span class="toc-number">4.1.</span> <span class="toc-text">ps</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#ps-选项"><span class="toc-number">4.1.1.</span> <span class="toc-text">ps 选项</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#ps-a"><span class="toc-number">4.1.1.1.</span> <span class="toc-text">ps a</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#ps-u"><span class="toc-number">4.1.1.2.</span> <span class="toc-text">ps u</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#ps-x"><span class="toc-number">4.1.1.3.</span> <span class="toc-text">ps x</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#top"><span class="toc-number">4.2.</span> <span class="toc-text">top</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#kill"><span class="toc-number">4.3.</span> <span class="toc-text">kill</span></a></li></ol></li></ol>
     </div>
     
     <div class="back-top iconfont-archer"></div>

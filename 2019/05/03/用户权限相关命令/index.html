@@ -273,7 +273,7 @@ height:50vh;
                 
                 
                     <div class="post-intro-read">
-                        <span>字数统计: <span class="post-count word-count">8.2k</span>阅读时长: <span class="post-count reading-time">29 min</span></span>
+                        <span>字数统计: <span class="post-count word-count">9.3k</span>阅读时长: <span class="post-count reading-time">33 min</span></span>
                     </div>
                 
                 <div class="post-intro-meta">
@@ -410,7 +410,7 @@ height:50vh;
 <li><strong>组管理</strong> 终端命令</li>
 <li><strong>修改权限</strong> 终端命令</li>
 </ul>
-<h1 id="用户和权限的基本概念"><a href="#用户和权限的基本概念" class="headerlink" title="用户和权限的基本概念"></a>用户和权限的基本概念</h1><h2 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h2><ul>
+<h1 id="用户和权限的基本概念"><a href="#用户和权限的基本概念" class="headerlink" title="用户和权限的基本概念"></a>用户和权限的基本概念</h1><ul>
 <li><strong>用户</strong> 是 Linux系统工作中重要的一环，用户管理包括 <strong>用户</strong> 与 <strong>组 管理</strong></li>
 <li>在 Linux系统 中，不论由本机或是远程登录系统，每个系统都<strong>必须拥有一个账号</strong>，并且对于 <strong>不同的系统资源有不同的使用权限</strong></li>
 <li>在 Linux 中，可以指定 每一个用户 <strong>针对 不同文件或者目录</strong> 的 <strong>不同权限</strong></li>
@@ -450,14 +450,14 @@ height:50vh;
 </tr>
 </tbody>
 </table>
-<h2 id="组"><a href="#组" class="headerlink" title="组"></a>组</h2><ul>
+<h1 id="组"><a href="#组" class="headerlink" title="组"></a>组</h1><ul>
 <li>为了方便用户管理，提出了 <strong>组</strong> 的概念，eg：</li>
 </ul>
 <p><img src="http://ww1.sinaimg.cn/large/8c0b2220gy1g2p0bsyi2lj2089057dfy.jpg" alt></p>
 <ul>
 <li>在实际应用中，可以预先针<strong>对 组 设置</strong>好权限，然后 <strong>将不同的用户添加到对应的组中</strong>，从而 <strong>不用依次为每一个用户设置权限</strong></li>
 </ul>
-<h2 id="ls-l-扩展"><a href="#ls-l-扩展" class="headerlink" title="ls -l 扩展"></a>ls -l 扩展</h2><ul>
+<h1 id="ls-l-扩展"><a href="#ls-l-扩展" class="headerlink" title="ls -l 扩展"></a>ls -l 扩展</h1><ul>
 <li><p>ls -l 可以查看文件夹下文件的详细信息，从左到右依次是：</p>
 <ul>
 <li><strong>权限</strong>，第一个字符如果是 d 表示目录</li>
@@ -477,7 +477,7 @@ height:50vh;
 <li><strong>w</strong>：可写</li>
 <li><strong>x</strong>：可执行</li>
 </ul>
-<h3 id="硬链接数"><a href="#硬链接数" class="headerlink" title="硬链接数"></a>硬链接数</h3><p>表示有几种方式能够访问到该文件</p>
+<h2 id="硬链接数"><a href="#硬链接数" class="headerlink" title="硬链接数"></a>硬链接数</h2><p>表示有几种方式能够访问到该文件</p>
 <p>eg：访问到 aaa目录的几种方式：</p>
 <p><img src="http://ww1.sinaimg.cn/large/8c0b2220gy1g2p0yhr26bj20gh031jtt.jpg" alt></p>
 <p>硬链接数为3的原因：</p>
@@ -487,7 +487,7 @@ height:50vh;
 <li>子文件夹返回到 aaa目录</li>
 </ul>
 <p><strong>结论：</strong> 绝大多数文件的 硬链接数 通常都是 1，而 目录 的 硬链接数 取决于<strong>目录包含有多少个子目录</strong></p>
-<h2 id="chmod-简单使用（重要）"><a href="#chmod-简单使用（重要）" class="headerlink" title="chmod 简单使用（重要）"></a>chmod 简单使用（重要）</h2><ul>
+<h1 id="chmod-简单使用（重要）"><a href="#chmod-简单使用（重要）" class="headerlink" title="chmod 简单使用（重要）"></a>chmod 简单使用（重要）</h1><ul>
 <li>chmod 可以修改 <strong>用户/组</strong> 对 <strong>文件/目录</strong> 的权限</li>
 <li><p>命令格式如下：</p>
 <ul>
@@ -498,7 +498,7 @@ height:50vh;
 <blockquote>
 <p>提示： 以上方法会一次性修改 拥有者/组 权限</p>
 </blockquote>
-<h3 id="修改文件权限"><a href="#修改文件权限" class="headerlink" title="修改文件权限"></a>修改文件权限</h3><h4 id="禁用所有权限"><a href="#禁用所有权限" class="headerlink" title="禁用所有权限"></a>禁用所有权限</h4><p>首先使用 ls 查看 01.py <strong>文件的权限</strong></p>
+<h2 id="修改文件权限"><a href="#修改文件权限" class="headerlink" title="修改文件权限"></a>修改文件权限</h2><h3 id="禁用所有权限"><a href="#禁用所有权限" class="headerlink" title="禁用所有权限"></a>禁用所有权限</h3><p>首先使用 ls 查看 01.py <strong>文件的权限</strong></p>
 <p><img src="http://ww1.sinaimg.cn/large/8c0b2220gy1g2p21ecq2pj20fw03w0vu.jpg" alt></p>
 <p>可以看到该文件当前拥有 <strong>可读、可写权限</strong>，接下来使用 <strong>chmod</strong> 来修改该文件的权限</p>
 <p><img src="http://ww1.sinaimg.cn/large/8c0b2220gy1g2p24xeo2vj20g304jwi4.jpg" alt></p>
@@ -506,9 +506,9 @@ height:50vh;
 <p><img src="http://ww1.sinaimg.cn/large/8c0b2220gy1g2p269oneqj201r01tt8l.jpg" alt></p>
 <p>接下来打开文件测试，可以看到 系统提示我们没有打开文件的权限</p>
 <p><img src="http://ww1.sinaimg.cn/large/8c0b2220gy1g2p27v4hetj20jm083t9v.jpg" alt></p>
-<h4 id="恢复权限"><a href="#恢复权限" class="headerlink" title="恢复权限"></a>恢复权限</h4><p>输入 chmod 恢复权限，可以看到现在我们又具有了 <strong>可读、 可写</strong> 权限</p>
+<h3 id="恢复权限"><a href="#恢复权限" class="headerlink" title="恢复权限"></a>恢复权限</h3><p>输入 chmod 恢复权限，可以看到现在我们又具有了 <strong>可读、 可写</strong> 权限</p>
 <p><img src="http://ww1.sinaimg.cn/large/8c0b2220gy1g2p2ac616qj20ge06279k.jpg" alt></p>
-<h4 id="添加可执行权限"><a href="#添加可执行权限" class="headerlink" title="添加可执行权限"></a>添加可执行权限</h4><p>可以看到文件名变绿了</p>
+<h3 id="添加可执行权限"><a href="#添加可执行权限" class="headerlink" title="添加可执行权限"></a>添加可执行权限</h3><p>可以看到文件名变绿了</p>
 <p><img src="http://ww1.sinaimg.cn/large/8c0b2220gy1g2p2cc5iojj20hb053dka.jpg" alt></p>
 <blockquote>
 <p><strong>注意：</strong> 在 Linux 终端中，要想执行某一个文件，是由一些细节的 ，首先要敲一个 【 . 】 表示<strong>当前目录</strong>，再加一个 【 / 】 表示<strong>当前目录下要执行哪一个文件</strong></p>
@@ -517,16 +517,16 @@ height:50vh;
 <p><img src="http://ww1.sinaimg.cn/large/8c0b2220gy1g2p2ili953j205o02ijrk.jpg" alt></p>
 <p>输入执行命令，可以看到 文件可以执行：</p>
 <p><img src="http://ww1.sinaimg.cn/large/8c0b2220gy1g2p2la4rfqj20a401qgm7.jpg" alt></p>
-<h3 id="修改目录权限"><a href="#修改目录权限" class="headerlink" title="修改目录权限"></a>修改目录权限</h3><p>首先新建一个目录，并且查看目录的权限，可以看到新建目录 <strong>默认权限</strong> 对拥有者而言是 <strong>可读可写可执行</strong> </p>
+<h2 id="修改目录权限"><a href="#修改目录权限" class="headerlink" title="修改目录权限"></a>修改目录权限</h2><p>首先新建一个目录，并且查看目录的权限，可以看到新建目录 <strong>默认权限</strong> 对拥有者而言是 <strong>可读可写可执行</strong> </p>
 <p><img src="http://ww1.sinaimg.cn/large/8c0b2220gy1g2p2xnwiuij20f605gdka.jpg" alt></p>
-<h4 id="修改可执行权限"><a href="#修改可执行权限" class="headerlink" title="修改可执行权限"></a>修改可执行权限</h4><p>接下来使用 chmod 取消 目录的可执行权限：</p>
+<h3 id="修改可执行权限"><a href="#修改可执行权限" class="headerlink" title="修改可执行权限"></a>修改可执行权限</h3><p>接下来使用 chmod 取消 目录的可执行权限：</p>
 <p><img src="http://ww1.sinaimg.cn/large/8c0b2220gy1g2p30xn6tuj20gf056td6.jpg" alt></p>
 <p>当取消可执行权限时，我们就无法 <strong>切换、查看</strong> 该目录,而且提示我们权限不够，并且<strong>无法执行目录下的文件</strong></p>
 <p><img src="http://ww1.sinaimg.cn/large/8c0b2220gy1g2p31t6h3hj20bh03kwge.jpg" alt></p>
 <blockquote>
 <p><strong>注意：</strong> 一个目录如果没有可执行权限，我们就 <strong>不能对这个目录执行其他的终端命令</strong> ，因此要想针对目录执行终端命令，就必须给目录增加可执行权限</p>
 </blockquote>
-<h4 id="修改读写权限"><a href="#修改读写权限" class="headerlink" title="修改读写权限"></a>修改读写权限</h4><p>使用 chmod 取消 目录的 读写权限 ，并且查看该目录权限</p>
+<h3 id="修改读写权限"><a href="#修改读写权限" class="headerlink" title="修改读写权限"></a>修改读写权限</h3><p>使用 chmod 取消 目录的 读写权限 ，并且查看该目录权限</p>
 <p><img src="http://ww1.sinaimg.cn/large/8c0b2220gy1g2p371wqi3j20gq052wj8.jpg" alt></p>
 <p>接下来尝试切换到该目录，可以看到成功切换，因为此时我们拥有 <strong>可执行权限</strong></p>
 <p><img src="http://ww1.sinaimg.cn/large/8c0b2220gy1g2p38bttxtj20ba01caay.jpg" alt></p>
@@ -534,18 +534,18 @@ height:50vh;
 <p><img src="http://ww1.sinaimg.cn/large/8c0b2220gy1g2p396y9kij20bc01rdgz.jpg" alt></p>
 <p>接下来添加 可读权限， 测试 <strong>可写权限</strong>， 可以看到 提示 <strong>无法创建，权限不够</strong>，因为此时我们没有 可写权限</p>
 <p><img src="http://ww1.sinaimg.cn/large/8c0b2220gy1g2p3ccj3lnj20fp07qjyb.jpg" alt></p>
-<h4 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h4><p>对于目录而言</p>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>对于目录而言</p>
 <ul>
 <li><strong>可读权限</strong> 就是阅读目录的内容</li>
 <li><strong>可写权限</strong>，就是修改目录的内容</li>
 <li>想在目录下 执行 终端命令，就必须要有 <strong>可执行权限</strong></li>
 </ul>
-<h2 id="超级用户"><a href="#超级用户" class="headerlink" title="超级用户"></a>超级用户</h2><ul>
+<h1 id="超级用户"><a href="#超级用户" class="headerlink" title="超级用户"></a>超级用户</h1><ul>
 <li>Linux 系统中的 <strong>root账户</strong> 通常用于 <strong>系统的维护和管理</strong>，<strong>对操作系统的所有资源 具有所有访问权限</strong></li>
 <li>在大多数版本的 Linux 中，都<strong>不推荐</strong> 直接使用 root 账号登录系统</li>
 <li>在 Linux 安装的过程中， 系统会自动创建一个用户账号，而这个默认用户就称为 标准用户</li>
 </ul>
-<h3 id="sudo"><a href="#sudo" class="headerlink" title="sudo"></a>sudo</h3><ul>
+<h2 id="sudo"><a href="#sudo" class="headerlink" title="sudo"></a>sudo</h2><ul>
 <li>su 是 substitute user 的缩写，表示 <strong>使用另一个用户的身份</strong></li>
 <li>sudo 命令用来以其他身份来执行命令，<strong>预设的身份为 root</strong></li>
 <li>用户使用 sudo 时，必须先输入密码，之后又 <strong>5分钟 的有效期限，超过预期则必须重新输入密码</strong></li>
@@ -553,7 +553,7 @@ height:50vh;
 <blockquote>
 <p>若其未经授权的用户企图使用 sudo，则会发警告邮件给管理员</p>
 </blockquote>
-<h2 id="组管理-终端命令"><a href="#组管理-终端命令" class="headerlink" title="组管理 终端命令"></a>组管理 终端命令</h2><blockquote>
+<h1 id="组管理-终端命令"><a href="#组管理-终端命令" class="headerlink" title="组管理 终端命令"></a>组管理 终端命令</h1><blockquote>
 <p>提示：<strong>创建组/删除组</strong> 的终端命令都需要通过 <strong>sudo</strong> 执行</p>
 </blockquote>
 <table>
@@ -594,7 +594,7 @@ height:50vh;
 <li>/etc 目录是专门用来保存 <strong>系统配置信息</strong> 的目录</li>
 </ul>
 </blockquote>
-<h3 id="添加组"><a href="#添加组" class="headerlink" title="添加组"></a>添加组</h3><p>如果我们不输入 <strong>sudo</strong> 直接添加一个组，系统会提示我们：</p>
+<h2 id="添加组"><a href="#添加组" class="headerlink" title="添加组"></a>添加组</h2><p>如果我们不输入 <strong>sudo</strong> 直接添加一个组，系统会提示我们：</p>
 <ul>
 <li>权限不够</li>
 <li>无法写入 /etc/group文件</li>
@@ -603,11 +603,11 @@ height:50vh;
 <p>接下使用 <strong>sudo</strong> 来添加一个组，终端会要求我们输入一个<strong>密码</strong>，并且使用 ls 在 <strong>/etc/group</strong> 文件下使用 <strong>cat命令</strong> 确认是否创建成功，可以看到在最末尾有 <strong>dev组</strong>，表示我们创建成功</p>
 <p><img src="http://ww1.sinaimg.cn/large/8c0b2220gy1g2p4gsig8jj20br020q3w.jpg" alt></p>
 <p><img src="http://ww1.sinaimg.cn/large/8c0b2220gy1g2p4h6l7lgj207w091n07.jpg" alt></p>
-<h3 id="删除组"><a href="#删除组" class="headerlink" title="删除组"></a>删除组</h3><p>使用 <strong>sudo</strong> 使用 <strong>groupdel</strong> 删除组，并且使用 cat命令 查看是否删除成功，可以看到 dev组 已经消失，表示操作成功</p>
+<h2 id="删除组"><a href="#删除组" class="headerlink" title="删除组"></a>删除组</h2><p>使用 <strong>sudo</strong> 使用 <strong>groupdel</strong> 删除组，并且使用 cat命令 查看是否删除成功，可以看到 dev组 已经消失，表示操作成功</p>
 <p><img src="http://ww1.sinaimg.cn/large/8c0b2220gy1g2p4l80bb1j20co019aar.jpg" alt></p>
 <p><img src="http://ww1.sinaimg.cn/large/8c0b2220gy1g2p4ltlf5gj20bh0b90wx.jpg" alt></p>
-<h3 id="关于-cat-etc-group"><a href="#关于-cat-etc-group" class="headerlink" title="关于 cat /etc/group"></a>关于 cat /etc/group</h3><p>这个文件不需要死记硬背，因为只要在 执行操作组的信息时，<strong>不加上 sudo ，就可以看到 group文件 的路径</strong>，通过这个提示我们就知道，<strong>有关组的信息</strong>，都是保存在 etc 下 group文件</p>
-<h3 id="修改文件-目录所属组"><a href="#修改文件-目录所属组" class="headerlink" title="修改文件/目录所属组"></a>修改文件/目录所属组</h3><p><strong>目标</strong></p>
+<h2 id="关于-cat-etc-group"><a href="#关于-cat-etc-group" class="headerlink" title="关于 cat /etc/group"></a>关于 cat /etc/group</h2><p>这个文件不需要死记硬背，因为只要在 执行操作组的信息时，<strong>不加上 sudo ，就可以看到 group文件 的路径</strong>，通过这个提示我们就知道，<strong>有关组的信息</strong>，都是保存在 etc 下 group文件</p>
+<h2 id="修改文件-目录所属组"><a href="#修改文件-目录所属组" class="headerlink" title="修改文件/目录所属组"></a>修改文件/目录所属组</h2><p><strong>目标</strong></p>
 <ul>
 <li>再 python用户 的桌面文件夹下创建 【 mkdir 】 Python学习 目录</li>
 <li>新建 【 groupadd 】 dev组</li>
@@ -626,10 +626,10 @@ height:50vh;
 <p>使用 <strong>chgrp 修改 Python学习 目录 的组名</strong>，并且再次使用 ls命令 查看该目录的信息，可以看到 Python学习 目录的所属组变成了 dev </p>
 <p><img src="http://ww1.sinaimg.cn/large/8c0b2220gy1g2p5mqq66tj20hh05jjwt.jpg" alt></p>
 <p>可以发现 dev组的权限是 <strong>可读可写可执行</strong>，就意味着将来我们把用户添加到 dev组，那么 dev 组的所有成员都对 该目录拥有 <strong>可读可写可执行</strong> 的权限</p>
-<h2 id="用户管理-终端命令"><a href="#用户管理-终端命令" class="headerlink" title="用户管理 终端命令"></a>用户管理 终端命令</h2><blockquote>
+<h1 id="用户管理-终端命令"><a href="#用户管理-终端命令" class="headerlink" title="用户管理 终端命令"></a>用户管理 终端命令</h1><blockquote>
 <p>提示： <strong>创建用户/删除用户/修改其他用户密码</strong> 的终端命令都需要通过 <strong>sudo</strong> 执行</p>
 </blockquote>
-<h3 id="创建用户-设置密码-删除用户"><a href="#创建用户-设置密码-删除用户" class="headerlink" title="创建用户/设置密码/删除用户"></a>创建用户/设置密码/删除用户</h3><table>
+<h2 id="创建用户-设置密码-删除用户"><a href="#创建用户-设置密码-删除用户" class="headerlink" title="创建用户/设置密码/删除用户"></a>创建用户/设置密码/删除用户</h2><table>
 <thead>
 <tr>
 <th style="text-align:left">序号</th>
@@ -672,7 +672,7 @@ height:50vh;
 <li>第二个终端命令负责指定用户的密码</li>
 </ul>
 </blockquote>
-<h4 id="创建用户"><a href="#创建用户" class="headerlink" title="创建用户"></a>创建用户</h4><blockquote>
+<h3 id="创建用户"><a href="#创建用户" class="headerlink" title="创建用户"></a>创建用户</h3><blockquote>
 <p>所有用户的 家目录 都默认保存在根目录的 <strong>home</strong> 文件夹下</p>
 </blockquote>
 <p>添加一个用户，并且系统自动提示我们输入密码</p>
@@ -682,7 +682,7 @@ height:50vh;
 <p>接下来使用 ls 命令 确认它是否是 新的用户，可以看到它的 <strong>文件拥有者 就是 新建的用户 zhangsan</strong>，同时<strong>目录的所属组为 dev</strong>：</p>
 <p><img src="http://ww1.sinaimg.cn/large/8c0b2220gy1g2peu127edj20hc031abw.jpg" alt></p>
 <p><strong>注意：</strong> 对于 zhangsan 的家目录，dev 这个群组只有 <strong>可读可执行权限</strong>，并没有可选的权限，也就意味着，默认情况下，dev群组中的人 <strong>只能对 zhangsan 家目录读取，而不能修改 zhangsan 家目录内部的内容</strong>, 这样是合理的，否则 别的 用户就可以对 zhangsan 的文件进行操作，所以这个<strong>群组默认对家目录的权限 没有可写权限</strong></p>
-<h4 id="设置密码"><a href="#设置密码" class="headerlink" title="设置密码"></a>设置密码</h4><p>此时用户还没有创建完成，因为我们只是创建了用户，并没有设置用户的密码</p>
+<h3 id="设置密码"><a href="#设置密码" class="headerlink" title="设置密码"></a>设置密码</h3><p>此时用户还没有创建完成，因为我们只是创建了用户，并没有设置用户的密码</p>
 <blockquote>
 <p><strong>注意：</strong> 没有设置密码，我们就没有办法在远程通过用户来登录系统</p>
 </blockquote>
@@ -690,7 +690,7 @@ height:50vh;
 <p><img src="http://ww1.sinaimg.cn/large/8c0b2220gy1g2pf78254xj20av031tad.jpg" alt></p>
 <p>接下来使用 客户机 进行测试，并且使用 pwd 查看当前的工作目录，可以看到当前在 zhangsan的家目录中，表示成功登陆</p>
 <p><img src="http://ww1.sinaimg.cn/large/8c0b2220gy1g2pfj0x1w0j205301xgll.jpg" alt></p>
-<h4 id="删除用户"><a href="#删除用户" class="headerlink" title="删除用户"></a>删除用户</h4><h5 id="useradd-的-m-选项"><a href="#useradd-的-m-选项" class="headerlink" title="useradd 的 -m 选项"></a>useradd 的 -m 选项</h5><p><strong>目标：</strong></p>
+<h3 id="删除用户"><a href="#删除用户" class="headerlink" title="删除用户"></a>删除用户</h3><h4 id="useradd-的-m-选项"><a href="#useradd-的-m-选项" class="headerlink" title="useradd 的 -m 选项"></a>useradd 的 -m 选项</h4><p><strong>目标：</strong></p>
 <p> 在新建用户时，如果不使用 <strong>-m 选项</strong>， 会出现什么情况？ 同时确认一下在使用 useradd 添加新用户时，<strong>新用户的信息保存在哪里</strong>？</p>
 <blockquote>
 <p><strong>注意事项：</strong></p>
@@ -700,7 +700,7 @@ height:50vh;
 <li>系统提示还提示了 <strong>没有权限修改 /etc/passwd</strong></li>
 </ul>
 </blockquote>
-<h6 id="passwd文件"><a href="#passwd文件" class="headerlink" title="passwd文件"></a>passwd文件</h6><p>使用 ls 查看 passd文件 的详细信息，我们可以看到 passwd文件 的拥有者是 root，并且对这个文件有 可读可写 的权限，而 passwd 的 组成员 和其他成员都只有 只读权限，没有写的权限</p>
+<h5 id="passwd文件"><a href="#passwd文件" class="headerlink" title="passwd文件"></a>passwd文件</h5><p>使用 ls 查看 passd文件 的详细信息，我们可以看到 passwd文件 的拥有者是 root，并且对这个文件有 可读可写 的权限，而 passwd 的 组成员 和其他成员都只有 只读权限，没有写的权限</p>
 <p><img src="http://ww1.sinaimg.cn/large/8c0b2220gy1g2pfwesw4jj20fr01wta1.jpg" alt></p>
 <p>接下来使用 cat命令 来查看 passwd 的内容，可以看到，我们创建的 zhangsan用户 是保存在第 49行，这这一行的末尾有一个 <strong>/home/zhangsan</strong> ，这个目录是 zhangsan 用户的家目录。</p>
 <p><img src="http://ww1.sinaimg.cn/large/8c0b2220gy1g2pg3d3xs2j20cl00y74v.jpg" alt></p>
@@ -709,7 +709,7 @@ height:50vh;
 <blockquote>
 <p>-n 表示  显示<strong>行号</strong></p>
 </blockquote>
-<h6 id="不添加-m-创建用户"><a href="#不添加-m-创建用户" class="headerlink" title="不添加 -m 创建用户"></a>不添加 -m 创建用户</h6><p>现在不使用 -m 选项创建用户 lisi，可以看到，文件中并没有出现 lisi 的 家目录，我们再使用 cat 命令查看 passwd 文件，看看 lisi用户 是否已经添加</p>
+<h5 id="不添加-m-创建用户"><a href="#不添加-m-创建用户" class="headerlink" title="不添加 -m 创建用户"></a>不添加 -m 创建用户</h5><p>现在不使用 -m 选项创建用户 lisi，可以看到，文件中并没有出现 lisi 的 家目录，我们再使用 cat 命令查看 passwd 文件，看看 lisi用户 是否已经添加</p>
 <p><img src="http://ww1.sinaimg.cn/large/8c0b2220gy1g2pg7qtc85j20fw042q70.jpg" alt></p>
 <p>我们可以看到在 50行 多了一条 lisi 的 信息，同时 lisi 的家目录是 /home/lisi ，但是由于我们在新建用户时没有使用 -m 选项，所以添加完用户后，<strong>系统并没有帮我们创建 liss 的家目录</strong>，这就是不使用 -m 选项 带来的后果</p>
 <blockquote>
@@ -719,12 +719,12 @@ height:50vh;
 <li>创建用户时，<strong>默认会创建</strong>一个用户名同名的组名<br>用户信息保存在 <strong>/etc/passwd 文件</strong>中</li>
 </ul>
 </blockquote>
-<h5 id="删除用户-1"><a href="#删除用户-1" class="headerlink" title="删除用户"></a>删除用户</h5><p>使用 userdel 命令删除 用户， <strong>-r</strong> 选项表示自动删除用户家目录，可以看到 它提示了没有找到 邮件目录 和 主目录，因为这两个邮件都<strong>不存在</strong></p>
+<h4 id="删除用户-1"><a href="#删除用户-1" class="headerlink" title="删除用户"></a>删除用户</h4><p>使用 userdel 命令删除 用户， <strong>-r</strong> 选项表示自动删除用户家目录，可以看到 它提示了没有找到 邮件目录 和 主目录，因为这两个邮件都<strong>不存在</strong></p>
 <p><img src="http://ww1.sinaimg.cn/large/8c0b2220gy1g2pgl5dkn3j20d8028mz5.jpg" alt></p>
 <p>接下来使用 cat 查看 passwd 文件 是否发生了变化</p>
 <p><img src="http://ww1.sinaimg.cn/large/8c0b2220gy1g2pgm3nqgpj20g404jtdy.jpg" alt></p>
 <p>可以看到现在已经 没有了 lisi用户，表示已经成功删除</p>
-<h3 id="查看用户信息"><a href="#查看用户信息" class="headerlink" title="查看用户信息"></a>查看用户信息</h3><table>
+<h2 id="查看用户信息"><a href="#查看用户信息" class="headerlink" title="查看用户信息"></a>查看用户信息</h2><table>
 <thead>
 <tr>
 <th style="text-align:left">序号</th>
@@ -750,13 +750,13 @@ height:50vh;
 </tr>
 </tbody>
 </table>
-<h4 id="用户代号-和-组代号"><a href="#用户代号-和-组代号" class="headerlink" title="用户代号 和 组代号"></a>用户代号 和 组代号</h4><p>使用 id 查看 用户 lisi 的 用户代号（UID）以及 组代号（GID）</p>
+<h3 id="用户代号-和-组代号"><a href="#用户代号-和-组代号" class="headerlink" title="用户代号 和 组代号"></a>用户代号 和 组代号</h3><p>使用 id 查看 用户 lisi 的 用户代号（UID）以及 组代号（GID）</p>
 <ul>
 <li>用户带号（UID）：是保存在 /etc/passwd 文件下的</li>
 <li>组代号（GID）：是保存在 /etc/group 文件下的</li>
 </ul>
 <p><img src="http://ww1.sinaimg.cn/large/8c0b2220gy1g2qajjbxgdj20cq02n759.jpg" alt></p>
-<h4 id="passwd-文件"><a href="#passwd-文件" class="headerlink" title="passwd 文件"></a>passwd 文件</h4><p>使用 cat 命令 查看 passwd 文件下 lisi 的相关信息;</p>
+<h3 id="passwd-文件"><a href="#passwd-文件" class="headerlink" title="passwd 文件"></a>passwd 文件</h3><p>使用 cat 命令 查看 passwd 文件下 lisi 的相关信息;</p>
 <p><img src="http://ww1.sinaimg.cn/large/8c0b2220gy1g2qam139g1j20eo029my6.jpg" alt></p>
 <p>可以看到 lisi用户 的信息在 passwd的 第50行， 并且可以看到 在 passwd文件中是以 <strong>冒号 【 ： 】 来分隔信息</strong> 的 ，每一个冒号分隔一段信息</p>
 <p>/etc/passwd 文件<strong>存放的是用户的信息</strong>，由 6 个分号组成的7个信息，分别是</p>
@@ -769,10 +769,10 @@ height:50vh;
 <li>家目录</li>
 <li>登陆使用的 Shell，就是登陆后，使用终端命令， ubuntu 默认是 dash</li>
 </ul>
-<h4 id="group-文件"><a href="#group-文件" class="headerlink" title="group 文件"></a>group 文件</h4><p>使用 cat命令 查看 group文件 中的 dev组</p>
+<h3 id="group-文件"><a href="#group-文件" class="headerlink" title="group 文件"></a>group 文件</h3><p>使用 cat命令 查看 group文件 中的 dev组</p>
 <p><img src="http://ww1.sinaimg.cn/large/8c0b2220gy1g2qawl9o64j20ev02s0tv.jpg" alt></p>
 <p>可以看到开发组的组代号是 1001，所以 用 id命令 查看 lisi用户 的信息的时候， lisi用户 的信息也是 1001</p>
-<h4 id="id命令"><a href="#id命令" class="headerlink" title="id命令"></a>id命令</h4><p>如果不指定 用户 直接输入 id，就是查看 当前用户的信息</p>
+<h3 id="id命令"><a href="#id命令" class="headerlink" title="id命令"></a>id命令</h3><p>如果不指定 用户 直接输入 id，就是查看 当前用户的信息</p>
 <p><img src="http://ww1.sinaimg.cn/large/8c0b2220gy1g2qazprwvrj20m501tgnc.jpg" alt></p>
 <p>输入完成后我们可以看到， 当前用户 python 的用户组还是很多的，先看前两项， python的用户带号 和 组代号 都是 1000，并且在使用 useradd命令 添加用户的时候，如果没有指定用户的组，会自动建立一个同名的组，因此，虽然有两个 1000，但是前面一个1000是用户代号，后面一个1000是组代号</p>
 <p>接下来分别使用 cat 命令查看， passwd文件 与 group文件 中 python 用户的内容</p>
@@ -784,7 +784,7 @@ height:50vh;
 <li>第 21 行 表示 python 这个用户可以 用 sudo 即 root 的身份 来执行系统管理和维护的工作</li>
 </ul>
 <p>这里所有带 python 用户的组名，跟我们使用 id 命令查询出来的结果是完全一样的，这是 Linux 中 管理用户权限的一个非常重要的特点，我们可以定义一个用户，然后把用户放到不同的组里面，这样这个用户就可以拥有不同组所具有的权限</p>
-<h3 id="who-与-whoami"><a href="#who-与-whoami" class="headerlink" title="who 与 whoami"></a>who 与 whoami</h3><table>
+<h2 id="who-与-whoami"><a href="#who-与-whoami" class="headerlink" title="who 与 whoami"></a>who 与 whoami</h2><table>
 <thead>
 <tr>
 <th style="text-align:left">命令</th>
@@ -804,8 +804,8 @@ height:50vh;
 </table>
 <p><strong>who：</strong> 查看当前所有登陆的用户列表， Linux 是个多用户操作系统，在同一时间允许多个用户同时使用一个电脑，使用 who 可以查看当前这一时刻有多少个用户登陆到系统中</p>
 <p><strong>whoami：</strong> 只是显示一下当前登陆用户的账户名</p>
-<h4 id="whoami"><a href="#whoami" class="headerlink" title="whoami"></a>whoami</h4><p>使用 whoami命令 查看当前用户名<br><img src="http://ww1.sinaimg.cn/large/8c0b2220gy1g2qbzqiwewj2098012mxa.jpg" alt></p>
-<h4 id="who"><a href="#who" class="headerlink" title="who"></a>who</h4><p>使用 who命令 查看当前登陆额账户名</p>
+<h3 id="whoami"><a href="#whoami" class="headerlink" title="whoami"></a>whoami</h3><p>使用 whoami命令 查看当前用户名<br><img src="http://ww1.sinaimg.cn/large/8c0b2220gy1g2qbzqiwewj2098012mxa.jpg" alt></p>
+<h3 id="who"><a href="#who" class="headerlink" title="who"></a>who</h3><p>使用 who命令 查看当前登陆额账户名</p>
 <p><img src="http://ww1.sinaimg.cn/large/8c0b2220gy1g2qbzcbljgj20da015t96.jpg" alt></p>
 <p>系统会 告诉我们</p>
 <ul>
@@ -819,7 +819,7 @@ height:50vh;
 <p><img src="http://ww1.sinaimg.cn/large/8c0b2220gy1g2qc6isiurj20gd01mq40.jpg" alt></p>
 <p>这次登陆，系统会告诉我们，这次有两个用户登陆到 Ubuntu 中，一个是 本机用户 【 (:0) 】， 另外一个是从 IP地址 【 (172.16.140.133) 】 登陆过来的，并且告诉我们系统的登陆时间</p>
 <p><strong>结论：</strong> who命令 可以查看 <strong>当前登陆的所有用户</strong> 以及 <strong>用户的来源</strong>，这个就是 who 的作用</p>
-<h3 id="usermod"><a href="#usermod" class="headerlink" title="usermod"></a>usermod</h3><p>usermod 可以用来设置 用户的 <strong>主组 / 附加组</strong> 和 <strong>登陆 Shell</strong>，命令格式如下;</p>
+<h2 id="usermod"><a href="#usermod" class="headerlink" title="usermod"></a>usermod</h2><p>usermod 可以用来设置 用户的 <strong>主组 / 附加组</strong> 和 <strong>登陆 Shell</strong>，命令格式如下;</p>
 <ul>
 <li><p><strong>主组</strong>：通常在新建用户时指定，再 etc/passwd 的<strong>第4列 GID对应的组</strong></p>
 </li>
@@ -850,7 +850,7 @@ height:50vh;
 <ul>
 <li>usermod -G sudo 用户名</li>
 </ul>
-<h4 id="回顾"><a href="#回顾" class="headerlink" title="回顾"></a>回顾</h4><p>id命令： 如果不指定用户 ，就默认查看当前的信息</p>
+<h3 id="回顾"><a href="#回顾" class="headerlink" title="回顾"></a>回顾</h3><p>id命令： 如果不指定用户 ，就默认查看当前的信息</p>
 <p><img src="http://ww1.sinaimg.cn/large/8c0b2220gy1g2qcwdop5mj20ld01pabq.jpg" alt></p>
 <p>通过系统返回的命令，我们可以看到：</p>
 <ul>
@@ -874,7 +874,7 @@ height:50vh;
 <li>67行python的 组代号是 1000</li>
 <li>其余的组后面都有一个 python，再<strong>后面这个 python 表示的是 python 用户</strong> 而不是 python组，如果 用户在某个组的后面，就说明用户拥有该组的权限。 譬如： 21行的附加组叫 sudo，因此 <strong>python这个用户可以使用 sudo 以 root身份 来执行系统维护的相关命令</strong></li>
 </ul>
-<h4 id="如果没有附加组"><a href="#如果没有附加组" class="headerlink" title="如果没有附加组"></a>如果没有附加组</h4><p>下面使用命令 id 查询用户 zhangsan的信息</p>
+<h3 id="如果没有附加组"><a href="#如果没有附加组" class="headerlink" title="如果没有附加组"></a>如果没有附加组</h3><p>下面使用命令 id 查询用户 zhangsan的信息</p>
 <p><img src="http://ww1.sinaimg.cn/large/8c0b2220gy1g2qdi0cspej20e0017mxw.jpg" alt></p>
 <p>我们可以看到 ，张三的用户标识是 1001，张三的组标识是 1001  ，但是<strong>后面的 【 组= 】 只有 zhangsan 的主组，并没有附加组</strong></p>
 <p>那么，如果我们在终端中，以张三这个用户登陆，张三能使用 sudo 来执行系统管理相关的命令吗？ 肯定不行。接下来在 Window计算机 中 使用 Xshell 远程登陆 Ubuntu系统：</p>
@@ -884,7 +884,7 @@ height:50vh;
 <p><img src="http://ww1.sinaimg.cn/large/8c0b2220gy1g2qdonnkmmj20n205l790.jpg" alt></p>
 <p>可以看到回车之后最后一个用户仍然是 lisi 并没有 wangwu这个用户</p>
 <p><strong>总结：</strong> 通过这个实验可以知道，Ubuntu中默认用 <strong>useradd 新建出来的 zhangsan用户 并不能使用 sudo 来执行系统维护权限的</strong></p>
-<h4 id="设置用户的附加组"><a href="#设置用户的附加组" class="headerlink" title="设置用户的附加组"></a>设置用户的附加组</h4><p>如果我们想让 zhangsan用户 拥有权限可以 把 该<strong>用户添加到 sudo 这个附加组</strong> 中 就可以了。 要想给用户添加附加组，我们就要使用 usermod 这个命令</p>
+<h3 id="设置用户的附加组"><a href="#设置用户的附加组" class="headerlink" title="设置用户的附加组"></a>设置用户的附加组</h3><p>如果我们想让 zhangsan用户 拥有权限可以 把 该<strong>用户添加到 sudo 这个附加组</strong> 中 就可以了。 要想给用户添加附加组，我们就要使用 usermod 这个命令</p>
 <ul>
 <li><p>修改用户的主组（passwd 中的 GID）</p>
 <ul>
@@ -912,10 +912,10 @@ height:50vh;
 <p>我们可以看到 在 21 行 sudo这个附加组中，除了之前看到的 python用户之外，又多了一个 zhangsan用户，即添加成功</p>
 <p>但是如果们想要 zhangsan 这个用户执行系统管理权限，我们<strong>必须要退出之前的终端</strong>，否则同步 Ubuntu 中配置的信息，重新启动后再次 使用 cat 命令 查看 passwd文件，可以看到已经成功的使用了 sudo 命令：</p>
 <p><img src="http://ww1.sinaimg.cn/large/8c0b2220gy1g2qe9oc4kqj20nc05bn1p.jpg" alt></p>
-<h4 id="设置用户登陆的-shell"><a href="#设置用户登陆的-shell" class="headerlink" title="设置用户登陆的 shell"></a>设置用户登陆的 shell</h4><p>我们要想使用终端命令，首先应该点击任务栏上的终端图标，点击之后 Ubuntu 会帮我们打开终端窗口，我们在终端窗口中就可以输入中断过命令，下图的所示的窗口就是 shell</p>
+<h3 id="设置用户登陆的-shell"><a href="#设置用户登陆的-shell" class="headerlink" title="设置用户登陆的 shell"></a>设置用户登陆的 shell</h3><p>我们要想使用终端命令，首先应该点击任务栏上的终端图标，点击之后 Ubuntu 会帮我们打开终端窗口，我们在终端窗口中就可以输入中断过命令，下图的所示的窗口就是 shell</p>
 <p><img src="http://ww1.sinaimg.cn/large/8c0b2220gy1g2qfka8a7jj20jn0e2jrz.jpg" alt></p>
 <p><strong>shell：</strong> 所谓shell，就是可以输入终端命令的窗口，<strong>shell是一个软件 </strong>； </p>
-<h5 id="shell的显示情况"><a href="#shell的显示情况" class="headerlink" title="shell的显示情况"></a>shell的显示情况</h5><p>当前这个python用户，在 Ubuntu系统下，shell 的显示情况，我们每次输入终端命令的时候，在<strong>输入前 都有一个 【 $ 】 符号</strong>， 而在前面会显示一个当前的<strong>用户名</strong> 紧接着 <strong>【 @ 】 符号 以及当前计算机的名字</strong>，然后 在 <strong>【 ： 】 后面会跟上一个 【 ~ 】 </strong>号，这个 【 ~ 】 就表示当前所在的工作目录。 这个就是当前 python 用户使用shell的显示情况</p>
+<h4 id="shell的显示情况"><a href="#shell的显示情况" class="headerlink" title="shell的显示情况"></a>shell的显示情况</h4><p>当前这个python用户，在 Ubuntu系统下，shell 的显示情况，我们每次输入终端命令的时候，在<strong>输入前 都有一个 【 $ 】 符号</strong>， 而在前面会显示一个当前的<strong>用户名</strong> 紧接着 <strong>【 @ 】 符号 以及当前计算机的名字</strong>，然后 在 <strong>【 ： 】 后面会跟上一个 【 ~ 】 </strong>号，这个 【 ~ 】 就表示当前所在的工作目录。 这个就是当前 python 用户使用shell的显示情况</p>
 <p><strong>Windows系统的 Xshell：</strong></p>
 <p>可以看到，在 Xshell 里面，查看文件的时候没有颜色</p>
 <p><img src="http://ww1.sinaimg.cn/large/8c0b2220gy1g2qfrtwj6ej20p9064408.jpg" alt></p>
@@ -948,10 +948,10 @@ height:50vh;
 <p>重新在 Xshell中登陆 zhangsan 用户，可以看到现在已经又变化了，有名字有机器有工作目录，现在我们尝试查看根目录下的文件夹，看看有没有区别</p>
 <p><img src="http://ww1.sinaimg.cn/large/8c0b2220gy1g2qgv0k4lqj20pm029wga.jpg" alt></p>
 <p>可以看到颜色发生了改变，这个就是改变了 shell 之后我们看到的一个效果</p>
-<h5 id="shell的显示情况-1"><a href="#shell的显示情况-1" class="headerlink" title="shell的显示情况"></a>shell的显示情况</h5><p>/etc/passwd 的<strong> 最后一个选项，就是 指定的用户登陆使用的 shell</strong>，现在回到 Ubuntu 再次确认下：</p>
+<h4 id="shell的显示情况-1"><a href="#shell的显示情况-1" class="headerlink" title="shell的显示情况"></a>shell的显示情况</h4><p>/etc/passwd 的<strong> 最后一个选项，就是 指定的用户登陆使用的 shell</strong>，现在回到 Ubuntu 再次确认下：</p>
 <p><img src="http://ww1.sinaimg.cn/large/8c0b2220gy1g2qh0lot92j20f201ijsl.jpg" alt></p>
 <p>可以看到最后一列出现了 /bin/bash,而 lisi 、 wangwu 并没有指定 shell，所以末尾只有一个冒号而没有内容； 如果我们希望新建的用户 登陆到 Ubuntu 能够 看到 带颜色 显示的 shell，那么，就可以用这一小节中， usermode 命令 指定 一下用户登陆 shell 就可以解决</p>
-<h3 id="which（重要）"><a href="#which（重要）" class="headerlink" title="which（重要）"></a>which（重要）</h3><p>which 这个命令是用来 <strong>查询 执行命令 所在位置的</strong></p>
+<h2 id="which（重要）"><a href="#which（重要）" class="headerlink" title="which（重要）"></a>which（重要）</h2><p>which 这个命令是用来 <strong>查询 执行命令 所在位置的</strong></p>
 <blockquote>
 <p>/etc/passwd 是用来保存用户的信息，但是为什么这个程序还可以修改用户的密码？</p>
 <ul>
@@ -973,17 +973,17 @@ height:50vh;
 <li>/usr/bin/passwd 是用于修改用户密码的程序</li>
 </ul>
 </blockquote>
-<h4 id="查找执行命令的位置"><a href="#查找执行命令的位置" class="headerlink" title="查找执行命令的位置"></a>查找执行命令的位置</h4><h5 id="usr-bin-passwd-文件"><a href="#usr-bin-passwd-文件" class="headerlink" title="/usr/bin/passwd 文件"></a>/usr/bin/passwd 文件</h5><p><img src="http://ww1.sinaimg.cn/large/8c0b2220gy1g2qhyasy5xj20a202574x.jpg" alt></p>
+<h3 id="查找执行命令的位置"><a href="#查找执行命令的位置" class="headerlink" title="查找执行命令的位置"></a>查找执行命令的位置</h3><h4 id="usr-bin-passwd-文件"><a href="#usr-bin-passwd-文件" class="headerlink" title="/usr/bin/passwd 文件"></a>/usr/bin/passwd 文件</h4><p><img src="http://ww1.sinaimg.cn/large/8c0b2220gy1g2qhyasy5xj20a202574x.jpg" alt></p>
 <p>可以看到终端中告诉我们， passwd这个文件 保存在 /usr/bin/passwd 目录下，下面使用 ls 查看 passwd文件</p>
 <p><img src="http://ww1.sinaimg.cn/large/8c0b2220gy1g2qi08qnbqj20hc020q44.jpg" alt></p>
 <p>终端提示我们，这个 文件 保存在 /usr/bin/passwd 下，并且用一个红色的标识，并且看一下前面的权限，对于 root 而言 可读可写可执行</p>
 <blockquote>
 <p><strong>注意：</strong> s 也是一个可执行权限，但是它相对而言稍微特殊一点，这个 s 权限在日常使用中使用的极少，因此这里先把 s 看成可执行就可以</p>
 </blockquote>
-<h5 id="etc-passwd-文件"><a href="#etc-passwd-文件" class="headerlink" title="/etc/passwd 文件"></a>/etc/passwd 文件</h5><p><img src="http://ww1.sinaimg.cn/large/8c0b2220gy1g2qiiqoh7ej20ht01xab2.jpg" alt></p>
+<h4 id="etc-passwd-文件"><a href="#etc-passwd-文件" class="headerlink" title="/etc/passwd 文件"></a>/etc/passwd 文件</h4><p><img src="http://ww1.sinaimg.cn/large/8c0b2220gy1g2qiiqoh7ej20ht01xab2.jpg" alt></p>
 <p>输入命令后，终端告诉我们 ， etc 下有一个 passwd ，这个文件对于 root 而言是 可读可写 <strong>但是不能执行</strong>，可以看到这是两个不同的程序， <strong>etc 下的 passwd 不能够执行，而 /usr/bin/passwd 具有可执行权限</strong></p>
 <p>因此虽然两个文件都叫 passwd，但是 etc 下的 passwd 并不能执行，只是用来保存用户信息的； 而 usr 下的 passwd 是可以修改用户密码的程序</p>
-<h5 id="查看执行命令的所在位置"><a href="#查看执行命令的所在位置" class="headerlink" title="查看执行命令的所在位置"></a>查看执行命令的所在位置</h5><p>Which ls</p>
+<h4 id="查看执行命令的所在位置"><a href="#查看执行命令的所在位置" class="headerlink" title="查看执行命令的所在位置"></a>查看执行命令的所在位置</h4><p>Which ls</p>
 <ul>
 <li>输出</li>
 <li>/bin/ls</li>
@@ -1001,8 +1001,8 @@ height:50vh;
 <p><img src="http://ww1.sinaimg.cn/large/8c0b2220gy1g2qj5oded3j20g101daal.jpg" alt></p>
 <p>接下来 使用 ls 查看 useradd 文件 信息，可以看到 一个 绿色的 useradd,同时前面写着，对于 root 而言，是可读可写可执行，对于其他用户我 可读可执行，这个就是 which 这个 终端命令 的用处</p>
 <p><img src="http://ww1.sinaimg.cn/large/8c0b2220gy1g2qjac4igwj20ig01agmm.jpg" alt></p>
-<h4 id="总结-1"><a href="#总结-1" class="headerlink" title="总结"></a>总结</h4><p>which 可以查询 我们 执行的终端命令 保存在 系统中的所在位置</p>
-<h5 id="bin-和-sbin"><a href="#bin-和-sbin" class="headerlink" title="bin 和 sbin"></a>bin 和 sbin</h5><ul>
+<h3 id="总结-1"><a href="#总结-1" class="headerlink" title="总结"></a>总结</h3><p>which 可以查询 我们 执行的终端命令 保存在 系统中的所在位置</p>
+<h4 id="bin-和-sbin"><a href="#bin-和-sbin" class="headerlink" title="bin 和 sbin"></a>bin 和 sbin</h4><ul>
 <li>在 Linux 中，绝大多数可执行文件都是保存在 /bin、/sbin 、/usr/bin、 /usr/sbin</li>
 <li>/bin （binary）<strong>是二进制执行文件目录</strong>，主要用于具体应用</li>
 <li>/sbin（system binary）是<strong>系统管理员专用的二进制代码存放记录</strong>，主要用于系统管理</li>
@@ -1011,7 +1011,7 @@ height:50vh;
 </ul>
 <p><strong>bin</strong>：表示二进制的文件</p>
 <p><strong>usr</strong>：就是整个系统安装好之后，后期安装的软件，如果是<strong>一般日常的软件，就放在 /usr/bin</strong> 下。 而如果是跟<strong>系统管理相关的软件，通常就放在 /usr/sbin</strong>下</p>
-<h3 id="切换用户"><a href="#切换用户" class="headerlink" title="切换用户"></a>切换用户</h3><table>
+<h2 id="切换用户"><a href="#切换用户" class="headerlink" title="切换用户"></a>切换用户</h2><table>
 <thead>
 <tr>
 <th style="text-align:left">命令</th>
@@ -1054,16 +1054,16 @@ height:50vh;
 </li>
 </ul>
 <p>这就是实际工作中切换 用户的实际场景</p>
-<h4 id="su"><a href="#su" class="headerlink" title="su"></a>su</h4><h5 id="不使用-【-】"><a href="#不使用-【-】" class="headerlink" title="不使用 【 - 】"></a>不使用 【 - 】</h5><p>首先使用 whoami 查看当前用户信息，然后输入 su 命令 切换用户</p>
+<h3 id="su"><a href="#su" class="headerlink" title="su"></a>su</h3><h4 id="不使用-【-】"><a href="#不使用-【-】" class="headerlink" title="不使用 【 - 】"></a>不使用 【 - 】</h4><p>首先使用 whoami 查看当前用户信息，然后输入 su 命令 切换用户</p>
 <p><img src="http://ww1.sinaimg.cn/large/8c0b2220gy1g2ql43969pj20a603qta0.jpg" alt></p>
 <p>可以看到终端中的显示 变化了，现在的显示是 zhangsan 并且 zhangsan 所在的位置 是 python 用户的家目录，我们可以使用 cd 返回 zhangsan 的家目录，并且使用 pwd 查看当前 的 工作目录</p>
 <p><img src="http://ww1.sinaimg.cn/large/8c0b2220gy1g2ql7fq7gxj20cs01l74w.jpg" alt></p>
 <p>操作完成后，输入 exit 返回到 python 用户，并且使用 pwd 来进行确认</p>
 <p><img src="http://ww1.sinaimg.cn/large/8c0b2220gy1g2ql9dvkybj209902ct9b.jpg" alt></p>
-<h5 id="使用-【-】"><a href="#使用-【-】" class="headerlink" title="使用 【 - 】"></a>使用 【 - 】</h5><p>接下来在使用 su 命令时，使用 【 - 】 看看有什么效果</p>
+<h4 id="使用-【-】"><a href="#使用-【-】" class="headerlink" title="使用 【 - 】"></a>使用 【 - 】</h4><p>接下来在使用 su 命令时，使用 【 - 】 看看有什么效果</p>
 <p><img src="http://ww1.sinaimg.cn/large/8c0b2220gy1g2qldih40ej208e0223yz.jpg" alt></p>
 <p>可以看到这一次的显示于 上面 没有使用 【 - 】 的显示 是不一样的，刚刚没有使用 【 - 】 ，我们切换到 zhangsan 用户之后，所在的目录 还是在 python 用户的家目录； 而现在使用了 【 - 】，切换用户时，<strong>工作目录也会变为 zhangsan 的家目录</strong></p>
-<h5 id="不接用户名"><a href="#不接用户名" class="headerlink" title="不接用户名"></a>不接用户名</h5><p>su 除了可以切换到其他用户外，如果我们在 su 中<strong>不接任何用户名，就可以切换到 root 身份</strong>，但是 root 对系统的所有资源都是有完全权限的，所以切换到 root 身份 执行终端命令是<strong>不推荐使用的，因为这种方式非常的不安全</strong></p>
+<h4 id="不接用户名"><a href="#不接用户名" class="headerlink" title="不接用户名"></a>不接用户名</h4><p>su 除了可以切换到其他用户外，如果我们在 su 中<strong>不接任何用户名，就可以切换到 root 身份</strong>，但是 root 对系统的所有资源都是有完全权限的，所以切换到 root 身份 执行终端命令是<strong>不推荐使用的，因为这种方式非常的不安全</strong></p>
 <p><img src="http://ww1.sinaimg.cn/large/8c0b2220gy1g2qlis5u98j207x02r74x.jpg" alt></p>
 <p>可以看到，终端中的显示发生变化了，现在的用户叫做 root，同时前面有一个 【 ~ 】 ，并且当前所在的位置是在 /root</p>
 <blockquote>
@@ -1073,8 +1073,126 @@ height:50vh;
 <p><img src="http://ww1.sinaimg.cn/large/8c0b2220gy1g2qlmn6sd5j20d002wq54.jpg" alt></p>
 <p>可以看到， zhaoliu 这个用户已经被添加上了</p>
 </blockquote>
-<h5 id="exit"><a href="#exit" class="headerlink" title="exit"></a>exit</h5><p>再切换用户之后，我们在输入的 exit，只是返回到上一级用户，<strong>如果 在 python 用户再敲一次 exit，就会退出终端</strong></p>
+<h4 id="exit"><a href="#exit" class="headerlink" title="exit"></a>exit</h4><p>再切换用户之后，我们在输入的 exit，只是返回到上一级用户，<strong>如果 在 python 用户再敲一次 exit，就会退出终端</strong></p>
 <p><img src="http://ww1.sinaimg.cn/large/8c0b2220gy1g2qk6gp7bzj20bd062gm7.jpg" alt></p>
+<h1 id="修改文件权限-1"><a href="#修改文件权限-1" class="headerlink" title="修改文件权限"></a>修改文件权限</h1><table>
+<thead>
+<tr>
+<th style="text-align:left">命令</th>
+<th style="text-align:left">作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">chown</td>
+<td style="text-align:left">修改<strong>拥有者</strong></td>
+</tr>
+<tr>
+<td style="text-align:left">chgrp</td>
+<td style="text-align:left">修改<strong>组</strong></td>
+</tr>
+<tr>
+<td style="text-align:left">chmod</td>
+<td style="text-align:left">修改<strong>权限</strong></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>这三个终端命令 分别对应着 <strong>ls -l 文件目录详细信息命令</strong> 的 三个列</p>
+<p><img src="http://ww1.sinaimg.cn/large/8c0b2220gy1g2rhr1dh7mj20en04vwi9.jpg" alt></p>
+</blockquote>
+<p><strong>命令格式如下：</strong></p>
+<ul>
+<li><p>修改文件|目录的拥有者</p>
+<ul>
+<li>chown 用户名 文件名|目录名</li>
+</ul>
+</li>
+<li><p>递归修改文件|目录的组</p>
+<ul>
+<li>chgrp -R 组名 文件名|目录名</li>
+</ul>
+</li>
+<li><p>递归修改文件权限</p>
+<ul>
+<li>chmod -R 775 文件名|目录名</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>-R 表示递归修改目录下的所有子目录以及文件的组</p>
+</blockquote>
+<h2 id="chown"><a href="#chown" class="headerlink" title="chown"></a>chown</h2><p>修改 Python学习 目录的拥有者</p>
+<p><img src="http://ww1.sinaimg.cn/large/8c0b2220gy1g2rhuswbqkj20ge05f42p.jpg" alt></p>
+<p>可以看到 目录 的拥有者 变成了 zhangsan ，而目录所属组为 dev</p>
+<p>并且我们可以知道<strong> python 并不属于 dev组 </strong>，我们可以使用 id命令 来确认</p>
+<p><img src="http://ww1.sinaimg.cn/large/8c0b2220gy1g2ri1ue853j20jw01f0u4.jpg" alt></p>
+<p>显示 用户的 组并没有 dev组，所以 python用户 对 Python学习 组 应该具有 <strong>其他用户的权限</strong>，可以看到 <strong>其他用户的权限</strong> 只有可读可执行，没有写操作， 即 <strong>python用户 就不能再对目录有写权限了，应为该目录的拥有者 是 zhangsan</strong></p>
+<h2 id="chgrp"><a href="#chgrp" class="headerlink" title="chgrp"></a>chgrp</h2><p>接下来修改 Python学习 目录的组</p>
+<p><img src="http://ww1.sinaimg.cn/large/8c0b2220gy1g2rknuwztwj20ff04ugpn.jpg" alt></p>
+<p>可以看到现在用户所属组变成了 python，而当前用户的 python 它的主组就是python，而 <strong>组用户对这个目录具有 可读可写可执行 权限</strong>，因此当我们修改了这个目录所属组之后，上面的小锁头就没有了</p>
+<h2 id="chmod-扩展"><a href="#chmod-扩展" class="headerlink" title="chmod 扩展"></a>chmod 扩展</h2><ul>
+<li>递归修改文件权限<ul>
+<li>chmod -R 775 文件名|目录名<ul>
+<li>7表示文件或者目录 <strong>拥有者</strong> 的权限</li>
+<li>5表示文件或者目录 <strong>组成员</strong> 的权限</li>
+<li>5表示文件或者目录 <strong>其他用户</strong> 的权限</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>chmod 再设置权限时，可以简单的使用三个数字分别对应 <strong>拥有者/组</strong> 和 <strong>其他 用户</strong>的权限 </p>
+<p><strong>另一种方法：</strong></p>
+<ul>
+<li>直接修改文件|目录的 读|写|执行 权限，但是 <strong>不能精确到 拥有者|组|其他</strong><ul>
+<li>chmod +/-rwx 文件名|目录名</li>
+</ul>
+</li>
+</ul>
+<h3 id="数字对应的权限"><a href="#数字对应的权限" class="headerlink" title="数字对应的权限"></a>数字对应的权限</h3><p>文件或者目录一共拥有三个权限 可读 、可写 、可执行,在要得到最终的数字结果之前，我们先把这三个权限进行 <strong>数字编号</strong>： </p>
+<ul>
+<li>可读权限 数字代号 4 </li>
+<li>可写权限 数字代号 2 </li>
+<li>可执行权限 数字代号 1 </li>
+</ul>
+<p><img src="http://ww1.sinaimg.cn/large/8c0b2220gy1g2rij6sne4j207z02tzkl.jpg" alt></p>
+<p>eg： 如果我们想给用户设置 可读可写可执行权限 即 4+2+1 = 7 ; 如果我们享给用户具有 可读可写权限 即 4+2 = 6 ，如果不设置可执行权限 那么可执行权限对应的数字就是 0；</p>
+<p>这三个权限分别用一个 <strong>数字代表</strong>，如果想指定的权限，我们就把数字写上，如果不想指定权限，我们就用 0 来设置，这三个数字相加的结果，就是我们在使用 chmod命令 时，其中一个数字的结果，如下表：</p>
+<p><img src="http://ww1.sinaimg.cn/large/8c0b2220gy1g2risg5aklj206d0713yw.jpg" alt></p>
+<ul>
+<li><p>常用的数字组合有（ u 表示用户/ g 表示组/ o 表示其他）</p>
+<ul>
+<li><p>777 ===> u = rwx , g = rwx , o = rwx </p>
+</li>
+<li><p>755 ===> u = rwx , g = rx , o = rx </p>
+</li>
+<li><p>644 ===> u = rw , g = r , o = r </p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="chmod-演练目标"><a href="#chmod-演练目标" class="headerlink" title="chmod 演练目标"></a>chmod 演练目标</h3><blockquote>
+<p>使用 <strong>chmod数字表示法</strong>，只需要使用三个简单的数字，就可以精准的设定不同用户对文件的权限</p>
+</blockquote>
+<p><strong>将 01.py 的权限修改为 u = rwx , g = rx , o = r ，即 754</strong></p>
+<p>首先使用 ls -l 命令 检查 01.py 的权限，可以看到 01.py 这个文件的拥有者为 可读可写可执行，组用户为 可读可写可执行，其他用户为 可读可执行</p>
+<p><img src="http://ww1.sinaimg.cn/large/8c0b2220gy1g2rj8zgu3nj20f604d41w.jpg" alt></p>
+<p>接下来使用 chmod数字表示法 修改 文件权限，并且使用 ls -l 检查权限是否修改正确，可以看到已经成功修改:</p>
+<p><img src="http://ww1.sinaimg.cn/large/8c0b2220gy1g2rjbzrb37j20f904q42a.jpg" alt></p>
+<p><strong>将 123.txt 的权限修改为 u = rw , g = r , o = - ， 即 640</strong></p>
+<p>首先使用 ls -l 查看 该文件详细信息</p>
+<p><img src="http://ww1.sinaimg.cn/large/8c0b2220gy1g2rjglyupsj20fn04bn0i.jpg" alt></p>
+<p>使用 chmod数字表示法 并且 使用 ls -l 确认文件权限是否修改成功</p>
+<p><img src="http://ww1.sinaimg.cn/large/8c0b2220gy1g2rjhntnc7j20g004y0wp.jpg" alt></p>
+<p><strong>将 test 目录以及目录下得 </strong>所有文件<strong> 修改为 u = rwx , g = rwx , o = rx ，即 775</strong></p>
+<blockquote>
+<p>当我们想修改一个目录下所有文件的权限时，就可以使用 【 -R 】 选项，即可以 <strong>以递归的方式把这个目录下的 所有文件 以及 子目录 下的 权限一次性修改</strong></p>
+</blockquote>
+<p>使用 chmod数字表示法 修改 目录权限，接着使用 ls -l 确认，可以看到修改成功</p>
+<p><img src="http://ww1.sinaimg.cn/large/8c0b2220gy1g2rjklw9cpj20fh04y78b.jpg" alt></p>
+<p>接下来使用 ls -l 查看 test 目录下的文件权限是否一并被修改，可以看到 test 目录下有个 01.py文件，它的权限同样变成了 775</p>
+<p><img src="http://ww1.sinaimg.cn/large/8c0b2220gy1g2rjn76bjfj20ee01it9g.jpg" alt></p>
 
     </article>
     <!-- license  -->
@@ -1083,7 +1201,7 @@ height:50vh;
             <p>原文作者：<a href="http://yoursite.com">YaoRemu</a>
             </p><p>原文链接：<a href="http://yoursite.com/2019/05/03/用户权限相关命令/">http://yoursite.com/2019/05/03/用户权限相关命令/</a>
             </p><p>发表日期：<a href="http://yoursite.com/2019/05/03/用户权限相关命令/">May 3rd 2019, 5:35:49 pm</a>
-            </p><p>更新日期：<a href="http://yoursite.com/2019/05/03/用户权限相关命令/">May 5th 2019, 6:10:36 pm</a>
+            </p><p>更新日期：<a href="http://yoursite.com/2019/05/03/用户权限相关命令/">May 6th 2019, 2:27:03 pm</a>
             </p><p>版权声明：本文采用<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可</p>
         </div>
     
@@ -1257,7 +1375,7 @@ height:50vh;
         <div class="toc-catalog">
             <span class="iconfont-archer catalog-icon"></span><span>CATALOG</span>
         </div>
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#目标"><span class="toc-number">1.</span> <span class="toc-text">目标</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#用户和权限的基本概念"><span class="toc-number">2.</span> <span class="toc-text">用户和权限的基本概念</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#基本概念"><span class="toc-number">2.1.</span> <span class="toc-text">基本概念</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#组"><span class="toc-number">2.2.</span> <span class="toc-text">组</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ls-l-扩展"><span class="toc-number">2.3.</span> <span class="toc-text">ls -l 扩展</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#硬链接数"><span class="toc-number">2.3.1.</span> <span class="toc-text">硬链接数</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#chmod-简单使用（重要）"><span class="toc-number">2.4.</span> <span class="toc-text">chmod 简单使用（重要）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#修改文件权限"><span class="toc-number">2.4.1.</span> <span class="toc-text">修改文件权限</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#禁用所有权限"><span class="toc-number">2.4.1.1.</span> <span class="toc-text">禁用所有权限</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#恢复权限"><span class="toc-number">2.4.1.2.</span> <span class="toc-text">恢复权限</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#添加可执行权限"><span class="toc-number">2.4.1.3.</span> <span class="toc-text">添加可执行权限</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#修改目录权限"><span class="toc-number">2.4.2.</span> <span class="toc-text">修改目录权限</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#修改可执行权限"><span class="toc-number">2.4.2.1.</span> <span class="toc-text">修改可执行权限</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#修改读写权限"><span class="toc-number">2.4.2.2.</span> <span class="toc-text">修改读写权限</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#总结"><span class="toc-number">2.4.2.3.</span> <span class="toc-text">总结</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#超级用户"><span class="toc-number">2.5.</span> <span class="toc-text">超级用户</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#sudo"><span class="toc-number">2.5.1.</span> <span class="toc-text">sudo</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#组管理-终端命令"><span class="toc-number">2.6.</span> <span class="toc-text">组管理 终端命令</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#添加组"><span class="toc-number">2.6.1.</span> <span class="toc-text">添加组</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#删除组"><span class="toc-number">2.6.2.</span> <span class="toc-text">删除组</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#关于-cat-etc-group"><span class="toc-number">2.6.3.</span> <span class="toc-text">关于 cat /etc/group</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#修改文件-目录所属组"><span class="toc-number">2.6.4.</span> <span class="toc-text">修改文件/目录所属组</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#用户管理-终端命令"><span class="toc-number">2.7.</span> <span class="toc-text">用户管理 终端命令</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#创建用户-设置密码-删除用户"><span class="toc-number">2.7.1.</span> <span class="toc-text">创建用户/设置密码/删除用户</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#创建用户"><span class="toc-number">2.7.1.1.</span> <span class="toc-text">创建用户</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#设置密码"><span class="toc-number">2.7.1.2.</span> <span class="toc-text">设置密码</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#删除用户"><span class="toc-number">2.7.1.3.</span> <span class="toc-text">删除用户</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#useradd-的-m-选项"><span class="toc-number">2.7.1.3.1.</span> <span class="toc-text">useradd 的 -m 选项</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#passwd文件"><span class="toc-number">2.7.1.3.1.1.</span> <span class="toc-text">passwd文件</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#不添加-m-创建用户"><span class="toc-number">2.7.1.3.1.2.</span> <span class="toc-text">不添加 -m 创建用户</span></a></li></ol></li><li class="toc-item toc-level-5"><a class="toc-link" href="#删除用户-1"><span class="toc-number">2.7.1.3.2.</span> <span class="toc-text">删除用户</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#查看用户信息"><span class="toc-number">2.7.2.</span> <span class="toc-text">查看用户信息</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#用户代号-和-组代号"><span class="toc-number">2.7.2.1.</span> <span class="toc-text">用户代号 和 组代号</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#passwd-文件"><span class="toc-number">2.7.2.2.</span> <span class="toc-text">passwd 文件</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#group-文件"><span class="toc-number">2.7.2.3.</span> <span class="toc-text">group 文件</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#id命令"><span class="toc-number">2.7.2.4.</span> <span class="toc-text">id命令</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#who-与-whoami"><span class="toc-number">2.7.3.</span> <span class="toc-text">who 与 whoami</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#whoami"><span class="toc-number">2.7.3.1.</span> <span class="toc-text">whoami</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#who"><span class="toc-number">2.7.3.2.</span> <span class="toc-text">who</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#usermod"><span class="toc-number">2.7.4.</span> <span class="toc-text">usermod</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#回顾"><span class="toc-number">2.7.4.1.</span> <span class="toc-text">回顾</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#如果没有附加组"><span class="toc-number">2.7.4.2.</span> <span class="toc-text">如果没有附加组</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#设置用户的附加组"><span class="toc-number">2.7.4.3.</span> <span class="toc-text">设置用户的附加组</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#设置用户登陆的-shell"><span class="toc-number">2.7.4.4.</span> <span class="toc-text">设置用户登陆的 shell</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#shell的显示情况"><span class="toc-number">2.7.4.4.1.</span> <span class="toc-text">shell的显示情况</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#shell的显示情况-1"><span class="toc-number">2.7.4.4.2.</span> <span class="toc-text">shell的显示情况</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#which（重要）"><span class="toc-number">2.7.5.</span> <span class="toc-text">which（重要）</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#查找执行命令的位置"><span class="toc-number">2.7.5.1.</span> <span class="toc-text">查找执行命令的位置</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#usr-bin-passwd-文件"><span class="toc-number">2.7.5.1.1.</span> <span class="toc-text">/usr/bin/passwd 文件</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#etc-passwd-文件"><span class="toc-number">2.7.5.1.2.</span> <span class="toc-text">/etc/passwd 文件</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#查看执行命令的所在位置"><span class="toc-number">2.7.5.1.3.</span> <span class="toc-text">查看执行命令的所在位置</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#总结-1"><span class="toc-number">2.7.5.2.</span> <span class="toc-text">总结</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#bin-和-sbin"><span class="toc-number">2.7.5.2.1.</span> <span class="toc-text">bin 和 sbin</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#切换用户"><span class="toc-number">2.7.6.</span> <span class="toc-text">切换用户</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#su"><span class="toc-number">2.7.6.1.</span> <span class="toc-text">su</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#不使用-【-】"><span class="toc-number">2.7.6.1.1.</span> <span class="toc-text">不使用 【 - 】</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#使用-【-】"><span class="toc-number">2.7.6.1.2.</span> <span class="toc-text">使用 【 - 】</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#不接用户名"><span class="toc-number">2.7.6.1.3.</span> <span class="toc-text">不接用户名</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#exit"><span class="toc-number">2.7.6.1.4.</span> <span class="toc-text">exit</span></a></li></ol></li></ol></li></ol></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#目标"><span class="toc-number">1.</span> <span class="toc-text">目标</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#用户和权限的基本概念"><span class="toc-number">2.</span> <span class="toc-text">用户和权限的基本概念</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#组"><span class="toc-number">3.</span> <span class="toc-text">组</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#ls-l-扩展"><span class="toc-number">4.</span> <span class="toc-text">ls -l 扩展</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#硬链接数"><span class="toc-number">4.1.</span> <span class="toc-text">硬链接数</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#chmod-简单使用（重要）"><span class="toc-number">5.</span> <span class="toc-text">chmod 简单使用（重要）</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#修改文件权限"><span class="toc-number">5.1.</span> <span class="toc-text">修改文件权限</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#禁用所有权限"><span class="toc-number">5.1.1.</span> <span class="toc-text">禁用所有权限</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#恢复权限"><span class="toc-number">5.1.2.</span> <span class="toc-text">恢复权限</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#添加可执行权限"><span class="toc-number">5.1.3.</span> <span class="toc-text">添加可执行权限</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#修改目录权限"><span class="toc-number">5.2.</span> <span class="toc-text">修改目录权限</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#修改可执行权限"><span class="toc-number">5.2.1.</span> <span class="toc-text">修改可执行权限</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#修改读写权限"><span class="toc-number">5.2.2.</span> <span class="toc-text">修改读写权限</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#总结"><span class="toc-number">5.2.3.</span> <span class="toc-text">总结</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#超级用户"><span class="toc-number">6.</span> <span class="toc-text">超级用户</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#sudo"><span class="toc-number">6.1.</span> <span class="toc-text">sudo</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#组管理-终端命令"><span class="toc-number">7.</span> <span class="toc-text">组管理 终端命令</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#添加组"><span class="toc-number">7.1.</span> <span class="toc-text">添加组</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#删除组"><span class="toc-number">7.2.</span> <span class="toc-text">删除组</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#关于-cat-etc-group"><span class="toc-number">7.3.</span> <span class="toc-text">关于 cat /etc/group</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#修改文件-目录所属组"><span class="toc-number">7.4.</span> <span class="toc-text">修改文件/目录所属组</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#用户管理-终端命令"><span class="toc-number">8.</span> <span class="toc-text">用户管理 终端命令</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#创建用户-设置密码-删除用户"><span class="toc-number">8.1.</span> <span class="toc-text">创建用户/设置密码/删除用户</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#创建用户"><span class="toc-number">8.1.1.</span> <span class="toc-text">创建用户</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#设置密码"><span class="toc-number">8.1.2.</span> <span class="toc-text">设置密码</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#删除用户"><span class="toc-number">8.1.3.</span> <span class="toc-text">删除用户</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#useradd-的-m-选项"><span class="toc-number">8.1.3.1.</span> <span class="toc-text">useradd 的 -m 选项</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#passwd文件"><span class="toc-number">8.1.3.1.1.</span> <span class="toc-text">passwd文件</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#不添加-m-创建用户"><span class="toc-number">8.1.3.1.2.</span> <span class="toc-text">不添加 -m 创建用户</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#删除用户-1"><span class="toc-number">8.1.3.2.</span> <span class="toc-text">删除用户</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#查看用户信息"><span class="toc-number">8.2.</span> <span class="toc-text">查看用户信息</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#用户代号-和-组代号"><span class="toc-number">8.2.1.</span> <span class="toc-text">用户代号 和 组代号</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#passwd-文件"><span class="toc-number">8.2.2.</span> <span class="toc-text">passwd 文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#group-文件"><span class="toc-number">8.2.3.</span> <span class="toc-text">group 文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#id命令"><span class="toc-number">8.2.4.</span> <span class="toc-text">id命令</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#who-与-whoami"><span class="toc-number">8.3.</span> <span class="toc-text">who 与 whoami</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#whoami"><span class="toc-number">8.3.1.</span> <span class="toc-text">whoami</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#who"><span class="toc-number">8.3.2.</span> <span class="toc-text">who</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#usermod"><span class="toc-number">8.4.</span> <span class="toc-text">usermod</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#回顾"><span class="toc-number">8.4.1.</span> <span class="toc-text">回顾</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#如果没有附加组"><span class="toc-number">8.4.2.</span> <span class="toc-text">如果没有附加组</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#设置用户的附加组"><span class="toc-number">8.4.3.</span> <span class="toc-text">设置用户的附加组</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#设置用户登陆的-shell"><span class="toc-number">8.4.4.</span> <span class="toc-text">设置用户登陆的 shell</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#shell的显示情况"><span class="toc-number">8.4.4.1.</span> <span class="toc-text">shell的显示情况</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#shell的显示情况-1"><span class="toc-number">8.4.4.2.</span> <span class="toc-text">shell的显示情况</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#which（重要）"><span class="toc-number">8.5.</span> <span class="toc-text">which（重要）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#查找执行命令的位置"><span class="toc-number">8.5.1.</span> <span class="toc-text">查找执行命令的位置</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#usr-bin-passwd-文件"><span class="toc-number">8.5.1.1.</span> <span class="toc-text">/usr/bin/passwd 文件</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#etc-passwd-文件"><span class="toc-number">8.5.1.2.</span> <span class="toc-text">/etc/passwd 文件</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#查看执行命令的所在位置"><span class="toc-number">8.5.1.3.</span> <span class="toc-text">查看执行命令的所在位置</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#总结-1"><span class="toc-number">8.5.2.</span> <span class="toc-text">总结</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#bin-和-sbin"><span class="toc-number">8.5.2.1.</span> <span class="toc-text">bin 和 sbin</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#切换用户"><span class="toc-number">8.6.</span> <span class="toc-text">切换用户</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#su"><span class="toc-number">8.6.1.</span> <span class="toc-text">su</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#不使用-【-】"><span class="toc-number">8.6.1.1.</span> <span class="toc-text">不使用 【 - 】</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#使用-【-】"><span class="toc-number">8.6.1.2.</span> <span class="toc-text">使用 【 - 】</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#不接用户名"><span class="toc-number">8.6.1.3.</span> <span class="toc-text">不接用户名</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#exit"><span class="toc-number">8.6.1.4.</span> <span class="toc-text">exit</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#修改文件权限-1"><span class="toc-number">9.</span> <span class="toc-text">修改文件权限</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#chown"><span class="toc-number">9.1.</span> <span class="toc-text">chown</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#chgrp"><span class="toc-number">9.2.</span> <span class="toc-text">chgrp</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#chmod-扩展"><span class="toc-number">9.3.</span> <span class="toc-text">chmod 扩展</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#数字对应的权限"><span class="toc-number">9.3.1.</span> <span class="toc-text">数字对应的权限</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#chmod-演练目标"><span class="toc-number">9.3.2.</span> <span class="toc-text">chmod 演练目标</span></a></li></ol></li></ol></li></ol>
     </div>
     
     <div class="back-top iconfont-archer"></div>
@@ -2650,9 +2768,26 @@ height:50vh;
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 78
+        Total : 79
         </div>
         <!-- search  -->
         
@@ -2665,6 +2800,11 @@ height:50vh;
     
     <div class="archive-year"> 2019 </div>
     <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">05/06</span><a class="archive-post-title" href="/2019/05/06/系统信息相关命令/">系统信息相关命令</a>
+        </li>
     
     
         <li class="archive-post-item">
@@ -2818,12 +2958,12 @@ height:50vh;
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">04/22</span><a class="archive-post-title" href="/2019/04/22/入门例子创建/">入门例子创建</a>
+            <span class="archive-post-date">04/22</span><a class="archive-post-title" href="/2019/04/22/全局CSS样式-排版/">全局CSS样式-排版</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">04/22</span><a class="archive-post-title" href="/2019/04/22/全局CSS样式-排版/">全局CSS样式-排版</a>
+            <span class="archive-post-date">04/22</span><a class="archive-post-title" href="/2019/04/22/入门例子创建/">入门例子创建</a>
         </li>
     
     
@@ -2878,12 +3018,12 @@ height:50vh;
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">04/16</span><a class="archive-post-title" href="/2019/04/16/RIPv1基本配置/">RIPv1基本配置</a>
+            <span class="archive-post-date">04/16</span><a class="archive-post-title" href="/2019/04/16/环回接口（Loopback）/">环回接口（Loopback）</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">04/16</span><a class="archive-post-title" href="/2019/04/16/环回接口（Loopback）/">环回接口（Loopback）</a>
+            <span class="archive-post-date">04/16</span><a class="archive-post-title" href="/2019/04/16/RIPv1基本配置/">RIPv1基本配置</a>
         </li>
     
     
@@ -3078,9 +3218,9 @@ height:50vh;
     
         <span class="sidebar-tag-name" data-tags="安装教程"><span class="iconfont-archer"></span>安装教程</span>
     
-        <span class="sidebar-tag-name" data-tags="Cisco笔记"><span class="iconfont-archer"></span>Cisco笔记</span>
-    
         <span class="sidebar-tag-name" data-tags="PHP相关知识"><span class="iconfont-archer"></span>PHP相关知识</span>
+    
+        <span class="sidebar-tag-name" data-tags="Cisco笔记"><span class="iconfont-archer"></span>Cisco笔记</span>
     
         <span class="sidebar-tag-name" data-tags="Cisco强化学习"><span class="iconfont-archer"></span>Cisco强化学习</span>
     
@@ -3134,9 +3274,9 @@ height:50vh;
     
         <span class="sidebar-category-name" data-categories="教学"><span class="iconfont-archer"></span>教学</span>
     
-        <span class="sidebar-category-name" data-categories="Cisco"><span class="iconfont-archer"></span>Cisco</span>
-    
         <span class="sidebar-category-name" data-categories="PHP"><span class="iconfont-archer"></span>PHP</span>
+    
+        <span class="sidebar-category-name" data-categories="Cisco"><span class="iconfont-archer"></span>Cisco</span>
     
         <span class="sidebar-category-name" data-categories="素描"><span class="iconfont-archer"></span>素描</span>
     

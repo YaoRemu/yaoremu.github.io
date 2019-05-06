@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-05-05T12:51:14.862Z</updated>
+  <updated>2019-05-06T09:01:39.696Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>系统信息相关命令</title>
+    <link href="http://yoursite.com/2019/05/06/%E7%B3%BB%E7%BB%9F%E4%BF%A1%E6%81%AF%E7%9B%B8%E5%85%B3%E5%91%BD%E4%BB%A4/"/>
+    <id>http://yoursite.com/2019/05/06/系统信息相关命令/</id>
+    <published>2019-05-06T06:28:52.000Z</published>
+    <updated>2019-05-06T09:01:39.696Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;ul&gt;
+&lt;li&gt;本节内容主要是为了方便通过 &lt;strong&gt;远程终端维护服务器时&lt;/strong&gt;，查看服务器上当前 &lt;strong&gt;系统日期和时间 / 磁盘控件占用情况 /
+        
+      
+    
+    </summary>
+    
+      <category term="Python" scheme="http://yoursite.com/categories/Python/"/>
+    
+    
+      <category term="从零开始的Python学习" scheme="http://yoursite.com/tags/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E7%9A%84Python%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
   
   <entry>
     <title>模态框使用</title>
@@ -133,7 +160,7 @@
     <link href="http://yoursite.com/2019/05/03/%E7%94%A8%E6%88%B7%E6%9D%83%E9%99%90%E7%9B%B8%E5%85%B3%E5%91%BD%E4%BB%A4/"/>
     <id>http://yoursite.com/2019/05/03/用户权限相关命令/</id>
     <published>2019-05-03T09:35:49.000Z</published>
-    <updated>2019-05-05T10:10:36.009Z</updated>
+    <updated>2019-05-06T06:27:03.054Z</updated>
     
     <summary type="html">
     
@@ -515,32 +542,6 @@
         
         
           &lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;h1 id=&quot;目标&quot;&gt;&lt;a href=&quot;#目标&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="Python" scheme="http://yoursite.com/categories/Python/"/>
-    
-    
-      <category term="从零开始的Python学习" scheme="http://yoursite.com/tags/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E7%9A%84Python%E5%AD%A6%E4%B9%A0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Linux终端命令格式</title>
-    <link href="http://yoursite.com/2019/04/28/Linux%E7%BB%88%E7%AB%AF%E5%91%BD%E4%BB%A4%E6%A0%BC%E5%BC%8F/"/>
-    <id>http://yoursite.com/2019/04/28/Linux终端命令格式/</id>
-    <published>2019-04-28T04:37:52.000Z</published>
-    <updated>2019-04-28T06:39:09.782Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;h1 id=&quot;终端命令格式&quot;&gt;&lt;a href=&quot;#终端命令格式&quot; class=&quot;headerlink&quot; title=&quot;终端命令格式&quot;&gt;&lt;/a&gt;终端命令格式&lt;/h1&gt;&lt;pre&gt;&lt;code&gt;command [-options]
         
       
     
