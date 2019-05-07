@@ -273,7 +273,7 @@ height:50vh;
                 
                 
                     <div class="post-intro-read">
-                        <span>字数统计: <span class="post-count word-count">1.7k</span>阅读时长: <span class="post-count reading-time">5 min</span></span>
+                        <span>字数统计: <span class="post-count word-count">4.9k</span>阅读时长: <span class="post-count reading-time">17 min</span></span>
                     </div>
                 
                 <div class="post-intro-meta">
@@ -532,6 +532,282 @@ height:50vh;
 <li><p>一旦使用相对路径建立的软连接，这个软链接就不能被移动位置</p>
 </li>
 </ul>
+<h2 id="硬链接简介（知道）"><a href="#硬链接简介（知道）" class="headerlink" title="硬链接简介（知道）"></a>硬链接简介（知道）</h2><p>再使用 ln 创建链接时，如果 <strong>没有 -s 选项</strong>，会创建一个 <strong>硬链接</strong>，而不是软链接</p>
+<p><strong>硬链接演练</strong></p>
+<h3 id="第一步"><a href="#第一步" class="headerlink" title="第一步"></a>第一步</h3><p>1.在 ~/Desktop/demo 目录下建立 ~/Desktop/demo/b/c/01.py 的硬链接 01_hard</p>
+<p>首先使用 tree 查看文件目录结构，现在在 demo目录下 有两个软链接，这两个软链接 都是指向 01.py，同时使用 相对路径 的软链接并不能正常的工作，这是demo 目录下 的文件情况。 接下来使用 ln 命令 在 demo目录下 建立 01.py的硬链接</p>
+<p><img src="http://ww1.sinaimg.cn/large/8c0b2220gy1g2sg5nakxuj20gc0610ur.jpg" alt></p>
+<p>使用 ln 命令 建立硬链接，并且使用 tree 查看目录的结构，可以看到 demo 目录下 多了一 个 绿色的 01_hard，<strong>注意：</strong> 01_hard 后面并没有键头</p>
+<p><img src="http://ww1.sinaimg.cn/large/8c0b2220gy1g2sg9rpfl0j20mq07877k.jpg" alt></p>
+<h3 id="第二步"><a href="#第二步" class="headerlink" title="第二步"></a>第二步</h3><p>2.使用 ls -l 查看文件的 <strong>硬链接数</strong>（硬链接–有多少方式可以访问文件或者目录）</p>
+<p>使用 ls -l 查看当前目录的情况，可以看到之前两个软链接后面都有键头，这个键头是指向链接文件的位置，而 01_hard 后面并没有键头，看起来就像一个正常的文件</p>
+<p><img src="http://ww1.sinaimg.cn/large/8c0b2220gy1g2sgbrhq74j20mw03wadm.jpg" alt></p>
+<p>使用 cat 查看 硬链接文件的内容，可以看到同样能够输出 源文件的信息</p>
+<p><img src="http://ww1.sinaimg.cn/large/8c0b2220gy1g2sgfw5j2kj20e302sdgz.jpg" alt></p>
+<h3 id="第三步"><a href="#第三步" class="headerlink" title="第三步"></a>第三步</h3><p>3.<strong>删除</strong> ~/Desktop/demo/b/c/01.py ，并且使用 tree 来确认 demo 目录下的三个链接文件</p>
+<p>使用 rm 删除 源文件，并且使用 tree命令 查看文件目录的结构，可以看到 c 目录下的 01.py 已经不见了，同时之前建立的两个软链接都变成了 红色，但是 01_hard 仍然是 绿的</p>
+<p><img src="http://ww1.sinaimg.cn/large/8c0b2220gy1g2sggb1sgzj20fp06owh3.jpg" alt></p>
+<p>使用 cat文件 查看三个链接内容</p>
+<ul>
+<li>硬链接文件 依旧 正常运行</li>
+<li>软链接的绝对路径：提示文件或目录不存在，因为软链接指向的 01.py 已经被删除</li>
+</ul>
+<p><img src="http://ww1.sinaimg.cn/large/8c0b2220gy1g2sgofamhoj20ec03ujtj.jpg" alt></p>
+<p>使用 ls 确认当前目录的文件情况，可以看到两个软链接都变红了，但是硬链接文件 还是绿的，而且硬链接数变成了数字 1 ，这个就是硬链接的作用</p>
+<p><img src="http://ww1.sinaimg.cn/large/8c0b2220gy1g2sgsc1r6hj20my03xq6k.jpg" alt></p>
+<blockquote>
+<p><strong>硬链接的作用：</strong> 我们建立了一个 硬链接，当我们把硬链接的源文件删除之后，硬链接的文件内容并不会受到影响，只有软链接的内容才会受到影响</p>
+</blockquote>
+<h2 id="硬链接和软链接的区别"><a href="#硬链接和软链接的区别" class="headerlink" title="硬链接和软链接的区别"></a>硬链接和软链接的区别</h2><p><img src="http://ww1.sinaimg.cn/large/8c0b2220gy1g2sgzmdaroj20gd05ngn7.jpg" alt></p>
+<blockquote>
+<p>在 Linux 中，<strong>文件名</strong> 和 <strong>文件的数据</strong> 是 <strong>分开存储</strong> 的</p>
+</blockquote>
+<h3 id="文件和文件名分开存储的概念"><a href="#文件和文件名分开存储的概念" class="headerlink" title="文件和文件名分开存储的概念"></a>文件和文件名分开存储的概念</h3><p>源文件 是用来存储数据，这些数据是保存在磁盘上的一个位置，想要访问这些数据，只需要使用保存在磁盘上 另外一个位置 的 <strong>文件名</strong>， 就可以访问到文件中的数据了。 即 <strong>文件名（链接文件） 和 文件数据 是保存在磁盘上不同位置的</strong></p>
+<h3 id="软链接的概念"><a href="#软链接的概念" class="headerlink" title="软链接的概念"></a>软链接的概念</h3><p>建立软链接的时候，同样会生成一个软链接的文件名，<strong>文件中保存着链接到源文件的完整路径</strong>，通过这个完整路径就可以访问到链接文件的文件数据； 软链接类似于 Window 中的 快捷方式，通过 快捷方式 就可以找到链接部分的 完整路径，通过这个路径就可以访问文件中存储的数据； 所以<strong>删除了源文件，对应的软链接 也就失效了</strong></p>
+<h3 id="硬链接的概念"><a href="#硬链接的概念" class="headerlink" title="硬链接的概念"></a>硬链接的概念</h3><p>硬链接就是文件的另外一个文件名； 譬如文件名 是文件数据 的 小名，我们无论通过大名 或者 小名，都可以访问到 存储在磁盘中另外一个 位置 的文件数据； 即便我们删除了 源文件，但是因为硬链接的存在，所以文件数据仍然会保留，只有把一个文件的所有文件名，也就是<strong>所有硬链接全部删除之后，这个文件数据才会真的从磁盘上删除</strong></p>
+<h1 id="打包压缩"><a href="#打包压缩" class="headerlink" title="打包压缩"></a>打包压缩</h1><ul>
+<li><strong>打包压缩</strong> 是日常工作中备份文件的一种方式</li>
+<li><p>在不同操作系统中，常用的 打包压缩 方式是不同的</p>
+<ul>
+<li>Windows 常用 rar</li>
+<li>Mac 常用 zip</li>
+<li>Linux 常用 tar.gz</li>
+</ul>
+</li>
+</ul>
+<h2 id="打包-解包"><a href="#打包-解包" class="headerlink" title="打包/解包"></a>打包/解包</h2><ul>
+<li>tar 是 Linux 中最常用的 <strong>备份工具</strong>，此命令可以 把一系列文件 打包到一个 大文件夹中，也可以把一个 包的大文件夹恢复成一系列文件：</li>
+</ul>
+<blockquote>
+<p>tar 只负责打包不负责压缩</p>
+</blockquote>
+<p><strong>tar命令格式如下：</strong></p>
+<ul>
+<li><p>打包命令</p>
+<ul>
+<li>tar -cvf 打包文件.tar 被打包的文件/路径 …</li>
+</ul>
+</li>
+<li><p>解包文件</p>
+<ul>
+<li>tar -xvf 打包文件.tar</li>
+</ul>
+</li>
+</ul>
+<h3 id="tar-选项说明"><a href="#tar-选项说明" class="headerlink" title="tar 选项说明"></a>tar 选项说明</h3><table>
+<thead>
+<tr>
+<th style="text-align:left">选项</th>
+<th style="text-align:left">含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">c</td>
+<td style="text-align:left">生成档案文件，创建打包文件</td>
+</tr>
+<tr>
+<td style="text-align:left">x</td>
+<td style="text-align:left">解开档案文件</td>
+</tr>
+<tr>
+<td style="text-align:left">v</td>
+<td style="text-align:left">列出归档解档的详细过程，显示进度</td>
+</tr>
+<tr>
+<td style="text-align:left">f</td>
+<td style="text-align:left">指定档案文件名称 ，<strong>f后面一定是 .tar 文件，所以必须放选项最后</strong></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>注意： f 选项必须放在最后，其他选项顺序可以随意</p>
+</blockquote>
+<h4 id="打包解包演练"><a href="#打包解包演练" class="headerlink" title="打包解包演练"></a>打包解包演练</h4><h5 id="第一步-1"><a href="#第一步-1" class="headerlink" title="第一步"></a>第一步</h5><p>1.删除桌面下的所有内容</p>
+<p>使用 rm 命令 删除桌面 上的文件，并且使用 ls 命令查看当前目录，可以看到 当前目录为空</p>
+<p><img src="http://ww1.sinaimg.cn/large/8c0b2220gy1g2sj5d1j0uj20ba01pwf4.jpg" alt></p>
+<h5 id="第二步-1"><a href="#第二步-1" class="headerlink" title="第二步"></a>第二步</h5><p>2.在桌面下新建三个空白文件 01.py、 02.py、 03.py</p>
+<p>使用 touch 命令分别创建 三个文件 </p>
+<p><img src="http://ww1.sinaimg.cn/large/8c0b2220gy1g2sj6dez4wj20ci02c3zy.jpg" alt></p>
+<h5 id="第三步-1"><a href="#第三步-1" class="headerlink" title="第三步"></a>第三步</h5><p>3.将着三个文件打一个 py.tar 的包</p>
+<p>使用 tar 命令 打一个 py.tar 包</p>
+<p><img src="http://ww1.sinaimg.cn/large/8c0b2220gy1g2sj7rmivsj20hw027js3.jpg" alt></p>
+<p>并且桌面上出现了一个 py .tar </p>
+<p><img src="http://ww1.sinaimg.cn/large/8c0b2220gy1g2sj8i8cjij203201r0sm.jpg" alt></p>
+<p>我们用 ls 命令 查看 桌面上的文件信息，可以看到 py.tar 这个文件有 10k，因为 tar 这个命令 在打包的时候不负责压缩</p>
+<p><img src="http://ww1.sinaimg.cn/large/8c0b2220gy1g2sjab0s8uj20h103fack.jpg" alt></p>
+<h5 id="第四步"><a href="#第四步" class="headerlink" title="第四步"></a>第四步</h5><p>4.新建 tar 目录，并且将 py。tar 移动到 tar 目录下</p>
+<p>使用 mkdir 命令 新建一个 tar 目录，此时桌面上多了一个 tar 目录</p>
+<p><img src="http://ww1.sinaimg.cn/large/8c0b2220gy1g2sjcqmtw6j20b500omxd.jpg" alt></p>
+<p>使用 mv 将 py.tar 文件移动到 新建的目录下，并且用 tree 来检查当前的文件结构，可以看到 py.tar 已经移动到 tar 目录里</p>
+<p><img src="http://ww1.sinaimg.cn/large/8c0b2220gy1g2sjfff7jwj20cx05habg.jpg" alt></p>
+<h5 id="第五步"><a href="#第五步" class="headerlink" title="第五步"></a>第五步</h5><p>5.解包 py.tar</p>
+<p>解包前使用 cd 命令切换到 tar 目录下</p>
+<p><img src="http://ww1.sinaimg.cn/large/8c0b2220gy1g2sjh4jb76j20ag00lt8u.jpg" alt></p>
+<p>使用 tar 命令 进行解包，可以看到有三个文件的显示</p>
+<p><img src="http://ww1.sinaimg.cn/large/8c0b2220gy1g2sjhz4j7cj20ej02974w.jpg" alt></p>
+<p>使用 ls 查看当前目录 确认，可以看到这三个文件已经被 解包 出来了</p>
+<p><img src="http://ww1.sinaimg.cn/large/8c0b2220gy1g2sjizj21dj20hk03eacn.jpg" alt></p>
+<h2 id="压缩-解压缩"><a href="#压缩-解压缩" class="headerlink" title="压缩/解压缩"></a>压缩/解压缩</h2><h3 id="gzip"><a href="#gzip" class="headerlink" title="gzip"></a>gzip</h3><ul>
+<li>tar 与 gzip 命令结合可以实现文件 <strong>打包和压缩</strong><ul>
+<li>tar 只负责打包文件，但不压缩</li>
+<li>用 gzip 压缩 tar 打包后的文件，其扩展名一般用 xxx.tar.gz</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>在 Linux 中，最常见的压缩文件格式就是 xxx<strong>.tar.gz</strong></p>
+</blockquote>
+<ul>
+<li>在 tar 命令中有一个选项 -z 可以调用 gzip ，从而可以方便的实现压缩和解压缩的功能</li>
+</ul>
+<p><strong>命令格式如下：</strong></p>
+<ul>
+<li><p>压缩文件</p>
+<ul>
+<li>tar -zcvf 打包文件.tar.gz 被解压的文件/路径</li>
+</ul>
+</li>
+<li><p>解压缩文件</p>
+<ul>
+<li>tar -zxvf 打包文件.tar.gz</li>
+</ul>
+</li>
+<li><p>解压缩到指定路径</p>
+<ul>
+<li>tar -zxvf 打包文件.tar.gz -C 目标路径</li>
+</ul>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">选项</th>
+<th style="text-align:left">含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">-C</td>
+<td style="text-align:left">解压缩到指定目录， 注意：要解压缩的目录必须存在</td>
+</tr>
+</tbody>
+</table>
+<h4 id="压缩解压缩演练"><a href="#压缩解压缩演练" class="headerlink" title="压缩解压缩演练"></a>压缩解压缩演练</h4><h5 id="压缩文件"><a href="#压缩文件" class="headerlink" title="压缩文件"></a>压缩文件</h5><p>使用 tar -z 压缩文件，并且使用 ls 命令查看 文件信息</p>
+<p><img src="http://ww1.sinaimg.cn/large/8c0b2220gy1g2skadwdu2j20hb06a0wo.jpg" alt></p>
+<p>可以看到 压缩的文件只有 134 个字节，而打包文件大小有 10k，小了非常非常多</p>
+<p><img src="http://ww1.sinaimg.cn/large/8c0b2220gy1g2skcmftkjj20g004d41z.jpg" alt></p>
+<h5 id="解压缩文件"><a href="#解压缩文件" class="headerlink" title="解压缩文件"></a>解压缩文件</h5><p>首先 使用 mkdir 创建一个 gz 目录，并且使用 mv命令 将压缩文件 py.tar.gz 移动到 gz目录 下，并且使用 tree 命令查看当前的 目录结构，可以看到压缩文件已经移动到目录下</p>
+<p><img src="http://ww1.sinaimg.cn/large/8c0b2220gy1g2skfbjiecj20en097mzj.jpg" alt></p>
+<p>接下来 切换到 gz 目录下，并且 使用 tar 命令 解压缩文件，然后使用 ls 查看 当前目录信息，可以看到 解压出来的 三个文件</p>
+<p><img src="http://ww1.sinaimg.cn/large/8c0b2220gy1g2skgrjfhij20hi05xdjk.jpg" alt></p>
+<h3 id="bzip2（two）"><a href="#bzip2（two）" class="headerlink" title="bzip2（two）"></a>bzip2（two）</h3><ul>
+<li><p>tar 与 bzip2 命令 结合可以使用实现文件 <strong>打包和压缩</strong>（用法和 gzip 一样）</p>
+<ul>
+<li>tar 只负责打包文件，但不压缩</li>
+<li>用 bzip2 压缩 tar 打包后的文件，其扩展名一般用 xxx.tar.bz2</li>
+</ul>
+</li>
+<li><p>在 tar 命令中有一个 选项 -j 可以通过调用 bzip2，从而可以方便的实现压缩和解压缩的功能</p>
+</li>
+</ul>
+<p><strong>命令格式如下：</strong></p>
+<ul>
+<li>压缩文件<ul>
+<li>tar -jcvf 打包文件.tar.bz2 解压缩的文件/路径…</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>解压缩文件<ul>
+<li>tar -jxvf 打包文件.tar.bz2 </li>
+</ul>
+</li>
+</ul>
+<h4 id="压缩解压缩演练-1"><a href="#压缩解压缩演练-1" class="headerlink" title="压缩解压缩演练"></a>压缩解压缩演练</h4><h5 id="压缩文件-1"><a href="#压缩文件-1" class="headerlink" title="压缩文件"></a>压缩文件</h5><p>使用 tar -j 命令 压缩桌面上的三个文件，并且使用 ls 查看文件的信息，对比 使用 gzip方式 压缩的文件，可以看到这两种压缩的方式基本差不多</p>
+<p><img src="http://ww1.sinaimg.cn/large/8c0b2220gy1g2skzcj6xij20gl074tdr.jpg" alt></p>
+<h5 id="解压缩文件-1"><a href="#解压缩文件-1" class="headerlink" title="解压缩文件"></a>解压缩文件</h5><table>
+<thead>
+<tr>
+<th style="text-align:left">选项</th>
+<th style="text-align:left">含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">-C</td>
+<td style="text-align:left">解压缩到指定目录， 注意：要 <strong>解压缩的目录必须存在</strong></td>
+</tr>
+</tbody>
+</table>
+<p>eg：如果指定目录不存在，终端会报错</p>
+<p><img src="http://ww1.sinaimg.cn/large/8c0b2220gy1g2sl9ha4kaj20fm026gne.jpg" alt></p>
+<blockquote>
+<p>这种方式适用于 gzip 压缩方式，也同样适用于 bzip2压缩方式</p>
+</blockquote>
+<p>首先使用 mkdir 命令 创建一个 bz2 目录，并且使用 tree 查看当前 目录结构，可以看到 bz2 目录 下没有任何的内容</p>
+<p><img src="http://ww1.sinaimg.cn/large/8c0b2220gy1g2sl47r5hhj20b00batb7.jpg" alt></p>
+<p>然后再 使用 tar 命令 解压缩文件 并且将 解压缩文件移动带 bz2目录</p>
+<p><img src="http://ww1.sinaimg.cn/large/8c0b2220gy1g2sl5rf82jj20hm029wf7.jpg" alt></p>
+<p>再使用 tree 来确认 bz 目录下是否有 解压后的文件，可以看到对应的文件，即解压成功</p>
+<p><img src="http://ww1.sinaimg.cn/large/8c0b2220gy1g2sl79p16pj208m0cnmzh.jpg" alt></p>
+<h1 id="软件安装"><a href="#软件安装" class="headerlink" title="软件安装"></a>软件安装</h1><h2 id="通过-apt安装-卸载-软件"><a href="#通过-apt安装-卸载-软件" class="headerlink" title="通过 apt安装/卸载 软件"></a>通过 apt安装/卸载 软件</h2><ul>
+<li>apt是 Advanced Packaging Tool，是 Linux 下的一款 <strong>安装包管理工具</strong></li>
+<li>可以再终端中方便的 <strong>安装/卸载/更新</strong> 软件包</li>
+</ul>
+<p><strong>命令格式如下：</strong></p>
+<ul>
+<li><p>安装软件</p>
+<ul>
+<li>sudo apt <strong>install</strong> 软件包</li>
+</ul>
+</li>
+<li><p>卸载软装</p>
+<ul>
+<li>sudo apt <strong>remove</strong> 软件名</li>
+</ul>
+</li>
+<li><p>更新已安装的包</p>
+<ul>
+<li>sudo apt <strong>upgrade</strong></li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p><strong>sudo 的作用</strong>： 是 让我们以 root 身份来执行对系统的维护和管理工作，在 Linux 中，我们平时都是以标准的用户来使用的，而标准用户都是在自己家目录中活动。 但是当我们想要<strong>执行一些系统维护管理工作的时候，就需要使用 sudo 以 root 身份来执行</strong>。 如果我们想安装一个软件或者卸载一个软件，就意味着当这个软件安装完成之后，系统中所有用户都 能够使用这个软件，因此安装软件也好，卸载软件也好，都<strong>应该在前面接上 一个 sudo</strong></p>
+</blockquote>
+<h3 id="安装演练"><a href="#安装演练" class="headerlink" title="安装演练"></a>安装演练</h3><h4 id="小火车提示"><a href="#小火车提示" class="headerlink" title="小火车提示"></a>小火车提示</h4><ul>
+<li>sudo apt install sl</li>
+</ul>
+<p>使用 apt 命令 安装 软件，当重新回到终端的命令提示之后，这一款软件就安装完成</p>
+<p><img src="http://ww1.sinaimg.cn/large/8c0b2220gy1g2sm0myyfuj20mw0b4ti0.jpg" alt></p>
+<p>接下来输入 sl 测试 软件的效果，可以看到 屏幕被清空并且 有一个小火车从屏幕右侧跑到屏幕左侧</p>
+<p><img src="http://ww1.sinaimg.cn/large/8c0b2220gy1g2sm2q3hayj20ln09z42h.jpg" alt></p>
+<h4 id="查看进程排名软件"><a href="#查看进程排名软件" class="headerlink" title="查看进程排名软件"></a>查看进程排名软件</h4><ul>
+<li>sudo apt install htop</li>
+</ul>
+<blockquote>
+<p>之前学习过，top 命令 可以查看当前系统中所有正在执行进程的 CPU 占用情况 和 内存占用情况</p>
+</blockquote>
+<p>使用 apt 命令 安装 软件</p>
+<p><img src="http://ww1.sinaimg.cn/large/8c0b2220gy1g2sm66yzfuj20l109z7cs.jpg" alt></p>
+<p>接下来敲入 htop 查看 安装的软件，可以看到一个彩色的界面出来了，会告诉我们 当前 CPU 的 情况、 内存的情况以及当前有多少个任务在执行，并且把 CPU、 内存 占用率比较高的程序显示在最前面</p>
+<p><img src="http://ww1.sinaimg.cn/mw690/8c0b2220gy1g2sm76gxavj20ms0cxqj7.jpg" alt></p>
+<p><strong>退出 按 q 即可</strong></p>
+<h2 id="配置软件源"><a href="#配置软件源" class="headerlink" title="配置软件源"></a>配置软件源</h2><p><img src="http://ww1.sinaimg.cn/mw690/8c0b2220gy1g2smeu7ocaj20gf07g3z8.jpg" alt></p>
+<p><strong>安装软件过程：</strong> Ubuntu 提供了一个主服务器，主服务器<strong>提供了所有可以通过 apt 命令 安装程序的软件安装包</strong>，当 使用 apt 来安装软件的时候，apt 会首先默认再主服务器上查找有关安装包，如果找到之后，apt就会先把安装包下载到本地，下载完成之后再开始执行安装的动作，安装完成之后，就可以使用这款软件了</p>
+<ul>
+<li>如果希望在 Ubuntu 中安装软件更加快速，可以通过设置镜像源，选择一个访问网速更快的服务器，来提供软件下载/安装服务</li>
+<li>提示： 更换服务器之后，需要一个相对比较长时间的跟新过程，需要耐心等待。 更新完成后，再安装软件都会从新设置的服务器下载软件了</li>
+</ul>
+<blockquote>
+<p><strong>镜像源</strong>，就是所有服务器的<strong>内容都是相同的（镜像）</strong>，但是根据<strong>所在位置不同</strong>，国内服务器通常速度会快一些</p>
+</blockquote>
+<p>###设置镜像源</p>
+<h4 id="图形界面设置"><a href="#图形界面设置" class="headerlink" title="图形界面设置"></a>图形界面设置</h4><p>右上角->系统设置-><strong>软件和更新</strong>->设置下载自->其他站点->中国-><strong>选择最佳服务器</strong></p>
+<p><img src="http://ww1.sinaimg.cn/mw690/8c0b2220gy1g2smm7s6o7j20fx0bejv1.jpg" alt></p>
+<p>当我们更新了镜像源之后，需要做一个 <strong>重新载入</strong> 的动作，这个重新载入的动作时间比较长，需要耐心等待 从 新的服务器把所有软件源的信息做一个统一的更新，当所有软件源更新完毕后，我们以后下载的软件，就会从 新的服务器下载，而且速度会非常快</p>
+<p><img src="http://ww1.sinaimg.cn/mw690/8c0b2220gy1g2smpktn9gj20e7057jsj.jpg" alt></p>
 
     </article>
     <!-- license  -->
@@ -540,13 +816,18 @@ height:50vh;
             <p>原文作者：<a href="http://yoursite.com">YaoRemu</a>
             </p><p>原文链接：<a href="http://yoursite.com/2019/05/06/其他命令/">http://yoursite.com/2019/05/06/其他命令/</a>
             </p><p>发表日期：<a href="http://yoursite.com/2019/05/06/其他命令/">May 6th 2019, 5:08:34 pm</a>
-            </p><p>更新日期：<a href="http://yoursite.com/2019/05/06/其他命令/">May 6th 2019, 7:22:16 pm</a>
+            </p><p>更新日期：<a href="http://yoursite.com/2019/05/06/其他命令/">May 7th 2019, 12:16:39 pm</a>
             </p><p>版权声明：本文采用<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可</p>
         </div>
     
     <!-- paginator  -->
     <ul class="post-paginator">
         <li class="next">
+            
+                <div class="nextSlogan">Next Post</div>
+                <a href="/2019/05/07/认识Python/" title="认识Python">
+                    <div class="nextTitle">认识Python</div>
+                </a>
             
         </li>
         <li class="previous">
@@ -709,7 +990,7 @@ height:50vh;
         <div class="toc-catalog">
             <span class="iconfont-archer catalog-icon"></span><span>CATALOG</span>
         </div>
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#目标"><span class="toc-number">1.</span> <span class="toc-text">目标</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#find-查找文件"><span class="toc-number">2.</span> <span class="toc-text">find - 查找文件</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#演练"><span class="toc-number">2.1.</span> <span class="toc-text">演练</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#ln-文件的软链接"><span class="toc-number">3.</span> <span class="toc-text">ln - 文件的软链接</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#演练目标"><span class="toc-number">3.1.</span> <span class="toc-text">演练目标</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#第一步-移动文件"><span class="toc-number">3.1.1.</span> <span class="toc-text">第一步 移动文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#第二步-创建链接"><span class="toc-number">3.1.2.</span> <span class="toc-text">第二步 创建链接</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#相对路径"><span class="toc-number">3.1.2.1.</span> <span class="toc-text">相对路径</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#绝对路径"><span class="toc-number">3.1.2.2.</span> <span class="toc-text">绝对路径</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#第三步-链接的区别"><span class="toc-number">3.1.3.</span> <span class="toc-text">第三步 链接的区别</span></a></li></ol></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#目标"><span class="toc-number">1.</span> <span class="toc-text">目标</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#find-查找文件"><span class="toc-number">2.</span> <span class="toc-text">find - 查找文件</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#演练"><span class="toc-number">2.1.</span> <span class="toc-text">演练</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#ln-文件的软链接"><span class="toc-number">3.</span> <span class="toc-text">ln - 文件的软链接</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#演练目标"><span class="toc-number">3.1.</span> <span class="toc-text">演练目标</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#第一步-移动文件"><span class="toc-number">3.1.1.</span> <span class="toc-text">第一步 移动文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#第二步-创建链接"><span class="toc-number">3.1.2.</span> <span class="toc-text">第二步 创建链接</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#相对路径"><span class="toc-number">3.1.2.1.</span> <span class="toc-text">相对路径</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#绝对路径"><span class="toc-number">3.1.2.2.</span> <span class="toc-text">绝对路径</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#第三步-链接的区别"><span class="toc-number">3.1.3.</span> <span class="toc-text">第三步 链接的区别</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#硬链接简介（知道）"><span class="toc-number">3.2.</span> <span class="toc-text">硬链接简介（知道）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#第一步"><span class="toc-number">3.2.1.</span> <span class="toc-text">第一步</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#第二步"><span class="toc-number">3.2.2.</span> <span class="toc-text">第二步</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#第三步"><span class="toc-number">3.2.3.</span> <span class="toc-text">第三步</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#硬链接和软链接的区别"><span class="toc-number">3.3.</span> <span class="toc-text">硬链接和软链接的区别</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#文件和文件名分开存储的概念"><span class="toc-number">3.3.1.</span> <span class="toc-text">文件和文件名分开存储的概念</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#软链接的概念"><span class="toc-number">3.3.2.</span> <span class="toc-text">软链接的概念</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#硬链接的概念"><span class="toc-number">3.3.3.</span> <span class="toc-text">硬链接的概念</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#打包压缩"><span class="toc-number">4.</span> <span class="toc-text">打包压缩</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#打包-解包"><span class="toc-number">4.1.</span> <span class="toc-text">打包/解包</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#tar-选项说明"><span class="toc-number">4.1.1.</span> <span class="toc-text">tar 选项说明</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#打包解包演练"><span class="toc-number">4.1.1.1.</span> <span class="toc-text">打包解包演练</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#第一步-1"><span class="toc-number">4.1.1.1.1.</span> <span class="toc-text">第一步</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#第二步-1"><span class="toc-number">4.1.1.1.2.</span> <span class="toc-text">第二步</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#第三步-1"><span class="toc-number">4.1.1.1.3.</span> <span class="toc-text">第三步</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#第四步"><span class="toc-number">4.1.1.1.4.</span> <span class="toc-text">第四步</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#第五步"><span class="toc-number">4.1.1.1.5.</span> <span class="toc-text">第五步</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#压缩-解压缩"><span class="toc-number">4.2.</span> <span class="toc-text">压缩/解压缩</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#gzip"><span class="toc-number">4.2.1.</span> <span class="toc-text">gzip</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#压缩解压缩演练"><span class="toc-number">4.2.1.1.</span> <span class="toc-text">压缩解压缩演练</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#压缩文件"><span class="toc-number">4.2.1.1.1.</span> <span class="toc-text">压缩文件</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#解压缩文件"><span class="toc-number">4.2.1.1.2.</span> <span class="toc-text">解压缩文件</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#bzip2（two）"><span class="toc-number">4.2.2.</span> <span class="toc-text">bzip2（two）</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#压缩解压缩演练-1"><span class="toc-number">4.2.2.1.</span> <span class="toc-text">压缩解压缩演练</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#压缩文件-1"><span class="toc-number">4.2.2.1.1.</span> <span class="toc-text">压缩文件</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#解压缩文件-1"><span class="toc-number">4.2.2.1.2.</span> <span class="toc-text">解压缩文件</span></a></li></ol></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#软件安装"><span class="toc-number">5.</span> <span class="toc-text">软件安装</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#通过-apt安装-卸载-软件"><span class="toc-number">5.1.</span> <span class="toc-text">通过 apt安装/卸载 软件</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#安装演练"><span class="toc-number">5.1.1.</span> <span class="toc-text">安装演练</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#小火车提示"><span class="toc-number">5.1.1.1.</span> <span class="toc-text">小火车提示</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#查看进程排名软件"><span class="toc-number">5.1.1.2.</span> <span class="toc-text">查看进程排名软件</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#配置软件源"><span class="toc-number">5.2.</span> <span class="toc-text">配置软件源</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#图形界面设置"><span class="toc-number">5.2.0.1.</span> <span class="toc-text">图形界面设置</span></a></li></ol></li></ol></li></ol>
     </div>
     
     <div class="back-top iconfont-archer"></div>
@@ -2142,9 +2423,28 @@ height:50vh;
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 80
+        Total : 81
         </div>
         <!-- search  -->
         
@@ -2157,6 +2457,11 @@ height:50vh;
     
     <div class="archive-year"> 2019 </div>
     <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">05/07</span><a class="archive-post-title" href="/2019/05/07/认识Python/">认识Python</a>
+        </li>
     
     
         <li class="archive-post-item">
@@ -2275,12 +2580,12 @@ height:50vh;
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">04/27</span><a class="archive-post-title" href="/2019/04/27/常用Linux命令的基本使用/">常用Linux命令的基本使用</a>
+            <span class="archive-post-date">04/27</span><a class="archive-post-title" href="/2019/04/27/Ubuntu图形界面入门/">Ubuntu图形界面入门</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">04/27</span><a class="archive-post-title" href="/2019/04/27/Ubuntu图形界面入门/">Ubuntu图形界面入门</a>
+            <span class="archive-post-date">04/27</span><a class="archive-post-title" href="/2019/04/27/常用Linux命令的基本使用/">常用Linux命令的基本使用</a>
         </li>
     
     
@@ -2320,12 +2625,12 @@ height:50vh;
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">04/22</span><a class="archive-post-title" href="/2019/04/22/全局CSS样式-排版/">全局CSS样式-排版</a>
+            <span class="archive-post-date">04/22</span><a class="archive-post-title" href="/2019/04/22/入门例子创建/">入门例子创建</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">04/22</span><a class="archive-post-title" href="/2019/04/22/入门例子创建/">入门例子创建</a>
+            <span class="archive-post-date">04/22</span><a class="archive-post-title" href="/2019/04/22/全局CSS样式-排版/">全局CSS样式-排版</a>
         </li>
     
     
@@ -2380,12 +2685,12 @@ height:50vh;
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">04/16</span><a class="archive-post-title" href="/2019/04/16/环回接口（Loopback）/">环回接口（Loopback）</a>
+            <span class="archive-post-date">04/16</span><a class="archive-post-title" href="/2019/04/16/RIPv1基本配置/">RIPv1基本配置</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">04/16</span><a class="archive-post-title" href="/2019/04/16/RIPv1基本配置/">RIPv1基本配置</a>
+            <span class="archive-post-date">04/16</span><a class="archive-post-title" href="/2019/04/16/环回接口（Loopback）/">环回接口（Loopback）</a>
         </li>
     
     
@@ -2455,12 +2760,12 @@ height:50vh;
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">04/10</span><a class="archive-post-title" href="/2019/04/10/HTML5与HTML4区别/">HTML5与HTML4区别</a>
+            <span class="archive-post-date">04/10</span><a class="archive-post-title" href="/2019/04/10/前端学习-全局属性/">全局属性</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">04/10</span><a class="archive-post-title" href="/2019/04/10/前端学习-全局属性/">全局属性</a>
+            <span class="archive-post-date">04/10</span><a class="archive-post-title" href="/2019/04/10/HTML5与HTML4区别/">HTML5与HTML4区别</a>
         </li>
     
     
@@ -2580,11 +2885,11 @@ height:50vh;
     
         <span class="sidebar-tag-name" data-tags="Cisco笔记"><span class="iconfont-archer"></span>Cisco笔记</span>
     
-        <span class="sidebar-tag-name" data-tags="安装教程"><span class="iconfont-archer"></span>安装教程</span>
+        <span class="sidebar-tag-name" data-tags="PHP相关知识"><span class="iconfont-archer"></span>PHP相关知识</span>
     
         <span class="sidebar-tag-name" data-tags="Cisco强化学习"><span class="iconfont-archer"></span>Cisco强化学习</span>
     
-        <span class="sidebar-tag-name" data-tags="PHP相关知识"><span class="iconfont-archer"></span>PHP相关知识</span>
+        <span class="sidebar-tag-name" data-tags="安装教程"><span class="iconfont-archer"></span>安装教程</span>
     
         <span class="sidebar-tag-name" data-tags="github搭建个人博客"><span class="iconfont-archer"></span>github搭建个人博客</span>
     
