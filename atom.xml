@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-05-08T04:47:56.370Z</updated>
+  <updated>2019-05-08T08:00:37.355Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>第一个Python程序</title>
+    <link href="http://yoursite.com/2019/05/08/%E7%AC%AC%E4%B8%80%E4%B8%AAPython%E7%A8%8B%E5%BA%8F/"/>
+    <id>http://yoursite.com/2019/05/08/第一个Python程序/</id>
+    <published>2019-05-08T06:01:11.000Z</published>
+    <updated>2019-05-08T08:00:37.355Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;h1 id=&quot;目标&quot;&gt;&lt;a href=&quot;#目标&quot; class=&quot;headerlink&quot; title=&quot;目标&quot;&gt;&lt;/a&gt;目标&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;第一个 HelloPython 程序&lt;/li&gt;
+&lt;li&gt;Python 2.x
+        
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>认识Python</title>
@@ -50,7 +74,7 @@
     <link href="http://yoursite.com/2019/05/06/%E5%85%B6%E4%BB%96%E5%91%BD%E4%BB%A4/"/>
     <id>http://yoursite.com/2019/05/06/其他命令/</id>
     <published>2019-05-06T09:08:34.000Z</published>
-    <updated>2019-05-07T04:16:39.830Z</updated>
+    <updated>2019-05-08T06:40:34.663Z</updated>
     
     <summary type="html">
     
@@ -520,40 +544,6 @@
     
     
       <category term="画画" scheme="http://yoursite.com/tags/%E7%94%BB%E7%94%BB/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>导航</title>
-    <link href="http://yoursite.com/2019/04/28/%E5%AF%BC%E8%88%AA/"/>
-    <id>http://yoursite.com/2019/04/28/导航/</id>
-    <published>2019-04-28T08:52:40.000Z</published>
-    <updated>2019-04-28T09:36:18.986Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;p&gt;导航分为几个方向：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;标签页&lt;/li&gt;
-&lt;li&gt;胶囊式标签页&lt;/li&gt;
-&lt;li&gt;两端对齐标签页&lt;/li&gt;
-&lt;li&gt;禁用的链接&lt;/li&gt;
-&lt;li&gt;添加下拉菜单&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h1
-        
-      
-    
-    </summary>
-    
-      <category term="Bootstrap" scheme="http://yoursite.com/categories/Bootstrap/"/>
-    
-    
-      <category term="【极客】前端学习" scheme="http://yoursite.com/tags/%E3%80%90%E6%9E%81%E5%AE%A2%E3%80%91%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/"/>
     
   </entry>
   
