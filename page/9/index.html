@@ -360,6 +360,84 @@ height:50vh;
     
     
     <article class="index-post">
+        <a class="abstract-title" href="/2019/03/20/cisco多交换机之间的端口聚合链路/">
+            
+                <span>cisco多交换机之间的端口聚合链路</span>
+        </a>
+        <div class="abstract-content">
+            拓扑图：
+
+相关知识：port-channel具备了逻辑端口的属性，真正成为一个独立的逻辑端口；端口汇聚是一种逻辑上的抽象过程，将一组具备相同属性的端口，抽象成一个逻辑端口；其不仅能增加网络的带宽，还能提供链路的备份功能，以及负载均衡；
+
+配置命令Switch0的配置命令hostname SwitchA        //更名
+int port-channel 1        //端口聚合模式
+exit
+
+int fa0/1
+channel-group 1 mode on    //将物理端口加入channel-group
+exit
+int fa0/2
+channel-group 1 ...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2019/03/20</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class="abstract-tags">
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Cisco基础">Cisco基础</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
+        <a class="abstract-title" href="/2019/03/19/cisco多交换机上配置基于端口的Vlan隔离办公网络/">
+            
+                <span>cisco多交换机上配置基于端口的Vlan隔离办公网络</span>
+        </a>
+        <div class="abstract-content">
+            拓扑图
+配置命令配置左边的交换机enable                                //特权模式
+configure terminal                    //全局模式
+
+interface fa 0/1                    
+switchport mode trunk                //配置Trunk
+switchport trunk allowed vlan all    //trunk允许所有Vlan流量通行（默认trunk就是允许所有）
+
+vlan 10                          ...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2019/03/19</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class="abstract-tags">
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Cisco基础">Cisco基础</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
         <a class="abstract-title" href="/2019/03/18/MarkDown基础教学/">
             
                 <span>MarkDown基础教学</span>
@@ -409,6 +487,49 @@ eg:点击跳转百度
             <div class="abstract-tags">
     
         <a class="post-tag" href="javascript:void(0);" data-tags="MarkDown基本语法">MarkDown基本语法</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
+        <a class="abstract-title" href="/2019/03/18/ciscoTelnet/">
+            
+                <span>No3. Telnet</span>
+        </a>
+        <div class="abstract-content">
+            拓扑图:
+
+配置命令:
+首先开启Vlan:   enable  
+configure terminal  
+interface vlan 1
+no shutdown   
+eg: 
+配置交换机：设置Vlan1 IP及其子网掩码:  interface vlan 1  
+ip address 10.1.1.154 255.255.255.0
+exit
+设置进入系统视图的密码：enable password ****
+设置五条虚拟链接：line vty 0 4
+设置特权等级[级别越高权限越大]：privilege level 1 0 
+设置远程链接(Telnet)的密码：password c...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2019/03/18</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class="abstract-tags">
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Cisco基础">Cisco基础</a>
     
 </div>
             
@@ -2109,9 +2230,70 @@ net start mysql(启动MySql服务)
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 82
+        Total : 85
         </div>
         <!-- search  -->
         
@@ -2124,6 +2306,21 @@ net start mysql(启动MySql服务)
     
     <div class="archive-year"> 2019 </div>
     <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">05/08</span><a class="archive-post-title" href="/2019/05/08/页面第二屏/">页面第二屏</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">05/08</span><a class="archive-post-title" href="/2019/05/08/页面第一屏/">页面第一屏</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">05/08</span><a class="archive-post-title" href="/2019/05/08/下拉菜单（二）/">下拉菜单（二）</a>
+        </li>
     
     
         <li class="archive-post-item">
@@ -2432,12 +2629,12 @@ net start mysql(启动MySql服务)
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">04/10</span><a class="archive-post-title" href="/2019/04/10/前端学习-全局属性/">全局属性</a>
+            <span class="archive-post-date">04/10</span><a class="archive-post-title" href="/2019/04/10/HTML5与HTML4区别/">HTML5与HTML4区别</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">04/10</span><a class="archive-post-title" href="/2019/04/10/HTML5与HTML4区别/">HTML5与HTML4区别</a>
+            <span class="archive-post-date">04/10</span><a class="archive-post-title" href="/2019/04/10/前端学习-全局属性/">全局属性</a>
         </li>
     
     
@@ -2517,12 +2714,12 @@ net start mysql(启动MySql服务)
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">03/18</span><a class="archive-post-title" href="/2019/03/18/MarkDown基础教学/">MarkDown基础教学</a>
+            <span class="archive-post-date">03/18</span><a class="archive-post-title" href="/2019/03/18/ciscoTelnet/">No3. Telnet</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">03/18</span><a class="archive-post-title" href="/2019/03/18/ciscoTelnet/">No3. Telnet</a>
+            <span class="archive-post-date">03/18</span><a class="archive-post-title" href="/2019/03/18/MarkDown基础教学/">MarkDown基础教学</a>
         </li>
     
     
@@ -2553,8 +2750,6 @@ net start mysql(启动MySql服务)
     
         <span class="sidebar-tag-name" data-tags="MarkDown基本语法"><span class="iconfont-archer"></span>MarkDown基本语法</span>
     
-        <span class="sidebar-tag-name" data-tags="PHP相关知识"><span class="iconfont-archer"></span>PHP相关知识</span>
-    
         <span class="sidebar-tag-name" data-tags="从零开始的Python学习"><span class="iconfont-archer"></span>从零开始的Python学习</span>
     
         <span class="sidebar-tag-name" data-tags="安装教程"><span class="iconfont-archer"></span>安装教程</span>
@@ -2564,6 +2759,8 @@ net start mysql(启动MySql服务)
         <span class="sidebar-tag-name" data-tags="Cisco强化学习"><span class="iconfont-archer"></span>Cisco强化学习</span>
     
         <span class="sidebar-tag-name" data-tags="github搭建个人博客"><span class="iconfont-archer"></span>github搭建个人博客</span>
+    
+        <span class="sidebar-tag-name" data-tags="PHP相关知识"><span class="iconfont-archer"></span>PHP相关知识</span>
     
         <span class="sidebar-tag-name" data-tags="Cisco基础"><span class="iconfont-archer"></span>Cisco基础</span>
     
@@ -2607,15 +2804,15 @@ net start mysql(启动MySql服务)
     
         <span class="sidebar-category-name" data-categories="Bootstrap"><span class="iconfont-archer"></span>Bootstrap</span>
     
-        <span class="sidebar-category-name" data-categories="教学"><span class="iconfont-archer"></span>教学</span>
-    
         <span class="sidebar-category-name" data-categories="前端知识"><span class="iconfont-archer"></span>前端知识</span>
     
-        <span class="sidebar-category-name" data-categories="PHP"><span class="iconfont-archer"></span>PHP</span>
+        <span class="sidebar-category-name" data-categories="教学"><span class="iconfont-archer"></span>教学</span>
     
         <span class="sidebar-category-name" data-categories="Python"><span class="iconfont-archer"></span>Python</span>
     
         <span class="sidebar-category-name" data-categories="Cisco"><span class="iconfont-archer"></span>Cisco</span>
+    
+        <span class="sidebar-category-name" data-categories="PHP"><span class="iconfont-archer"></span>PHP</span>
     
         <span class="sidebar-category-name" data-categories="素描"><span class="iconfont-archer"></span>素描</span>
     

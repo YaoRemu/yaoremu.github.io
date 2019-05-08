@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-05-08T08:00:37.355Z</updated>
+  <updated>2019-05-08T10:32:01.356Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,87 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>页面第二屏</title>
+    <link href="http://yoursite.com/2019/05/08/%E9%A1%B5%E9%9D%A2%E7%AC%AC%E4%BA%8C%E5%B1%8F/"/>
+    <id>http://yoursite.com/2019/05/08/页面第二屏/</id>
+    <published>2019-05-08T09:28:06.000Z</published>
+    <updated>2019-05-08T10:32:01.356Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;h1 id=&quot;CSS&quot;&gt;&lt;a href=&quot;#CSS&quot; class=&quot;headerlink&quot; title=&quot;CSS&quot;&gt;&lt;/a&gt;CSS&lt;/h1&gt;&lt;figure class=&quot;highlight
+        
+      
+    
+    </summary>
+    
+      <category term="Bootstrap" scheme="http://yoursite.com/categories/Bootstrap/"/>
+    
+    
+      <category term="【极客】前端学习" scheme="http://yoursite.com/tags/%E3%80%90%E6%9E%81%E5%AE%A2%E3%80%91%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>页面第一屏</title>
+    <link href="http://yoursite.com/2019/05/08/%E9%A1%B5%E9%9D%A2%E7%AC%AC%E4%B8%80%E5%B1%8F/"/>
+    <id>http://yoursite.com/2019/05/08/页面第一屏/</id>
+    <published>2019-05-08T08:52:07.000Z</published>
+    <updated>2019-05-08T10:32:49.049Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;注意：&lt;/strong&gt; 引入 Css样式表 顺序,由于我们会覆盖掉 Bootstrap 原本的一些效果，所以引入的时候先引入
+        
+      
+    
+    </summary>
+    
+      <category term="Bootstrap" scheme="http://yoursite.com/categories/Bootstrap/"/>
+    
+    
+      <category term="【极客】前端学习" scheme="http://yoursite.com/tags/%E3%80%90%E6%9E%81%E5%AE%A2%E3%80%91%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>下拉菜单（二）</title>
+    <link href="http://yoursite.com/2019/05/08/%E4%B8%8B%E6%8B%89%E8%8F%9C%E5%8D%95%EF%BC%88%E4%BA%8C%EF%BC%89/"/>
+    <id>http://yoursite.com/2019/05/08/下拉菜单（二）/</id>
+    <published>2019-05-08T08:36:11.000Z</published>
+    <updated>2019-05-08T08:51:26.279Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;p&gt;Bootstrap 官网 介绍了 实例、 用法、 方法 和 事件&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;事件处理：&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img
+        
+      
+    
+    </summary>
+    
+      <category term="前端知识" scheme="http://yoursite.com/categories/%E5%89%8D%E7%AB%AF%E7%9F%A5%E8%AF%86/"/>
+    
+    
+      <category term="【极客】前端学习" scheme="http://yoursite.com/tags/%E3%80%90%E6%9E%81%E5%AE%A2%E3%80%91%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
   
   <entry>
     <title>第一个Python程序</title>
@@ -466,84 +547,6 @@
     
     
       <category term="前端知识" scheme="http://yoursite.com/tags/%E5%89%8D%E7%AB%AF%E7%9F%A5%E8%AF%86/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>媒体对象（评论模块）</title>
-    <link href="http://yoursite.com/2019/04/29/%E5%AA%92%E4%BD%93%E5%AF%B9%E8%B1%A1/"/>
-    <id>http://yoursite.com/2019/04/29/媒体对象/</id>
-    <published>2019-04-29T09:22:11.000Z</published>
-    <updated>2019-04-29T11:35:06.480Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;h1 id=&quot;默认样式&quot;&gt;&lt;a href=&quot;#默认样式&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="Bootstrap" scheme="http://yoursite.com/categories/Bootstrap/"/>
-    
-    
-      <category term="【极客】前端学习" scheme="http://yoursite.com/tags/%E3%80%90%E6%9E%81%E5%AE%A2%E3%80%91%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>导航条</title>
-    <link href="http://yoursite.com/2019/04/29/%E5%AF%BC%E8%88%AA%E6%9D%A1/"/>
-    <id>http://yoursite.com/2019/04/29/导航条/</id>
-    <published>2019-04-29T07:59:43.000Z</published>
-    <updated>2019-04-29T09:20:46.899Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;h1 id=&quot;简介&quot;&gt;&lt;a href=&quot;#简介&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="Bootstrap" scheme="http://yoursite.com/categories/Bootstrap/"/>
-    
-    
-      <category term="【极客】前端学习" scheme="http://yoursite.com/tags/%E3%80%90%E6%9E%81%E5%AE%A2%E3%80%91%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>透视</title>
-    <link href="http://yoursite.com/2019/04/28/%E9%80%8F%E8%A7%86/"/>
-    <id>http://yoursite.com/2019/04/28/透视/</id>
-    <published>2019-04-28T13:00:26.000Z</published>
-    <updated>2019-04-28T13:26:49.508Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;h1 id=&quot;三点透视&quot;&gt;&lt;a href=&quot;#三点透视&quot; class=&quot;headerlink&quot; title=&quot;三点透视&quot;&gt;&lt;/a&gt;三点透视&lt;/h1&gt;&lt;p&gt;&lt;img
-        
-      
-    
-    </summary>
-    
-      <category term="素描" scheme="http://yoursite.com/categories/%E7%B4%A0%E6%8F%8F/"/>
-    
-    
-      <category term="画画" scheme="http://yoursite.com/tags/%E7%94%BB%E7%94%BB/"/>
     
   </entry>
   
